@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\caption{Parametric Copy Suite: Six Outcomes, Missed Re-Checks by the Nearest Copy, and Two Stress Conditions (\%)}\label{tab:copysuite}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrrrrrrrrrr@{}}\toprule
+ & \multicolumn{6}{c}{All held-out trials} & \multicolumn{4}{c}{Miss, nearest copy} & Extra & Miss & Miss \\ \cmidrule(lr){2-7}\cmidrule(lr){8-11}
+Method & Place & Miss & Silent & Misdir & Lost & Extra & adj. & $\le$20 & $>$50 & file & shifted & same rev. & issues \\ \midrule
+Cascade, deployed & 73.9 & 82.1 & 42.9 & 0.2 & 0.0 & 0.0 & 100.0 & 100.0 & 100.0 & 48.8 & 0.0 & 87.2 & 74.4 \\
+Cascade+IG+AG+VW & 73.9 & 8.5 & 4.2 & 38.9 & 0.0 & 50.0 & 36.0 & 0.0 & 0.0 & 0.0 & 100.0 & 34.1 & 1.2 \\
+Cascade+IG+AGi+VW & 76.5 & 8.5 & 4.2 & 37.0 & 0.0 & 0.0 & 36.0 & 0.0 & 0.0 & 0.0 & 0.0 & 40.1 & 2.5 \\
+CodeMapper+quote & 100.0 & 4.1 & 2.1 & 1.6 & 0.0 & 0.0 & 17.4 & 0.2 & 0.0 & 0.0 & 0.1 & 49.6 & 1.4 \\
+\quad +IG+AG & 100.0 & 3.3 & 1.7 & 2.1 & 0.0 & 50.0 & 14.1 & 0.0 & 0.0 & 0.0 & 100.0 & 21.5 & 0.5 \\
+\quad +IG+AGi & 100.0 & 3.3 & 1.7 & 2.1 & 0.0 & 0.0 & 14.1 & 0.0 & 0.0 & 0.0 & 0.1 & 26.5 & 1.1 \\
+\bottomrule
+\end{tabular}
+\tablenote{}{\wpNMain{} constructed trials from \wpSources{} source files: 0, 1, 2, 4 or 8 identical copies of the anchored lines before the revision, the nearest adjacent, within 20 lines, more than 50 lines away or in another file, anchors of 1--8 lines, and the original unchanged, shifted by comment lines inserted directly above, token-edited or deleted; 20 trials per cell, every file parses. Nearest-copy columns: trials with at least one copy. Extra, shifted: unnecessary requests on shifted originals. Same rev.: \wpNSame{} trials in which the revision edits or deletes the original and adds one copy. Issues: \wpIssues{} issues of 2--4 anchors, missed when an issue with a changed anchor raises no request.}
+\end{table*}

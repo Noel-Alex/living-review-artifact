@@ -1,0 +1,11 @@
+{
+ "summary": "evidence/v11-wpi/summary-20261102T183407.json",
+ "summary_sha256": "9b515032e3b76213554e64fc79edb6670bdadcdbe7020d5d7564cc90e9380146",
+ "macros": 34002,
+ "output_sha256": "19d85938711576685a13dbcbf2d382007d614b078f6d3ce84d399b5d3fcfcaca",
+ "tables": {
+  "table-locator.tex": "f3730f47561e92fdeec27a34473ed9c8294dd0989f386895a0f671bd49259c99",
+  "table-identity.tex": "87c8dfb3c443518b5b10ba5df94351f8f234c1b432da0e5199a1198ae5423909",
+  "table-stress.tex": "5810d9b9db43f45cfaae1e86f620160f19e2b25c43899c755027313adc28e22f"
+ }
+}

@@ -1,0 +1,28 @@
+% v11 Evaluation Method additions (E1-E5, ST, AB5, TV5). Inserted after v10 "Outcomes and Metrics".
+\subsection{Scoring Placement and Classification Separately}
+Earlier versions scored one outcome per trial, correct, wrong or lost, which mixes two questions. We now score \emph{placement} (file and start line on targets that survive) and \emph{classification} (the label against the reference class: preserved in place, shifted or moved to another file; edited; gone) separately, and derive the safety outcomes of Section~\ref{sec:safety} from both. A placement can be right while its change status is wrong, and the converse. Wrong placement and lost anchors are reported separately throughout, because a wrong location misdirects the supervisor while a missing one is visible. Table~\ref{tab:metrics} gives every reported rate with its numerator and denominator; the denominators differ by design, so rates with different names are not comparable.
+
+\begin{table}[t]
+\caption{Reported Rates and Their Denominators}\label{tab:metrics}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\tablenote{\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.27\columnwidth}>{\raggedright\arraybackslash}p{.45\columnwidth}>{\raggedright\arraybackslash}p{.22\columnwidth}@{}}\toprule
+Rate (column names) & Counts & Out of \\ \midrule
+Correct outcome (correct, Acc) & surviving targets placed at the reference file and start, and gone targets reported gone & all targets \\
+Placement (Place) & targets placed at the reference file and start & surviving targets \\
+Classification (Class) & targets whose label agrees with the reference class & all targets \\
+Missed re-check (Miss) & targets labeled \lbl{identical}, \lbl{content-match} or \lbl{moved} & edited or gone targets \\
+False re-check (Extra) & targets labeled \lbl{changed} or \lbl{removed} & content-preserved targets \\
+Silent misplacement (Silent) & targets placed at a wrong location without a re-check request & all targets \\
+Lost & targets for which no location is returned & surviving targets \\ \bottomrule
+\end{tabular}}{Section~\ref{sec:safety} gives the formal definitions. Correct outcome and placement differ on the same data whenever targets are gone: on the human-annotated regions the deployed cascade's correct outcome is \cExtHumDepAcc\% and its placement \wiHumDepPlace\%.}
+\end{table}
+
+\subsection{Dependence-Aware Uncertainty}
+Trials share source files, and real-history observations share commit pairs and projects. Besides nominal Wilson intervals, we report cluster-bootstrap 95\% intervals from 10,000 fixed-seed resamples of source files (controlled), commit pairs and, separately, projects (real histories), for headline accuracies and every paired difference, together with the sign of each per-project difference. A conclusion is stated as directional only if it survives the project-level interval. Every percentage is rounded independently from its raw counts, so the parts of a partition may sum to 99.9 or 100.1.
+
+\subsection{Protocols and Held-Out Evidence}
+Every new analysis in this revision followed a written protocol whose text and executable-code hashes were recorded, with a timestamp, before the analysis it governs; these are local records, not external preregistrations. Before any new result was produced, a reproduction gate re-ran the archived methods and required per-observation agreement with all \nTrialsAll{} archived controlled trials and all \smRealCasAccN{} real-history observations, including the \smRealTrkExecFail{} execution failures of the external tracker; the gate passed. The real-history observations had been inspected in earlier revisions, and the safety guards were designed after examining the real-history missed re-checks, so all guard results on these histories are retrospective. The held-out evaluations of the guards are the stress suites generated after their code was fixed (Section~\ref{sec:stress}), the external human-annotated benchmark (Section~\ref{sec:external}) and the student-authored repositories (Section~\ref{sec:student}).
+
+\subsection{Calibration Objectives}
+Threshold calibration previously maximized the number of correct outcomes. Because the stated objective ranks safety failures first, we also report safety-constrained calibration, which maximizes accuracy subject to limits on the missed re-check rate and on the rate at which deleted code is reported present, and leave-one-project-out calibration over all nine projects (Section~\ref{sec:design-results}). The oracle-excluded observations cannot enter any calibration without independent labels, so every threshold is calibrated on the oracle's decidable subset only.

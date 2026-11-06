@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-11-05T18:57:50.484163+00:00",
+  "protocol": "review/V12-PROTOCOL-K1.md",
+  "protocol_sha256": "c31ec1a7116b794434fab0335ba9ae5cbea600f979fea3fc08c0228fb7c22ff4",
+  "method_sources": {
+    "tools/v11/analyze_wpi.py": "c086f8e2329a303f0aeb0c30e3d88825a33cc975a37b96817007b3b1a41fd37f",
+    "tools/v11/wpi_core.py": "3ad1fbdb74e1ae1f04ec3c33fc4e412188d9903a2ccf2d9241f77a80f9a6b405",
+    "tools/v11/wpb2_chains.py": "e8b1d0313d6f4e35384523ba80c7af6ff8d4b028593640d7670a36bc62e01f05",
+    "tools/v11/wpa_core.py": "832529ce56d8bf290301ad6b2eeaccf4f7d545ce6afed64ebc037d906e99b725",
+    "tools/v11/run_wpi.py": "413d9091d86c510f6674d6a8040d405b0d1a33c13e1bd9c1c7affb58b8d86931",
+    "tools/v11/build_wpi_tex.py": "00de0dc18f5ca3778db9a40ea44576e9c15e05756b98ce94666aec0997d7c00b",
+    "tools/v11/build_wpj_tex.py": "e32d80c1e66854a1bd3ee4e0cf9096ab060ed886cf94dc478405673338928e43"
+  },
+  "status": "frozen before K1 outcome re-aggregation; retrospective and post hoc"
+}

@@ -1,0 +1,564 @@
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 1}\label{tab:wpk1-strata-part1}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+real & 1 & t0.85-deployed & missed & 2.4 (27/1,120) \\
+real & 1 & t0.85-deployed & silent & 0.4 (30/8,549) \\
+real & 1 & t0.85-deployed & misdirected & 0.4 (36/8,549) \\
+real & 1 & t0.85-deployed & unnecessary & 0.0 (0/7,429) \\
+real & 1 & t0.85-IG+AGi+VW & missed & 0.3 (3/1,120) \\
+real & 1 & t0.85-IG+AGi+VW & silent & 0.0 (3/8,549) \\
+real & 1 & t0.85-IG+AGi+VW & misdirected & 0.8 (66/8,549) \\
+real & 1 & t0.85-IG+AGi+VW & unnecessary & 0.8 (60/7,429) \\
+real & 1 & codemapper+quote & missed & 0.8 (9/1,120) \\
+real & 1 & codemapper+quote & silent & 0.1 (9/8,549) \\
+real & 1 & codemapper+quote & misdirected & 2.0 (169/8,549) \\
+real & 1 & codemapper+quote & unnecessary & 0.9 (70/7,429) \\
+real & 1 & codemapper+IG+AG & missed & 0.0 (0/1,120) \\
+real & 1 & codemapper+IG+AG & silent & 0.0 (0/8,549) \\
+real & 1 & codemapper+IG+AG & misdirected & 2.1 (178/8,549) \\
+real & 1 & codemapper+IG+AG & unnecessary & 2.1 (154/7,429) \\
+real & 1 & codemapper+IG+AGi & missed & 0.0 (0/1,120) \\
+real & 1 & codemapper+IG+AGi & silent & 0.0 (0/8,549) \\
+real & 1 & codemapper+IG+AGi & misdirected & 2.1 (178/8,549) \\
+real & 1 & codemapper+IG+AGi & unnecessary & 1.5 (110/7,429) \\
+real & 2-3 & t0.85-deployed & missed & 0.3 (2/616) \\
+real & 2-3 & t0.85-deployed & silent & 0.1 (2/3,143) \\
+real & 2-3 & t0.85-deployed & misdirected & 1.1 (36/3,143) \\
+real & 2-3 & t0.85-deployed & unnecessary & 0.0 (0/2,527) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 2}\label{tab:wpk1-strata-part2}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+real & 2-3 & t0.85-IG+AGi+VW & missed & 0.0 (0/616) \\
+real & 2-3 & t0.85-IG+AGi+VW & silent & 0.0 (0/3,143) \\
+real & 2-3 & t0.85-IG+AGi+VW & misdirected & 0.5 (16/3,143) \\
+real & 2-3 & t0.85-IG+AGi+VW & unnecessary & 0.7 (17/2,527) \\
+real & 2-3 & codemapper+quote & missed & 0.0 (0/616) \\
+real & 2-3 & codemapper+quote & silent & 0.0 (0/3,143) \\
+real & 2-3 & codemapper+quote & misdirected & 1.0 (32/3,143) \\
+real & 2-3 & codemapper+quote & unnecessary & 0.6 (16/2,527) \\
+real & 2-3 & codemapper+IG+AG & missed & 0.0 (0/616) \\
+real & 2-3 & codemapper+IG+AG & silent & 0.0 (0/3,143) \\
+real & 2-3 & codemapper+IG+AG & misdirected & 1.0 (32/3,143) \\
+real & 2-3 & codemapper+IG+AG & unnecessary & 1.7 (42/2,527) \\
+real & 2-3 & codemapper+IG+AGi & missed & 0.0 (0/616) \\
+real & 2-3 & codemapper+IG+AGi & silent & 0.0 (0/3,143) \\
+real & 2-3 & codemapper+IG+AGi & misdirected & 1.0 (32/3,143) \\
+real & 2-3 & codemapper+IG+AGi & unnecessary & 1.2 (30/2,527) \\
+real & 4-9 & t0.85-deployed & missed & 0.6 (6/968) \\
+real & 4-9 & t0.85-deployed & silent & 0.2 (6/3,127) \\
+real & 4-9 & t0.85-deployed & misdirected & 5.0 (155/3,127) \\
+real & 4-9 & t0.85-deployed & unnecessary & 0.0 (0/2,159) \\
+real & 4-9 & t0.85-IG+AGi+VW & missed & 0.1 (1/968) \\
+real & 4-9 & t0.85-IG+AGi+VW & silent & 0.0 (1/3,127) \\
+real & 4-9 & t0.85-IG+AGi+VW & misdirected & 1.9 (58/3,127) \\
+real & 4-9 & t0.85-IG+AGi+VW & unnecessary & 0.5 (11/2,159) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 3}\label{tab:wpk1-strata-part3}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+real & 4-9 & codemapper+quote & missed & 0.3 (3/968) \\
+real & 4-9 & codemapper+quote & silent & 0.1 (3/3,127) \\
+real & 4-9 & codemapper+quote & misdirected & 0.8 (26/3,127) \\
+real & 4-9 & codemapper+quote & unnecessary & 0.6 (13/2,159) \\
+real & 4-9 & codemapper+IG+AG & missed & 0.1 (1/968) \\
+real & 4-9 & codemapper+IG+AG & silent & 0.0 (1/3,127) \\
+real & 4-9 & codemapper+IG+AG & misdirected & 0.9 (28/3,127) \\
+real & 4-9 & codemapper+IG+AG & unnecessary & 1.6 (34/2,159) \\
+real & 4-9 & codemapper+IG+AGi & missed & 0.1 (1/968) \\
+real & 4-9 & codemapper+IG+AGi & silent & 0.0 (1/3,127) \\
+real & 4-9 & codemapper+IG+AGi & misdirected & 0.9 (28/3,127) \\
+real & 4-9 & codemapper+IG+AGi & unnecessary & 0.9 (20/2,159) \\
+real & >=10 & t0.85-deployed & missed & 2.6 (2/76) \\
+real & >=10 & t0.85-deployed & silent & 0.8 (2/245) \\
+real & >=10 & t0.85-deployed & misdirected & 8.6 (21/245) \\
+real & >=10 & t0.85-deployed & unnecessary & 0.0 (0/169) \\
+real & >=10 & t0.85-IG+AGi+VW & missed & 0.0 (0/76) \\
+real & >=10 & t0.85-IG+AGi+VW & silent & 0.0 (0/245) \\
+real & >=10 & t0.85-IG+AGi+VW & misdirected & 2.4 (6/245) \\
+real & >=10 & t0.85-IG+AGi+VW & unnecessary & 0.0 (0/169) \\
+real & >=10 & codemapper+quote & missed & 0.0 (0/76) \\
+real & >=10 & codemapper+quote & silent & 0.0 (0/245) \\
+real & >=10 & codemapper+quote & misdirected & 0.0 (0/245) \\
+real & >=10 & codemapper+quote & unnecessary & 0.0 (0/169) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 4}\label{tab:wpk1-strata-part4}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+real & >=10 & codemapper+IG+AG & missed & 0.0 (0/76) \\
+real & >=10 & codemapper+IG+AG & silent & 0.0 (0/245) \\
+real & >=10 & codemapper+IG+AG & misdirected & 0.0 (0/245) \\
+real & >=10 & codemapper+IG+AG & unnecessary & 0.0 (0/169) \\
+real & >=10 & codemapper+IG+AGi & missed & 0.0 (0/76) \\
+real & >=10 & codemapper+IG+AGi & silent & 0.0 (0/245) \\
+real & >=10 & codemapper+IG+AGi & misdirected & 0.0 (0/245) \\
+real & >=10 & codemapper+IG+AGi & unnecessary & 0.0 (0/169) \\
+real & same\_exact|guard=False & Cascade deployed & missed & 1/1 \\
+real & same\_exact|guard=False & Cascade deployed & wrong\_silent & 1/12,108 \\
+real & same\_exact|guard=False & Cascade deployed & wrong\_with\_recheck & 0/12,108 \\
+real & same\_exact|guard=False & Cascade deployed & false\_recheck & 0/12,107 \\
+real & same\_exact|guard=False & Cascade deployed & lost & 0/12,108 \\
+real & variable|guard=False & Cascade deployed & missed & 0/1,810 \\
+real & variable|guard=False & Cascade deployed & wrong\_silent & 0/1,810 \\
+real & variable|guard=False & Cascade deployed & wrong\_with\_recheck & 114/1,810 \\
+real & variable|guard=False & Cascade deployed & false\_recheck & 0/0 \\
+real & variable|guard=False & Cascade deployed & lost & 0/1,805 \\
+real & no\_match|guard=False & Cascade deployed & missed & 0/937 \\
+real & no\_match|guard=False & Cascade deployed & wrong\_silent & 0/937 \\
+real & no\_match|guard=False & Cascade deployed & wrong\_with\_recheck & 0/937 \\
+real & no\_match|guard=False & Cascade deployed & false\_recheck & 0/0 \\
+real & no\_match|guard=False & Cascade deployed & lost & 805/805 \\
+real & cross\_exact|guard=False & Cascade deployed & missed & 3/3 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 5}\label{tab:wpk1-strata-part5}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+real & cross\_exact|guard=False & Cascade deployed & wrong\_silent & 3/92 \\
+real & cross\_exact|guard=False & Cascade deployed & wrong\_with\_recheck & 0/92 \\
+real & cross\_exact|guard=False & Cascade deployed & false\_recheck & 0/89 \\
+real & cross\_exact|guard=False & Cascade deployed & lost & 0/92 \\
+real & cross\_exact|guard=True & Cascade deployed & missed & 0/16 \\
+real & cross\_exact|guard=True & Cascade deployed & wrong\_silent & 0/38 \\
+real & cross\_exact|guard=True & Cascade deployed & wrong\_with\_recheck & 19/38 \\
+real & cross\_exact|guard=True & Cascade deployed & false\_recheck & 22/22 \\
+real & cross\_exact|guard=True & Cascade deployed & lost & 0/38 \\
+real & same\_exact|guard=True & Cascade deployed & missed & 0/13 \\
+real & same\_exact|guard=True & Cascade deployed & wrong\_silent & 0/79 \\
+real & same\_exact|guard=True & Cascade deployed & wrong\_with\_recheck & 13/79 \\
+real & same\_exact|guard=True & Cascade deployed & false\_recheck & 66/66 \\
+real & same\_exact|guard=True & Cascade deployed & lost & 0/72 \\
+students & 1 & t0.85-deployed & missed & 3.3 (26/788) \\
+students & 1 & t0.85-deployed & silent & 1.3 (64/4,790) \\
+students & 1 & t0.85-deployed & misdirected & 1.1 (52/4,790) \\
+students & 1 & t0.85-deployed & unnecessary & 0.1 (3/4,002) \\
+students & 1 & t0.85-IG+AGi+VW & missed & 0.3 (2/788) \\
+students & 1 & t0.85-IG+AGi+VW & silent & 0.4 (19/4,790) \\
+students & 1 & t0.85-IG+AGi+VW & misdirected & 2.0 (96/4,790) \\
+students & 1 & t0.85-IG+AGi+VW & unnecessary & 3.7 (148/4,002) \\
+students & 1 & codemapper+quote & missed & 1.1 (9/788) \\
+students & 1 & codemapper+quote & silent & 0.3 (13/4,790) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 6}\label{tab:wpk1-strata-part6}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+students & 1 & codemapper+quote & misdirected & 4.2 (199/4,790) \\
+students & 1 & codemapper+quote & unnecessary & 5.2 (207/4,002) \\
+students & 1 & codemapper+IG+AG & missed & 0.3 (2/788) \\
+students & 1 & codemapper+IG+AG & silent & 0.1 (6/4,790) \\
+students & 1 & codemapper+IG+AG & misdirected & 4.3 (206/4,790) \\
+students & 1 & codemapper+IG+AG & unnecessary & 7.6 (304/4,002) \\
+students & 1 & codemapper+IG+AGi & missed & 0.3 (2/788) \\
+students & 1 & codemapper+IG+AGi & silent & 0.1 (6/4,790) \\
+students & 1 & codemapper+IG+AGi & misdirected & 4.3 (206/4,790) \\
+students & 1 & codemapper+IG+AGi & unnecessary & 6.5 (262/4,002) \\
+students & 2-3 & t0.85-deployed & missed & 5.1 (17/331) \\
+students & 2-3 & t0.85-deployed & silent & 1.8 (23/1,313) \\
+students & 2-3 & t0.85-deployed & misdirected & 1.4 (18/1,313) \\
+students & 2-3 & t0.85-deployed & unnecessary & 0.0 (0/982) \\
+students & 2-3 & t0.85-IG+AGi+VW & missed & 0.0 (0/331) \\
+students & 2-3 & t0.85-IG+AGi+VW & silent & 0.2 (3/1,313) \\
+students & 2-3 & t0.85-IG+AGi+VW & misdirected & 2.1 (28/1,313) \\
+students & 2-3 & t0.85-IG+AGi+VW & unnecessary & 2.6 (26/982) \\
+students & 2-3 & codemapper+quote & missed & 0.0 (0/331) \\
+students & 2-3 & codemapper+quote & silent & 0.0 (0/1,313) \\
+students & 2-3 & codemapper+quote & misdirected & 3.3 (43/1,313) \\
+students & 2-3 & codemapper+quote & unnecessary & 7.4 (73/982) \\
+students & 2-3 & codemapper+IG+AG & missed & 0.0 (0/331) \\
+students & 2-3 & codemapper+IG+AG & silent & 0.0 (0/1,313) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 7}\label{tab:wpk1-strata-part7}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+students & 2-3 & codemapper+IG+AG & misdirected & 3.3 (43/1,313) \\
+students & 2-3 & codemapper+IG+AG & unnecessary & 9.0 (88/982) \\
+students & 2-3 & codemapper+IG+AGi & missed & 0.0 (0/331) \\
+students & 2-3 & codemapper+IG+AGi & silent & 0.0 (0/1,313) \\
+students & 2-3 & codemapper+IG+AGi & misdirected & 3.3 (43/1,313) \\
+students & 2-3 & codemapper+IG+AGi & unnecessary & 8.1 (80/982) \\
+students & 4-9 & t0.85-deployed & missed & 2.0 (12/598) \\
+students & 4-9 & t0.85-deployed & silent & 1.8 (31/1,679) \\
+students & 4-9 & t0.85-deployed & misdirected & 3.0 (51/1,679) \\
+students & 4-9 & t0.85-deployed & unnecessary & 0.0 (0/1,081) \\
+students & 4-9 & t0.85-IG+AGi+VW & missed & 0.3 (2/598) \\
+students & 4-9 & t0.85-IG+AGi+VW & silent & 0.7 (12/1,679) \\
+students & 4-9 & t0.85-IG+AGi+VW & misdirected & 2.0 (33/1,679) \\
+students & 4-9 & t0.85-IG+AGi+VW & unnecessary & 4.9 (53/1,081) \\
+students & 4-9 & codemapper+quote & missed & 0.0 (0/598) \\
+students & 4-9 & codemapper+quote & silent & 0.0 (0/1,679) \\
+students & 4-9 & codemapper+quote & misdirected & 2.0 (34/1,679) \\
+students & 4-9 & codemapper+quote & unnecessary & 8.4 (91/1,081) \\
+students & 4-9 & codemapper+IG+AG & missed & 0.0 (0/598) \\
+students & 4-9 & codemapper+IG+AG & silent & 0.0 (0/1,679) \\
+students & 4-9 & codemapper+IG+AG & misdirected & 2.0 (34/1,679) \\
+students & 4-9 & codemapper+IG+AG & unnecessary & 10.5 (114/1,081) \\
+students & 4-9 & codemapper+IG+AGi & missed & 0.0 (0/598) \\
+students & 4-9 & codemapper+IG+AGi & silent & 0.0 (0/1,679) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 8}\label{tab:wpk1-strata-part8}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+students & 4-9 & codemapper+IG+AGi & misdirected & 2.0 (34/1,679) \\
+students & 4-9 & codemapper+IG+AGi & unnecessary & 10.0 (108/1,081) \\
+students & >=10 & t0.85-deployed & missed & 0.0 (0/53) \\
+students & >=10 & t0.85-deployed & silent & 0.0 (0/100) \\
+students & >=10 & t0.85-deployed & misdirected & 14.0 (14/100) \\
+students & >=10 & t0.85-deployed & unnecessary & 0.0 (0/47) \\
+students & >=10 & t0.85-IG+AGi+VW & missed & 0.0 (0/53) \\
+students & >=10 & t0.85-IG+AGi+VW & silent & 0.0 (0/100) \\
+students & >=10 & t0.85-IG+AGi+VW & misdirected & 4.0 (4/100) \\
+students & >=10 & t0.85-IG+AGi+VW & unnecessary & 6.4 (3/47) \\
+students & >=10 & codemapper+quote & missed & 0.0 (0/53) \\
+students & >=10 & codemapper+quote & silent & 0.0 (0/100) \\
+students & >=10 & codemapper+quote & misdirected & 4.0 (4/100) \\
+students & >=10 & codemapper+quote & unnecessary & 6.4 (3/47) \\
+students & >=10 & codemapper+IG+AG & missed & 0.0 (0/53) \\
+students & >=10 & codemapper+IG+AG & silent & 0.0 (0/100) \\
+students & >=10 & codemapper+IG+AG & misdirected & 4.0 (4/100) \\
+students & >=10 & codemapper+IG+AG & unnecessary & 6.4 (3/47) \\
+students & >=10 & codemapper+IG+AGi & missed & 0.0 (0/53) \\
+students & >=10 & codemapper+IG+AGi & silent & 0.0 (0/100) \\
+students & >=10 & codemapper+IG+AGi & misdirected & 4.0 (4/100) \\
+students & >=10 & codemapper+IG+AGi & unnecessary & 6.4 (3/47) \\
+students & same\_exact|guard=False & Cascade deployed & missed & 2/2 \\
+students & same\_exact|guard=False & Cascade deployed & wrong\_silent & 6/5,566 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 9}\label{tab:wpk1-strata-part9}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+students & same\_exact|guard=False & Cascade deployed & wrong\_with\_recheck & 0/5,566 \\
+students & same\_exact|guard=False & Cascade deployed & false\_recheck & 0/5,564 \\
+students & same\_exact|guard=False & Cascade deployed & lost & 0/5,566 \\
+students & variable|guard=False & Cascade deployed & missed & 0/1,183 \\
+students & variable|guard=False & Cascade deployed & wrong\_silent & 0/1,186 \\
+students & variable|guard=False & Cascade deployed & wrong\_with\_recheck & 92/1,186 \\
+students & variable|guard=False & Cascade deployed & false\_recheck & 3/3 \\
+students & variable|guard=False & Cascade deployed & lost & 0/1,150 \\
+students & no\_match|guard=False & Cascade deployed & missed & 0/547 \\
+students & no\_match|guard=False & Cascade deployed & wrong\_silent & 0/547 \\
+students & no\_match|guard=False & Cascade deployed & wrong\_with\_recheck & 0/547 \\
+students & no\_match|guard=False & Cascade deployed & false\_recheck & 0/0 \\
+students & no\_match|guard=False & Cascade deployed & lost & 374/374 \\
+students & same\_exact|guard=True & Cascade deployed & missed & 0/7 \\
+students & same\_exact|guard=True & Cascade deployed & wrong\_silent & 0/108 \\
+students & same\_exact|guard=True & Cascade deployed & wrong\_with\_recheck & 7/108 \\
+students & same\_exact|guard=True & Cascade deployed & false\_recheck & 101/101 \\
+students & same\_exact|guard=True & Cascade deployed & lost & 0/104 \\
+students & cross\_exact|guard=False & Cascade deployed & missed & 2/2 \\
+students & cross\_exact|guard=False & Cascade deployed & wrong\_silent & 28/309 \\
+students & cross\_exact|guard=False & Cascade deployed & wrong\_with\_recheck & 0/309 \\
+students & cross\_exact|guard=False & Cascade deployed & false\_recheck & 0/307 \\
+students & cross\_exact|guard=False & Cascade deployed & lost & 0/309 \\
+students & cross\_exact|guard=True & Cascade deployed & missed & 0/29 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 10}\label{tab:wpk1-strata-part10}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+students & cross\_exact|guard=True & Cascade deployed & wrong\_silent & 0/155 \\
+students & cross\_exact|guard=True & Cascade deployed & wrong\_with\_recheck & 62/155 \\
+students & cross\_exact|guard=True & Cascade deployed & false\_recheck & 126/126 \\
+students & cross\_exact|guard=True & Cascade deployed & lost & 0/147 \\
+students & hash|guard=False & Cascade deployed & missed & 0/0 \\
+students & hash|guard=False & Cascade deployed & wrong\_silent & 0/11 \\
+students & hash|guard=False & Cascade deployed & wrong\_with\_recheck & 0/11 \\
+students & hash|guard=False & Cascade deployed & false\_recheck & 0/11 \\
+students & hash|guard=False & Cascade deployed & lost & 0/11 \\
+fresh & 1 & t0.85-deployed & missed & 70.8 (3,947/5,572) \\
+fresh & 1 & t0.85-deployed & silent & 37.9 (6,322/16,667) \\
+fresh & 1 & t0.85-deployed & misdirected & 0.6 (93/16,667) \\
+fresh & 1 & t0.85-deployed & unnecessary & 0.3 (32/11,095) \\
+fresh & 1 & t0.85-IG+AGi+VW & missed & 0.3 (15/5,572) \\
+fresh & 1 & t0.85-IG+AGi+VW & silent & 0.4 (60/16,667) \\
+fresh & 1 & t0.85-IG+AGi+VW & misdirected & 35.0 (5,831/16,667) \\
+fresh & 1 & t0.85-IG+AGi+VW & unnecessary & 34.0 (3,768/11,095) \\
+fresh & 1 & codemapper+quote & missed & 1.2 (69/5,572) \\
+fresh & 1 & codemapper+quote & silent & 0.8 (126/16,667) \\
+fresh & 1 & codemapper+quote & misdirected & 5.2 (861/16,667) \\
+fresh & 1 & codemapper+quote & unnecessary & 13.6 (1,510/11,095) \\
+fresh & 1 & codemapper+IG+AG & missed & 0.1 (3/5,572) \\
+fresh & 1 & codemapper+IG+AG & silent & 0.2 (26/16,667) \\
+fresh & 1 & codemapper+IG+AG & misdirected & 5.8 (961/16,667) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 11}\label{tab:wpk1-strata-part11}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+fresh & 1 & codemapper+IG+AG & unnecessary & 37.7 (4,185/11,095) \\
+fresh & 1 & codemapper+IG+AGi & missed & 0.1 (6/5,572) \\
+fresh & 1 & codemapper+IG+AGi & silent & 0.2 (29/16,667) \\
+fresh & 1 & codemapper+IG+AGi & misdirected & 5.7 (958/16,667) \\
+fresh & 1 & codemapper+IG+AGi & unnecessary & 37.5 (4,160/11,095) \\
+fresh & 2-3 & t0.85-deployed & missed & 72.5 (623/859) \\
+fresh & 2-3 & t0.85-deployed & silent & 34.4 (626/1,822) \\
+fresh & 2-3 & t0.85-deployed & misdirected & 1.9 (35/1,822) \\
+fresh & 2-3 & t0.85-deployed & unnecessary & 4.4 (42/963) \\
+fresh & 2-3 & t0.85-IG+AGi+VW & missed & 8.7 (75/859) \\
+fresh & 2-3 & t0.85-IG+AGi+VW & silent & 13.5 (246/1,822) \\
+fresh & 2-3 & t0.85-IG+AGi+VW & misdirected & 21.3 (388/1,822) \\
+fresh & 2-3 & t0.85-IG+AGi+VW & unnecessary & 32.7 (315/963) \\
+fresh & 2-3 & codemapper+quote & missed & 48.2 (414/859) \\
+fresh & 2-3 & codemapper+quote & silent & 20.7 (377/1,822) \\
+fresh & 2-3 & codemapper+quote & misdirected & 3.3 (60/1,822) \\
+fresh & 2-3 & codemapper+quote & unnecessary & 15.3 (147/963) \\
+fresh & 2-3 & codemapper+IG+AG & missed & 2.8 (24/859) \\
+fresh & 2-3 & codemapper+IG+AG & silent & 7.0 (128/1,822) \\
+fresh & 2-3 & codemapper+IG+AG & misdirected & 17.0 (309/1,822) \\
+fresh & 2-3 & codemapper+IG+AG & unnecessary & 42.3 (407/963) \\
+fresh & 2-3 & codemapper+IG+AGi & missed & 4.5 (39/859) \\
+fresh & 2-3 & codemapper+IG+AGi & silent & 8.8 (160/1,822) \\
+fresh & 2-3 & codemapper+IG+AGi & misdirected & 15.2 (277/1,822) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 12}\label{tab:wpk1-strata-part12}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+fresh & 2-3 & codemapper+IG+AGi & unnecessary & 39.5 (380/963) \\
+fresh & 4-9 & t0.85-deployed & missed & 73.0 (1,602/2,194) \\
+fresh & 4-9 & t0.85-deployed & silent & 35.0 (1,575/4,504) \\
+fresh & 4-9 & t0.85-deployed & misdirected & 1.7 (77/4,504) \\
+fresh & 4-9 & t0.85-deployed & unnecessary & 2.3 (54/2,310) \\
+fresh & 4-9 & t0.85-IG+AGi+VW & missed & 13.2 (290/2,194) \\
+fresh & 4-9 & t0.85-IG+AGi+VW & silent & 17.2 (774/4,504) \\
+fresh & 4-9 & t0.85-IG+AGi+VW & misdirected & 16.6 (747/4,504) \\
+fresh & 4-9 & t0.85-IG+AGi+VW & unnecessary & 27.4 (634/2,310) \\
+fresh & 4-9 & codemapper+quote & missed & 48.3 (1,060/2,194) \\
+fresh & 4-9 & codemapper+quote & silent & 21.9 (986/4,504) \\
+fresh & 4-9 & codemapper+quote & misdirected & 3.0 (137/4,504) \\
+fresh & 4-9 & codemapper+quote & unnecessary & 11.9 (274/2,310) \\
+fresh & 4-9 & codemapper+IG+AG & missed & 5.3 (116/2,194) \\
+fresh & 4-9 & codemapper+IG+AG & silent & 9.7 (438/4,504) \\
+fresh & 4-9 & codemapper+IG+AG & misdirected & 15.2 (685/4,504) \\
+fresh & 4-9 & codemapper+IG+AG & unnecessary & 37.6 (868/2,310) \\
+fresh & 4-9 & codemapper+IG+AGi & missed & 8.6 (188/2,194) \\
+fresh & 4-9 & codemapper+IG+AGi & silent & 12.6 (567/4,504) \\
+fresh & 4-9 & codemapper+IG+AGi & misdirected & 12.3 (556/4,504) \\
+fresh & 4-9 & codemapper+IG+AGi & unnecessary & 33.7 (779/2,310) \\
+fresh & >=10 & t0.85-deployed & missed & 78.4 (214/273) \\
+fresh & >=10 & t0.85-deployed & silent & 36.6 (204/557) \\
+fresh & >=10 & t0.85-deployed & misdirected & 1.6 (9/557) \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 13}\label{tab:wpk1-strata-part13}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+fresh & >=10 & t0.85-deployed & unnecessary & 3.2 (9/284) \\
+fresh & >=10 & t0.85-IG+AGi+VW & missed & 21.2 (58/273) \\
+fresh & >=10 & t0.85-IG+AGi+VW & silent & 24.1 (134/557) \\
+fresh & >=10 & t0.85-IG+AGi+VW & misdirected & 13.5 (75/557) \\
+fresh & >=10 & t0.85-IG+AGi+VW & unnecessary & 29.2 (83/284) \\
+fresh & >=10 & codemapper+quote & missed & 63.0 (172/273) \\
+fresh & >=10 & codemapper+quote & silent & 29.3 (163/557) \\
+fresh & >=10 & codemapper+quote & misdirected & 2.5 (14/557) \\
+fresh & >=10 & codemapper+quote & unnecessary & 13.7 (39/284) \\
+fresh & >=10 & codemapper+IG+AG & missed & 13.2 (36/273) \\
+fresh & >=10 & codemapper+IG+AG & silent & 19.0 (106/557) \\
+fresh & >=10 & codemapper+IG+AG & misdirected & 12.7 (71/557) \\
+fresh & >=10 & codemapper+IG+AG & unnecessary & 37.7 (107/284) \\
+fresh & >=10 & codemapper+IG+AGi & missed & 16.1 (44/273) \\
+fresh & >=10 & codemapper+IG+AGi & silent & 20.5 (114/557) \\
+fresh & >=10 & codemapper+IG+AGi & misdirected & 11.3 (63/557) \\
+fresh & >=10 & codemapper+IG+AGi & unnecessary & 36.6 (104/284) \\
+fresh & same\_exact|guard=True & Cascade deployed & missed & 0/5,711 \\
+fresh & same\_exact|guard=True & Cascade deployed & wrong\_silent & 0/10,234 \\
+fresh & same\_exact|guard=True & Cascade deployed & wrong\_with\_recheck & 6,615/10,234 \\
+fresh & same\_exact|guard=True & Cascade deployed & false\_recheck & 4,523/4,523 \\
+fresh & same\_exact|guard=True & Cascade deployed & lost & 0/8,059 \\
+fresh & same\_exact|guard=False & Cascade deployed & missed & 212/212 \\
+fresh & same\_exact|guard=False & Cascade deployed & wrong\_silent & 846/7,932 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 14}\label{tab:wpk1-strata-part14}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+fresh & same\_exact|guard=False & Cascade deployed & wrong\_with\_recheck & 0/7,932 \\
+fresh & same\_exact|guard=False & Cascade deployed & false\_recheck & 0/7,720 \\
+fresh & same\_exact|guard=False & Cascade deployed & lost & 0/7,788 \\
+fresh & hash|guard=False & Cascade deployed & missed & 83/83 \\
+fresh & hash|guard=False & Cascade deployed & wrong\_silent & 161/1,661 \\
+fresh & hash|guard=False & Cascade deployed & wrong\_with\_recheck & 0/1,661 \\
+fresh & hash|guard=False & Cascade deployed & false\_recheck & 0/1,578 \\
+fresh & hash|guard=False & Cascade deployed & lost & 0/1,578 \\
+fresh & variable|guard=False & Cascade deployed & missed & 0/1,279 \\
+fresh & variable|guard=False & Cascade deployed & wrong\_silent & 0/1,366 \\
+fresh & variable|guard=False & Cascade deployed & wrong\_with\_recheck & 132/1,366 \\
+fresh & variable|guard=False & Cascade deployed & false\_recheck & 87/87 \\
+fresh & variable|guard=False & Cascade deployed & lost & 0/1,305 \\
+fresh & cross\_exact|guard=False & Cascade deployed & missed & 143/143 \\
+fresh & cross\_exact|guard=False & Cascade deployed & wrong\_silent & 207/697 \\
+fresh & cross\_exact|guard=False & Cascade deployed & wrong\_with\_recheck & 0/697 \\
+fresh & cross\_exact|guard=False & Cascade deployed & false\_recheck & 0/554 \\
+fresh & cross\_exact|guard=False & Cascade deployed & lost & 0/555 \\
+fresh & cross\_exact|guard=True & Cascade deployed & missed & 0/237 \\
+fresh & cross\_exact|guard=True & Cascade deployed & wrong\_silent & 0/376 \\
+fresh & cross\_exact|guard=True & Cascade deployed & wrong\_with\_recheck & 294/376 \\
+fresh & cross\_exact|guard=True & Cascade deployed & false\_recheck & 139/139 \\
+fresh & cross\_exact|guard=True & Cascade deployed & lost & 0/221 \\
+fresh & no\_match|guard=False & Cascade deployed & missed & 0/1,233 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Anchor-Length and Confidence-by-Guard Strata, Part 15}\label{tab:wpk1-strata-part15}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Population & Stratum & Configuration & Outcome & Rate (k/n) \\
+\midrule
+fresh & no\_match|guard=False & Cascade deployed & wrong\_silent & 0/1,284 \\
+fresh & no\_match|guard=False & Cascade deployed & wrong\_with\_recheck & 0/1,284 \\
+fresh & no\_match|guard=False & Cascade deployed & false\_recheck & 51/51 \\
+fresh & no\_match|guard=False & Cascade deployed & lost & 594/594 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Span bins are 1, 2-3, 4-9, and at least 10 lines. The summary also contains cascade-tier by guard-fire outcome cross-tabs for real, student, and fresh rows. CodeMapper has no stored confidence field; old-copy strata and multi-anchor issue outcomes are unavailable in the saved row schema.}
+\end{table*}

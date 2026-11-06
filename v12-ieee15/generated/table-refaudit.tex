@@ -1,0 +1,18 @@
+\begin{table}[t]
+\caption{Blinded Model Adjudication of the Syntax-Tree Reference}\label{tab:refaudit}
+\centering\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lrrrrrrr@{}}\toprule
+ & & \multicolumn{2}{c}{Status (\%)} & \multicolumn{2}{c}{Start $\pm$2 (\%)} & \multicolumn{2}{c}{Suspects} \\ \cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(l){7-8}
+Stratum & $n$ & Beam & Nem. & Beam & Nem. & all & in file \\ \midrule
+Same-type pairing & 50 & 94.0 & 98.0 & 100.0 & 100.0 & 1 & 1/50 \\
+Deleted or relocated & 50 & 32.0 & 40.0 & 75.0 & 85.7 & 30 & 10/30 \\
+Methods disagree & 50 & 52.0 & 56.0 & 89.7 & 96.4 & 21 & 4/33 \\
+Deployed misses & 37 & 73.0 & 75.7 & 90.0 & 96.7 & 8 & 8/37 \\
+Aligned controls & 50 & 98.0 & 98.0 & 100.0 & 98.0 & 1 & 1/50 \\
+\midrule
+All decided & 237 & 69.6 & 73.4 & 95.2 & 97.6 & 61 & 24/200 \\
+\bottomrule
+\end{tabular}
+\tablenote{}{Agreement of two hosted language models, not people, with the reference. Each model saw the old excerpt with the reviewed lines marked and the paired new file, blind to the reference and every method. Status: unchanged, edited or deleted. Start $\pm$2: inside the paired file, over items the model places. Suspects: items on which both models contradict the reference status; in file: excluding reference locations in another file, which the input cannot show. Pooled $\kappa$ with the reference: \wrAllBeamKappa{} (Beam), \wrAllNemoKappa{} (Nemotron); between the models \wrAllMMKappa.}
+\end{table}

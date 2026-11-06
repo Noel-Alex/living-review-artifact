@@ -1,0 +1,73 @@
+\begin{table*}[t]
+\caption{Minimum-Cost Policy by Population and Weights}\label{tab:wpk1-policy}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Population & w1\_m1 & w1\_m3 & w3\_m1 & w3\_m3 & w10\_m1 & w10\_m3 & w30\_m1 & w30\_m3 \\
+\midrule
+fresh & \shortstack{hybrid+AG2\\C=0.316} & \shortstack{hybrid+quote\\C=0.319} & \shortstack{tracker+IG+AG\\C=0.511} & \shortstack{tracker+IG\\C=0.585} & \shortstack{codemapper+IG+AG\\C=0.785} & \shortstack{tracker+IG+AG\\C=0.887} & \shortstack{codemapper+IG+AG\\C=1.530} & \shortstack{codemapper+IG+AG\\C=1.702} \\
+fresh:duplicates & \shortstack{codemapper+IG\\C=0.754} & \shortstack{tracker+quote\\C=0.771} & \shortstack{codemapper+AG\\C=1.238} & \shortstack{line\_number\\C=1.379} & \shortstack{line\_number\\C=2.090} & \shortstack{line\_number\\C=2.090} & \shortstack{line\_number\\C=4.122} & \shortstack{line\_number\\C=4.122} \\
+fresh:indentation & \shortstack{t0.55-IG\\C=0.125} & \shortstack{t0.55-IG\\C=0.125} & \shortstack{t0.55-IG\\C=0.125} & \shortstack{t0.55-IG\\C=0.125} & \shortstack{t0.55-IG\\C=0.125} & \shortstack{t0.55-IG\\C=0.125} & \shortstack{t0.55-IG\\C=0.125} & \shortstack{t0.55-IG\\C=0.125} \\
+fresh:short & \shortstack{hybrid+AG2\\C=0.164} & \shortstack{hybrid+quote\\C=0.167} & \shortstack{hybrid+AG2\\C=0.165} & \shortstack{hybrid+AG2\\C=0.197} & \shortstack{hybrid+AG2\\C=0.167} & \shortstack{hybrid+AG2\\C=0.199} & \shortstack{hybrid+AG2\\C=0.175} & \shortstack{hybrid+AG2\\C=0.207} \\
+controlled:replication & \shortstack{hybrid+AG2\\C=0.009} & \shortstack{hybrid+quote\\C=0.011} & \shortstack{hybrid+AG2\\C=0.009} & \shortstack{hybrid+AG2\\C=0.013} & \shortstack{hybrid+AG2\\C=0.009} & \shortstack{hybrid+AG2\\C=0.013} & \shortstack{hybrid+AG2\\C=0.009} & \shortstack{hybrid+AG2\\C=0.013} \\
+real & \shortstack{cmhybrid+quote\\C=0.020} & \shortstack{hybrid+quote\\C=0.049} & \shortstack{cmhybrid+IG+AG2\\C=0.023} & \shortstack{hybrid+IG\\C=0.053} & \shortstack{cmhybrid+IG+AGi\\C=0.026} & \shortstack{hybrid+IG+AG2\\C=0.055} & \shortstack{cmhybrid+IG+AGi\\C=0.029} & \shortstack{gumtree+IG+AGi\\C=0.057} \\
+students & \shortstack{hybrid+quote\\C=0.042} & \shortstack{hybrid+quote\\C=0.065} & \shortstack{hybrid+AG2\\C=0.067} & \shortstack{hybrid+quote\\C=0.095} & \shortstack{cmhybrid+IG+AGi\\C=0.099} & \shortstack{tracker\_adapter\\C=0.127} & \shortstack{cmhybrid+IG+AGi\\C=0.132} & \shortstack{tracker\_adapter\\C=0.183} \\
+external:human-AB & \shortstack{cmhybrid+IG+AG2\\C=0.230} & \shortstack{hybrid+IG\\C=0.355} & \shortstack{cmhybrid+IG+AG2\\C=0.260} & \shortstack{hybrid+AG\\C=0.390} & \shortstack{codemapper+AG\\C=0.305} & \shortstack{hybrid+AG\\C=0.425} & \shortstack{codemapper+AG\\C=0.405} & \shortstack{hybrid+AG\\C=0.525} \\
+fresh:compound:k=4 & \shortstack{hybrid+quote\\C=0.597} & \shortstack{hybrid+quote\\C=0.603} & \shortstack{hybrid+AG2\\C=0.607} & \shortstack{hybrid+quote\\C=0.617} & \shortstack{hybrid+IG+AG\\C=0.617} & \shortstack{hybrid+IG+AG\\C=0.630} & \shortstack{hybrid+IG+AG\\C=0.617} & \shortstack{hybrid+IG+AG\\C=0.630} \\
+wpj:beam:human-AB & \shortstack{llm+verdict\\C=0.225} & \shortstack{llm+verdict\\C=0.285} & \shortstack{cmhybrid+IG+AG2\\C=0.260} & \shortstack{llm+IG+AGi\\C=0.380} & \shortstack{codemapper+AG\\C=0.305} & \shortstack{hybrid+AG\\C=0.425} & \shortstack{codemapper+AG\\C=0.405} & \shortstack{hybrid+AG\\C=0.525} \\
+wpj:beam:real-oss-targeted & \shortstack{cmhybrid+quote\\C=0.075} & \shortstack{llm+quote\\C=0.154} & \shortstack{cmhybrid+IG+AG2\\C=0.087} & \shortstack{llm+IG\\C=0.167} & \shortstack{cmhybrid+IG+AGi\\C=0.091} & \shortstack{llm+IG+AGi\\C=0.174} & \shortstack{cmhybrid+IG+AGi\\C=0.091} & \shortstack{llm+IG+AGi\\C=0.174} \\
+wpj:beam:students-targeted & \shortstack{hybrid+quote\\C=0.110} & \shortstack{hybrid+quote\\C=0.186} & \shortstack{hybrid+AG2\\C=0.142} & \shortstack{hybrid+quote\\C=0.226} & \shortstack{hybrid+AGi\\C=0.172} & \shortstack{hybrid+AGi\\C=0.266} & \shortstack{cmhybrid+IG+AGi\\C=0.219} & \shortstack{hybrid+IG+AGi\\C=0.320} \\
+wpj:nemotron:human-AB & \shortstack{cmhybrid+IG+AG2\\C=0.230} & \shortstack{llm+IG\\C=0.295} & \shortstack{cmhybrid+IG+AG2\\C=0.260} & \shortstack{llm+IG+AGi\\C=0.365} & \shortstack{codemapper+AG\\C=0.305} & \shortstack{hybrid+AG\\C=0.425} & \shortstack{codemapper+AG\\C=0.405} & \shortstack{hybrid+AG\\C=0.525} \\
+wpj:nemotron:real-oss-targeted & \shortstack{cmhybrid+quote\\C=0.075} & \shortstack{llm-self\\C=0.117} & \shortstack{llm+IG\\C=0.085} & \shortstack{llm+IG\\C=0.132} & \shortstack{llm+IG+AGi\\C=0.091} & \shortstack{llm+IG+AGi\\C=0.140} & \shortstack{llm+IG+AGi\\C=0.091} & \shortstack{llm+IG+AGi\\C=0.140} \\
+wpj:nemotron:students-targeted & \shortstack{hybrid+quote\\C=0.110} & \shortstack{hybrid+quote\\C=0.186} & \shortstack{hybrid+AG2\\C=0.142} & \shortstack{hybrid+quote\\C=0.226} & \shortstack{hybrid+AGi\\C=0.172} & \shortstack{llm+AGi\\C=0.264} & \shortstack{llm+IG+AGi\\C=0.213} & \shortstack{llm+IG+AGi\\C=0.286} \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Each cell gives the minimizing configuration and its C per carried target. The complete Pareto sets and all six outcomes are in the K1 JSON. Ties follow the frozen protocol. C is descriptive.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Leave-One-Project-Out Selection at w=3 and m=3}\label{tab:wpk1-lopo}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Source & Held-out group & Selected & C & Oracle regret & Deployed regret & CodeMapper+IG+AGi regret \\
+\midrule
+real & click & cmhybrid+quote & 0.062 & 0.026 & -0.031 & -0.001 \\
+real & flask & cmhybrid+quote & 0.079 & 0.023 & -0.086 & -0.006 \\
+real & httpx & hybrid+IG & 0.065 & 0.024 & -0.041 & -0.013 \\
+real & p3 & hybrid+AG2 & 0.068 & 0.009 & -0.102 & -0.017 \\
+real & p4 & hybrid+IG & 0.049 & 0.032 & -0.149 & 0.026 \\
+real & requests & gumtree+IG & 0.060 & 0.044 & -0.002 & 0.028 \\
+real & rich & hybrid+IG & 0.064 & 0.023 & -0.055 & 0.019 \\
+real & tracer & hybrid+IG & 0.011 & 0.011 & -0.149 & 0.011 \\
+real & vcap & cmhybrid+quote & 0.096 & 0.050 & -0.068 & -0.004 \\
+students & S1 & hybrid+quote & 0.038 & 0.011 & -0.086 & -0.002 \\
+students & S10 & hybrid+quote & 0.142 & 0.094 & 0.031 & -0.094 \\
+students & S11 & hybrid+quote & 0.375 & 0.375 & 0.333 & 0.042 \\
+students & S12 & hybrid+quote & 0.469 & 0.069 & 0.046 & -0.194 \\
+students & S13 & hybrid+quote & 0.513 & 0.294 & -0.086 & -0.289 \\
+students & S14 & hybrid+quote & 0.091 & 0.013 & -0.026 & -0.089 \\
+students & S15 & hybrid+quote & 0.000 & 0.000 & 0.000 & 0.000 \\
+students & S16 & hybrid+quote & 0.042 & 0.000 & -0.096 & -0.117 \\
+students & S17 & hybrid+quote & 0.117 & 0.064 & -0.154 & -0.021 \\
+students & S18 & hybrid+quote & 0.067 & 0.067 & 0.000 & -0.382 \\
+students & S19 & hybrid+quote & 0.225 & 0.050 & -0.003 & 0.013 \\
+students & S2 & hybrid+quote & 0.053 & 0.000 & -0.050 & -0.009 \\
+students & S20 & hybrid+quote & 0.112 & 0.000 & -0.007 & -0.428 \\
+students & S3 & hybrid+quote & 0.091 & 0.019 & -0.038 & 0.005 \\
+students & S4 & hybrid+quote & 0.010 & 0.000 & -0.139 & -0.061 \\
+students & S5 & hybrid+quote & 0.088 & 0.022 & -0.110 & -0.044 \\
+students & S6 & hybrid+quote & 0.000 & 0.000 & -0.017 & -0.200 \\
+students & S7 & hybrid+quote & 0.090 & 0.003 & -0.164 & -0.130 \\
+students & S8 & hybrid+quote & 0.000 & 0.000 & 0.000 & -0.333 \\
+students & S9 & hybrid+quote & 0.099 & 0.000 & -0.028 & -0.250 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{All six held-out outcomes for every weight pair are in the K1 JSON. Negative fixed-policy regret means the selected policy had lower held-out cost. Real history has nine project folds; students have twenty repository folds. Retrospective and descriptive.}
+\end{table*}

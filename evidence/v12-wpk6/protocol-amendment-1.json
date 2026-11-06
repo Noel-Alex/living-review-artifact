@@ -1,0 +1,10 @@
+{
+ "recorded_utc": "2026-11-05T20:55:19Z",
+ "note": "D8 step-2 runner and its stratified sample, recorded before any model call. Prompts are D8 verbatim; settings and transport are WP J (temperature 0, seed 20261103, reasoning effort low).",
+ "sha256": {
+  "tools/v11/run_wpk6_llm.py": "5e2487f2f8d116f38afd532056c0b2e13f6829988055ec82d080b01eb4fa8d99",
+  "evidence/v12-wpk6/llm/sample.json": "3c01bdbd3522b455f427b909dfa29199f8e21a5212e9b3c66dfff62972691833",
+  "tools/v11/run_wpj.py": "bef940be0b8b393f7aa595a6545592b50b22ce79e233f627002da45085c3bbea",
+  "tools/v11/run_wpj_nim.py": "e47485b3e0f1cff4a44e37f3612ca7ce92d114b9daea1f104c2c6ba0a69a1e27"
+ }
+}

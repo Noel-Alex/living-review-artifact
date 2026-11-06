@@ -1,0 +1,40 @@
+% Extracted from v11 paper-v11.tex by tools/v12/make_v12.py; do not edit.
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=4mm and 5mm, >={Stealth[length=2.2mm]}, font=\small,
+  box/.style={draw=ink!70, rounded corners=2pt, fill=ink!6, align=center, inner sep=3pt, minimum height=9mm},
+  tier/.style={draw=ink!80, rounded corners=2pt, fill=white, align=left, inner sep=3pt, text width=33mm, minimum height=9mm},
+  lbl/.style={rounded corners=2pt, align=center, inner sep=2.5pt, minimum width=17mm, font=\small\sffamily},
+  st/.style={draw=black!45, rounded corners=2pt, fill=black!4, align=center, inner sep=3pt, text width=27mm}]
+\node[box, text width=29mm] (old) {Issue on version $t$\\ anchors $a=(\pi,s,e,c,q)$};
+\node[box, text width=29mm, below=6mm of old] (new) {Files of version $t{+}1$\\ previous text of $\pi$};
+\node[tier, right=8mm of old, yshift=7mm] (t1) {1 same path, same hash};
+\node[tier, below=2mm of t1] (t2) {2 same stripped lines in $\pi$, nearest to $s$};
+\node[tier, below=2mm of t2] (t3) {3 best similar window near the diff-predicted line, if ${\ge}\,\theta$};
+\node[tier, below=2mm of t3] (t4) {4 same stripped lines in another file};
+\node[lbl, fill=ink, text=white, right=5mm of t1] (l1) {identical};
+\node[lbl, fill=ink, text=white, right=5mm of t2, yshift=2.5mm] (l2a) {content-match};
+\node[lbl, fill=cyan!25, below=1mm of l2a] (l2b) {moved};
+\node[lbl, fill=orange!35, right=5mm of t3] (l3) {changed};
+\node[lbl, fill=cyan!25, right=5mm of t4] (l4) {moved};
+\node[lbl, fill=magenta!20, below=3mm of l4] (l5) {removed};
+\node[st, right=13mm of l2a, yshift=-1mm] (keep) {\textbf{keeps its state}\\ \footnotesize prior active state; carried with lineage};
+\node[st, right=13mm of l3, yshift=-3mm] (re) {\textbf{needs re-check}\\ \footnotesize supervisor sees old quote next to new place};
+\node[st, below=4mm of re, fill=white, draw=black!30, dashed] (res) {\textbf{resolved}\\ \footnotesize only by the supervisor};
+\begin{scope}[on background layer]
+\node[draw=ink!30, fill=ink!2, rounded corners=3pt, fit=(t1)(t4), inner sep=3pt, label={[font=\footnotesize\itshape, text=ink]above:relocation cascade (first match wins)}] {};
+\end{scope}
+\draw[->, ink] (old.east) -- ++(4mm,0) |- (t1.west);
+\draw[->, ink] (new.east) -- ++(4mm,0) |- (t1.west);
+\foreach \a/\b in {t1/t2, t2/t3, t3/t4} \draw[->, black!50] (\a.south) -- node[right, font=\scriptsize, black!60]{no} (\b.north);
+\draw[->, black!50] (t4.south) |- node[pos=0.25, right, font=\scriptsize, black!60]{no} (l5.west);
+\draw[->] (t1) -- (l1); \draw[->] (t2.east) -- (l2a.west); \draw[->] (t2.east) -- (l2b.west);
+\draw[->] (t3) -- (l3); \draw[->] (t4) -- (l4);
+\foreach \n in {l1,l2a,l2b,l4} \draw[->, black!55] (\n.east) -- (keep.west);
+\foreach \n in {l3,l5} \draw[->, warn] (\n.east) -- (re.west);
+\draw[->, black!40, dashed] (re.south) -- (res.north);
+\end{tikzpicture}
+\caption{Carry-forward of one issue. Each anchor is re-found by the first tier that matches; the issue needs a re-check if any anchor is \lbl{changed} or \lbl{removed}. No automated transition leads to \lbl{resolved}: only the supervisor closes an issue.}
+\label{fig:cascade}
+\end{figure*}

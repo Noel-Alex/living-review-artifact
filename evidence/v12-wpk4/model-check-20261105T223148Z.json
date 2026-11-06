@@ -1,0 +1,860 @@
+{
+ "created_utc": "2026-11-05T22:31:48.337386+00:00",
+ "provenance": {
+  "code": "tools/v11/wpk4_contract.py",
+  "code_sha256": "af80c961bcc6c1b0ae9ad5f25940e4d2b07eaf85bfd2aff29f5efb5d1bb1ffe5",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_version": "3.12.14",
+  "wpd_spec_sha256": "37511dccfa393ba17a9faca9779b67977adac39edfcb64330b03721f99056066"
+ },
+ "scope": {
+  "versions": [
+   1,
+   2,
+   3
+  ],
+  "findings": [
+   "A",
+   "B"
+  ],
+  "dismissal_keys": "legacy keys collide across A/B; proposed identity includes quotation digest",
+  "relocation_labels": [
+   "exact",
+   "moved",
+   "changed",
+   "removed"
+  ],
+  "depth": 8,
+  "probe_families": [
+   "delete_faculty",
+   "delete_assistant",
+   "restore",
+   "collision",
+   "lapse",
+   "uncomposed",
+   "closed_write",
+   "labels",
+   "depth_stress"
+  ]
+ },
+ "contracts": {
+  "IMPL": {
+   "distinct_states": 3455,
+   "transitions_explored": 12286512,
+   "violations": {
+    "S5": 1169024,
+    "S4b": 191008,
+    "dismissal_identity": 1,
+    "dismissal_memory_lapse": 1,
+    "restoration": 1,
+    "closed_issue_evidence_replacement": 0,
+    "S4a": 0,
+    "S4c": 0,
+    "S5-vis": 0,
+    "append_only": 0,
+    "idempotence": 0,
+    "labels": 0
+   },
+   "by_cause": {
+    "S5::deleted by faculty": 384,
+    "S5::deleted by assistant": 16,
+    "S5::uncomposed intermediate v2": 1168624,
+    "S4b::dismissal memory creates closed": 191008
+   },
+   "shortest_counterexamples": {
+    "S5": {
+     "trail": [
+      {
+       "event": "faculty_withdraw",
+       "issue": "A"
+      },
+      {
+       "event": "compose",
+       "version": 2
+      }
+     ],
+     "cause": "deleted by faculty"
+    },
+    "S4b": {
+     "trail": [
+      {
+       "event": "faculty_dismiss",
+       "issue": "A"
+      },
+      {
+       "event": "compose",
+       "version": 2
+      },
+      {
+       "event": "raise_new",
+       "issue": "B"
+      }
+     ],
+     "cause": "dismissal memory creates closed"
+    }
+   }
+  },
+  "STRONG": {
+   "distinct_states": 3748,
+   "transitions_explored": 12286512,
+   "violations": {
+    "dismissal_identity": 0,
+    "dismissal_memory_lapse": 0,
+    "restoration": 0,
+    "closed_issue_evidence_replacement": 0,
+    "S4a": 0,
+    "S4b": 0,
+    "S4c": 0,
+    "S5": 0,
+    "S5-vis": 0,
+    "append_only": 0,
+    "idempotence": 0,
+    "labels": 0
+   },
+   "by_cause": {},
+   "shortest_counterexamples": {}
+  }
+ },
+ "gap_probes": {
+  "delete_faculty": {
+   "IMPL": {
+    "violations": [
+     "S5"
+    ],
+    "system_writes": [],
+    "final_v2": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {}
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [],
+    "final_v2": {
+     "A": {
+      "status": "open",
+      "active": false,
+      "tombstone": true,
+      "key": "legacy",
+      "deleted_by": "faculty",
+      "withdrawn_by": "faculty",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {}
+   }
+  },
+  "delete_assistant": {
+   "IMPL": {
+    "violations": [
+     "S5"
+    ],
+    "system_writes": [],
+    "final_v2": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {}
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [],
+    "final_v2": {
+     "A": {
+      "status": "open",
+      "active": false,
+      "tombstone": true,
+      "key": "legacy",
+      "deleted_by": "assistant",
+      "withdrawn_by": "faculty",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {}
+   }
+  },
+  "restore": {
+   "IMPL": {
+    "violations": [
+     "restoration"
+    ],
+    "system_writes": [],
+    "final_v2": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     }
+    }
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [],
+    "final_v2": {
+     "A": {
+      "status": "open",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "deleted_by": "faculty",
+      "withdrawn_by": null,
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "deleted_by": "faculty",
+      "withdrawn_by": null,
+      "lineage": "v2:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     }
+    }
+   }
+  },
+  "collision": {
+   "IMPL": {
+    "violations": [
+     "dismissal_identity_collision",
+     "S4b"
+    ],
+    "system_writes": [
+     "dismissed"
+    ],
+    "final_v2": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     },
+     "B'": {
+      "status": "dismissed",
+      "active": false,
+      "tombstone": false,
+      "note": null,
+      "same_as": "B"
+     }
+    },
+    "final_v3": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     }
+    }
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [
+     "open"
+    ],
+    "final_v2": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     },
+     "B'": {
+      "status": "open",
+      "active": true,
+      "tombstone": false,
+      "note": null,
+      "same_as": "B"
+     }
+    },
+    "final_v3": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     },
+     "B'": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "note": null,
+      "same_as": "B",
+      "lineage": "v2:B'"
+     }
+    }
+   }
+  },
+  "lapse": {
+   "IMPL": {
+    "violations": [
+     "dismissal_memory_lapse"
+    ],
+    "system_writes": [
+     "open"
+    ],
+    "final_v2": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     },
+     "A'": {
+      "status": "open",
+      "active": true,
+      "tombstone": false,
+      "note": null,
+      "same_as": "A"
+     }
+    }
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [
+     "open"
+    ],
+    "final_v2": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     },
+     "A'": {
+      "status": "open",
+      "active": true,
+      "tombstone": false,
+      "note": "previously dismissed in v1",
+      "same_as": "A"
+     }
+    }
+   }
+  },
+  "uncomposed": {
+   "IMPL": {
+    "violations": [
+     "S5"
+    ],
+    "system_writes": [],
+    "final_v2": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {}
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [],
+    "final_v2": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     }
+    }
+   }
+  },
+  "closed_write": {
+   "IMPL": {
+    "violations": [],
+    "system_writes": [
+     "evidence-replaced-closed"
+    ],
+    "final_v2": {
+     "A": {
+      "status": "resolved",
+      "active": false,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {}
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [
+     "evidence-replaced-closed"
+    ],
+    "final_v2": {
+     "A": {
+      "status": "resolved",
+      "active": false,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {}
+   }
+  },
+  "labels": {
+   "IMPL": {
+    "violations": [],
+    "system_writes": [],
+    "final_v2": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     }
+    }
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [],
+    "final_v2": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:B"
+     }
+    },
+    "final_v3": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:A"
+     },
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     }
+    }
+   }
+  },
+  "depth_stress": {
+   "IMPL": {
+    "violations": [],
+    "system_writes": [
+     "evidence-replaced-closed",
+     "open"
+    ],
+    "final_v2": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     }
+    },
+    "final_v3": {
+     "B": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:B"
+     },
+     "B'": {
+      "status": "open",
+      "active": true,
+      "tombstone": false,
+      "note": null,
+      "same_as": "B"
+     }
+    }
+   },
+   "STRONG": {
+    "violations": [],
+    "system_writes": [
+     "evidence-replaced-closed",
+     "open"
+    ],
+    "final_v2": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v1:A"
+     }
+    },
+    "final_v3": {
+     "A": {
+      "status": "needs_recheck",
+      "active": true,
+      "tombstone": false,
+      "key": "legacy",
+      "lineage": "v2:A"
+     },
+     "B'": {
+      "status": "open",
+      "active": true,
+      "tombstone": false,
+      "note": "previously dismissed in v1",
+      "same_as": "B"
+     }
+    }
+   }
+  }
+ },
+ "summary": {
+  "distinct_states_across_contract_runs": 7203,
+  "transitions_explored": 24573024
+ },
+ "spec": [
+  {
+   "event": "carry-forward creation (system)",
+   "source": [
+    {
+     "file": {
+      "sha256": "52795c21de8685e6685e02285c9622bcba92bfb4715e8502fd30fd99ffefc35f",
+      "chars": 39
+     },
+     "line": 251,
+     "text": {
+      "sha256": "5f398773aac1c7987755d79c3717689652cff7c5bf98234cc04ce44b0121e491",
+      "chars": 90
+     }
+    },
+    {
+     "file": {
+      "sha256": "52795c21de8685e6685e02285c9622bcba92bfb4715e8502fd30fd99ffefc35f",
+      "chars": 39
+     },
+     "line": 254,
+     "text": {
+      "sha256": "bdc598bf3c98772ed01a40f069c0f69919520a042d8261845f8cf39823060746",
+      "chars": 19
+     }
+    },
+    {
+     "file": {
+      "sha256": "52795c21de8685e6685e02285c9622bcba92bfb4715e8502fd30fd99ffefc35f",
+      "chars": 39
+     },
+     "line": 261,
+     "text": {
+      "sha256": "afcb7712ee33018daa58d55e70237357e100fe7f331bbf626c78f00a9d7722c3",
+      "chars": 73
+     }
+    },
+    {
+     "file": {
+      "sha256": "52795c21de8685e6685e02285c9622bcba92bfb4715e8502fd30fd99ffefc35f",
+      "chars": 39
+     },
+     "line": 167,
+     "text": {
+      "sha256": "92cafabf5fcc19a4bb6b6dbca83b86060dc58333e2c07a63a75f73324905f8b0",
+      "chars": 59
+     }
+    }
+   ]
+  },
+  {
+   "event": "finding raised again on a carried resolved/dismissed issue (system)",
+   "source": [
+    {
+     "file": {
+      "sha256": "2cc204ec5dc597c10dd08e3e0ed806266dc5e23026c8b65de6e285fb10a9cb1d",
+      "chars": 41
+     },
+     "line": 621,
+     "text": {
+      "sha256": "78b65fc554e3dec92e6da3608552cea9d2e8e8c71a0b86253695ec6e747c8ea2",
+      "chars": 68
+     }
+    }
+   ]
+  },
+  {
+   "event": "dismissal-memory creation (system)",
+   "source": [
+    {
+     "file": {
+      "sha256": "2cc204ec5dc597c10dd08e3e0ed806266dc5e23026c8b65de6e285fb10a9cb1d",
+      "chars": 41
+     },
+     "line": 628,
+     "text": {
+      "sha256": "f589ff835382de048957ca8faa1b2af28403fa64c6533abc0b660b8c2332b2cf",
+      "chars": 77
+     }
+    },
+    {
+     "file": {
+      "sha256": "2cc204ec5dc597c10dd08e3e0ed806266dc5e23026c8b65de6e285fb10a9cb1d",
+      "chars": 41
+     },
+     "line": 633,
+     "text": {
+      "sha256": "cb67338284dc8b3f0663fe131cee02f20b5bf5bd8633b8a3def3c1c034adddf5",
+      "chars": 30
+     }
+    },
+    {
+     "file": {
+      "sha256": "52795c21de8685e6685e02285c9622bcba92bfb4715e8502fd30fd99ffefc35f",
+      "chars": 39
+     },
+     "line": 249,
+     "text": {
+      "sha256": "909feae765df12c9f7b2d5a842a6e0c79f0f9103b429f9b7589f7d20a539430f",
+      "chars": 81
+     }
+    }
+   ]
+  },
+  {
+   "event": "assistant edit status",
+   "source": [
+    {
+     "file": {
+      "sha256": "09967fe4afcb79e967b7aad42e623908d9f9acd156d7bc1bd12273dc212320b7",
+      "chars": 36
+     },
+     "line": 449,
+     "text": {
+      "sha256": "4f88467dabf9d393e21b3ed3288884b9a9ba707d6bcfefb5132bce99c8456c00",
+      "chars": 52
+     }
+    },
+    {
+     "file": {
+      "sha256": "09967fe4afcb79e967b7aad42e623908d9f9acd156d7bc1bd12273dc212320b7",
+      "chars": 36
+     },
+     "line": 452,
+     "text": {
+      "sha256": "514fd314e96ed1e64e44ab16c0975774b7011c585e2aa3cd7c9fdfd8cb768bfb",
+      "chars": 137
+     }
+    }
+   ]
+  },
+  {
+   "event": "delete (faculty or assistant)",
+   "source": [
+    {
+     "file": {
+      "sha256": "2cc204ec5dc597c10dd08e3e0ed806266dc5e23026c8b65de6e285fb10a9cb1d",
+      "chars": 41
+     },
+     "line": 463,
+     "text": {
+      "sha256": "14d52db7ecd174bf053e326b787d8e2b85bbab2f700791b1e92513ce5d850c11",
+      "chars": 19
+     }
+    },
+    {
+     "file": {
+      "sha256": "09967fe4afcb79e967b7aad42e623908d9f9acd156d7bc1bd12273dc212320b7",
+      "chars": 36
+     },
+     "line": 467,
+     "text": {
+      "sha256": "f81239b2359f061d5e2b5ab5517e3ec2c76f57155e8e3ca2b0517aabdbe3d6e9",
+      "chars": 138
+     }
+    }
+   ]
+  },
+  {
+   "event": "restore / undo (faculty)",
+   "source": [
+    {
+     "file": {
+      "sha256": "2cc204ec5dc597c10dd08e3e0ed806266dc5e23026c8b65de6e285fb10a9cb1d",
+      "chars": 41
+     },
+     "line": 479,
+     "text": {
+      "sha256": "1fe783adc8c9b011a0b963c2a5a2b27e887862afc2bde56f860f4fed77eb2d77",
+      "chars": 38
+     }
+    },
+    {
+     "file": {
+      "sha256": "aeafb10684333660d3aed874054defa26ce3ad0abb5316b70db80cd35d8d95b0",
+      "chars": 41
+     },
+     "line": 118,
+     "text": {
+      "sha256": "691ac50462ee61fced5b23a66ad8915f3f1fd391a53c651171185229957d93a6",
+      "chars": 71
+     }
+    }
+   ]
+  }
+ ],
+ "invariants": {
+  "S4a": "no system event writes resolved",
+  "S4b": "no system event writes dismissed",
+  "S4c": "assistant closing/withdrawal is a faculty-applied proposal",
+  "S5": "active and not faculty-closed issues reach each new composition",
+  "S5-vis": "withdrawn issues remain visible as tombstones",
+  "Restoration": "undo restores active lineage through recomposition",
+  "append_only": "existing revision history is never rewritten",
+  "idempotence": "repeated composition leaves materialized version content unchanged",
+  "labels": "changed and removed carry as needs_recheck"
+ },
+ "model_note": "Bounded exhaustive permutations of the registered event-template families, through depth 8, with all 16 two-anchor label assignments per trace. It checks each transition prefix and records state/transition counts. Gap probes run their complete event traces. Abstract contract model only; not an application test."
+}

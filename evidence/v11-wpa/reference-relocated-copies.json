@@ -1,0 +1,158 @@
+{
+  "provenance": {
+    "script": "tools/v11/audit_reference_copies.py",
+    "inputs_sha256": {
+      "evidence/recomputed-real/results-real-v1.json": "2565ff3e3c39fcd82c68d1ed4125b933ae9d02fd73bf8f4904b2bbd75444ba4f",
+      "evidence/recomputed-real/results-oss-v1.json": "15aa41755b4f71282769923d4aea757e0fd36e46718a506111d0f2d79a9c402e",
+      "evidence/public-histories/manifest.json": "86539301c77439abfa8f73866e21cb2b3cd6f4c127701c2dc80f60665ea582af",
+      "evidence/v11-wpa/reference-direction.json": "72ee40c61894686b2a8af8231d45772f9df63b9ae9149a8f10c219215f1a14b1"
+    },
+    "utc": "2026-11-06T04:05:44.975031+00:00"
+  },
+  "data": {
+    "reference_unchanged": 12284,
+    "unchanged_by_event": {
+      "aligned": 12117,
+      "edited": 21,
+      "relocated": 146
+    },
+    "relocated": 146,
+    "relocated_checked": 110,
+    "relocated_introduced_by_revision": 102,
+    "relocated_copy_already_at_reference": 8,
+    "relocated_unavailable": 36,
+    "unavailable_by_repo": {
+      "p4": 1,
+      "p3": 29,
+      "vcap": 6
+    },
+    "suspects_without_deployed_request": 8,
+    "unavailable_without_deployed_request": 36,
+    "deployed_missed": 37,
+    "deployed_missed_pct": 1.330935251798561,
+    "missed_pct_if_checked_suspects_are_changes": 1.6140602582496413,
+    "missed_pct_if_all_unverified_are_changes": 2.868271954674221,
+    "suspects": [
+      {
+        "pair": "flask:1:177",
+        "anchor_at": [
+          "tests/test_config.py",
+          212
+        ],
+        "truth_at": [
+          "tests/test_helpers.py",
+          58
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "correct"
+      },
+      {
+        "pair": "flask:1:237",
+        "anchor_at": [
+          "tests/test_cli.py",
+          461
+        ],
+        "truth_at": [
+          "tests/test_cli.py",
+          424
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "correct"
+      },
+      {
+        "pair": "flask:10:230",
+        "anchor_at": [
+          "tests/test_cli.py",
+          461
+        ],
+        "truth_at": [
+          "tests/test_cli.py",
+          424
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "correct"
+      },
+      {
+        "pair": "click:10:430",
+        "anchor_at": [
+          "tests/test_arguments.py",
+          368
+        ],
+        "truth_at": [
+          "tests/test_context.py",
+          102
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "wrong_place"
+      },
+      {
+        "pair": "rich:1:219",
+        "anchor_at": [
+          "rich/live.py",
+          51
+        ],
+        "truth_at": [
+          "rich/live_render.py",
+          30
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "correct"
+      },
+      {
+        "pair": "rich:1:219",
+        "anchor_at": [
+          "rich/progress.py",
+          646
+        ],
+        "truth_at": [
+          "rich/live.py",
+          167
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "correct"
+      },
+      {
+        "pair": "rich:1:259",
+        "anchor_at": [
+          "tests/test_syntax.py",
+          152
+        ],
+        "truth_at": [
+          "rich/__init__.py",
+          39
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "wrong_place"
+      },
+      {
+        "pair": "rich:10:250",
+        "anchor_at": [
+          "tests/test_syntax.py",
+          152
+        ],
+        "truth_at": [
+          "rich/__init__.py",
+          39
+        ],
+        "copies_before": 1,
+        "deployed_label": "moved",
+        "deployed_requests": false,
+        "deployed_outcome": "wrong_place"
+      }
+    ]
+  }
+}

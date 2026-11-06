@@ -1,0 +1,16 @@
+% Extracted from v11 paper-v11.tex by tools/v12/make_v12.py; do not edit.
+\begin{table}[t]
+\caption{Reported Rates and Their Denominators}\label{tab:metrics}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\tablenote{\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.27\columnwidth}>{\raggedright\arraybackslash}p{.45\columnwidth}>{\raggedright\arraybackslash}p{.22\columnwidth}@{}}\toprule
+Rate (column names) & Counts & Out of \\ \midrule
+Correct outcome (correct, Acc) & surviving targets placed at the reference file and start, and gone targets reported gone & all targets \\
+Placement (Place) & targets placed at the reference file and start & surviving targets \\
+Classification (Class) & targets whose label agrees with the reference class & all targets \\
+Missed re-check (Miss) & targets labeled \lbl{identical}, \lbl{content-match} or \lbl{moved} & edited or gone targets \\
+False re-check (Extra) & targets labeled \lbl{changed} or \lbl{removed} & content-preserved targets \\
+Silent misplacement (Silent) & targets placed at a wrong location without a re-check request & all targets \\
+Lost & targets for which no location is returned & surviving targets \\ \bottomrule
+\end{tabular}}{Section~\ref{sec:safety} gives the formal definitions. Correct outcome and placement differ on the same data whenever targets are gone: on the human-annotated regions the deployed cascade's correct outcome is \cExtHumDepAcc\% and its placement \wiHumDepPlace\%.}
+\end{table}

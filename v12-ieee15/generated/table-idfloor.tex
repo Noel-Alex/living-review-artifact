@@ -1,0 +1,227 @@
+\begin{table*}[t]
+\caption{Identity-Floor Sensitivity at Ten Hops, Part 1}\label{tab:wpk1-idfloor-part1}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Base & Floor & N & Correct & Wrong & Lost & Missed-last & Silent-wrong \\
+\midrule
+chains:v0.85-off & 0.55 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.6 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.65 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.7 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.75 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.8 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.85 & 4,000 & 3,573 & 88 & 337 & 8 & 8 \\
+chains:v0.85-off & 0.9 & 4,000 & 3,457 & 59 & 482 & 8 & 8 \\
+chains:v0.85-off & 0.95 & 4,000 & 3,314 & 34 & 650 & 8 & 8 \\
+chains:v0.85-off & 1.0 & 4,000 & 3,045 & 8 & 945 & 8 & 8 \\
+chains:v0.85-off & 0.3 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.35 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.4 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.45 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-off & 0.5 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains:v0.85-all & 0.55 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.6 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.65 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.7 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.75 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.8 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.85 & 4,000 & 3,668 & 47 & 283 & 8 & 7 \\
+chains:v0.85-all & 0.9 & 4,000 & 3,546 & 27 & 425 & 8 & 7 \\
+chains:v0.85-all & 0.95 & 4,000 & 3,373 & 16 & 609 & 8 & 7 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Counts are endpoint outcomes at h=10. Cascade traces replay from saved identity traces; CodeMapper replay is limited to floors at or above 0.50. Gate mismatches and ratio distributions are recorded in the summary.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Identity-Floor Sensitivity at Ten Hops, Part 2}\label{tab:wpk1-idfloor-part2}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Base & Floor & N & Correct & Wrong & Lost & Missed-last & Silent-wrong \\
+\midrule
+chains:v0.85-all & 1.0 & 4,000 & 3,045 & 8 & 945 & 8 & 7 \\
+chains:v0.85-all & 0.3 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.35 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.4 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.45 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all & 0.5 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.55 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.6 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.65 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.7 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.75 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.8 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.85 & 4,000 & 3,668 & 47 & 283 & 8 & 7 \\
+chains:v0.85-all2 & 0.9 & 4,000 & 3,546 & 27 & 425 & 8 & 7 \\
+chains:v0.85-all2 & 0.95 & 4,000 & 3,373 & 16 & 609 & 8 & 7 \\
+chains:v0.85-all2 & 1.0 & 4,000 & 3,045 & 8 & 945 & 8 & 7 \\
+chains:v0.85-all2 & 0.3 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.35 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.4 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.45 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.85-all2 & 0.5 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains:v0.55-all2 & 0.55 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains:v0.55-all2 & 0.6 & 4,000 & 3,874 & 84 & 28 & 3 & 2 \\
+chains:v0.55-all2 & 0.65 & 4,000 & 3,867 & 77 & 47 & 3 & 2 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Counts are endpoint outcomes at h=10. Cascade traces replay from saved identity traces; CodeMapper replay is limited to floors at or above 0.50. Gate mismatches and ratio distributions are recorded in the summary.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Identity-Floor Sensitivity at Ten Hops, Part 3}\label{tab:wpk1-idfloor-part3}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Base & Floor & N & Correct & Wrong & Lost & Missed-last & Silent-wrong \\
+\midrule
+chains:v0.55-all2 & 0.7 & 4,000 & 3,844 & 71 & 77 & 3 & 2 \\
+chains:v0.55-all2 & 0.75 & 4,000 & 3,808 & 67 & 118 & 3 & 2 \\
+chains:v0.55-all2 & 0.8 & 4,000 & 3,748 & 54 & 194 & 3 & 2 \\
+chains:v0.55-all2 & 0.85 & 4,000 & 3,668 & 42 & 288 & 3 & 2 \\
+chains:v0.55-all2 & 0.9 & 4,000 & 3,546 & 22 & 430 & 3 & 2 \\
+chains:v0.55-all2 & 0.95 & 4,000 & 3,373 & 11 & 614 & 3 & 2 \\
+chains:v0.55-all2 & 1.0 & 4,000 & 3,045 & 3 & 950 & 3 & 2 \\
+chains:v0.55-all2 & 0.3 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains:v0.55-all2 & 0.35 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains:v0.55-all2 & 0.4 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains:v0.55-all2 & 0.45 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains:v0.55-all2 & 0.5 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains:cm-seq-id & 0.5 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.55 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.6 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.65 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.7 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.75 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.8 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.85 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.9 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 0.95 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains:cm-seq-id & 1.0 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:v0.85-off & 0.55 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Counts are endpoint outcomes at h=10. Cascade traces replay from saved identity traces; CodeMapper replay is limited to floors at or above 0.50. Gate mismatches and ratio distributions are recorded in the summary.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Identity-Floor Sensitivity at Ten Hops, Part 4}\label{tab:wpk1-idfloor-part4}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Base & Floor & N & Correct & Wrong & Lost & Missed-last & Silent-wrong \\
+\midrule
+chains-agi:v0.85-off & 0.6 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.65 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.7 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.75 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.8 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.85 & 4,000 & 3,573 & 88 & 337 & 8 & 8 \\
+chains-agi:v0.85-off & 0.9 & 4,000 & 3,457 & 59 & 482 & 8 & 8 \\
+chains-agi:v0.85-off & 0.95 & 4,000 & 3,314 & 34 & 650 & 8 & 8 \\
+chains-agi:v0.85-off & 1.0 & 4,000 & 3,045 & 8 & 945 & 8 & 8 \\
+chains-agi:v0.85-off & 0.3 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.35 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.4 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.45 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-off & 0.5 & 4,000 & 3,575 & 88 & 335 & 8 & 8 \\
+chains-agi:v0.85-alli & 0.55 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.6 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.65 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.7 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.75 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.8 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.85 & 4,000 & 3,668 & 47 & 283 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.9 & 4,000 & 3,546 & 27 & 425 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.95 & 4,000 & 3,373 & 16 & 609 & 8 & 7 \\
+chains-agi:v0.85-alli & 1.0 & 4,000 & 3,045 & 8 & 945 & 8 & 7 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Counts are endpoint outcomes at h=10. Cascade traces replay from saved identity traces; CodeMapper replay is limited to floors at or above 0.50. Gate mismatches and ratio distributions are recorded in the summary.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Identity-Floor Sensitivity at Ten Hops, Part 5}\label{tab:wpk1-idfloor-part5}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Base & Floor & N & Correct & Wrong & Lost & Missed-last & Silent-wrong \\
+\midrule
+chains-agi:v0.85-alli & 0.3 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.35 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.4 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.45 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.85-alli & 0.5 & 4,000 & 3,670 & 47 & 281 & 8 & 7 \\
+chains-agi:v0.55-alli & 0.55 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.6 & 4,000 & 3,874 & 84 & 28 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.65 & 4,000 & 3,867 & 77 & 47 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.7 & 4,000 & 3,844 & 71 & 77 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.75 & 4,000 & 3,808 & 67 & 118 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.8 & 4,000 & 3,748 & 54 & 194 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.85 & 4,000 & 3,668 & 42 & 288 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.9 & 4,000 & 3,546 & 22 & 430 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.95 & 4,000 & 3,373 & 11 & 614 & 3 & 2 \\
+chains-agi:v0.55-alli & 1.0 & 4,000 & 3,045 & 3 & 950 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.3 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.35 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.4 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.45 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains-agi:v0.55-alli & 0.5 & 4,000 & 3,878 & 85 & 20 & 3 & 2 \\
+chains-agi:cm-seq-id & 0.5 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.55 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.6 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.65 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Counts are endpoint outcomes at h=10. Cascade traces replay from saved identity traces; CodeMapper replay is limited to floors at or above 0.50. Gate mismatches and ratio distributions are recorded in the summary.}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Identity-Floor Sensitivity at Ten Hops, Part 6}\label{tab:wpk1-idfloor-part6}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Base & Floor & N & Correct & Wrong & Lost & Missed-last & Silent-wrong \\
+\midrule
+chains-agi:cm-seq-id & 0.7 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.75 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.8 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.85 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.9 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 0.95 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-id & 1.0 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.5 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.55 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.6 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.65 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.7 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.75 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.8 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.85 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.9 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 0.95 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+chains-agi:cm-seq-gi-id & 1.0 & 3,998 & 3,881 & 36 & 81 & 3 & 1 \\
+\bottomrule
+\end{tabular}
+}
+\tablenote{}{Counts are endpoint outcomes at h=10. Cascade traces replay from saved identity traces; CodeMapper replay is limited to floors at or above 0.50. Gate mismatches and ratio distributions are recorded in the summary.}
+\end{table*}

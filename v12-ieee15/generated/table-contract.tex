@@ -1,0 +1,17 @@
+% Generated from evidence/v12-wpk4; do not edit.
+\begin{table*}[t]
+\caption{Implemented and Proposed Review-Persistence Contracts}\label{tab:contract}
+\centering\scriptsize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}p{.16\textwidth}p{.27\textwidth}p{.31\textwidth}p{.11\textwidth}>{\raggedleft\arraybackslash}p{.045\textwidth}>{\raggedleft\arraybackslash}p{.045\textwidth}@{}}\toprule
+Gap & Implemented & Proposed rule & Invariant & Impl. & Prop. \\ \midrule
+Deletion (faculty) & Deleted item excluded from carry & Faculty withdrawal leaves visible tombstone & S5, S5-vis & 1 & 0 \\
+Deletion (assistant) & Assistant deletion stops carry & Assistant proposal; faculty applies withdrawal & S4c, S5, S5-vis & 1 & 0 \\
+Restoration across versions & Undo restores prior snapshot only & Recompose descendants after undo & Restoration, S5 & 1 & 0 \\
+Dismissal key collision & Category plus first paragraph key conflates anchors & Category + normalized title + reviewed-quotation digest & Dismissal identity, S4b & 2 & 0 \\
+Dismissal lapse after absent version & Only immediately previous version is checked & Compare dismissals across all earlier versions & Dismissal memory, S5 & 1 & 0 \\
+Dismissed finding created closed by system & Matching new finding is created dismissed & Create open with prior-dismissal annotation & S4b & 1 & 0 \\
+Uncomposed intermediate version & v3 reads only v2 and skips v1 issues & Compose latest ancestor; later v2 recomposes descendants & S5 & 1 & 0 \\
+System write on closed issue (evidence replaced) & System replaces evidence and retains closed state & Evidence replacement never writes a closed state & S4a, S4b & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table*}

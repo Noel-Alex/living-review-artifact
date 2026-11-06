@@ -1,0 +1,14 @@
+{
+ "recorded_utc": "2026-11-05T21:27:50Z",
+ "protocol_sha256": "f56b2cb1e847bb2d22e85ae34ab4bdc7a5e2d2dfa10e192a7dd3b25a612cf4a5",
+ "code_sha256": {
+  "wpk5_audit.py": "79f2fea27b7d9eaa62b2eebbb9daccb2f0352d770b0d951812f13e4d8f56f7c3",
+  "run_wpj.py": "bef940be0b8b393f7aa595a6545592b50b22ce79e233f627002da45085c3bbea",
+  "run_wpj_nim.py": "e47485b3e0f1cff4a44e37f3612ca7ce92d114b9daea1f104c2c6ba0a69a1e27"
+ },
+ "sample_sha256": "2670cfa7e661bff296553a22f1cf6f5dcc04b7f1e6231b6c7a091f0f8b1f5d36",
+ "key_sha256": "c125228e1da59e0ed80d50f4c16e8dd9ca2c1ce9a95bc801b0bff10e623a6099",
+ "system_prompt_sha256": "455daf0e87b5106a8867bc6893392af8a25e4fa8b03c06ea34413094a6b0639a",
+ "system_prompt": "You audit how a reviewed block of Python code changed between two versions of a file. In the OLD excerpt the reviewed lines are marked with \">>\". Every line is numbered. Find the code that the reviewed lines became in the NEW file: the same statements, possibly edited or moved, not merely similar code elsewhere. Answer ONLY with a JSON object {\"status\": \"unchanged\" | \"edited\" | \"deleted\", \"start\": <first line number in NEW or null>, \"end\": <last line number in NEW or null>, \"reason\": \"<one line>\"}. unchanged: the reviewed lines are present with the same text apart from whitespace; edited: they are present but their text was modified; deleted: they are no longer in the NEW file (start and end null).",
+ "statement": "No WP K5 model call was made before this record."
+}

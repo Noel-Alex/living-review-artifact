@@ -1,0 +1,7151 @@
+{
+ "provenance": {
+  "input_sha256": {
+   "evidence/source-snapshot/bench_relocation.py": "ea8f369b06d54f56bfa9b25a87fcba923a393532a03f51d6f0d2f6f438e4c1f2",
+   "evidence/source-snapshot/real_history.py": "0bed9ad9d47231cba39028ceafcd83d1fb9dfe9799f44e951c7e3476179dc225",
+   "evidence/source-snapshot/analysis_v3.py": "fa54efa629817707958da3f6ce4be7305b731b6a391bf4994408a9eb5e68a64c",
+   "evidence/source-snapshot/results-real-v1.json": "2565ff3e3c39fcd82c68d1ed4125b933ae9d02fd73bf8f4904b2bbd75444ba4f",
+   "evidence/source-snapshot/results-oss-v1.json": "15aa41755b4f71282769923d4aea757e0fd36e46718a506111d0f2d79a9c402e",
+   "evidence/source-snapshot/results-v3.json": "3bbf477c776a2feca5669c9c9cf1e9f539f57b35a9d795912b05a1d0ca0d1063",
+   "evidence/pinned-corpus/vcap/app/modules/review_studio/carry.py": "f7aef79c3600dc371a541d2e6d370f34cd7c0f66b27a7dcc3aeb44755cc4edcb",
+   "review/V11-WPA-PROTOCOL.md": "8025bd91436226598f738278d527a282f750282034fa4178732baf13b6a5c0bf",
+   "tools/v11/analyze_wpa.py": "919325f1cfd79fe9ac4493d0fa6a3e6d91cd3003965f964ad57ef1eefd5254f5",
+   "tools/v11/build_wpa_results.py": "bbbc689677a911c43c691820ee7e01f97b3473f60671e09dce3080fdd35aa07d",
+   "tools/v11/freeze_gate_source.py": "a816d139a0fc82f3f3cac8282c5a2ba04a5a73d7d4a7b6265074c6855f11a963",
+   "tools/v11/mine_review_threads.py": "8ba1296ce2a84327f717e2b02de7fccd81b671d17a9268b664aa35fa5a8f8952",
+   "tools/v11/preserve_wpa_diagnostic.py": "e72d8013f80fe210fb2c4308b467edb07c2ea3d5bf5a1c33b1a886fc4eea9842",
+   "tools/v11/run_wpa_gate.py": "cf3a57d02bae9e23ba118db40d6ad4233ba1b1d7e4592a2a45dca8dd959100e4",
+   "tools/v11/test_wpa.py": "278023d1497c1e54c733e84b9cebd58742402238a5937d452dba2aff992550c9",
+   "tools/v11/verify_wpa.py": "4338070a2e2e829c49a58fe8606eaf401d95dd66ee5f3419f259155fbef12b1e",
+   "tools/v11/wpa_core.py": "832529ce56d8bf290301ad6b2eeaccf4f7d545ce6afed64ebc037d906e99b725",
+   "tools/v11/wpa_exclusions.py": "b00e12301ac667f4b91411b1e6164897a64699d7c848813f6b6fdbeb623a9ff6",
+   "evidence/v11-wpa/gate-trials.json": "2503a7866cd1e459dc9193987eea86a94dbe784cdb122f0b56b91c4884638093"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\noela\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "seed": 20261031
+ },
+ "data": {
+  "missed_n": 37,
+  "missed_cases": [
+   {
+    "repo": "p4",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p4:1:106",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 2,
+    "anchor_at": [
+     "services/maverick/server.py",
+     204
+    ],
+    "truth_at": [
+     "services/maverick/server.py",
+     289
+    ],
+    "benchmark": "real",
+    "row": 631,
+    "source_file": "services/maverick/server.py",
+    "old_file_sha256": "cf3ab4f207156d08d2efbe221ae1b894e928ecb1c82afc381baeb9bee57baa1c",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "services/coref/server.py",
+     102
+    ],
+    "copies": [
+     {
+      "path": "services/coref/server.py",
+      "start": 102,
+      "end": 103,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:5",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "src/asterlm/data/resumable.py",
+     231
+    ],
+    "truth_at": [
+     "src/asterlm/data/resumable.py",
+     238
+    ],
+    "benchmark": "real",
+    "row": 811,
+    "source_file": "src/asterlm/data/resumable.py",
+    "old_file_sha256": "b2c2ea2d441f27b9e4d3d6ca63e40dd6be45708eeb504bb978b7177422c8d425",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     ".asterlm-backup-turbo-v10-20260807-231710/src/asterlm/data/resumable.py",
+     231
+    ],
+    "copies": [
+     {
+      "path": ".asterlm-backup-turbo-v10-20260807-231710/src/asterlm/data/resumable.py",
+      "start": 231,
+      "end": 231,
+      "distance": null
+     },
+     {
+      "path": ".asterlm-backup-turbo-v9-20260807-225226/src/asterlm/data/resumable.py",
+      "start": 229,
+      "end": 229,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 2,
+    "total_copies": 2
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "uniform",
+    "pair": "p3:1:8",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "aligned",
+    "span": 7,
+    "anchor_at": [
+     "src/asterlm/layers/moe_grouped_te.py",
+     186
+    ],
+    "truth_at": [
+     "src/asterlm/layers/moe_grouped_te.py",
+     146
+    ],
+    "benchmark": "real",
+    "row": 842,
+    "source_file": "src/asterlm/layers/moe_grouped_te.py",
+    "old_file_sha256": "115f7e7d0815df0646b5858143b061d42a70b7204f30c412e6aeea6e805c344c",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     ".asterlm-backup-frontier-vnext-20260809T084334Z/src/asterlm/layers/moe_grouped_te.py",
+     186
+    ],
+    "copies": [
+     {
+      "path": ".asterlm-backup-frontier-vnext-20260809T084334Z/src/asterlm/layers/moe_grouped_te.py",
+      "start": 186,
+      "end": 192,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:8",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "aligned",
+    "span": 4,
+    "anchor_at": [
+     "src/asterlm/layers/moe_grouped_te.py",
+     200
+    ],
+    "truth_at": [
+     "src/asterlm/layers/moe_grouped_te.py",
+     154
+    ],
+    "benchmark": "real",
+    "row": 847,
+    "source_file": "src/asterlm/layers/moe_grouped_te.py",
+    "old_file_sha256": "115f7e7d0815df0646b5858143b061d42a70b7204f30c412e6aeea6e805c344c",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     ".asterlm-backup-frontier-vnext-20260809T084334Z/src/asterlm/layers/moe_grouped_te.py",
+     200
+    ],
+    "copies": [
+     {
+      "path": ".asterlm-backup-frontier-vnext-20260809T084334Z/src/asterlm/layers/moe_grouped_te.py",
+      "start": 200,
+      "end": 203,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:8",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "aligned",
+    "span": 7,
+    "anchor_at": [
+     "src/asterlm/layers/moe_grouped_te.py",
+     186
+    ],
+    "truth_at": [
+     "src/asterlm/layers/moe_grouped_te.py",
+     146
+    ],
+    "benchmark": "real",
+    "row": 849,
+    "source_file": "src/asterlm/layers/moe_grouped_te.py",
+    "old_file_sha256": "115f7e7d0815df0646b5858143b061d42a70b7204f30c412e6aeea6e805c344c",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     ".asterlm-backup-frontier-vnext-20260809T084334Z/src/asterlm/layers/moe_grouped_te.py",
+     186
+    ],
+    "copies": [
+     {
+      "path": ".asterlm-backup-frontier-vnext-20260809T084334Z/src/asterlm/layers/moe_grouped_te.py",
+      "start": 186,
+      "end": 192,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:65",
+    "horizon": 1,
+    "cls": "gone",
+    "how": "deleted",
+    "span": 1,
+    "anchor_at": [
+     "scripts/run_architecture_quality_campaign.py",
+     208
+    ],
+    "truth_at": null,
+    "benchmark": "real",
+    "row": 1167,
+    "source_file": "scripts/run_architecture_quality_campaign.py",
+    "old_file_sha256": "1a5e524027e0d5acf40383bee15d4a6ee5afdd0f9ab171ebcc40a8ef69fa4f1d",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "scripts/run_architecture_quality_campaign.py",
+     258
+    ],
+    "copies": [
+     {
+      "path": "scripts/run_architecture_quality_campaign.py",
+      "start": 258,
+      "end": 258,
+      "distance": 50
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:91",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "scripts/run_architecture_quality_campaign.py",
+     374
+    ],
+    "truth_at": [
+     "scripts/run_architecture_quality_campaign.py",
+     456
+    ],
+    "benchmark": "real",
+    "row": 1324,
+    "source_file": "scripts/run_architecture_quality_campaign.py",
+    "old_file_sha256": "d29683f56f6b02b0bcaf9037daf1a4eb3c92afcaf3b79632008a25d35009c45e",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "scripts/run_scale_frontier_fit.py",
+     156
+    ],
+    "copies": [
+     {
+      "path": "scripts/run_scale_frontier_fit.py",
+      "start": 156,
+      "end": 156,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:106",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "src/asterlm/model.py",
+     975
+    ],
+    "truth_at": [
+     "src/asterlm/model.py",
+     980
+    ],
+    "benchmark": "real",
+    "row": 1405,
+    "source_file": "src/asterlm/model.py",
+    "old_file_sha256": "7994e858acfc3fc7ca601ccb5a7b4c4c7efb8316b3b8257568006d49b187f94b",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "src/asterlm/model.py",
+     517
+    ],
+    "copies": [
+     {
+      "path": "src/asterlm/model.py",
+      "start": 517,
+      "end": 517,
+      "distance": -458
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:120",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 10,
+    "anchor_at": [
+     "src/asterlm/layers/moe_grouped_cutlass.py",
+     105
+    ],
+    "truth_at": [
+     "src/asterlm/layers/moe_grouped_cutlass.py",
+     146
+    ],
+    "benchmark": "real",
+    "row": 1507,
+    "source_file": "src/asterlm/layers/moe_grouped_cutlass.py",
+    "old_file_sha256": "d5d8cc414a3c6bc70e55233dff7f83bb422a4d2aede2ba52f4ee8174ed6357f2",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "src/asterlm/layers/moe_grouped_liger.py",
+     68
+    ],
+    "copies": [
+     {
+      "path": "src/asterlm/layers/moe_grouped_liger.py",
+      "start": 68,
+      "end": 77,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "p3:1:197",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "scripts/run_interrupted_recovery_canary.py",
+     240
+    ],
+    "truth_at": [
+     "scripts/run_interrupted_recovery_canary.py",
+     240
+    ],
+    "benchmark": "real",
+    "row": 1941,
+    "source_file": "scripts/run_interrupted_recovery_canary.py",
+    "old_file_sha256": "1c291a5dc7b02f035cd295df412219f2a59514476955f1d045d4da75b59ee532",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "scripts/cloud/modal_qualification_entrypoint.py",
+     75
+    ],
+    "copies": [
+     {
+      "path": "scripts/cloud/modal_qualification_entrypoint.py",
+      "start": 75,
+      "end": 75,
+      "distance": null
+     },
+     {
+      "path": "scripts/run_architecture_quality_campaign.py",
+      "start": 583,
+      "end": 583,
+      "distance": null
+     },
+     {
+      "path": "scripts/run_laptop_inference_canary.py",
+      "start": 78,
+      "end": 78,
+      "distance": null
+     },
+     {
+      "path": "scripts/run_moe_utilization_matrix.py",
+      "start": 375,
+      "end": 375,
+      "distance": null
+     },
+     {
+      "path": "scripts/run_optimizer_matrix.py",
+      "start": 144,
+      "end": 144,
+      "distance": null
+     },
+     {
+      "path": "scripts/run_pretraining_campaign.py",
+      "start": 448,
+      "end": 448,
+      "distance": null
+     },
+     {
+      "path": "src/asterlm/cloud/modal.py",
+      "start": 442,
+      "end": 442,
+      "distance": null
+     },
+     {
+      "path": "src/asterlm/cloud/modal.py",
+      "start": 478,
+      "end": 478,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 8,
+    "total_copies": 8
+   },
+   {
+    "repo": "p3",
+    "group": "own",
+    "sample": "uniform",
+    "pair": "p3:10:120",
+    "horizon": 10,
+    "cls": "edited",
+    "how": "edited",
+    "span": 10,
+    "anchor_at": [
+     "src/asterlm/layers/moe_grouped_cutlass.py",
+     105
+    ],
+    "truth_at": [
+     "src/asterlm/layers/moe_grouped_cutlass.py",
+     146
+    ],
+    "benchmark": "real",
+    "row": 2104,
+    "source_file": "src/asterlm/layers/moe_grouped_cutlass.py",
+    "old_file_sha256": "d5d8cc414a3c6bc70e55233dff7f83bb422a4d2aede2ba52f4ee8174ed6357f2",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "src/asterlm/layers/moe_grouped_liger.py",
+     68
+    ],
+    "copies": [
+     {
+      "path": "src/asterlm/layers/moe_grouped_liger.py",
+      "start": 68,
+      "end": 77,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "vcap",
+    "group": "own",
+    "sample": "uniform",
+    "pair": "vcap:1:302",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "aligned",
+    "span": 1,
+    "anchor_at": [
+     "vcap/tests/shared/test_debug_mode.py",
+     45
+    ],
+    "truth_at": [
+     "vcap/tests/shared/test_debug_mode.py",
+     64
+    ],
+    "benchmark": "real",
+    "row": 2796,
+    "source_file": "vcap/tests/shared/test_debug_mode.py",
+    "old_file_sha256": "e112eb27c30fd1d9b3c5b0585e6d06cbcefeee43af5c065edbcdf189d9c356de",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "scripts/smoke_live_faculty_loop.py",
+     20
+    ],
+    "copies": [
+     {
+      "path": "scripts/smoke_live_faculty_loop.py",
+      "start": 20,
+      "end": 20,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/review_copilot/test_preband_arm_interplay.py",
+      "start": 72,
+      "end": 72,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/review_copilot/test_preband_arm_interplay.py",
+      "start": 666,
+      "end": 666,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/review_copilot/test_rubric_lifecycle_full.py",
+      "start": 70,
+      "end": 70,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_api_status_contract.py",
+      "start": 117,
+      "end": 117,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_auth_matrix_extended.py",
+      "start": 93,
+      "end": 93,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_auth_matrix_section_c.py",
+      "start": 80,
+      "end": 80,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_cross_layer_integration.py",
+      "start": 70,
+      "end": 70,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_debug_mode_contract.py",
+      "start": 90,
+      "end": 90,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_debug_mode_contract.py",
+      "start": 392,
+      "end": 392,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_m3_p2_majors.py",
+      "start": 52,
+      "end": 52,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_ownership_fuzz.py",
+      "start": 145,
+      "end": 145,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_pre_band_wiring.py",
+      "start": 47,
+      "end": 47,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_redteam_minors_r20_r30.py",
+      "start": 75,
+      "end": 75,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_resubmission_slice.py",
+      "start": 42,
+      "end": 42,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_review_brief.py",
+      "start": 57,
+      "end": 57,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_route_table_dod.py",
+      "start": 50,
+      "end": 50,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_route_table_dod.py",
+      "start": 234,
+      "end": 234,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_e2e.py",
+      "start": 44,
+      "end": 44,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_e2e.py",
+      "start": 180,
+      "end": 180,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_milestone1_qa.py",
+      "start": 46,
+      "end": 46,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_milestone1_qa.py",
+      "start": 312,
+      "end": 312,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 22,
+    "total_copies": 22
+   },
+   {
+    "repo": "vcap",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "vcap:1:302",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "aligned",
+    "span": 1,
+    "anchor_at": [
+     "vcap/tests/shared/test_debug_mode.py",
+     45
+    ],
+    "truth_at": [
+     "vcap/tests/shared/test_debug_mode.py",
+     64
+    ],
+    "benchmark": "real",
+    "row": 2800,
+    "source_file": "vcap/tests/shared/test_debug_mode.py",
+    "old_file_sha256": "e112eb27c30fd1d9b3c5b0585e6d06cbcefeee43af5c065edbcdf189d9c356de",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "scripts/smoke_live_faculty_loop.py",
+     20
+    ],
+    "copies": [
+     {
+      "path": "scripts/smoke_live_faculty_loop.py",
+      "start": 20,
+      "end": 20,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/review_copilot/test_preband_arm_interplay.py",
+      "start": 72,
+      "end": 72,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/review_copilot/test_preband_arm_interplay.py",
+      "start": 666,
+      "end": 666,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/review_copilot/test_rubric_lifecycle_full.py",
+      "start": 70,
+      "end": 70,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_api_status_contract.py",
+      "start": 117,
+      "end": 117,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_auth_matrix_extended.py",
+      "start": 93,
+      "end": 93,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_auth_matrix_section_c.py",
+      "start": 80,
+      "end": 80,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_cross_layer_integration.py",
+      "start": 70,
+      "end": 70,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_debug_mode_contract.py",
+      "start": 90,
+      "end": 90,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_debug_mode_contract.py",
+      "start": 392,
+      "end": 392,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_m3_p2_majors.py",
+      "start": 52,
+      "end": 52,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_ownership_fuzz.py",
+      "start": 145,
+      "end": 145,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_pre_band_wiring.py",
+      "start": 47,
+      "end": 47,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_redteam_minors_r20_r30.py",
+      "start": 75,
+      "end": 75,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_resubmission_slice.py",
+      "start": 42,
+      "end": 42,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_review_brief.py",
+      "start": 57,
+      "end": 57,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_route_table_dod.py",
+      "start": 50,
+      "end": 50,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_route_table_dod.py",
+      "start": 234,
+      "end": 234,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_e2e.py",
+      "start": 44,
+      "end": 44,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_e2e.py",
+      "start": 180,
+      "end": 180,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_milestone1_qa.py",
+      "start": 46,
+      "end": 46,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_milestone1_qa.py",
+      "start": 312,
+      "end": 312,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 22,
+    "total_copies": 22
+   },
+   {
+    "repo": "vcap",
+    "group": "own",
+    "sample": "uniform",
+    "pair": "vcap:1:310",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "aligned",
+    "span": 4,
+    "anchor_at": [
+     "vcap/app/modules/review_copilot/services/pii_scrubber.py",
+     180
+    ],
+    "truth_at": [
+     "vcap/app/modules/review_copilot/services/pii_scrubber.py",
+     200
+    ],
+    "benchmark": "real",
+    "row": 2825,
+    "source_file": "vcap/app/modules/review_copilot/services/pii_scrubber.py",
+    "old_file_sha256": "08779f674092af3a0c68356ce0c96c5ebe86abf2a44f7fbed36d6a054b6d2d93",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "vcap/app/modules/review_copilot/services/pii_scrubber.py",
+     202
+    ],
+    "copies": [
+     {
+      "path": "vcap/app/modules/review_copilot/services/pii_scrubber.py",
+      "start": 202,
+      "end": 205,
+      "distance": 22
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "vcap",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "vcap:1:319",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 2,
+    "anchor_at": [
+     "vcap/tests/shared/test_debug_mode_contract.py",
+     105
+    ],
+    "truth_at": [
+     "vcap/tests/shared/test_debug_mode_contract.py",
+     106
+    ],
+    "benchmark": "real",
+    "row": 2876,
+    "source_file": "vcap/tests/shared/test_debug_mode_contract.py",
+    "old_file_sha256": "77ce14be66df2cd44166fde330f73190d238d7cf421f0769423aba0c58506feb",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "vcap/tests/shared/test_debug_mode_contract.py",
+     418
+    ],
+    "copies": [
+     {
+      "path": "vcap/tests/shared/test_debug_mode_contract.py",
+      "start": 418,
+      "end": 419,
+      "distance": 313
+     },
+     {
+      "path": "vcap/tests/review_copilot/test_rubric_lifecycle_full.py",
+      "start": 84,
+      "end": 85,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_api_status_contract.py",
+      "start": 152,
+      "end": 153,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_auth_matrix_extended.py",
+      "start": 102,
+      "end": 103,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_auth_matrix_section_c.py",
+      "start": 89,
+      "end": 90,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_ownership_fuzz.py",
+      "start": 157,
+      "end": 158,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_redteam_minors_r20_r30.py",
+      "start": 84,
+      "end": 85,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_route_table_dod.py",
+      "start": 59,
+      "end": 60,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_route_table_dod.py",
+      "start": 251,
+      "end": 252,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_slice_e2e.py",
+      "start": 194,
+      "end": 195,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 9,
+    "total_copies": 10
+   },
+   {
+    "repo": "vcap",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "vcap:1:383",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "vcap/app/shared/auth/roster.py",
+     125
+    ],
+    "truth_at": [
+     "vcap/app/shared/auth/roster.py",
+     125
+    ],
+    "benchmark": "real",
+    "row": 3045,
+    "source_file": "vcap/app/shared/auth/roster.py",
+    "old_file_sha256": "a7d7d8d8fe28b695056f3aafc211224cafbe8db1b6e60c224a60adba701db8ff",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "vcap/app/routers/admin.py",
+     146
+    ],
+    "copies": [
+     {
+      "path": "vcap/app/routers/admin.py",
+      "start": 146,
+      "end": 146,
+      "distance": null
+     },
+     {
+      "path": "vcap/app/routers/debug.py",
+      "start": 257,
+      "end": 257,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_browser_auth.py",
+      "start": 311,
+      "end": 311,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 3,
+    "total_copies": 3
+   },
+   {
+    "repo": "vcap",
+    "group": "own",
+    "sample": "targeted",
+    "pair": "vcap:10:380",
+    "horizon": 10,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "vcap/app/shared/auth/roster.py",
+     125
+    ],
+    "truth_at": [
+     "vcap/app/shared/auth/roster.py",
+     125
+    ],
+    "benchmark": "real",
+    "row": 3738,
+    "source_file": "vcap/app/shared/auth/roster.py",
+    "old_file_sha256": "a7d7d8d8fe28b695056f3aafc211224cafbe8db1b6e60c224a60adba701db8ff",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "vcap/app/routers/admin.py",
+     146
+    ],
+    "copies": [
+     {
+      "path": "vcap/app/routers/admin.py",
+      "start": 146,
+      "end": 146,
+      "distance": null
+     },
+     {
+      "path": "vcap/app/routers/debug.py",
+      "start": 257,
+      "end": 257,
+      "distance": null
+     },
+     {
+      "path": "vcap/tests/shared/test_browser_auth.py",
+      "start": 311,
+      "end": 311,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 3,
+    "total_copies": 3
+   },
+   {
+    "repo": "flask",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "flask:1:173",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "src/flask/ctx.py",
+     216
+    ],
+    "truth_at": [
+     "src/flask/ctx.py",
+     216
+    ],
+    "benchmark": "real",
+    "row": 5652,
+    "source_file": "src/flask/ctx.py",
+    "old_file_sha256": "757d602cd9230251a7c8a229ad07b85a48da6101ca91b48423768a4c7ead43e7",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "src/flask/ctx.py",
+     226
+    ],
+    "copies": [
+     {
+      "path": "src/flask/ctx.py",
+      "start": 226,
+      "end": 226,
+      "distance": 10
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "flask",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "flask:1:173",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "src/flask/ctx.py",
+     226
+    ],
+    "truth_at": [
+     "src/flask/ctx.py",
+     226
+    ],
+    "benchmark": "real",
+    "row": 5653,
+    "source_file": "src/flask/ctx.py",
+    "old_file_sha256": "757d602cd9230251a7c8a229ad07b85a48da6101ca91b48423768a4c7ead43e7",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "src/flask/ctx.py",
+     216
+    ],
+    "copies": [
+     {
+      "path": "src/flask/ctx.py",
+      "start": 216,
+      "end": 216,
+      "distance": -10
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "flask",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "flask:10:170",
+    "horizon": 10,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "src/flask/ctx.py",
+     216
+    ],
+    "truth_at": [
+     "src/flask/ctx.py",
+     216
+    ],
+    "benchmark": "real",
+    "row": 6576,
+    "source_file": "src/flask/ctx.py",
+    "old_file_sha256": "757d602cd9230251a7c8a229ad07b85a48da6101ca91b48423768a4c7ead43e7",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "src/flask/ctx.py",
+     226
+    ],
+    "copies": [
+     {
+      "path": "src/flask/ctx.py",
+      "start": 226,
+      "end": 226,
+      "distance": 10
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "httpx",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "httpx:1:267",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "tests/client/test_proxies.py",
+     53
+    ],
+    "truth_at": [
+     "tests/client/test_proxies.py",
+     70
+    ],
+    "benchmark": "real",
+    "row": 9824,
+    "source_file": "tests/client/test_proxies.py",
+    "old_file_sha256": "1e900b52a667efc275aa189beefc864f949e3782826637e46b3e7d07cdb96109",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "tests/client/test_proxies.py",
+     55
+    ],
+    "copies": [
+     {
+      "path": "tests/client/test_proxies.py",
+      "start": 55,
+      "end": 55,
+      "distance": 2
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "httpx",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "httpx:1:398",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "tests/models/test_responses.py",
+     1014
+    ],
+    "truth_at": [
+     "tests/models/test_responses.py",
+     1017
+    ],
+    "benchmark": "real",
+    "row": 10218,
+    "source_file": "tests/models/test_responses.py",
+    "old_file_sha256": "b0c0f9ad34d0baf92d34ef447e4b6a8d00f78f316fa132258acb099e6c66dff1",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "tests/client/test_client.py",
+     434
+    ],
+    "copies": [
+     {
+      "path": "tests/client/test_client.py",
+      "start": 434,
+      "end": 434,
+      "distance": null
+     },
+     {
+      "path": "tests/client/test_client.py",
+      "start": 461,
+      "end": 461,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 2,
+    "total_copies": 2
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:109",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "rich/progress.py",
+     559
+    ],
+    "truth_at": [
+     "rich/progress.py",
+     559
+    ],
+    "benchmark": "real",
+    "row": 11000,
+    "source_file": "rich/progress.py",
+    "old_file_sha256": "7dc8837a7ac571a911dfd45ee35003761ca87101a01dfd8d19bf1e970b36777f",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/console.py",
+     478
+    ],
+    "copies": [
+     {
+      "path": "rich/console.py",
+      "start": 478,
+      "end": 478,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "uniform",
+    "pair": "rich:1:271",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "rich/layout.py",
+     133
+    ],
+    "truth_at": [
+     "rich/layout.py",
+     224
+    ],
+    "benchmark": "real",
+    "row": 11464,
+    "source_file": "rich/layout.py",
+    "old_file_sha256": "b04da489bc667c59adefe4643f260955a513f7c7e9020be0fecd254987dd25a1",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/align.py",
+     289
+    ],
+    "copies": [
+     {
+      "path": "rich/align.py",
+      "start": 289,
+      "end": 289,
+      "distance": null
+     },
+     {
+      "path": "rich/pretty.py",
+      "start": 22,
+      "end": 22,
+      "distance": null
+     },
+     {
+      "path": "rich/table.py",
+      "start": 846,
+      "end": 846,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 3,
+    "total_copies": 3
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:271",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "rich/bar.py",
+     52
+    ],
+    "truth_at": [
+     "rich/bar.py",
+     52
+    ],
+    "benchmark": "real",
+    "row": 11468,
+    "source_file": "rich/bar.py",
+    "old_file_sha256": "9153a3c30ebc3af8d9b091f84c629ceeb771696805d8ce989660379247e43386",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/progress_bar.py",
+     158
+    ],
+    "copies": [
+     {
+      "path": "rich/progress_bar.py",
+      "start": 158,
+      "end": 158,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:271",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "rich/layout.py",
+     133
+    ],
+    "truth_at": [
+     "rich/layout.py",
+     224
+    ],
+    "benchmark": "real",
+    "row": 11473,
+    "source_file": "rich/layout.py",
+    "old_file_sha256": "b04da489bc667c59adefe4643f260955a513f7c7e9020be0fecd254987dd25a1",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/align.py",
+     289
+    ],
+    "copies": [
+     {
+      "path": "rich/align.py",
+      "start": 289,
+      "end": 289,
+      "distance": null
+     },
+     {
+      "path": "rich/pretty.py",
+      "start": 22,
+      "end": 22,
+      "distance": null
+     },
+     {
+      "path": "rich/table.py",
+      "start": 846,
+      "end": 846,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 3,
+    "total_copies": 3
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:461",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "tests/test_log.py",
+     18
+    ],
+    "truth_at": [
+     "tests/test_log.py",
+     17
+    ],
+    "benchmark": "real",
+    "row": 11929,
+    "source_file": "tests/test_log.py",
+    "old_file_sha256": "69b7d05cc69bec33f08665be61339724ea44d9acf81e04190865a9a3846cc5b0",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "tests/render.py",
+     15
+    ],
+    "copies": [
+     {
+      "path": "tests/render.py",
+      "start": 15,
+      "end": 15,
+      "distance": null
+     },
+     {
+      "path": "tests/test_card.py",
+      "start": 17,
+      "end": 17,
+      "distance": null
+     },
+     {
+      "path": "tests/test_markdown.py",
+      "start": 87,
+      "end": 87,
+      "distance": null
+     },
+     {
+      "path": "tests/test_markdown_no_hyperlinks.py",
+      "start": 81,
+      "end": 81,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 4,
+    "total_copies": 4
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "uniform",
+    "pair": "rich:1:524",
+    "horizon": 1,
+    "cls": "gone",
+    "how": "deleted",
+    "span": 1,
+    "anchor_at": [
+     "rich/jupyter.py",
+     78
+    ],
+    "truth_at": null,
+    "benchmark": "real",
+    "row": 12116,
+    "source_file": "rich/jupyter.py",
+    "old_file_sha256": "3c73b4ec691478711556c8c46edc4b2ee343c2a9834aea2a95e0672fb7cdd080",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "rich/jupyter.py",
+     80
+    ],
+    "copies": [
+     {
+      "path": "rich/jupyter.py",
+      "start": 80,
+      "end": 80,
+      "distance": 2
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:524",
+    "horizon": 1,
+    "cls": "gone",
+    "how": "deleted",
+    "span": 1,
+    "anchor_at": [
+     "rich/jupyter.py",
+     78
+    ],
+    "truth_at": null,
+    "benchmark": "real",
+    "row": 12125,
+    "source_file": "rich/jupyter.py",
+    "old_file_sha256": "3c73b4ec691478711556c8c46edc4b2ee343c2a9834aea2a95e0672fb7cdd080",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "rich/jupyter.py",
+     80
+    ],
+    "copies": [
+     {
+      "path": "rich/jupyter.py",
+      "start": 80,
+      "end": 80,
+      "distance": 2
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:951",
+    "horizon": 1,
+    "cls": "gone",
+    "how": "deleted",
+    "span": 1,
+    "anchor_at": [
+     "rich/tree.py",
+     86
+    ],
+    "truth_at": null,
+    "benchmark": "real",
+    "row": 13373,
+    "source_file": "rich/tree.py",
+    "old_file_sha256": "dd2d1e030dad59855837262d130af3b3b45b51f4f0003c48368ae45e789dfb1b",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "rich/tree.py",
+     29
+    ],
+    "copies": [
+     {
+      "path": "rich/tree.py",
+      "start": 29,
+      "end": 29,
+      "distance": -57
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:951",
+    "horizon": 1,
+    "cls": "gone",
+    "how": "deleted",
+    "span": 5,
+    "anchor_at": [
+     "rich/tree.py",
+     87
+    ],
+    "truth_at": null,
+    "benchmark": "real",
+    "row": 13374,
+    "source_file": "rich/tree.py",
+    "old_file_sha256": "dd2d1e030dad59855837262d130af3b3b45b51f4f0003c48368ae45e789dfb1b",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "rich/tree.py",
+     30
+    ],
+    "copies": [
+     {
+      "path": "rich/tree.py",
+      "start": 30,
+      "end": 34,
+      "distance": -57
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:1:1024",
+    "horizon": 1,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "rich/syntax.py",
+     610
+    ],
+    "truth_at": [
+     "rich/syntax.py",
+     625
+    ],
+    "benchmark": "real",
+    "row": 13602,
+    "source_file": "rich/syntax.py",
+    "old_file_sha256": "358d43448a97064144c6e76ac66e4adc1257142b6d37adc017fdc8640bed2cc8",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/panel.py",
+     282
+    ],
+    "copies": [
+     {
+      "path": "rich/panel.py",
+      "start": 282,
+      "end": 282,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:10:100",
+    "horizon": 10,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "rich/progress.py",
+     559
+    ],
+    "truth_at": [
+     "rich/progress.py",
+     559
+    ],
+    "benchmark": "real",
+    "row": 13943,
+    "source_file": "rich/progress.py",
+    "old_file_sha256": "7dc8837a7ac571a911dfd45ee35003761ca87101a01dfd8d19bf1e970b36777f",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/console.py",
+     478
+    ],
+    "copies": [
+     {
+      "path": "rich/console.py",
+      "start": 478,
+      "end": 478,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:10:520",
+    "horizon": 10,
+    "cls": "gone",
+    "how": "deleted",
+    "span": 1,
+    "anchor_at": [
+     "rich/jupyter.py",
+     78
+    ],
+    "truth_at": null,
+    "benchmark": "real",
+    "row": 14414,
+    "source_file": "rich/jupyter.py",
+    "old_file_sha256": "3c73b4ec691478711556c8c46edc4b2ee343c2a9834aea2a95e0672fb7cdd080",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "rich/jupyter.py",
+     80
+    ],
+    "copies": [
+     {
+      "path": "rich/jupyter.py",
+      "start": 80,
+      "end": 80,
+      "distance": 2
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "uniform",
+    "pair": "rich:10:750",
+    "horizon": 10,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "examples/fullscreen.py",
+     66
+    ],
+    "truth_at": [
+     "examples/fullscreen.py",
+     57
+    ],
+    "benchmark": "real",
+    "row": 14667,
+    "source_file": "examples/fullscreen.py",
+    "old_file_sha256": "676f49f99a236cb44dd13db5af042ca29a03ed19385b20472b81b6831d8e228a",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/__main__.py",
+     263
+    ],
+    "copies": [
+     {
+      "path": "rich/__main__.py",
+      "start": 263,
+      "end": 263,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:10:950",
+    "horizon": 10,
+    "cls": "gone",
+    "how": "deleted",
+    "span": 5,
+    "anchor_at": [
+     "rich/tree.py",
+     87
+    ],
+    "truth_at": null,
+    "benchmark": "real",
+    "row": 14915,
+    "source_file": "rich/tree.py",
+    "old_file_sha256": "dd2d1e030dad59855837262d130af3b3b45b51f4f0003c48368ae45e789dfb1b",
+    "label": "moved",
+    "tier": "same_exact",
+    "placement": [
+     "rich/tree.py",
+     31
+    ],
+    "copies": [
+     {
+      "path": "rich/tree.py",
+      "start": 31,
+      "end": 35,
+      "distance": -56
+     }
+    ],
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "total_copies": 1
+   },
+   {
+    "repo": "rich",
+    "group": "oss",
+    "sample": "targeted",
+    "pair": "rich:10:1020",
+    "horizon": 10,
+    "cls": "edited",
+    "how": "edited",
+    "span": 1,
+    "anchor_at": [
+     "rich/syntax.py",
+     610
+    ],
+    "truth_at": [
+     "rich/syntax.py",
+     625
+    ],
+    "benchmark": "real",
+    "row": 14993,
+    "source_file": "rich/syntax.py",
+    "old_file_sha256": "358d43448a97064144c6e76ac66e4adc1257142b6d37adc017fdc8640bed2cc8",
+    "label": "moved",
+    "tier": "cross_exact",
+    "placement": [
+     "rich/panel.py",
+     282
+    ],
+    "copies": [
+     {
+      "path": "rich/panel.py",
+      "start": 282,
+      "end": 282,
+      "distance": null
+     }
+    ],
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "total_copies": 1
+   }
+  ],
+  "marginal_groups": {
+   "tier": {
+    "cross_exact": 23,
+    "same_exact": 14
+   },
+   "label": {
+    "moved": 37
+   },
+   "cls": {
+    "edited": 30,
+    "gone": 7
+   },
+   "how": {
+    "edited": 24,
+    "aligned": 6,
+    "deleted": 7
+   },
+   "repo": {
+    "p4": 1,
+    "p3": 10,
+    "vcap": 6,
+    "flask": 3,
+    "httpx": 2,
+    "rich": 15
+   },
+   "horizon": {
+    "1": 29,
+    "10": 8
+   },
+   "span": {
+    "2": 2,
+    "1": 27,
+    "7": 2,
+    "4": 2,
+    "10": 2,
+    "5": 2
+   },
+   "same_file_copies": {
+    "0": 23,
+    "1": 14
+   },
+   "other_file_copies": {
+    "1": 13,
+    "2": 2,
+    "0": 13,
+    "8": 1,
+    "22": 2,
+    "9": 1,
+    "3": 4,
+    "4": 1
+   },
+   "total_copies": {
+    "1": 26,
+    "2": 2,
+    "8": 1,
+    "22": 2,
+    "10": 1,
+    "3": 4,
+    "4": 1
+   }
+  },
+  "joint_groups": [
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "p4",
+    "horizon": 1,
+    "span": 2,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 2,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "aligned",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 7,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 2
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "aligned",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 4,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 1
+   },
+   {
+    "tier": "same_exact",
+    "cls": "gone",
+    "how": "deleted",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 1
+   },
+   {
+    "tier": "same_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 10,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "p3",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 8,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "p3",
+    "horizon": 10,
+    "span": 10,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "aligned",
+    "repo": "vcap",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 22,
+    "n": 2
+   },
+   {
+    "tier": "same_exact",
+    "cls": "edited",
+    "how": "aligned",
+    "repo": "vcap",
+    "horizon": 1,
+    "span": 4,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   },
+   {
+    "tier": "same_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "vcap",
+    "horizon": 1,
+    "span": 2,
+    "same_file_copies": 1,
+    "other_file_copies": 9,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "vcap",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 3,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "vcap",
+    "horizon": 10,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 3,
+    "n": 1
+   },
+   {
+    "tier": "same_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "flask",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 2
+   },
+   {
+    "tier": "same_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "flask",
+    "horizon": 10,
+    "span": 1,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   },
+   {
+    "tier": "same_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "httpx",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "httpx",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 2,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "rich",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 3
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "rich",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 3,
+    "n": 2
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "rich",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 4,
+    "n": 1
+   },
+   {
+    "tier": "same_exact",
+    "cls": "gone",
+    "how": "deleted",
+    "repo": "rich",
+    "horizon": 1,
+    "span": 1,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 3
+   },
+   {
+    "tier": "same_exact",
+    "cls": "gone",
+    "how": "deleted",
+    "repo": "rich",
+    "horizon": 1,
+    "span": 5,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   },
+   {
+    "tier": "cross_exact",
+    "cls": "edited",
+    "how": "edited",
+    "repo": "rich",
+    "horizon": 10,
+    "span": 1,
+    "same_file_copies": 0,
+    "other_file_copies": 1,
+    "n": 3
+   },
+   {
+    "tier": "same_exact",
+    "cls": "gone",
+    "how": "deleted",
+    "repo": "rich",
+    "horizon": 10,
+    "span": 1,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   },
+   {
+    "tier": "same_exact",
+    "cls": "gone",
+    "how": "deleted",
+    "repo": "rich",
+    "horizon": 10,
+    "span": 5,
+    "same_file_copies": 1,
+    "other_file_copies": 0,
+    "n": 1
+   }
+  ],
+  "controlled_failure_cases": [
+   {
+    "benchmark": "main",
+    "row": 1509,
+    "cls": "shifted",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     74
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     125
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+    "span": 10,
+    "op": "move_within",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1509",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      157
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 74,
+      "end": 83,
+      "distance": -51
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 157,
+      "end": 166,
+      "distance": 32
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1521,
+    "cls": "shifted",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     52
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     160
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+    "span": 8,
+    "op": "move_within",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1521",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      136
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 52,
+      "end": 59,
+      "distance": -108
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 136,
+      "end": 143,
+      "distance": -24
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1599,
+    "cls": "shifted",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     42
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     158
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+    "span": 8,
+    "op": "move_within",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1599",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      134
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 42,
+      "end": 49,
+      "distance": -116
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 134,
+      "end": 141,
+      "distance": -24
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1819,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/review_copilot/models/interaction.py",
+     112
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+     47
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+    "span": 6,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1819",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      55
+     ],
+     "tier": "local",
+     "similarity": 0.9565217391304348
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_copilot/models/interaction.py",
+      "start": 112,
+      "end": 117,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9565217391304348,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      55
+     ]
+    ],
+    "whole": [
+     0.9565217391304348,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      55
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1826,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/agent/mcp_bridge.py",
+     628
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     82
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 3,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1826",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      86
+     ],
+     "tier": "local",
+     "similarity": 0.945054945054945
+    },
+    "copies": [
+     {
+      "path": "app/modules/agent/mcp_bridge.py",
+      "start": 628,
+      "end": 630,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.945054945054945,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      86
+     ]
+    ],
+    "whole": [
+     0.945054945054945,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      86
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1836,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/preflight/persistence.py",
+     47
+    ],
+    "anchor_at": [
+     "app/modules/agent/gateway.py",
+     155
+    ],
+    "source_file": "app/modules/agent/gateway.py",
+    "span": 3,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1836",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/agent/gateway.py",
+      160
+     ],
+     "tier": "local",
+     "similarity": 0.8981481481481481
+    },
+    "copies": [
+     {
+      "path": "app/modules/preflight/persistence.py",
+      "start": 47,
+      "end": 49,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8981481481481481,
+     [
+      "app/modules/agent/gateway.py",
+      160
+     ]
+    ],
+    "whole": [
+     0.8981481481481481,
+     [
+      "app/modules/agent/gateway.py",
+      160
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1849,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     1
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/services/obligation_ledger.py",
+     140
+    ],
+    "source_file": "app/modules/review_copilot/services/obligation_ledger.py",
+    "span": 8,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1849",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/obligation_ledger.py",
+      143
+     ],
+     "tier": "local",
+     "similarity": 0.9014084507042254
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 1,
+      "end": 8,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9014084507042254,
+     [
+      "app/modules/review_copilot/services/obligation_ledger.py",
+      143
+     ]
+    ],
+    "whole": [
+     0.9014084507042254,
+     [
+      "app/modules/review_copilot/services/obligation_ledger.py",
+      143
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1898,
+    "cls": "moved file",
+    "truth_at": [
+     "app/shared/auth/routes.py",
+     51
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     158
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+    "span": 4,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1898",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      126
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 126,
+      "end": 129,
+      "distance": -32
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/summary.py",
+      "start": 100,
+      "end": 103,
+      "distance": null
+     },
+     {
+      "path": "app/shared/auth/routes.py",
+      "start": 51,
+      "end": 54,
+      "distance": null
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1906,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/review_studio/annotations.py",
+     41
+    ],
+    "anchor_at": [
+     "app/modules/academic/models.py",
+     492
+    ],
+    "source_file": "app/modules/academic/models.py",
+    "span": 1,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1906",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/academic/models.py",
+      491
+     ],
+     "tier": "local",
+     "similarity": 0.8947368421052632
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_studio/annotations.py",
+      "start": 41,
+      "end": 41,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8947368421052632,
+     [
+      "app/modules/academic/models.py",
+      491
+     ]
+    ],
+    "whole": [
+     0.8947368421052632,
+     [
+      "app/modules/academic/models.py",
+      491
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1975,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/review_copilot/models/interaction.py",
+     116
+    ],
+    "anchor_at": [
+     "app/routers/notifications.py",
+     74
+    ],
+    "source_file": "app/routers/notifications.py",
+    "span": 3,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1975",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/routers/notifications.py",
+      127
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/routers/notifications.py",
+      "start": 127,
+      "end": 129,
+      "distance": 53
+     },
+     {
+      "path": "app/modules/review_copilot/models/interaction.py",
+      "start": 116,
+      "end": 118,
+      "distance": null
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1980,
+    "cls": "moved file",
+    "truth_at": [
+     "app/workers/beat_schedule.py",
+     26
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     66
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 4,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1980",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      61
+     ],
+     "tier": "local",
+     "similarity": 0.9411764705882353
+    },
+    "copies": [
+     {
+      "path": "app/workers/beat_schedule.py",
+      "start": 26,
+      "end": 29,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9411764705882353,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      61
+     ]
+    ],
+    "whole": [
+     0.9411764705882353,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      61
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 1991,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+     46
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     58
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 3,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:1991",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+      16
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+      "start": 16,
+      "end": 17,
+      "distance": null
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      "start": 46,
+      "end": 47,
+      "distance": null
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      "start": 109,
+      "end": 110,
+      "distance": null
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      "start": 10,
+      "end": 11,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.5945945945945946,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      49
+     ]
+    ],
+    "whole": [
+     0.6470588235294118,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      45
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2434,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/preflight/handoff.py",
+     333
+    ],
+    "anchor_at": [
+     "app/modules/preflight/handoff.py",
+     333
+    ],
+    "source_file": "app/modules/preflight/handoff.py",
+    "span": 4,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2434",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/preflight/handoff.py",
+      332
+     ],
+     "tier": "local",
+     "similarity": 0.9931350114416476
+    },
+    "copies": [],
+    "local": [
+     0.9931350114416476,
+     [
+      "app/modules/preflight/handoff.py",
+      332
+     ]
+    ],
+    "whole": [
+     0.9931350114416476,
+     [
+      "app/modules/preflight/handoff.py",
+      332
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2513,
+    "cls": "edited",
+    "truth_at": [
+     "app/main.py",
+     423
+    ],
+    "anchor_at": [
+     "app/main.py",
+     423
+    ],
+    "source_file": "app/main.py",
+    "span": 3,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2513",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/main.py",
+      422
+     ],
+     "tier": "local",
+     "similarity": 0.9879518072289156
+    },
+    "copies": [],
+    "local": [
+     0.9879518072289156,
+     [
+      "app/main.py",
+      422
+     ]
+    ],
+    "whole": [
+     0.9879518072289156,
+     [
+      "app/main.py",
+      422
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2515,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_copilot/services/analysis_bundles.py",
+     60
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/services/analysis_bundles.py",
+     60
+    ],
+    "source_file": "app/modules/review_copilot/services/analysis_bundles.py",
+    "span": 5,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2515",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/analysis_bundles.py",
+      59
+     ],
+     "tier": "local",
+     "similarity": 0.9608540925266904
+    },
+    "copies": [],
+    "local": [
+     0.9608540925266904,
+     [
+      "app/modules/review_copilot/services/analysis_bundles.py",
+      59
+     ]
+    ],
+    "whole": [
+     0.9608540925266904,
+     [
+      "app/modules/review_copilot/services/analysis_bundles.py",
+      59
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2531,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/database.py",
+     38
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/database.py",
+     38
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/database.py",
+    "span": 6,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2531",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      37
+     ],
+     "tier": "local",
+     "similarity": 0.9639344262295082
+    },
+    "copies": [],
+    "local": [
+     0.9639344262295082,
+     [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      37
+     ]
+    ],
+    "whole": [
+     0.9639344262295082,
+     [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      37
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2533,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_studio/media.py",
+     26
+    ],
+    "anchor_at": [
+     "app/modules/review_studio/media.py",
+     26
+    ],
+    "source_file": "app/modules/review_studio/media.py",
+    "span": 3,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2533",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_studio/media.py",
+      25
+     ],
+     "tier": "local",
+     "similarity": 0.9861751152073732
+    },
+    "copies": [],
+    "local": [
+     0.9861751152073732,
+     [
+      "app/modules/review_studio/media.py",
+      25
+     ]
+    ],
+    "whole": [
+     0.9861751152073732,
+     [
+      "app/modules/review_studio/media.py",
+      25
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2535,
+    "cls": "edited",
+    "truth_at": [
+     "app/shared/provider_observation.py",
+     92
+    ],
+    "anchor_at": [
+     "app/shared/provider_observation.py",
+     92
+    ],
+    "source_file": "app/shared/provider_observation.py",
+    "span": 10,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2535",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/shared/provider_observation.py",
+      91
+     ],
+     "tier": "local",
+     "similarity": 0.9946524064171123
+    },
+    "copies": [],
+    "local": [
+     0.9946524064171123,
+     [
+      "app/shared/provider_observation.py",
+      91
+     ]
+    ],
+    "whole": [
+     0.9946524064171123,
+     [
+      "app/shared/provider_observation.py",
+      91
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2548,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/partners/vendor/ocel/analyze_team1_synthetic.py",
+     191
+    ],
+    "anchor_at": [
+     "app/modules/partners/vendor/ocel/analyze_team1_synthetic.py",
+     191
+    ],
+    "source_file": "app/modules/partners/vendor/ocel/analyze_team1_synthetic.py",
+    "span": 3,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2548",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/partners/vendor/ocel/analyze_team1_synthetic.py",
+      192
+     ],
+     "tier": "local",
+     "similarity": 0.9830508474576272
+    },
+    "copies": [],
+    "local": [
+     0.9830508474576272,
+     [
+      "app/modules/partners/vendor/ocel/analyze_team1_synthetic.py",
+      192
+     ]
+    ],
+    "whole": [
+     0.9830508474576272,
+     [
+      "app/modules/partners/vendor/ocel/analyze_team1_synthetic.py",
+      192
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2562,
+    "cls": "edited",
+    "truth_at": [
+     "app/routers/pre_band_store.py",
+     28
+    ],
+    "anchor_at": [
+     "app/routers/pre_band_store.py",
+     28
+    ],
+    "source_file": "app/routers/pre_band_store.py",
+    "span": 5,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2562",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/routers/pre_band_store.py",
+      29
+     ],
+     "tier": "local",
+     "similarity": 0.9823008849557522
+    },
+    "copies": [],
+    "local": [
+     0.9823008849557522,
+     [
+      "app/routers/pre_band_store.py",
+      29
+     ]
+    ],
+    "whole": [
+     0.9823008849557522,
+     [
+      "app/routers/pre_band_store.py",
+      29
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2567,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/fixtures.py",
+     197
+    ],
+    "anchor_at": [
+     "app/modules/demo/fixtures.py",
+     197
+    ],
+    "source_file": "app/modules/demo/fixtures.py",
+    "span": 2,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2567",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/fixtures.py",
+      160
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/fixtures.py",
+      "start": 160,
+      "end": 161,
+      "distance": -37
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2573,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     66
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     66
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 1,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2573",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      61
+     ],
+     "tier": "local",
+     "similarity": 0.9705882352941176
+    },
+    "copies": [],
+    "local": [
+     0.9705882352941176,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      61
+     ]
+    ],
+    "whole": [
+     0.9705882352941176,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      61
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2584,
+    "cls": "edited",
+    "truth_at": [
+     "app/routers/review_studio.py",
+     284
+    ],
+    "anchor_at": [
+     "app/routers/review_studio.py",
+     284
+    ],
+    "source_file": "app/routers/review_studio.py",
+    "span": 8,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2584",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/routers/review_studio.py",
+      283
+     ],
+     "tier": "local",
+     "similarity": 0.996547756041427
+    },
+    "copies": [],
+    "local": [
+     0.996547756041427,
+     [
+      "app/routers/review_studio.py",
+      283
+     ]
+    ],
+    "whole": [
+     0.996547756041427,
+     [
+      "app/routers/review_studio.py",
+      283
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2586,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_copilot/models/interaction.py",
+     198
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/models/interaction.py",
+     198
+    ],
+    "source_file": "app/modules/review_copilot/models/interaction.py",
+    "span": 4,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2586",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/models/interaction.py",
+      197
+     ],
+     "tier": "local",
+     "similarity": 0.9853658536585366
+    },
+    "copies": [],
+    "local": [
+     0.9853658536585366,
+     [
+      "app/modules/review_copilot/models/interaction.py",
+      197
+     ]
+    ],
+    "whole": [
+     0.9853658536585366,
+     [
+      "app/modules/review_copilot/models/interaction.py",
+      197
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2697,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+     48
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+     48
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+    "span": 2,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2697",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      62
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      "start": 62,
+      "end": 63,
+      "distance": 14
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      "start": 76,
+      "end": 77,
+      "distance": 28
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2703,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/app.py",
+     61
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/app.py",
+     47
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/app.py",
+    "span": 7,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2703",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      60
+     ],
+     "tier": "local",
+     "similarity": 0.9925558312655087
+    },
+    "copies": [],
+    "local": [
+     0.9925558312655087,
+     [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      60
+     ]
+    ],
+    "whole": [
+     0.9925558312655087,
+     [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      60
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2750,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     94
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     81
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 7,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2750",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      93
+     ],
+     "tier": "local",
+     "similarity": 0.9925925925925926
+    },
+    "copies": [],
+    "local": [
+     0.9925925925925926,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      93
+     ]
+    ],
+    "whole": [
+     0.9925925925925926,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      93
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2765,
+    "cls": "edited",
+    "truth_at": [
+     "app/main.py",
+     381
+    ],
+    "anchor_at": [
+     "app/main.py",
+     346
+    ],
+    "source_file": "app/main.py",
+    "span": 1,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2765",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/main.py",
+      340
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/main.py",
+      "start": 340,
+      "end": 340,
+      "distance": -6
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2781,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/research/models.py",
+     76
+    ],
+    "anchor_at": [
+     "app/modules/research/models.py",
+     60
+    ],
+    "source_file": "app/modules/research/models.py",
+    "span": 5,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2781",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/research/models.py",
+      75
+     ],
+     "tier": "local",
+     "similarity": 0.9924050632911392
+    },
+    "copies": [],
+    "local": [
+     0.9924050632911392,
+     [
+      "app/modules/research/models.py",
+      75
+     ]
+    ],
+    "whole": [
+     0.9924050632911392,
+     [
+      "app/modules/research/models.py",
+      75
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2860,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/database.py",
+     93
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/database.py",
+     64
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/database.py",
+    "span": 2,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2860",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      94
+     ],
+     "tier": "local",
+     "similarity": 0.9183673469387755
+    },
+    "copies": [],
+    "local": [
+     0.9183673469387755,
+     [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      94
+     ]
+    ],
+    "whole": [
+     0.9183673469387755,
+     [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      94
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2871,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/app.py",
+     63
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/app.py",
+     27
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/app.py",
+    "span": 4,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2871",
+    "cause": "other",
+    "output": {
+     "label": "removed",
+     "placement": null,
+     "tier": "no_match"
+    },
+    "copies": [],
+    "local": [
+     0.2714285714285714,
+     [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      21
+     ]
+    ],
+    "whole": [
+     0.9837837837837838,
+     [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      63
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2903,
+    "cls": "edited",
+    "truth_at": [
+     "app/shared/auth/sessions.py",
+     175
+    ],
+    "anchor_at": [
+     "app/shared/auth/sessions.py",
+     155
+    ],
+    "source_file": "app/shared/auth/sessions.py",
+    "span": 2,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2903",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/shared/auth/sessions.py",
+      176
+     ],
+     "tier": "local",
+     "similarity": 0.9795918367346939
+    },
+    "copies": [],
+    "local": [
+     0.9795918367346939,
+     [
+      "app/shared/auth/sessions.py",
+      176
+     ]
+    ],
+    "whole": [
+     0.9795918367346939,
+     [
+      "app/shared/auth/sessions.py",
+      176
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2919,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/preflight/persistence.py",
+     50
+    ],
+    "anchor_at": [
+     "app/modules/preflight/persistence.py",
+     32
+    ],
+    "source_file": "app/modules/preflight/persistence.py",
+    "span": 2,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2919",
+    "cause": "other",
+    "output": {
+     "label": "removed",
+     "placement": null,
+     "tier": "no_match"
+    },
+    "copies": [],
+    "local": [
+     0.2814070351758794,
+     [
+      "app/modules/preflight/persistence.py",
+      40
+     ]
+    ],
+    "whole": [
+     0.9871244635193133,
+     [
+      "app/modules/preflight/persistence.py",
+      50
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2959,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_copilot/services/arm_lookup.py",
+     60
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/services/arm_lookup.py",
+     44
+    ],
+    "source_file": "app/modules/review_copilot/services/arm_lookup.py",
+    "span": 2,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2959",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/arm_lookup.py",
+      59
+     ],
+     "tier": "local",
+     "similarity": 0.9523809523809523
+    },
+    "copies": [
+     {
+      "path": "app/routers/auth.py",
+      "start": 370,
+      "end": 370,
+      "distance": null
+     },
+     {
+      "path": "app/routers/research.py",
+      "start": 231,
+      "end": 231,
+      "distance": null
+     },
+     {
+      "path": "app/routers/research.py",
+      "start": 291,
+      "end": 291,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9523809523809523,
+     [
+      "app/modules/review_copilot/services/arm_lookup.py",
+      59
+     ]
+    ],
+    "whole": [
+     0.9523809523809523,
+     [
+      "app/modules/review_copilot/services/arm_lookup.py",
+      59
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 2966,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/agent/providers.py",
+     201
+    ],
+    "anchor_at": [
+     "app/modules/agent/providers.py",
+     181
+    ],
+    "source_file": "app/modules/agent/providers.py",
+    "span": 3,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:2966",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/agent/providers.py",
+      200
+     ],
+     "tier": "local",
+     "similarity": 0.9853658536585366
+    },
+    "copies": [],
+    "local": [
+     0.9853658536585366,
+     [
+      "app/modules/agent/providers.py",
+      200
+     ]
+    ],
+    "whole": [
+     0.9853658536585366,
+     [
+      "app/modules/agent/providers.py",
+      200
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3007,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+     48
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+    "span": 3,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3007",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      62
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      "start": 62,
+      "end": 64,
+      "distance": 14
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      "start": 76,
+      "end": 78,
+      "distance": 28
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3012,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/academic/__init__.py",
+     113
+    ],
+    "source_file": "app/modules/academic/__init__.py",
+    "span": 7,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3012",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/academic/services.py",
+      578
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/academic/services.py",
+      "start": 578,
+      "end": 584,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.7398119122257053,
+     [
+      "app/modules/academic/__init__.py",
+      99
+     ]
+    ],
+    "whole": [
+     0.9530201342281879,
+     [
+      "app/modules/academic/__init__.py",
+      51
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3035,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/services/obligation_ledger.py",
+     159
+    ],
+    "source_file": "app/modules/review_copilot/services/obligation_ledger.py",
+    "span": 4,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3035",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/obligation_ledger.py",
+      165
+     ],
+     "tier": "local",
+     "similarity": 0.926829268292683
+    },
+    "copies": [],
+    "local": [
+     0.926829268292683,
+     [
+      "app/modules/review_copilot/services/obligation_ledger.py",
+      165
+     ]
+    ],
+    "whole": [
+     0.926829268292683,
+     [
+      "app/modules/review_copilot/services/obligation_ledger.py",
+      165
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3055,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/agent/executions.py",
+     131
+    ],
+    "source_file": "app/modules/agent/executions.py",
+    "span": 1,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3055",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/agent/executions.py",
+      129
+     ],
+     "tier": "local",
+     "similarity": 0.9585798816568047
+    },
+    "copies": [],
+    "local": [
+     0.9585798816568047,
+     [
+      "app/modules/agent/executions.py",
+      129
+     ]
+    ],
+    "whole": [
+     0.9585798816568047,
+     [
+      "app/modules/agent/executions.py",
+      129
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3103,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_studio/changes.py",
+     134
+    ],
+    "source_file": "app/modules/review_studio/changes.py",
+    "span": 1,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3103",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/agent/mcp_bridge.py",
+      179
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/agent/mcp_bridge.py",
+      "start": 179,
+      "end": 179,
+      "distance": null
+     },
+     {
+      "path": "app/modules/agent/mcp_bridge.py",
+      "start": 484,
+      "end": 484,
+      "distance": null
+     },
+     {
+      "path": "app/modules/agent/mcp_bridge.py",
+      "start": 492,
+      "end": 492,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.48739495798319327,
+     [
+      "app/modules/review_studio/changes.py",
+      134
+     ]
+    ],
+    "whole": [
+     0.8297872340425532,
+     [
+      "app/modules/review_studio/changes.py",
+      8
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3193,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/academic/services.py",
+     518
+    ],
+    "source_file": "app/modules/academic/services.py",
+    "span": 2,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3193",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/academic/services.py",
+      512
+     ],
+     "tier": "local",
+     "similarity": 0.9467455621301775
+    },
+    "copies": [],
+    "local": [
+     0.9467455621301775,
+     [
+      "app/modules/academic/services.py",
+      512
+     ]
+    ],
+    "whole": [
+     0.9467455621301775,
+     [
+      "app/modules/academic/services.py",
+      512
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3196,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/services/detectors/base.py",
+     53
+    ],
+    "source_file": "app/modules/review_copilot/services/detectors/base.py",
+    "span": 2,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3196",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/review_copilot/services/obligation_ledger.py",
+      65
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_copilot/services/obligation_ledger.py",
+      "start": 65,
+      "end": 65,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.3302752293577982,
+     [
+      "app/modules/review_copilot/services/detectors/base.py",
+      47
+     ]
+    ],
+    "whole": [
+     0.3302752293577982,
+     [
+      "app/modules/review_copilot/services/detectors/base.py",
+      47
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3209,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     158
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+    "span": 10,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3209",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      126
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 126,
+      "end": 135,
+      "distance": -32
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3269,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+     61
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+    "span": 10,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3269",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      48
+     ],
+     "tier": "local",
+     "similarity": 0.9228395061728395
+    },
+    "copies": [],
+    "local": [
+     0.9228395061728395,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      48
+     ]
+    ],
+    "whole": [
+     0.9228395061728395,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      48
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3404,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     24
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 6,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3404",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      13
+     ],
+     "tier": "local",
+     "similarity": 0.9893617021276596
+    },
+    "copies": [],
+    "local": [
+     0.9893617021276596,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      13
+     ]
+    ],
+    "whole": [
+     0.9893617021276596,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      13
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3414,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+     146
+    ],
+    "source_file": "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3414",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+      140
+     ],
+     "tier": "local",
+     "similarity": 0.9166666666666666
+    },
+    "copies": [],
+    "local": [
+     0.9166666666666666,
+     [
+      "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+      140
+     ]
+    ],
+    "whole": [
+     0.9166666666666666,
+     [
+      "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+      140
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3429,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/shared/auth/deps.py",
+     98
+    ],
+    "source_file": "app/shared/auth/deps.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3429",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/shared/auth/deps.py",
+      103
+     ],
+     "tier": "local",
+     "similarity": 0.9148936170212766
+    },
+    "copies": [],
+    "local": [
+     0.9148936170212766,
+     [
+      "app/shared/auth/deps.py",
+      103
+     ]
+    ],
+    "whole": [
+     0.9148936170212766,
+     [
+      "app/shared/auth/deps.py",
+      103
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3454,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     31
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 8,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3454",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      36
+     ],
+     "tier": "local",
+     "similarity": 0.9391304347826087
+    },
+    "copies": [],
+    "local": [
+     0.9391304347826087,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      36
+     ]
+    ],
+    "whole": [
+     0.9391304347826087,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      36
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3464,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/models/feedback.py",
+     203
+    ],
+    "source_file": "app/modules/review_copilot/models/feedback.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3464",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/models/feedback.py",
+      213
+     ],
+     "tier": "local",
+     "similarity": 0.8947368421052632
+    },
+    "copies": [],
+    "local": [
+     0.8947368421052632,
+     [
+      "app/modules/review_copilot/models/feedback.py",
+      213
+     ]
+    ],
+    "whole": [
+     0.8947368421052632,
+     [
+      "app/modules/review_copilot/models/feedback.py",
+      213
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3471,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/academic/models.py",
+     777
+    ],
+    "source_file": "app/modules/academic/models.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3471",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/academic/models.py",
+      773
+     ],
+     "tier": "local",
+     "similarity": 0.9076923076923077
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_studio/models.py",
+      "start": 65,
+      "end": 65,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9076923076923077,
+     [
+      "app/modules/academic/models.py",
+      773
+     ]
+    ],
+    "whole": [
+     0.9354838709677419,
+     [
+      "app/modules/academic/models.py",
+      434
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3477,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+     62
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+    "span": 7,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3477",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      48
+     ],
+     "tier": "local",
+     "similarity": 0.8586666666666667
+    },
+    "copies": [],
+    "local": [
+     0.8586666666666667,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      48
+     ]
+    ],
+    "whole": [
+     0.8586666666666667,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      48
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3495,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+     49
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+    "span": 3,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3495",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      58
+     ],
+     "tier": "local",
+     "similarity": 0.9743589743589743
+    },
+    "copies": [],
+    "local": [
+     0.9743589743589743,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      58
+     ]
+    ],
+    "whole": [
+     0.9743589743589743,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      58
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3515,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/routers/admin.py",
+     377
+    ],
+    "source_file": "app/routers/admin.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3515",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/routers/admin.py",
+      386
+     ],
+     "tier": "local",
+     "similarity": 0.9487179487179487
+    },
+    "copies": [],
+    "local": [
+     0.9487179487179487,
+     [
+      "app/routers/admin.py",
+      386
+     ]
+    ],
+    "whole": [
+     0.9487179487179487,
+     [
+      "app/routers/admin.py",
+      386
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3539,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+     256
+    ],
+    "source_file": "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3539",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+      252
+     ],
+     "tier": "local",
+     "similarity": 0.9090909090909091
+    },
+    "copies": [],
+    "local": [
+     0.9090909090909091,
+     [
+      "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+      252
+     ]
+    ],
+    "whole": [
+     0.9090909090909091,
+     [
+      "app/modules/partners/vendor/ocel/team1_synthetic_ocel.py",
+      252
+     ]
+    ]
+   },
+   {
+    "benchmark": "main",
+    "row": 3593,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/models/student.py",
+     119
+    ],
+    "source_file": "app/modules/review_copilot/models/student.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "main:3593",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/review_studio/models.py",
+      72
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_studio/models.py",
+      "start": 72,
+      "end": 72,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.7421383647798742,
+     [
+      "app/modules/review_copilot/models/student.py",
+      119
+     ]
+    ],
+    "whole": [
+     0.8590604026845637,
+     [
+      "app/modules/review_copilot/models/student.py",
+      29
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 872,
+    "cls": "shifted",
+    "truth_at": [
+     "app/routers/auth.py",
+     336
+    ],
+    "anchor_at": [
+     "app/routers/auth.py",
+     308
+    ],
+    "source_file": "app/routers/auth.py",
+    "span": 3,
+    "op": "insert_above",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:872",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/routers/auth.py",
+      310
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/routers/auth.py",
+      "start": 310,
+      "end": 312,
+      "distance": 2
+     },
+     {
+      "path": "app/routers/auth.py",
+      "start": 336,
+      "end": 338,
+      "distance": 28
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1659,
+    "cls": "shifted",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     11
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     158
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+    "span": 8,
+    "op": "move_within",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1659",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      134
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 11,
+      "end": 18,
+      "distance": -147
+     },
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 134,
+      "end": 141,
+      "distance": -24
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1678,
+    "cls": "shifted",
+    "truth_at": [
+     "app/routers/auth.py",
+     433
+    ],
+    "anchor_at": [
+     "app/routers/auth.py",
+     285
+    ],
+    "source_file": "app/routers/auth.py",
+    "span": 2,
+    "op": "move_within",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1678",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/routers/auth.py",
+      309
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/routers/auth.py",
+      "start": 309,
+      "end": 310,
+      "distance": 24
+     },
+     {
+      "path": "app/routers/auth.py",
+      "start": 433,
+      "end": 434,
+      "distance": 148
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1684,
+    "cls": "shifted",
+    "truth_at": [
+     "app/modules/review_copilot/services/publish_orchestration.py",
+     26
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/services/publish_orchestration.py",
+     104
+    ],
+    "source_file": "app/modules/review_copilot/services/publish_orchestration.py",
+    "span": 2,
+    "op": "move_within",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1684",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/review_copilot/services/publish_orchestration.py",
+      82
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_copilot/services/publish_orchestration.py",
+      "start": 26,
+      "end": 27,
+      "distance": -78
+     },
+     {
+      "path": "app/modules/review_copilot/services/publish_orchestration.py",
+      "start": 82,
+      "end": 83,
+      "distance": -22
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1828,
+    "cls": "moved file",
+    "truth_at": [
+     "app/shared/auth/deps.py",
+     81
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+     90
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+    "span": 4,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1828",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      93
+     ],
+     "tier": "local",
+     "similarity": 0.8877551020408163
+    },
+    "copies": [
+     {
+      "path": "app/shared/auth/deps.py",
+      "start": 81,
+      "end": 84,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8877551020408163,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      93
+     ]
+    ],
+    "whole": [
+     0.8877551020408163,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      54
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1829,
+    "cls": "moved file",
+    "truth_at": [
+     "app/main.py",
+     507
+    ],
+    "anchor_at": [
+     "app/modules/academic/access.py",
+     213
+    ],
+    "source_file": "app/modules/academic/access.py",
+    "span": 2,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1829",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/academic/access.py",
+      176
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/academic/access.py",
+      "start": 54,
+      "end": 55,
+      "distance": -159
+     },
+     {
+      "path": "app/modules/academic/access.py",
+      "start": 73,
+      "end": 74,
+      "distance": -140
+     },
+     {
+      "path": "app/modules/academic/access.py",
+      "start": 124,
+      "end": 125,
+      "distance": -89
+     },
+     {
+      "path": "app/modules/academic/access.py",
+      "start": 176,
+      "end": 177,
+      "distance": -37
+     },
+     {
+      "path": "app/main.py",
+      "start": 507,
+      "end": 508,
+      "distance": null
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1830,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/agent/conversation_tools.py",
+     80
+    ],
+    "anchor_at": [
+     "cdc/codebase.py",
+     229
+    ],
+    "source_file": "cdc/codebase.py",
+    "span": 2,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1830",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "cdc/codebase.py",
+      209
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "cdc/codebase.py",
+      "start": 175,
+      "end": 176,
+      "distance": -54
+     },
+     {
+      "path": "cdc/codebase.py",
+      "start": 209,
+      "end": 210,
+      "distance": -20
+     },
+     {
+      "path": "app/modules/agent/conversation_tools.py",
+      "start": 80,
+      "end": 81,
+      "distance": null
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1841,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/review_studio/carry.py",
+     50
+    ],
+    "anchor_at": [
+     "app/modules/artifacts/store.py",
+     148
+    ],
+    "source_file": "app/modules/artifacts/store.py",
+    "span": 2,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1841",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/artifacts/store.py",
+      154
+     ],
+     "tier": "local",
+     "similarity": 0.8830409356725146
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_studio/carry.py",
+      "start": 50,
+      "end": 51,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8830409356725146,
+     [
+      "app/modules/artifacts/store.py",
+      154
+     ]
+    ],
+    "whole": [
+     0.8830409356725146,
+     [
+      "app/modules/artifacts/store.py",
+      154
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1846,
+    "cls": "moved file",
+    "truth_at": [
+     "app/routers/repository.py",
+     299
+    ],
+    "anchor_at": [
+     "app/modules/academic/models.py",
+     235
+    ],
+    "source_file": "app/modules/academic/models.py",
+    "span": 2,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1846",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/academic/models.py",
+      232
+     ],
+     "tier": "local",
+     "similarity": 0.9090909090909091
+    },
+    "copies": [
+     {
+      "path": "app/routers/repository.py",
+      "start": 299,
+      "end": 300,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9090909090909091,
+     [
+      "app/modules/academic/models.py",
+      232
+     ]
+    ],
+    "whole": [
+     0.9545454545454546,
+     [
+      "app/modules/academic/models.py",
+      304
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1853,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/preflight/handoff.py",
+     12
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     79
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 7,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1853",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      79
+     ],
+     "tier": "local",
+     "similarity": 0.8609271523178808
+    },
+    "copies": [
+     {
+      "path": "app/modules/preflight/handoff.py",
+      "start": 12,
+      "end": 18,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8609271523178808,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      79
+     ]
+    ],
+    "whole": [
+     0.8609271523178808,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      79
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1909,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/help.py",
+     60
+    ],
+    "anchor_at": [
+     "app/modules/academic/models.py",
+     338
+    ],
+    "source_file": "app/modules/academic/models.py",
+    "span": 2,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1909",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/academic/models.py",
+      334
+     ],
+     "tier": "local",
+     "similarity": 0.8761904761904762
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/help.py",
+      "start": 60,
+      "end": 61,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8761904761904762,
+     [
+      "app/modules/academic/models.py",
+      334
+     ]
+    ],
+    "whole": [
+     0.941747572815534,
+     [
+      "app/modules/academic/models.py",
+      510
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1929,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/research/models.py",
+     124
+    ],
+    "anchor_at": [
+     "app/modules/preflight/archive.py",
+     202
+    ],
+    "source_file": "app/modules/preflight/archive.py",
+    "span": 3,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1929",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/preflight/archive.py",
+      202
+     ],
+     "tier": "local",
+     "similarity": 0.8753993610223643
+    },
+    "copies": [
+     {
+      "path": "app/modules/research/models.py",
+      "start": 124,
+      "end": 126,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8753993610223643,
+     [
+      "app/modules/preflight/archive.py",
+      202
+     ]
+    ],
+    "whole": [
+     0.8753993610223643,
+     [
+      "app/modules/preflight/archive.py",
+      202
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 1935,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/review_copilot/models/feedback.py",
+     114
+    ],
+    "anchor_at": [
+     "cdc/codebase.py",
+     233
+    ],
+    "source_file": "cdc/codebase.py",
+    "span": 2,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:1935",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "cdc/codebase.py",
+      179
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "cdc/codebase.py",
+      "start": 160,
+      "end": 161,
+      "distance": -73
+     },
+     {
+      "path": "cdc/codebase.py",
+      "start": 179,
+      "end": 180,
+      "distance": -54
+     },
+     {
+      "path": "app/modules/review_copilot/models/feedback.py",
+      "start": 114,
+      "end": 115,
+      "distance": null
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2012,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/review_copilot/services/revision_check_service.py",
+     21
+    ],
+    "anchor_at": [
+     "app/modules/review_studio/schemas.py",
+     28
+    ],
+    "source_file": "app/modules/review_studio/schemas.py",
+    "span": 2,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2012",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_studio/schemas.py",
+      22
+     ],
+     "tier": "local",
+     "similarity": 0.9291338582677166
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_copilot/services/revision_check_service.py",
+      "start": 21,
+      "end": 22,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9291338582677166,
+     [
+      "app/modules/review_studio/schemas.py",
+      22
+     ]
+    ],
+    "whole": [
+     0.9291338582677166,
+     [
+      "app/modules/review_studio/schemas.py",
+      22
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2015,
+    "cls": "moved file",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+     31
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+     62
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+    "span": 3,
+    "op": "move_file",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2015",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      72
+     ],
+     "tier": "local",
+     "similarity": 0.9633507853403142
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+      "start": 31,
+      "end": 33,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.9633507853403142,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      72
+     ]
+    ],
+    "whole": [
+     0.9947643979057592,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      50
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2401,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/database.py",
+     42
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/database.py",
+     42
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/database.py",
+    "span": 5,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2401",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      43
+     ],
+     "tier": "local",
+     "similarity": 0.9917355371900827
+    },
+    "copies": [],
+    "local": [
+     0.9917355371900827,
+     [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      43
+     ]
+    ],
+    "whole": [
+     0.9917355371900827,
+     [
+      "app/modules/demo/snapshots/ultrachat/database.py",
+      43
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2498,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/preflight/persistence.py",
+     29
+    ],
+    "anchor_at": [
+     "app/modules/preflight/persistence.py",
+     29
+    ],
+    "source_file": "app/modules/preflight/persistence.py",
+    "span": 3,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2498",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/preflight/persistence.py",
+      28
+     ],
+     "tier": "local",
+     "similarity": 0.9883268482490273
+    },
+    "copies": [],
+    "local": [
+     0.9883268482490273,
+     [
+      "app/modules/preflight/persistence.py",
+      28
+     ]
+    ],
+    "whole": [
+     0.9883268482490273,
+     [
+      "app/modules/preflight/persistence.py",
+      28
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2508,
+    "cls": "edited",
+    "truth_at": [
+     "app/routers/review_studio.py",
+     447
+    ],
+    "anchor_at": [
+     "app/routers/review_studio.py",
+     447
+    ],
+    "source_file": "app/routers/review_studio.py",
+    "span": 1,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2508",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/routers/review_studio.py",
+      501
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/routers/review_studio.py",
+      "start": 167,
+      "end": 167,
+      "distance": -280
+     },
+     {
+      "path": "app/routers/review_studio.py",
+      "start": 180,
+      "end": 180,
+      "distance": -267
+     },
+     {
+      "path": "app/routers/review_studio.py",
+      "start": 194,
+      "end": 194,
+      "distance": -253
+     },
+     {
+      "path": "app/routers/review_studio.py",
+      "start": 225,
+      "end": 225,
+      "distance": -222
+     },
+     {
+      "path": "app/routers/review_studio.py",
+      "start": 241,
+      "end": 241,
+      "distance": -206
+     },
+     {
+      "path": "app/routers/review_studio.py",
+      "start": 501,
+      "end": 501,
+      "distance": 54
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2546,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_copilot/services/head_checkpoint.py",
+     52
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/services/head_checkpoint.py",
+     52
+    ],
+    "source_file": "app/modules/review_copilot/services/head_checkpoint.py",
+    "span": 3,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2546",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/head_checkpoint.py",
+      51
+     ],
+     "tier": "local",
+     "similarity": 0.9844559585492227
+    },
+    "copies": [],
+    "local": [
+     0.9844559585492227,
+     [
+      "app/modules/review_copilot/services/head_checkpoint.py",
+      51
+     ]
+    ],
+    "whole": [
+     0.9844559585492227,
+     [
+      "app/modules/review_copilot/services/head_checkpoint.py",
+      51
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2571,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/agent/executions.py",
+     63
+    ],
+    "anchor_at": [
+     "app/modules/agent/executions.py",
+     63
+    ],
+    "source_file": "app/modules/agent/executions.py",
+    "span": 3,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2571",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/agent/executions.py",
+      62
+     ],
+     "tier": "local",
+     "similarity": 0.9864253393665159
+    },
+    "copies": [],
+    "local": [
+     0.9864253393665159,
+     [
+      "app/modules/agent/executions.py",
+      62
+     ]
+    ],
+    "whole": [
+     0.9864253393665159,
+     [
+      "app/modules/agent/executions.py",
+      62
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2575,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     123
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/summarisers.py",
+     123
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+    "span": 7,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2575",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      155
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/demo/snapshots/ultrachat/summarisers.py",
+      "start": 155,
+      "end": 161,
+      "distance": 32
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2628,
+    "cls": "edited",
+    "truth_at": [
+     "app/main.py",
+     307
+    ],
+    "anchor_at": [
+     "app/main.py",
+     307
+    ],
+    "source_file": "app/main.py",
+    "span": 3,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2628",
+    "cause": "whitespace normalisation",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/main.py",
+      219
+     ],
+     "tier": "same_exact"
+    },
+    "copies": [
+     {
+      "path": "app/main.py",
+      "start": 219,
+      "end": 221,
+      "distance": -88
+     }
+    ],
+    "local": [
+     0,
+     null
+    ],
+    "whole": [
+     0,
+     null
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2636,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_copilot/services/provenance_service.py",
+     132
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/services/provenance_service.py",
+     132
+    ],
+    "source_file": "app/modules/review_copilot/services/provenance_service.py",
+    "span": 7,
+    "op": "edit_token",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2636",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/provenance_service.py",
+      131
+     ],
+     "tier": "local",
+     "similarity": 0.996328029375765
+    },
+    "copies": [],
+    "local": [
+     0.996328029375765,
+     [
+      "app/modules/review_copilot/services/provenance_service.py",
+      131
+     ]
+    ],
+    "whole": [
+     0.996328029375765,
+     [
+      "app/modules/review_copilot/services/provenance_service.py",
+      131
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2767,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+     51
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+     45
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+    "span": 1,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2767",
+    "cause": "other",
+    "output": {
+     "label": "removed",
+     "placement": null,
+     "tier": "no_match"
+    },
+    "copies": [],
+    "local": [
+     0.8450704225352113,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+      51
+     ]
+    ],
+    "whole": [
+     0.8450704225352113,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/querying.py",
+      51
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2768,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/partners/ocel.py",
+     205
+    ],
+    "anchor_at": [
+     "app/modules/partners/ocel.py",
+     188
+    ],
+    "source_file": "app/modules/partners/ocel.py",
+    "span": 5,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2768",
+    "cause": "other",
+    "output": {
+     "label": "removed",
+     "placement": null,
+     "tier": "no_match"
+    },
+    "copies": [],
+    "local": [
+     0.3524416135881104,
+     [
+      "app/modules/partners/ocel.py",
+      182
+     ]
+    ],
+    "whole": [
+     0.9919137466307277,
+     [
+      "app/modules/partners/ocel.py",
+      205
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2801,
+    "cls": "edited",
+    "truth_at": [
+     "app/shared/auth/routes.py",
+     87
+    ],
+    "anchor_at": [
+     "app/shared/auth/routes.py",
+     59
+    ],
+    "source_file": "app/shared/auth/routes.py",
+    "span": 3,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2801",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/shared/auth/routes.py",
+      86
+     ],
+     "tier": "local",
+     "similarity": 0.986046511627907
+    },
+    "copies": [],
+    "local": [
+     0.986046511627907,
+     [
+      "app/shared/auth/routes.py",
+      86
+     ]
+    ],
+    "whole": [
+     0.986046511627907,
+     [
+      "app/shared/auth/routes.py",
+      86
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2809,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_copilot/models/interaction.py",
+     310
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/models/interaction.py",
+     309
+    ],
+    "source_file": "app/modules/review_copilot/models/interaction.py",
+    "span": 6,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2809",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/models/interaction.py",
+      309
+     ],
+     "tier": "local",
+     "similarity": 0.9945945945945946
+    },
+    "copies": [],
+    "local": [
+     0.9945945945945946,
+     [
+      "app/modules/review_copilot/models/interaction.py",
+      309
+     ]
+    ],
+    "whole": [
+     0.9945945945945946,
+     [
+      "app/modules/review_copilot/models/interaction.py",
+      309
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2880,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/agent/hermes.py",
+     76
+    ],
+    "anchor_at": [
+     "app/modules/agent/hermes.py",
+     66
+    ],
+    "source_file": "app/modules/agent/hermes.py",
+    "span": 1,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2880",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/agent/conversation_tools.py",
+      79
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/agent/conversation_tools.py",
+      "start": 79,
+      "end": 79,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8493150684931506,
+     [
+      "app/modules/agent/hermes.py",
+      76
+     ]
+    ],
+    "whole": [
+     0.8493150684931506,
+     [
+      "app/modules/agent/hermes.py",
+      76
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2885,
+    "cls": "edited",
+    "truth_at": [
+     "cdc/corroborate.py",
+     58
+    ],
+    "anchor_at": [
+     "cdc/corroborate.py",
+     47
+    ],
+    "source_file": "cdc/corroborate.py",
+    "span": 5,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2885",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "cdc/corroborate.py",
+      57
+     ],
+     "tier": "local",
+     "similarity": 0.9834254143646409
+    },
+    "copies": [],
+    "local": [
+     0.9834254143646409,
+     [
+      "cdc/corroborate.py",
+      57
+     ]
+    ],
+    "whole": [
+     0.9834254143646409,
+     [
+      "cdc/corroborate.py",
+      57
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2895,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/preflight/archive.py",
+     242
+    ],
+    "anchor_at": [
+     "app/modules/preflight/archive.py",
+     225
+    ],
+    "source_file": "app/modules/preflight/archive.py",
+    "span": 8,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2895",
+    "cause": "other",
+    "output": {
+     "label": "removed",
+     "placement": null,
+     "tier": "no_match"
+    },
+    "copies": [],
+    "local": [
+     0.8482490272373541,
+     [
+      "app/modules/preflight/archive.py",
+      241
+     ]
+    ],
+    "whole": [
+     0.9932584269662922,
+     [
+      "app/modules/preflight/archive.py",
+      242
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2973,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/demo/snapshots/ultrachat/app.py",
+     35
+    ],
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/app.py",
+     30
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/app.py",
+    "span": 7,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2973",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      34
+     ],
+     "tier": "local",
+     "similarity": 0.990990990990991
+    },
+    "copies": [],
+    "local": [
+     0.990990990990991,
+     [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      34
+     ]
+    ],
+    "whole": [
+     0.990990990990991,
+     [
+      "app/modules/demo/snapshots/ultrachat/app.py",
+      34
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 2977,
+    "cls": "edited",
+    "truth_at": [
+     "app/modules/review_copilot/services/publish_orchestration.py",
+     84
+    ],
+    "anchor_at": [
+     "app/modules/review_copilot/services/publish_orchestration.py",
+     48
+    ],
+    "source_file": "app/modules/review_copilot/services/publish_orchestration.py",
+    "span": 4,
+    "op": "insert_and_edit",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:2977",
+    "cause": "other",
+    "output": {
+     "label": "removed",
+     "placement": null,
+     "tier": "no_match"
+    },
+    "copies": [],
+    "local": [
+     0.3911671924290221,
+     [
+      "app/modules/review_copilot/services/publish_orchestration.py",
+      45
+     ]
+    ],
+    "whole": [
+     0.9917355371900827,
+     [
+      "app/modules/review_copilot/services/publish_orchestration.py",
+      84
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3027,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "cdc/policies.py",
+     86
+    ],
+    "source_file": "cdc/policies.py",
+    "span": 10,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3027",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "cdc/policies.py",
+      98
+     ],
+     "tier": "local",
+     "similarity": 0.9433962264150944
+    },
+    "copies": [],
+    "local": [
+     0.9433962264150944,
+     [
+      "cdc/policies.py",
+      98
+     ]
+    ],
+    "whole": [
+     0.9611111111111111,
+     [
+      "cdc/policies.py",
+      110
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3030,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/academic/services.py",
+     547
+    ],
+    "source_file": "app/modules/academic/services.py",
+    "span": 3,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3030",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/academic/services.py",
+      541
+     ],
+     "tier": "local",
+     "similarity": 0.9647887323943662
+    },
+    "copies": [],
+    "local": [
+     0.9647887323943662,
+     [
+      "app/modules/academic/services.py",
+      541
+     ]
+    ],
+    "whole": [
+     0.974910394265233,
+     [
+      "app/modules/academic/services.py",
+      535
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3038,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/models/interaction.py",
+     48
+    ],
+    "source_file": "app/modules/review_copilot/models/interaction.py",
+    "span": 1,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3038",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/models/interaction.py",
+      49
+     ],
+     "tier": "local",
+     "similarity": 0.9436619718309859
+    },
+    "copies": [],
+    "local": [
+     0.9436619718309859,
+     [
+      "app/modules/review_copilot/models/interaction.py",
+      49
+     ]
+    ],
+    "whole": [
+     0.9436619718309859,
+     [
+      "app/modules/review_copilot/models/interaction.py",
+      49
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3068,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/preflight/handoff.py",
+     41
+    ],
+    "source_file": "app/modules/preflight/handoff.py",
+    "span": 1,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3068",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/preflight/handoff.py",
+      44
+     ],
+     "tier": "local",
+     "similarity": 0.8992248062015504
+    },
+    "copies": [],
+    "local": [
+     0.8992248062015504,
+     [
+      "app/modules/preflight/handoff.py",
+      44
+     ]
+    ],
+    "whole": [
+     0.8992248062015504,
+     [
+      "app/modules/preflight/handoff.py",
+      44
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3074,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/services/feedback_draft_service.py",
+     131
+    ],
+    "source_file": "app/modules/review_copilot/services/feedback_draft_service.py",
+    "span": 1,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3074",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/feedback_draft_service.py",
+      133
+     ],
+     "tier": "local",
+     "similarity": 0.8955223880597015
+    },
+    "copies": [],
+    "local": [
+     0.8955223880597015,
+     [
+      "app/modules/review_copilot/services/feedback_draft_service.py",
+      133
+     ]
+    ],
+    "whole": [
+     0.8955223880597015,
+     [
+      "app/modules/review_copilot/services/feedback_draft_service.py",
+      133
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3093,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     72
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 4,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3093",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      77
+     ],
+     "tier": "local",
+     "similarity": 0.8818897637795275
+    },
+    "copies": [],
+    "local": [
+     0.8818897637795275,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      77
+     ]
+    ],
+    "whole": [
+     0.8818897637795275,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      77
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3127,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     69
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 1,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3127",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      64
+     ],
+     "tier": "local",
+     "similarity": 0.9117647058823529
+    },
+    "copies": [],
+    "local": [
+     0.9117647058823529,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      64
+     ]
+    ],
+    "whole": [
+     0.9117647058823529,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      64
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3173,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+     89
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+    "span": 5,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3173",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      95
+     ],
+     "tier": "local",
+     "similarity": 0.875
+    },
+    "copies": [],
+    "local": [
+     0.875,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      95
+     ]
+    ],
+    "whole": [
+     0.875,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/summaries.py",
+      95
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3201,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/services/publish_orchestration.py",
+     64
+    ],
+    "source_file": "app/modules/review_copilot/services/publish_orchestration.py",
+    "span": 4,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3201",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/review_copilot/services/publish_persistence.py",
+      261
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_copilot/services/publish_persistence.py",
+      "start": 261,
+      "end": 264,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.27692307692307694,
+     [
+      "app/modules/review_copilot/services/publish_orchestration.py",
+      67
+     ]
+    ],
+    "whole": [
+     0.5028571428571429,
+     [
+      "app/modules/review_copilot/services/publish_orchestration.py",
+      104
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3210,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_studio/media.py",
+     39
+    ],
+    "source_file": "app/modules/review_studio/media.py",
+    "span": 2,
+    "op": "rewrite",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3210",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_studio/media.py",
+      37
+     ],
+     "tier": "local",
+     "similarity": 0.8531468531468531
+    },
+    "copies": [],
+    "local": [
+     0.8531468531468531,
+     [
+      "app/modules/review_studio/media.py",
+      37
+     ]
+    ],
+    "whole": [
+     0.8531468531468531,
+     [
+      "app/modules/review_studio/media.py",
+      37
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3317,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_studio/schemas.py",
+     59
+    ],
+    "source_file": "app/modules/review_studio/schemas.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3317",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_studio/schemas.py",
+      65
+     ],
+     "tier": "local",
+     "similarity": 0.8979591836734694
+    },
+    "copies": [],
+    "local": [
+     0.8979591836734694,
+     [
+      "app/modules/review_studio/schemas.py",
+      65
+     ]
+    ],
+    "whole": [
+     0.9574468085106383,
+     [
+      "app/modules/review_studio/schemas.py",
+      76
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3443,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+     60
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+    "span": 10,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3443",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      46
+     ],
+     "tier": "local",
+     "similarity": 0.8662900188323918
+    },
+    "copies": [],
+    "local": [
+     0.8662900188323918,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      46
+     ]
+    ],
+    "whole": [
+     0.8662900188323918,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/xkcd.py",
+      46
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3451,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/services/provenance_service.py",
+     112
+    ],
+    "source_file": "app/modules/review_copilot/services/provenance_service.py",
+    "span": 10,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3451",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/provenance_service.py",
+      98
+     ],
+     "tier": "local",
+     "similarity": 0.8629283489096573
+    },
+    "copies": [],
+    "local": [
+     0.8629283489096573,
+     [
+      "app/modules/review_copilot/services/provenance_service.py",
+      98
+     ]
+    ],
+    "whole": [
+     0.8629283489096573,
+     [
+      "app/modules/review_copilot/services/provenance_service.py",
+      98
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3454,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/preflight/archive.py",
+     173
+    ],
+    "source_file": "app/modules/preflight/archive.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3454",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/review_copilot/services/version_diff.py",
+      234
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/review_copilot/services/version_diff.py",
+      "start": 234,
+      "end": 234,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.27906976744186046,
+     [
+      "app/modules/preflight/archive.py",
+      174
+     ]
+    ],
+    "whole": [
+     0.8080808080808081,
+     [
+      "app/modules/preflight/archive.py",
+      162
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3473,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     21
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 8,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3473",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      10
+     ],
+     "tier": "local",
+     "similarity": 0.9882352941176471
+    },
+    "copies": [],
+    "local": [
+     0.9882352941176471,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      10
+     ]
+    ],
+    "whole": [
+     0.9882352941176471,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      10
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3522,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/services/llm/provider.py",
+     374
+    ],
+    "source_file": "app/modules/review_copilot/services/llm/provider.py",
+    "span": 1,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3522",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/review_copilot/services/llm/provider.py",
+      373
+     ],
+     "tier": "local",
+     "similarity": 0.8923076923076924
+    },
+    "copies": [],
+    "local": [
+     0.8923076923076924,
+     [
+      "app/modules/review_copilot/services/llm/provider.py",
+      373
+     ]
+    ],
+    "whole": [
+     0.8923076923076924,
+     [
+      "app/modules/review_copilot/services/llm/provider.py",
+      373
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3523,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+     71
+    ],
+    "source_file": "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+    "span": 4,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3523",
+    "cause": "local-window similarity",
+    "output": {
+     "label": "changed",
+     "placement": [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      72
+     ],
+     "tier": "local",
+     "similarity": 0.8832807570977917
+    },
+    "copies": [],
+    "local": [
+     0.8832807570977917,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      72
+     ]
+    ],
+    "whole": [
+     0.8832807570977917,
+     [
+      "app/modules/demo/snapshots/ultrachat/cogs/crypto.py",
+      72
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3578,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/review_copilot/contracts.py",
+     33
+    ],
+    "source_file": "app/modules/review_copilot/contracts.py",
+    "span": 2,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3578",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/routers/debug.py",
+      614
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/routers/debug.py",
+      "start": 614,
+      "end": 615,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.36065573770491804,
+     [
+      "app/modules/review_copilot/contracts.py",
+      26
+     ]
+    ],
+    "whole": [
+     0.7272727272727273,
+     [
+      "app/modules/review_copilot/contracts.py",
+      74
+     ]
+    ]
+   },
+   {
+    "benchmark": "replication",
+    "row": 3599,
+    "cls": "gone",
+    "truth_at": null,
+    "anchor_at": [
+     "app/modules/academic/services.py",
+     574
+    ],
+    "source_file": "app/modules/academic/services.py",
+    "span": 3,
+    "op": "delete_block",
+    "group": "controlled",
+    "sample": "balanced",
+    "pair": "replication:3599",
+    "cause": "cross-file ordering",
+    "output": {
+     "label": "moved",
+     "placement": [
+      "app/modules/academic/__init__.py",
+      109
+     ],
+     "tier": "cross_exact"
+    },
+    "copies": [
+     {
+      "path": "app/modules/academic/__init__.py",
+      "start": 109,
+      "end": 111,
+      "distance": null
+     }
+    ],
+    "local": [
+     0.8120300751879699,
+     [
+      "app/modules/academic/services.py",
+      574
+     ]
+    ],
+    "whole": [
+     0.8120300751879699,
+     [
+      "app/modules/academic/services.py",
+      574
+     ]
+    ]
+   }
+  ],
+  "controlled_failure_groups": {
+   "main": {
+    "whitespace normalisation": 10,
+    "local-window similarity": 38,
+    "cross-file ordering": 5,
+    "other": 2
+   },
+   "replication": {
+    "whitespace normalisation": 10,
+    "local-window similarity": 32,
+    "other": 4,
+    "cross-file ordering": 5
+   }
+  },
+  "cause_definitions": {
+   "tie-breaking among identical runs": "same-file exact branch; at least two raw-equal runs",
+   "whitespace normalisation": "same-file exact branch without two raw-equal runs; normalized/raw ambiguity",
+   "local-window similarity": "local fuzzy branch wins at wrong location or for gone target",
+   "cross-file ordering": "cross-file exact branch selects wrong file/start or resurrects gone target",
+   "other": "unmatched residual, including no-match after full cascade"
+  }
+ }
+}

@@ -1,0 +1,26 @@
+% Extracted from v11 paper-v11.tex by tools/v12/make_v12.py; do not edit.
+\begin{figure}[t]
+\centering
+% Review-issue lifecycle across versions (shared by both papers).
+\begin{tikzpicture}[>={Stealth[length=2mm]}, font=\scriptsize, node distance=7mm and 4.5mm,
+  st/.style={draw=ink!70, rounded corners=6pt, fill=ink!6, align=center, inner sep=3pt, minimum width=14mm, minimum height=6mm, font=\scriptsize\sffamily},
+  fin/.style={st, fill=black!6, draw=black!50, double}]
+\node[st] (open) {open};
+\node[st, right=of open] (acc) {accepted};
+\node[st, below=9mm of $(open)!0.5!(acc)$, fill=orange!30, draw=warn] (re) {needs re-check};
+\node[fin, right=of acc] (res) {resolved};
+\node[fin, below=of res] (dis) {dismissed};
+\node[left=6mm of open, align=right, text=black!60] (new) {new finding\\ or faculty point};
+\draw[->] (new) -- (open);
+\draw[->] (open) -- (acc);
+\draw[->] (acc) -- (res);
+\draw[->] (re.east) -- (dis.west);
+\draw[->, warn] (open.south) -- node[pos=0.6, left=6pt, text=warn, align=right]{carried; an anchor\\ \lab{changed}/\lab{removed}} (re);
+\draw[->, warn] (acc.south) -- (re);
+\draw[->] (re.north east) -- (res.south west);
+\draw[->, black!55] (open) edge[loop above] node[above, align=center]{carried; all anchors\ \lab{identical},\\ \lab{content-match} or \lab{moved}} (open);
+\draw[->, black!55, dashed] (dis.south) -- ++(0,-5mm) node[below, align=center, text=black!60]{same finding on version $t{+}1$\\ arrives dismissed};
+\end{tikzpicture}
+\caption{Lifecycle of a review issue across versions. Black arrows are faculty actions, orange arrows are carry-forward. Carry-forward moves an issue to \lab{needs re-check} when any anchor is \lab{changed} or \lab{removed}, and otherwise keeps its state. Supervisors may set any state from any state; no system or assistant action resolves an issue. A new finding matching an issue dismissed on the preceding version is created dismissed, and a deleted issue is not carried (Section~\ref{sec:statecheck}).}
+\label{fig:states}
+\end{figure}

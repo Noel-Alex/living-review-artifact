@@ -1,0 +1,62 @@
+{
+  "scenario": "concurrency_postgres",
+  "claim": "Concurrent composition of one version creates no duplicates; an interrupted composition leaves no partial state.",
+  "claim_holds": true,
+  "engine": "postgresql",
+  "note": "Service-level on PostgreSQL; only the file loader is an in-memory map.",
+  "observed": {
+    "interrupted": {
+      "error": "simulated worker crash during composition",
+      "documents_after_rollback": 0
+    },
+    "concurrent": {
+      "errors": [],
+      "items": 3,
+      "carried": 3,
+      "duplicate_origin_refs": 0,
+      "statuses": [
+        "needs_recheck",
+        "needs_recheck",
+        "open"
+      ],
+      "create_revisions": 3,
+      "timeline_seconds": [
+        [
+          "worker-2",
+          "compose_call",
+          0.0
+        ],
+        [
+          "worker-1",
+          "compose_call",
+          0.0
+        ],
+        [
+          "worker-2",
+          "carry_start",
+          0.016
+        ],
+        [
+          "worker-2",
+          "commit",
+          1.578
+        ],
+        [
+          "worker-1",
+          "carry_start",
+          1.578
+        ],
+        [
+          "worker-1",
+          "commit",
+          1.609
+        ]
+      ],
+      "second_carry_started_after_first_commit": true
+    },
+    "server_version": [
+      17,
+      10
+    ]
+  }
+}

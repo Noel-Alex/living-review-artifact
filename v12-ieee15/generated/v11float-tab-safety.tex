@@ -1,0 +1,19 @@
+% Extracted from v11 paper-v11.tex by tools/v12/make_v12.py; do not edit.
+\begin{table*}[t]
+\caption{Safety and Effort Outcomes of Carry-Forward}\label{tab:safety}
+\centering\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}l rrrrrr c rrrrrr@{}}\toprule
+& \multicolumn{6}{c}{Controlled edits, main seed (\smCtlCasAccN{} trials)} && \multicolumn{6}{c}{Real histories, all retained observations (\smRealCasAccN)} \\
+\cmidrule(lr){2-7}\cmidrule(lr){9-14}
+Method & place & class & missed & silent & lost & false && place & class & missed & silent & lost & false \\ \midrule
+Cascade, default & \smCtlCasPlacePct & \smCtlCasClassPct & \smCtlCasMissPct & \smCtlCasSilentPct & \smCtlCasLostPct & \smCtlCasFalsePct && \smRealCasPlacePct & \smRealCasClassPct & \smRealCasMissPct & \smRealCasSilentPct & \smRealCasLostPct & \smRealCasFalsePct \\
+Cascade, $\theta{=}0.5$ & \smCtlCalPlacePct & \smCtlCalClassPct & \smCtlCalMissPct & \smCtlCalSilentPct & \smCtlCalLostPct & \smCtlCalFalsePct && \smRealCalPlacePct & \smRealCalClassPct & \smRealCalMissPct & \smRealCalSilentPct & \smRealCalLostPct & \smRealCalFalsePct \\
+Cascade v1 & \smCtlVonePlacePct & \smCtlVoneClassPct & \smCtlVoneMissPct & \smCtlVoneSilentPct & \smCtlVoneLostPct & \smCtlVoneFalsePct && \smRealVonePlacePct & \smRealVoneClassPct & \smRealVoneMissPct & \smRealVoneSilentPct & \smRealVoneLostPct & \smRealVoneFalsePct \\
+Contextual tracker$^\dagger$ & \smCtlTrkPlacePct & \smCtlTrkClassPct & \smCtlTrkMissPct & \smCtlTrkSilentPct & \smCtlTrkLostPct & \smCtlTrkFalsePct && \smRealTrkPlacePct & \smRealTrkClassPct & \smRealTrkMissPct & \smRealTrkSilentPct & \smRealTrkLostPct & \smRealTrkFalsePct \\
+Exact quotation & \smCtlQuotePlacePct & \smCtlQuoteClassPct & \smCtlQuoteMissPct & \smCtlQuoteSilentPct & \smCtlQuoteLostPct & \smCtlQuoteFalsePct && \smRealQuotePlacePct & \smRealQuoteClassPct & \smRealQuoteMissPct & \smRealQuoteSilentPct & \smRealQuoteLostPct & \smRealQuoteFalsePct \\
+Diff drift & \smCtlDriftPlacePct & \smCtlDriftClassPct & \smCtlDriftMissPct & \smCtlDriftSilentPct & \smCtlDriftLostPct & \smCtlDriftFalsePct && \smRealDriftPlacePct & \smRealDriftClassPct & \smRealDriftMissPct & \smRealDriftSilentPct & \smRealDriftLostPct & \smRealDriftFalsePct \\
+Line number & \smCtlLinePlacePct & \smCtlLineClassPct & \smCtlLineMissPct & \smCtlLineSilentPct & \smCtlLineLostPct & \smCtlLineFalsePct && \smRealLinePlacePct & \smRealLineClassPct & \smRealLineMissPct & \smRealLineSilentPct & \smRealLineLostPct & \smRealLineFalsePct \\ \bottomrule
+\end{tabular}
+\tablenote{}{Percentages. \emph{place}: correct file and start among surviving targets; \emph{class}: label agrees with reference class; \emph{missed}: Eq.~\eqref{eq:missed}, among edited or gone targets; \emph{silent}: wrong location without re-check, among all targets; \emph{lost}: surviving target with no location; \emph{false}: re-check requested for preserved content. $^\dagger$The tracker has no review-state policy; a declared adapter requests re-check when the normalized quotation at its returned line differs, and its \smRealTrkExecFail{} execution failures count as incorrect, as GumTree's do in Table~\ref{tab:external}. Raw counts and Wilson intervals for every cell are in the evidence package.}
+\end{table*}

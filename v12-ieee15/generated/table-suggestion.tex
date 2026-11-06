@@ -1,0 +1,16 @@
+\begin{table}[t]
+\caption{Suggestion-Application Oracle: Six Outcomes (\%)}\label{tab:suggest}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+Method & Place & Miss & Silent & Misdir & Lost & Extra \\ \midrule
+GitHub outdating & 36.7 & 16.2 & 3.2 & 0.0 & 59.8 & 12.2 \\
+Cascade, deployed & 78.9 & 3.1 & 0.0 & 2.2 & 19.5 & 0.0 \\
+Cascade+IG+AGi+VW & 80.5 & 3.1 & 0.0 & 1.9 & 18.2 & 4.2 \\
+CodeMapper+quote & 91.1 & 2.7 & 0.0 & 5.1 & 5.6 & 4.2 \\
+\quad +IG+AG & 91.1 & 1.1 & 0.0 & 5.1 & 5.6 & 9.5 \\
+\quad +IG+AGi & 91.1 & 2.7 & 0.0 & 5.1 & 5.6 & 5.8 \\
+\bottomrule
+\end{tabular}
+\tablenote{}{\wkUnits{} review suggestions from \wkRepos{} repositories in \wkLanguages{} languages; scope is the file pair. Place and Lost: over the \wkDepPlaceN{} applied or untouched targets (applied: start inside the suggested text). Miss: over the \wkDepMissN{} changed targets (applied, rewritten, deleted). Extra: over the \wkDepExtraN{} untouched targets. Silent and Misdir: over all \wkDepSilentN{} scored targets. GitHub: the thread's current outdated flag. Ambiguous targets (\wkClsAmbiguous) are not scored.}
+\end{table}

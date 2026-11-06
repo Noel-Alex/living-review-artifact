@@ -1,0 +1,27 @@
+% Generated from WPA JSON by build_wpa_results.py. Percentages unless stated.
+% Input SHA-256 calibration.json 22289c93b3305dfb7e43b74ee80c16dc760cf0c3bf15c47665fdd27c681fafaf
+% Input SHA-256 cluster-uncertainty.json 64971ece7579450961c480dfc0ac2301510f959e75175588c373a7e4364b69e3
+% Input SHA-256 effort-dominance.json d6a0be5bf97b2fef07a973c1064ba1b1e9e35152f80caad8a68dd0710b411721
+% Input SHA-256 error-analysis.json f5c11738e65d43c8fb2b0a8219eae603a8c325cd6c7d46a9da33b906d48ea021
+% Input SHA-256 exclusion-horizon.json 831816bc1d1f4c3da04877b3d09c8079f38ec600d24a826abf4fee1df626ed8f
+% Input SHA-256 factorial-summary.json 948cec01db46b592686f9bbad9e132835bbc4171f92e5a90621500ee1192f15c
+% Input SHA-256 numerical-audit.json 1a7b862c44d5790d7930997df6c2a9a75d46d725038f78d1c682d7ca9d9b942e
+% Input SHA-256 safety-metrics.json 5e8532d75762bc815da55cd7cde45cc43af2703ff74f890c7139acbac9be5fba
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\setbox0=\hbox{\begin{tabular}{@{}lrrrrr@{}}\toprule
+Population & Contrast, averaged across thresholds & Accuracy pp & Missed pp & Gone correct pp & Wrong pp \\ \midrule
+controlled, main & cross-file first $-$ fuzzy first & 0.96 & 0.79 & 0.00 & -0.96 \\
+controlled, main & whole file $-$ local window & -2.35 & -0.06 & -11.40 & 2.41 \\
+controlled, main & order $\times$ scope interaction & 0.86 & 0.13 & 0.00 & -0.86 \\
+controlled, replication & cross-file first $-$ fuzzy first & 1.14 & 0.34 & 0.00 & -1.14 \\
+controlled, replication & whole file $-$ local window & -2.07 & -0.05 & -9.52 & 2.14 \\
+controlled, replication & order $\times$ scope interaction & 1.03 & 0.11 & 0.00 & -1.03 \\
+real, internal & cross-file first $-$ fuzzy first & -0.23 & 1.99 & 0.00 & 0.23 \\
+real, internal & whole file $-$ local window & -0.25 & -0.01 & -14.00 & 0.46 \\
+real, internal & order $\times$ scope interaction & 0.03 & 0.03 & 0.00 & -0.03 \\
+real, public & cross-file first $-$ fuzzy first & -0.05 & 0.51 & 0.00 & 0.05 \\
+real, public & whole file $-$ local window & -0.58 & -0.04 & -14.30 & 0.81 \\
+real, public & order $\times$ scope interaction & 0.04 & 0.08 & 0.00 & -0.04 \\
+\bottomrule\end{tabular}}\noindent\ifdim\wd0>\linewidth\resizebox{.995\linewidth}{!}{\box0}\else\box0\fi
+\par\smallskip Contrasts use full-height windows. Scope and order are crossed at each threshold; the final row for each population is the order-by-scope difference in differences. Full cells, threshold interactions and the legacy-partial factor are retained in factorial-summary.json.
+\endgroup

@@ -1,0 +1,48 @@
+{
+  "scenario": "normalisation",
+  "claim": "Encoding and newline variants of unchanged code keep their anchors; non-UTF-8 files are skipped, so their anchors become removed (lead's preliminary reading).",
+  "claim_holds": false,
+  "engine": "sqlite",
+  "note": "Recorded labels are the implemented behaviour; see results note for the specification.",
+  "observed": {
+    "crlf": {
+      "First lines": {
+        "match": "exact",
+        "status": "open"
+      },
+      "Body lines": {
+        "match": "exact",
+        "status": "open"
+      }
+    },
+    "bom": {
+      "First lines": {
+        "match": "changed",
+        "status": "needs_recheck"
+      },
+      "Body lines": {
+        "match": "exact",
+        "status": "open"
+      }
+    },
+    "no_trailing_newline": {
+      "First lines": {
+        "match": "exact",
+        "status": "open"
+      },
+      "Body lines": {
+        "match": "exact",
+        "status": "open"
+      }
+    },
+    "unchanged_file_over_400000_bytes": {
+      "bytes": 464098,
+      "match": "removed",
+      "status": "needs_recheck"
+    },
+    "non_utf8_text_file": {
+      "preflight_status": 400,
+      "body": "{\"detail\":{\"code\":\"invalid_text_encoding\",\"message\":\"text member is not valid UTF-8: src/app.py\"}}"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+ "recorded_utc": "2026-11-05T21:21:01Z",
+ "statement": "Amendment 2, recorded after outcomes were read. No locator or model output is rerun or changed; rows.json and the response files are unchanged.",
+ "items": [
+  {
+   "item": "CodeMapper execution errors",
+   "detail": "36 units (144 method cells: codemapper and its three layers) are kept as recorded errors (request, no placement), as the protocol requires; rates excluding errors are reported beside them. Causes by error text: {\"PermissionError\": 20, \"renamed path (native-readonly reads the old path)\": 13, \"unsafe native resolver command\": 2, \"TimeoutError('cm 60s timeout')\": 1}. No rerun, so the frozen outcomes stand."
+  },
+  {
+   "item": "GitHub placement",
+   "detail": "The GitHub arm placed multi-line threads at `line` (the last line); corrected to `startLine` (falling back to `line`) in analyze_wpk6.github_output before the reported summary. This is a scoring fix of a non-locator baseline; it raises GitHub placement and does not affect any locator."
+  },
+  {
+   "item": "Miss mechanism (post hoc)",
+   "detail": "analyze_wpk6.wraps/mechanisms classify each missed re-check by whether the applied suggestion contains the unchanged stripped quotation as a contiguous run (the suggestion wraps the reviewed lines). Defined after the misses were read; reported as a post hoc mechanism analysis."
+  },
+  {
+   "item": "LLM analysis",
+   "detail": "run_wpk6_llm.analyze had a crash in the class count (dict iterated as list); fixed without touching predictions. The wrap-mechanism breakdown of both arms (wrap_n, wrap_flagged) is post hoc."
+  }
+ ],
+ "hashes": {
+  "tools/v11/analyze_wpk6.py": "92c020fd28419184da9ba9853f5c2b4987cf6b3655301ffe6f38aa9273ca511e",
+  "tools/v11/run_wpk6_llm.py": "862251f80d61e669c94efceeb73a844882ece7e32e3ada92aa15387d985cb652",
+  "tools/v11/build_wpk6_tex.py": "e9c483c1ef416213f8b08898afb8106383e7a7dc0bdb0008f0e433e46a5d8845",
+  "evidence/v12-wpk6/rows.json": "dd35fee2106f8e936f4105d4a28da5f596a8c027c9dbe2bb27bbc611c70fa62a",
+  "evidence/v12-wpk6/llm/summary.json": "c57be142147aa70d2bb56f65575b807d9e594ba27ebb8ec7df739bad7f5ab9ac"
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "scenario": "uncomposed_intermediate_version",
+  "claim": "An open issue reaches every later version until faculty close it.",
+  "claim_holds": false,
+  "engine": "sqlite",
+  "note": "In production each version is composed after its analysis pipeline; this case needs that pipeline to fail and the version to stay unopened.",
+  "observed": {
+    "v3_carried_when_v2_uncomposed": [],
+    "v2_carried_when_opened_later": [
+      "Explain the constant"
+    ],
+    "v3_carried_after_v2_opened": [],
+    "v3_carried_after_explicit_recompose": [
+      "Explain the constant"
+    ]
+  }
+}

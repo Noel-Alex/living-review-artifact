@@ -1,0 +1,28 @@
+{
+  "scenario": "multi_anchor_supporting_change",
+  "claim": "An issue is returned for re-check when any of its anchors changes, including a supporting one.",
+  "claim_holds": true,
+  "engine": "sqlite",
+  "note": "The Studio headline label (anchorHtml) shows only the first code anchor; per-anchor notes appear in the evidence list.",
+  "observed": {
+    "status": "needs_recheck",
+    "anchors": [
+      {
+        "path": "src/other.py",
+        "line_start": 1,
+        "line_end": 2,
+        "match": "exact",
+        "similarity": null,
+        "quotation": "def unrelated():\n    return 'stable'"
+      },
+      {
+        "path": "src/app.py",
+        "line_start": 10,
+        "line_end": 12,
+        "match": "changed",
+        "similarity": 0.98,
+        "quotation": "def answer(x):\n    total = x * 3\n    return total + 40"
+      }
+    ]
+  }
+}

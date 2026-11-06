@@ -1,0 +1,16 @@
+{
+  "input": "evidence/v11-wpa/effort-dominance.json",
+  "sha256": "d6a0be5bf97b2fef07a973c1064ba1b1e9e35152f80caad8a68dd0710b411721",
+  "script_sha256": "d1462ed80337863dd8f742192908279ab7124a0204e7381085b7190330377511",
+  "panels": [
+    "main/all",
+    "real/all"
+  ],
+  "methods_shown": [
+    "calibrated",
+    "cascade",
+    "diff_drift",
+    "quote_exact",
+    "tracker_adapter"
+  ]
+}

@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\caption{Policy Selection on Held-Out Projects: Mean Cost per Carried Target}\label{tab:policysel}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llp{.25\textwidth}rrrrrrr@{}}\toprule
+Population & $w, m$ & Most often selected (share of folds) & Distinct & Selected & Deployed & CM+IG+AGi & Best & Beats dep. & Beats CM \\ \midrule
+Real (9 projects) & 1, 1 & CodeMapper$\to$cascade+quote (100\%) & 1 & 0.017 & 0.086 & 0.028 & 0.016 & 9/9 & 7/9 \\
+ & 3, 3 & tracker$\to$cascade+IG (44\%) & 4 & 0.062 & 0.138 & 0.057 & 0.035 & 9/9 & 5/9 \\
+ & 10, 3 & tracker$\to$cascade+IG+AG2 (44\%) & 5 & 0.069 & 0.167 & 0.058 & 0.036 & 9/9 & 1/9 \\
+Student (20 repositories) & 1, 1 & tracker$\to$cascade+quote (100\%) & 1 & 0.056 & 0.087 & 0.173 & 0.037 & 14/20 & 13/20 \\
+ & 3, 3 & tracker$\to$cascade+quote (100\%) & 1 & 0.131 & 0.161 & 0.260 & 0.077 & 14/20 & 16/20 \\
+ & 10, 3 & tracker, own labels (95\%) & 2 & 0.183 & 0.316 & 0.263 & 0.083 & 15/20 & 12/20 \\
+\bottomrule
+\end{tabular}
+\tablenote{}{Leave one project out: the policy minimizing $C=w(\text{missed}+\text{silent})+m\,\text{misdirected}+\text{lost}+\text{unnecessary}$ per carried target on the other projects is evaluated on the held-out one. Candidates are every recorded locator and layer. Best: the held-out project's own minimum (an oracle). Distinct: number of different policies selected across folds. tracker$\to$cascade and CodeMapper$\to$cascade use the cascade's cross-file exact match when the first locator finds nothing. Post hoc: all records had been read.}
+\end{table*}

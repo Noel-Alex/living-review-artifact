@@ -1,0 +1,29 @@
+% v11 Architecture: replaces v10 "Integrity Properties" and "Implementation and Tests" (SA1-SA6).
+% Evidence column cites Section~\ref{sec:statecheck} (WP D, evidence/v11-wpd).
+\subsection{Integrity Properties and Their Evidence}\label{sec:integrity}
+The architecture implements more than the experiments evaluate. Table~\ref{tab:integrity} separates the two: each property is listed with its mechanism and the kind of evidence this paper provides for it, namely a measurement, a pass/fail scenario test against the pinned implementation, or a description of the design only.
+
+\begin{table}[t]
+\caption{Integrity Properties, Mechanisms and Evidence}\label{tab:integrity}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.22\columnwidth}p{.45\columnwidth}p{.27\columnwidth}@{}}\toprule
+Property & Mechanism & Evidence here \\ \midrule
+No automatic resolution & no system or assistant code path writes \lbl{resolved}; relocation can only request re-check; the only system-written closed state is a new finding created dismissed by dismissal memory & scan of \wpdWriters{} status writers; bounded model check (Sec.~\ref{sec:statecheck}) \\
+Idempotent composition & carried issues are recognised by their lineage reference; composition never overwrites an existing issue & repeated-composition scenario \\
+Concurrency & the version row is locked during composition; every edit names its base revision, though a restore does not & PostgreSQL concurrent-composition scenario \\
+Dismissal memory & a new finding whose category and opening description match an issue dismissed on the preceding version is created dismissed, with a note naming that version & collision scenarios; heuristic key, limits in Sec.~\ref{sec:statecheck} \\
+Media notes follow code & notes on carried issues move with them; notes pinned to code are re-found by the cascade and become document-level notes, with an explanation, when the code is removed & three-version scenario \\
+Attribution and undo & every change is an attributed, append-only revision; undo appends a restoring entry & design only \\
+Verified quotations & an anchor is created only after its quotation is checked against the stored version & design only \\
+Private and shared feedback & released wording is frozen per student; a student reaches source only through an anchor in their own packet & design only \\ \bottomrule
+\end{tabular}
+\tablenote{}{``Design only'': implemented and covered by the portal's own integration tests, but not assessed in this paper. No security assessment, penetration test or formal access-control verification was performed; the access controls are implemented design controls, not established security guarantees.}
+\end{table}
+
+An optional assistant can create, edit and delete review points through journaled, undoable tool calls, but cannot publish, and a resolve or dismiss it suggests takes effect only when a supervisor applies it. Its deletions, like a supervisor's, stop an issue from being carried forward (Section~\ref{sec:statecheck}). It plays no part in relocation, and its usefulness to supervisors is not evaluated.
+
+The review studio, the supervisor's review page, shows an anchor with the deployed \texttt{exact} label as ``Unchanged in this version'', although that label also covers \lbl{content-match} anchors whose whitespace or line endings changed (Table~\ref{tab:labels}). Its ``Compare with version~$n$'' panel shows the immediately preceding version only; the original quotation of a long-lived issue survives in its stored lineage.
+
+\subsection{Implementation}
+The portal uses Python, FastAPI, SQLAlchemy and PostgreSQL. The evaluated relocation and carry-forward functions come from a pinned source snapshot, identified by commit in the artifact; later application changes must not be assumed to share these results.

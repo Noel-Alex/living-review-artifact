@@ -1,0 +1,119 @@
+{
+  "provenance": {
+    "implementation": "https://github.com/oselvar/lhdiff",
+    "revision": "5a9f7fd87193098cf90f7ee4081f6d95f04d4cc7",
+    "context_size": 4,
+    "binary_sha256": "67c431f74ff653aac306def23f24347070e3b9850c7648a7309053919d49190f",
+    "scope": "same-file, first-line mapping, defaults, no label-policy comparison"
+  },
+  "main": {
+    "n": 3600,
+    "correct": 3288,
+    "percent": 91.33333333333333,
+    "wilson_95_percent": [
+      90.36966200471981,
+      92.2088874113749
+    ],
+    "per_op": {
+      "identity": {
+        "correct": 300
+      },
+      "edit_elsewhere": {
+        "correct": 300
+      },
+      "insert_above": {
+        "correct": 300
+      },
+      "delete_above": {
+        "correct": 300
+      },
+      "reindent": {
+        "correct": 300
+      },
+      "move_within": {
+        "correct": 300
+      },
+      "move_file": {
+        "lost": 300
+      },
+      "duplicate_above": {
+        "correct": 300
+      },
+      "edit_token": {
+        "correct": 293,
+        "lost": 7
+      },
+      "insert_and_edit": {
+        "correct": 295,
+        "lost": 5
+      },
+      "rewrite": {
+        "correct": 300
+      },
+      "delete_block": {
+        "correct": 300
+      }
+    },
+    "paired": {
+      "only_cascade": 299,
+      "only_tracker": 42,
+      "exact_mcnemar_p": 6.2955457785349855e-49
+    }
+  },
+  "replication": {
+    "n": 3600,
+    "correct": 3293,
+    "percent": 91.47222222222223,
+    "wilson_95_percent": [
+      90.51508536560627,
+      92.34094573535437
+    ],
+    "per_op": {
+      "identity": {
+        "correct": 300
+      },
+      "edit_elsewhere": {
+        "correct": 300
+      },
+      "insert_above": {
+        "correct": 300
+      },
+      "delete_above": {
+        "correct": 300
+      },
+      "reindent": {
+        "correct": 300
+      },
+      "move_within": {
+        "correct": 300
+      },
+      "move_file": {
+        "lost": 300
+      },
+      "duplicate_above": {
+        "correct": 300
+      },
+      "edit_token": {
+        "correct": 298,
+        "lost": 2
+      },
+      "insert_and_edit": {
+        "correct": 297,
+        "lost": 3
+      },
+      "rewrite": {
+        "correct": 299,
+        "wrong_place": 1
+      },
+      "delete_block": {
+        "correct": 299,
+        "wrong_place": 1
+      }
+    },
+    "paired": {
+      "only_cascade": 295,
+      "only_tracker": 39,
+      "exact_mcnemar_p": 8.546479566188977e-50
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "scenario": "three_version_chain_media",
+  "claim": "An anchor that moves, changes and disappears is labelled moved, changed, removed; the issue stays open until faculty act, needs re-check after change; voice and image notes follow the carried issue and code.",
+  "claim_holds": true,
+  "engine": "sqlite",
+  "note": "",
+  "observed": {
+    "steps": [
+      {
+        "expected_label": "moved",
+        "status": "open",
+        "carried": {
+          "from_version": 1,
+          "from_item": "e605d858-0207-4300-b184-66f630d865c5"
+        },
+        "anchors": [
+          {
+            "path": "src/app.py",
+            "line_start": 10,
+            "line_end": 12,
+            "match": "moved",
+            "similarity": null,
+            "quotation": "def answer(x):\n    total = x * 2\n    return total + 40"
+          }
+        ],
+        "voice": {
+          "anchor_type": "review_item",
+          "item_id": "09ac89ca-9795-4c7b-ae22-35a9d5fa9cf7",
+          "note": "Carried from version 1. "
+        },
+        "voice_linked_to_carried_issue": true,
+        "image": {
+          "anchor_type": "code_range",
+          "path": "src/app.py",
+          "line_start": 10,
+          "line_end": 12,
+          "note": "Carried from version 1. The code it points to moved; it is shown at its new place. "
+        }
+      },
+      {
+        "expected_label": "changed",
+        "status": "needs_recheck",
+        "carried": {
+          "from_version": 2,
+          "from_item": "09ac89ca-9795-4c7b-ae22-35a9d5fa9cf7"
+        },
+        "anchors": [
+          {
+            "path": "src/app.py",
+            "line_start": 10,
+            "line_end": 12,
+            "match": "changed",
+            "similarity": 0.98,
+            "quotation": "def answer(x):\n    total = x * 3\n    return total + 40"
+          }
+        ],
+        "voice": {
+          "anchor_type": "review_item",
+          "item_id": "3c55c453-6499-42a5-b5ee-4dc2c48618f0",
+          "note": "Carried from version 2. Carried from version 1. "
+        },
+        "voice_linked_to_carried_issue": true,
+        "image": {
+          "anchor_type": "code_range",
+          "path": "src/app.py",
+          "line_start": 10,
+          "line_end": 12,
+          "note": "Carried from version 2. The code it points to changed; check that this note still applies. Carried from version 1. The code it points to moved; it is shown at its new place. "
+        }
+      },
+      {
+        "expected_label": "removed",
+        "status": "needs_recheck",
+        "carried": {
+          "from_version": 3,
+          "from_item": "3c55c453-6499-42a5-b5ee-4dc2c48618f0"
+        },
+        "anchors": [
+          {
+            "path": "src/app.py",
+            "line_start": 10,
+            "line_end": 12,
+            "match": "removed",
+            "similarity": 0.98,
+            "quotation": "def answer(x):\n    total = x * 3\n    return total + 40"
+          }
+        ],
+        "voice": {
+          "anchor_type": "review_item",
+          "item_id": "9ee101d1-e710-44b6-a954-f46b92921cbf",
+          "note": "Carried from version 3. Carried from version 2. Carried from version 1. "
+        },
+        "voice_linked_to_carried_issue": true,
+        "image": {
+          "anchor_type": "document",
+          "path": null,
+          "line_start": null,
+          "line_end": null,
+          "note": "Carried from version 3. It was on src/app.py:10-12, which is no longer in the submission. Carried from version 2. The code it points to changed; check that this note still applies. Carried from version 1. The code it points to moved; it is shown at its new place. "
+        }
+      }
+    ],
+    "labels": [
+      "moved",
+      "changed",
+      "removed"
+    ],
+    "statuses": [
+      "open",
+      "needs_recheck",
+      "needs_recheck"
+    ],
+    "v1_issue_after_chain": {
+      "status": "open",
+      "anchors": [
+        {
+          "path": "src/app.py",
+          "line_start": 5,
+          "line_end": 7,
+          "match": null,
+          "similarity": null,
+          "quotation": "def answer(x):\n    total = x * 2\n    return total + 40"
+        }
+      ]
+    },
+    "quotation_after_changed_is_new_text": true,
+    "quotation_after_removed": "def answer(x):\n    total = x * 3\n    return total + 40"
+  }
+}

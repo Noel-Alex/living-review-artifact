@@ -1,0 +1,6742 @@
+{
+ "provenance": {
+  "input_sha256": {
+   "evidence/source-snapshot/bench_relocation.py": "ea8f369b06d54f56bfa9b25a87fcba923a393532a03f51d6f0d2f6f438e4c1f2",
+   "evidence/source-snapshot/real_history.py": "0bed9ad9d47231cba39028ceafcd83d1fb9dfe9799f44e951c7e3476179dc225",
+   "evidence/source-snapshot/analysis_v3.py": "fa54efa629817707958da3f6ce4be7305b731b6a391bf4994408a9eb5e68a64c",
+   "evidence/source-snapshot/results-real-v1.json": "2565ff3e3c39fcd82c68d1ed4125b933ae9d02fd73bf8f4904b2bbd75444ba4f",
+   "evidence/source-snapshot/results-oss-v1.json": "15aa41755b4f71282769923d4aea757e0fd36e46718a506111d0f2d79a9c402e",
+   "evidence/source-snapshot/results-v3.json": "3bbf477c776a2feca5669c9c9cf1e9f539f57b35a9d795912b05a1d0ca0d1063",
+   "evidence/pinned-corpus/vcap/app/modules/review_studio/carry.py": "f7aef79c3600dc371a541d2e6d370f34cd7c0f66b27a7dcc3aeb44755cc4edcb",
+   "review/V11-WPA-PROTOCOL.md": "8025bd91436226598f738278d527a282f750282034fa4178732baf13b6a5c0bf",
+   "tools/v11/analyze_wpa.py": "919325f1cfd79fe9ac4493d0fa6a3e6d91cd3003965f964ad57ef1eefd5254f5",
+   "tools/v11/build_wpa_results.py": "bbbc689677a911c43c691820ee7e01f97b3473f60671e09dce3080fdd35aa07d",
+   "tools/v11/freeze_gate_source.py": "a816d139a0fc82f3f3cac8282c5a2ba04a5a73d7d4a7b6265074c6855f11a963",
+   "tools/v11/mine_review_threads.py": "8ba1296ce2a84327f717e2b02de7fccd81b671d17a9268b664aa35fa5a8f8952",
+   "tools/v11/preserve_wpa_diagnostic.py": "e72d8013f80fe210fb2c4308b467edb07c2ea3d5bf5a1c33b1a886fc4eea9842",
+   "tools/v11/run_wpa_gate.py": "cf3a57d02bae9e23ba118db40d6ad4233ba1b1d7e4592a2a45dca8dd959100e4",
+   "tools/v11/test_wpa.py": "278023d1497c1e54c733e84b9cebd58742402238a5937d452dba2aff992550c9",
+   "tools/v11/verify_wpa.py": "4338070a2e2e829c49a58fe8606eaf401d95dd66ee5f3419f259155fbef12b1e",
+   "tools/v11/wpa_core.py": "832529ce56d8bf290301ad6b2eeaccf4f7d545ce6afed64ebc037d906e99b725",
+   "tools/v11/wpa_exclusions.py": "b00e12301ac667f4b91411b1e6164897a64699d7c848813f6b6fdbeb623a9ff6",
+   "evidence/v11-wpa/gate-trials.json": "2503a7866cd1e459dc9193987eea86a94dbe784cdb122f0b56b91c4884638093",
+   "v10-citation-methods/main.tex": "e6acfc3484852bd8a85f6ebe52614a1342a571a6f4ba8a4198b780fe8badf96f"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\noela\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "seed": 20261031
+ },
+ "data": {
+  "outcome_partitions": [
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "cascade",
+    "n": 3600,
+    "counts": {
+     "correct": 3545,
+     "wrong_place": 53,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 98.5,
+     "wrong_place": 1.5,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "cascade_v1",
+    "n": 3600,
+    "counts": {
+     "correct": 3469,
+     "wrong_place": 131
+    },
+    "rounded": {
+     "correct": 96.4,
+     "wrong_place": 3.6,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "quote_exact",
+    "n": 3600,
+    "counts": {
+     "correct": 2695,
+     "wrong_place": 10,
+     "lost": 895
+    },
+    "rounded": {
+     "correct": 74.9,
+     "wrong_place": 0.3,
+     "lost": 24.9,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "diff_drift",
+    "n": 3600,
+    "counts": {
+     "correct": 2100,
+     "lost": 1500
+    },
+    "rounded": {
+     "correct": 58.3,
+     "wrong_place": 0.0,
+     "lost": 41.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "line_number",
+    "n": 3600,
+    "counts": {
+     "correct": 1500,
+     "lost": 2100
+    },
+    "rounded": {
+     "correct": 41.7,
+     "wrong_place": 0.0,
+     "lost": 58.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "tracker_adapter",
+    "n": 3600,
+    "counts": {
+     "correct": 3288,
+     "lost": 312
+    },
+    "rounded": {
+     "correct": 91.3,
+     "wrong_place": 0.0,
+     "lost": 8.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "calibrated",
+    "n": 3600,
+    "counts": {
+     "correct": 3348,
+     "wrong_place": 250,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 93.0,
+     "wrong_place": 6.9,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "cascade",
+    "n": 3300,
+    "counts": {
+     "correct": 3254,
+     "wrong_place": 44,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 98.6,
+     "wrong_place": 1.3,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "cascade_v1",
+    "n": 3300,
+    "counts": {
+     "correct": 3172,
+     "wrong_place": 128
+    },
+    "rounded": {
+     "correct": 96.1,
+     "wrong_place": 3.9,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "quote_exact",
+    "n": 3300,
+    "counts": {
+     "correct": 2695,
+     "wrong_place": 8,
+     "lost": 597
+    },
+    "rounded": {
+     "correct": 81.7,
+     "wrong_place": 0.2,
+     "lost": 18.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "diff_drift",
+    "n": 3300,
+    "counts": {
+     "correct": 2100,
+     "lost": 1200
+    },
+    "rounded": {
+     "correct": 63.6,
+     "wrong_place": 0.0,
+     "lost": 36.4,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "line_number",
+    "n": 3300,
+    "counts": {
+     "correct": 1500,
+     "lost": 1800
+    },
+    "rounded": {
+     "correct": 45.5,
+     "wrong_place": 0.0,
+     "lost": 54.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "tracker_adapter",
+    "n": 3300,
+    "counts": {
+     "correct": 3288,
+     "lost": 12
+    },
+    "rounded": {
+     "correct": 99.6,
+     "wrong_place": 0.0,
+     "lost": 0.4,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "calibrated",
+    "n": 3300,
+    "counts": {
+     "correct": 3127,
+     "wrong_place": 171,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 94.8,
+     "wrong_place": 5.2,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_above",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_above",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_above",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_above",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_above",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_above",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_above",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_block",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 289,
+     "wrong_place": 11
+    },
+    "rounded": {
+     "correct": 96.3,
+     "wrong_place": 3.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_block",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 259,
+     "wrong_place": 41
+    },
+    "rounded": {
+     "correct": 86.3,
+     "wrong_place": 13.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_block",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_block",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_block",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_block",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-delete_block",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 226,
+     "wrong_place": 74
+    },
+    "rounded": {
+     "correct": 75.3,
+     "wrong_place": 24.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-duplicate_above",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-duplicate_above",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-duplicate_above",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-duplicate_above",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-duplicate_above",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-duplicate_above",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-duplicate_above",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_elsewhere",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_elsewhere",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_elsewhere",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_elsewhere",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_elsewhere",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_elsewhere",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_elsewhere",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_token",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 287,
+     "wrong_place": 13
+    },
+    "rounded": {
+     "correct": 95.7,
+     "wrong_place": 4.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_token",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 285,
+     "wrong_place": 15
+    },
+    "rounded": {
+     "correct": 95.0,
+     "wrong_place": 5.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_token",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 298,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.7,
+     "lost": 99.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_token",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_token",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_token",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 293,
+     "lost": 7
+    },
+    "rounded": {
+     "correct": 97.7,
+     "wrong_place": 0.0,
+     "lost": 2.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-edit_token",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 287,
+     "wrong_place": 13
+    },
+    "rounded": {
+     "correct": 95.7,
+     "wrong_place": 4.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-identity",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-identity",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-identity",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-identity",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-identity",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-identity",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-identity",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_above",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_above",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_above",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_above",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_above",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_above",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_above",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 290,
+     "wrong_place": 8,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 96.7,
+     "wrong_place": 2.7,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 285,
+     "wrong_place": 15
+    },
+    "rounded": {
+     "correct": 95.0,
+     "wrong_place": 5.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 299,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.3,
+     "lost": 99.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 295,
+     "lost": 5
+    },
+    "rounded": {
+     "correct": 98.3,
+     "wrong_place": 0.0,
+     "lost": 1.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 290,
+     "wrong_place": 8,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 96.7,
+     "wrong_place": 2.7,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_file",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 291,
+     "wrong_place": 9
+    },
+    "rounded": {
+     "correct": 97.0,
+     "wrong_place": 3.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_file",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_file",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 298,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.7,
+     "lost": 99.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_file",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_file",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_file",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_file",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 221,
+     "wrong_place": 79
+    },
+    "rounded": {
+     "correct": 73.7,
+     "wrong_place": 26.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_within",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_within",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_within",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_within",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_within",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_within",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-move_within",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-reindent",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-reindent",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-reindent",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-reindent",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-reindent",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-reindent",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-reindent",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-rewrite",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 291,
+     "wrong_place": 9
+    },
+    "rounded": {
+     "correct": 97.0,
+     "wrong_place": 3.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-rewrite",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 246,
+     "wrong_place": 54
+    },
+    "rounded": {
+     "correct": 82.0,
+     "wrong_place": 18.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-rewrite",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 298,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 99.3,
+     "wrong_place": 0.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-rewrite",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-rewrite",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-rewrite",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-rewrite",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 227,
+     "wrong_place": 73
+    },
+    "rounded": {
+     "correct": 75.7,
+     "wrong_place": 24.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-in place",
+    "method": "cascade",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-in place",
+    "method": "cascade_v1",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-in place",
+    "method": "quote_exact",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-in place",
+    "method": "diff_drift",
+    "n": 900,
+    "counts": {
+     "correct": 600,
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 66.7,
+     "wrong_place": 0.0,
+     "lost": 33.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-in place",
+    "method": "line_number",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-in place",
+    "method": "tracker_adapter",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-in place",
+    "method": "calibrated",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-shifted",
+    "method": "cascade",
+    "n": 1200,
+    "counts": {
+     "correct": 1197,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.8,
+     "wrong_place": 0.2,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-shifted",
+    "method": "cascade_v1",
+    "n": 1200,
+    "counts": {
+     "correct": 1197,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.8,
+     "wrong_place": 0.2,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-shifted",
+    "method": "quote_exact",
+    "n": 1200,
+    "counts": {
+     "correct": 1197,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.8,
+     "wrong_place": 0.2,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-shifted",
+    "method": "diff_drift",
+    "n": 1200,
+    "counts": {
+     "correct": 900,
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 75.0,
+     "wrong_place": 0.0,
+     "lost": 25.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-shifted",
+    "method": "line_number",
+    "n": 1200,
+    "counts": {
+     "lost": 1200
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-shifted",
+    "method": "tracker_adapter",
+    "n": 1200,
+    "counts": {
+     "correct": 1200
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-shifted",
+    "method": "calibrated",
+    "n": 1200,
+    "counts": {
+     "correct": 1197,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.8,
+     "wrong_place": 0.2,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-moved file",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 291,
+     "wrong_place": 9
+    },
+    "rounded": {
+     "correct": 97.0,
+     "wrong_place": 3.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-moved file",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-moved file",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 298,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.7,
+     "lost": 99.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-moved file",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-moved file",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-moved file",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-moved file",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 221,
+     "wrong_place": 79
+    },
+    "rounded": {
+     "correct": 73.7,
+     "wrong_place": 26.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-edited",
+    "method": "cascade",
+    "n": 600,
+    "counts": {
+     "correct": 577,
+     "wrong_place": 21,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 96.2,
+     "wrong_place": 3.5,
+     "lost": 0.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-edited",
+    "method": "cascade_v1",
+    "n": 600,
+    "counts": {
+     "correct": 570,
+     "wrong_place": 30
+    },
+    "rounded": {
+     "correct": 95.0,
+     "wrong_place": 5.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-edited",
+    "method": "quote_exact",
+    "n": 600,
+    "counts": {
+     "lost": 597,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.5,
+     "lost": 99.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-edited",
+    "method": "diff_drift",
+    "n": 600,
+    "counts": {
+     "lost": 600
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-edited",
+    "method": "line_number",
+    "n": 600,
+    "counts": {
+     "lost": 600
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-edited",
+    "method": "tracker_adapter",
+    "n": 600,
+    "counts": {
+     "correct": 588,
+     "lost": 12
+    },
+    "rounded": {
+     "correct": 98.0,
+     "wrong_place": 0.0,
+     "lost": 2.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-edited",
+    "method": "calibrated",
+    "n": 600,
+    "counts": {
+     "correct": 577,
+     "wrong_place": 21,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 96.2,
+     "wrong_place": 3.5,
+     "lost": 0.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-gone",
+    "method": "cascade",
+    "n": 600,
+    "counts": {
+     "correct": 580,
+     "wrong_place": 20
+    },
+    "rounded": {
+     "correct": 96.7,
+     "wrong_place": 3.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-gone",
+    "method": "cascade_v1",
+    "n": 600,
+    "counts": {
+     "correct": 505,
+     "wrong_place": 95
+    },
+    "rounded": {
+     "correct": 84.2,
+     "wrong_place": 15.8,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-gone",
+    "method": "quote_exact",
+    "n": 600,
+    "counts": {
+     "correct": 598,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-gone",
+    "method": "diff_drift",
+    "n": 600,
+    "counts": {
+     "correct": 600
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-gone",
+    "method": "line_number",
+    "n": 600,
+    "counts": {
+     "correct": 600
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-gone",
+    "method": "tracker_adapter",
+    "n": 600,
+    "counts": {
+     "correct": 600
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "class-gone",
+    "method": "calibrated",
+    "n": 600,
+    "counts": {
+     "correct": 453,
+     "wrong_place": 147
+    },
+    "rounded": {
+     "correct": 75.5,
+     "wrong_place": 24.5,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "cascade",
+    "n": 3600,
+    "counts": {
+     "correct": 3549,
+     "wrong_place": 47,
+     "lost": 4
+    },
+    "rounded": {
+     "correct": 98.6,
+     "wrong_place": 1.3,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "cascade_v1",
+    "n": 3600,
+    "counts": {
+     "correct": 3494,
+     "wrong_place": 106
+    },
+    "rounded": {
+     "correct": 97.1,
+     "wrong_place": 2.9,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "quote_exact",
+    "n": 3600,
+    "counts": {
+     "correct": 2696,
+     "wrong_place": 10,
+     "lost": 894
+    },
+    "rounded": {
+     "correct": 74.9,
+     "wrong_place": 0.3,
+     "lost": 24.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "diff_drift",
+    "n": 3600,
+    "counts": {
+     "correct": 2100,
+     "lost": 1500
+    },
+    "rounded": {
+     "correct": 58.3,
+     "wrong_place": 0.0,
+     "lost": 41.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "line_number",
+    "n": 3600,
+    "counts": {
+     "correct": 1500,
+     "lost": 2100
+    },
+    "rounded": {
+     "correct": 41.7,
+     "wrong_place": 0.0,
+     "lost": 58.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "tracker_adapter",
+    "n": 3600,
+    "counts": {
+     "correct": 3293,
+     "lost": 305,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 91.5,
+     "wrong_place": 0.1,
+     "lost": 8.5,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "calibrated",
+    "n": 3600,
+    "counts": {
+     "correct": 3334,
+     "wrong_place": 264,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 92.6,
+     "wrong_place": 7.3,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "cascade",
+    "n": 3300,
+    "counts": {
+     "correct": 3260,
+     "wrong_place": 36,
+     "lost": 4
+    },
+    "rounded": {
+     "correct": 98.8,
+     "wrong_place": 1.1,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "cascade_v1",
+    "n": 3300,
+    "counts": {
+     "correct": 3197,
+     "wrong_place": 103
+    },
+    "rounded": {
+     "correct": 96.9,
+     "wrong_place": 3.1,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "quote_exact",
+    "n": 3300,
+    "counts": {
+     "correct": 2696,
+     "wrong_place": 7,
+     "lost": 597
+    },
+    "rounded": {
+     "correct": 81.7,
+     "wrong_place": 0.2,
+     "lost": 18.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "diff_drift",
+    "n": 3300,
+    "counts": {
+     "correct": 2100,
+     "lost": 1200
+    },
+    "rounded": {
+     "correct": 63.6,
+     "wrong_place": 0.0,
+     "lost": 36.4,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "line_number",
+    "n": 3300,
+    "counts": {
+     "correct": 1500,
+     "lost": 1800
+    },
+    "rounded": {
+     "correct": 45.5,
+     "wrong_place": 0.0,
+     "lost": 54.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "tracker_adapter",
+    "n": 3300,
+    "counts": {
+     "correct": 3293,
+     "lost": 5,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 99.8,
+     "wrong_place": 0.1,
+     "lost": 0.2,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "calibrated",
+    "n": 3300,
+    "counts": {
+     "correct": 3112,
+     "wrong_place": 186,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 94.3,
+     "wrong_place": 5.6,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_above",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_above",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_above",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_above",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_above",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_above",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_above",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_block",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 291,
+     "wrong_place": 9
+    },
+    "rounded": {
+     "correct": 97.0,
+     "wrong_place": 3.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_block",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "wrong_place": 48,
+     "correct": 252
+    },
+    "rounded": {
+     "correct": 84.0,
+     "wrong_place": 16.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_block",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_block",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_block",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_block",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 299,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-delete_block",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 207,
+     "wrong_place": 93
+    },
+    "rounded": {
+     "correct": 69.0,
+     "wrong_place": 31.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-duplicate_above",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-duplicate_above",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-duplicate_above",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-duplicate_above",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-duplicate_above",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-duplicate_above",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-duplicate_above",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_elsewhere",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_elsewhere",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_elsewhere",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_elsewhere",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_elsewhere",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_elsewhere",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_elsewhere",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_token",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 292,
+     "wrong_place": 8
+    },
+    "rounded": {
+     "correct": 97.3,
+     "wrong_place": 2.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_token",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 289,
+     "wrong_place": 11
+    },
+    "rounded": {
+     "correct": 96.3,
+     "wrong_place": 3.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_token",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 1.0,
+     "lost": 99.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_token",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_token",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_token",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 298,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 99.3,
+     "wrong_place": 0.0,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-edit_token",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 292,
+     "wrong_place": 8
+    },
+    "rounded": {
+     "correct": 97.3,
+     "wrong_place": 2.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-identity",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-identity",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-identity",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-identity",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-identity",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-identity",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-identity",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_above",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 299,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_above",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 299,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_above",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 299,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_above",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_above",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_above",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_above",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 299,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 291,
+     "lost": 4,
+     "wrong_place": 5
+    },
+    "rounded": {
+     "correct": 97.0,
+     "wrong_place": 1.7,
+     "lost": 1.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 294,
+     "wrong_place": 6
+    },
+    "rounded": {
+     "correct": 98.0,
+     "wrong_place": 2.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "lost": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 0.0,
+     "lost": 1.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 293,
+     "lost": 2,
+     "wrong_place": 5
+    },
+    "rounded": {
+     "correct": 97.7,
+     "wrong_place": 1.7,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_file",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 289,
+     "wrong_place": 11
+    },
+    "rounded": {
+     "correct": 96.3,
+     "wrong_place": 3.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_file",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_file",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 1.0,
+     "lost": 99.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_file",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_file",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_file",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_file",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 222,
+     "wrong_place": 78
+    },
+    "rounded": {
+     "correct": 74.0,
+     "wrong_place": 26.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_within",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_within",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_within",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_within",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_within",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_within",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-move_within",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-reindent",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-reindent",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-reindent",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-reindent",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-reindent",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-reindent",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-reindent",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-rewrite",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 290,
+     "wrong_place": 10
+    },
+    "rounded": {
+     "correct": 96.7,
+     "wrong_place": 3.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-rewrite",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 266,
+     "wrong_place": 34
+    },
+    "rounded": {
+     "correct": 88.7,
+     "wrong_place": 11.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-rewrite",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-rewrite",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-rewrite",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "correct": 300
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-rewrite",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "correct": 299,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-rewrite",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 224,
+     "wrong_place": 76
+    },
+    "rounded": {
+     "correct": 74.7,
+     "wrong_place": 25.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-in place",
+    "method": "cascade",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-in place",
+    "method": "cascade_v1",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-in place",
+    "method": "quote_exact",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-in place",
+    "method": "diff_drift",
+    "n": 900,
+    "counts": {
+     "correct": 600,
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 66.7,
+     "wrong_place": 0.0,
+     "lost": 33.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-in place",
+    "method": "line_number",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-in place",
+    "method": "tracker_adapter",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-in place",
+    "method": "calibrated",
+    "n": 900,
+    "counts": {
+     "correct": 900
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-shifted",
+    "method": "cascade",
+    "n": 1200,
+    "counts": {
+     "correct": 1196,
+     "wrong_place": 4
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-shifted",
+    "method": "cascade_v1",
+    "n": 1200,
+    "counts": {
+     "correct": 1196,
+     "wrong_place": 4
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-shifted",
+    "method": "quote_exact",
+    "n": 1200,
+    "counts": {
+     "correct": 1196,
+     "wrong_place": 4
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-shifted",
+    "method": "diff_drift",
+    "n": 1200,
+    "counts": {
+     "correct": 900,
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 75.0,
+     "wrong_place": 0.0,
+     "lost": 25.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-shifted",
+    "method": "line_number",
+    "n": 1200,
+    "counts": {
+     "lost": 1200
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-shifted",
+    "method": "tracker_adapter",
+    "n": 1200,
+    "counts": {
+     "correct": 1200
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-shifted",
+    "method": "calibrated",
+    "n": 1200,
+    "counts": {
+     "correct": 1196,
+     "wrong_place": 4
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-moved file",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 289,
+     "wrong_place": 11
+    },
+    "rounded": {
+     "correct": 96.3,
+     "wrong_place": 3.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-moved file",
+    "method": "cascade_v1",
+    "n": 300,
+    "counts": {
+     "correct": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 99.0,
+     "wrong_place": 1.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-moved file",
+    "method": "quote_exact",
+    "n": 300,
+    "counts": {
+     "lost": 297,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 1.0,
+     "lost": 99.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-moved file",
+    "method": "diff_drift",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-moved file",
+    "method": "line_number",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-moved file",
+    "method": "tracker_adapter",
+    "n": 300,
+    "counts": {
+     "lost": 300
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-moved file",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 222,
+     "wrong_place": 78
+    },
+    "rounded": {
+     "correct": 74.0,
+     "wrong_place": 26.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "cascade",
+    "n": 600,
+    "counts": {
+     "correct": 583,
+     "wrong_place": 13,
+     "lost": 4
+    },
+    "rounded": {
+     "correct": 97.2,
+     "wrong_place": 2.2,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "cascade_v1",
+    "n": 600,
+    "counts": {
+     "correct": 583,
+     "wrong_place": 17
+    },
+    "rounded": {
+     "correct": 97.2,
+     "wrong_place": 2.8,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "quote_exact",
+    "n": 600,
+    "counts": {
+     "lost": 597,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.5,
+     "lost": 99.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "diff_drift",
+    "n": 600,
+    "counts": {
+     "lost": 600
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "line_number",
+    "n": 600,
+    "counts": {
+     "lost": 600
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "tracker_adapter",
+    "n": 600,
+    "counts": {
+     "correct": 595,
+     "lost": 5
+    },
+    "rounded": {
+     "correct": 99.2,
+     "wrong_place": 0.0,
+     "lost": 0.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "calibrated",
+    "n": 600,
+    "counts": {
+     "correct": 585,
+     "wrong_place": 13,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 97.5,
+     "wrong_place": 2.2,
+     "lost": 0.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-gone",
+    "method": "cascade",
+    "n": 600,
+    "counts": {
+     "correct": 581,
+     "wrong_place": 19
+    },
+    "rounded": {
+     "correct": 96.8,
+     "wrong_place": 3.2,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-gone",
+    "method": "cascade_v1",
+    "n": 600,
+    "counts": {
+     "correct": 518,
+     "wrong_place": 82
+    },
+    "rounded": {
+     "correct": 86.3,
+     "wrong_place": 13.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-gone",
+    "method": "quote_exact",
+    "n": 600,
+    "counts": {
+     "correct": 600
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-gone",
+    "method": "diff_drift",
+    "n": 600,
+    "counts": {
+     "correct": 600
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-gone",
+    "method": "line_number",
+    "n": 600,
+    "counts": {
+     "correct": 600
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-gone",
+    "method": "tracker_adapter",
+    "n": 600,
+    "counts": {
+     "correct": 598,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-gone",
+    "method": "calibrated",
+    "n": 600,
+    "counts": {
+     "correct": 431,
+     "wrong_place": 169
+    },
+    "rounded": {
+     "correct": 71.8,
+     "wrong_place": 28.2,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "cascade",
+    "n": 15064,
+    "counts": {
+     "correct": 13826,
+     "wrong_place": 288,
+     "lost": 950
+    },
+    "rounded": {
+     "correct": 91.8,
+     "wrong_place": 1.9,
+     "lost": 6.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "cascade_v1",
+    "n": 15064,
+    "counts": {
+     "correct": 14091,
+     "wrong_place": 548,
+     "lost": 425
+    },
+    "rounded": {
+     "correct": 93.5,
+     "wrong_place": 3.6,
+     "lost": 2.8,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "quote_exact",
+    "n": 15064,
+    "counts": {
+     "correct": 12331,
+     "lost": 2719,
+     "wrong_place": 14
+    },
+    "rounded": {
+     "correct": 81.9,
+     "wrong_place": 0.1,
+     "lost": 18.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "diff_drift",
+    "n": 15064,
+    "counts": {
+     "correct": 12260,
+     "lost": 2803,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 81.4,
+     "wrong_place": 0.0,
+     "lost": 18.6,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "line_number",
+    "n": 15064,
+    "counts": {
+     "correct": 6130,
+     "lost": 8934
+    },
+    "rounded": {
+     "correct": 40.7,
+     "wrong_place": 0.0,
+     "lost": 59.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "tracker_adapter",
+    "n": 15064,
+    "counts": {
+     "correct": 14413,
+     "lost": 403,
+     "wrong_place": 105,
+     "execution_error": 143
+    },
+    "rounded": {
+     "correct": 95.7,
+     "wrong_place": 0.7,
+     "lost": 2.7,
+     "execution_error": 0.9
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "calibrated",
+    "n": 15064,
+    "counts": {
+     "correct": 14382,
+     "wrong_place": 625,
+     "lost": 57
+    },
+    "rounded": {
+     "correct": 95.5,
+     "wrong_place": 4.1,
+     "lost": 0.4,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "cascade",
+    "n": 3805,
+    "counts": {
+     "correct": 3434,
+     "wrong_place": 116,
+     "lost": 255
+    },
+    "rounded": {
+     "correct": 90.2,
+     "wrong_place": 3.0,
+     "lost": 6.7,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "cascade_v1",
+    "n": 3805,
+    "counts": {
+     "correct": 3500,
+     "wrong_place": 190,
+     "lost": 115
+    },
+    "rounded": {
+     "correct": 92.0,
+     "wrong_place": 5.0,
+     "lost": 3.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "quote_exact",
+    "n": 3805,
+    "counts": {
+     "correct": 3123,
+     "lost": 678,
+     "wrong_place": 4
+    },
+    "rounded": {
+     "correct": 82.1,
+     "wrong_place": 0.1,
+     "lost": 17.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "diff_drift",
+    "n": 3805,
+    "counts": {
+     "correct": 3101,
+     "lost": 703,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 81.5,
+     "wrong_place": 0.0,
+     "lost": 18.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "line_number",
+    "n": 3805,
+    "counts": {
+     "correct": 1157,
+     "lost": 2648
+    },
+    "rounded": {
+     "correct": 30.4,
+     "wrong_place": 0.0,
+     "lost": 69.6,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "tracker_adapter",
+    "n": 3805,
+    "counts": {
+     "correct": 3673,
+     "lost": 101,
+     "wrong_place": 31
+    },
+    "rounded": {
+     "correct": 96.5,
+     "wrong_place": 0.8,
+     "lost": 2.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "calibrated",
+    "n": 3805,
+    "counts": {
+     "correct": 3579,
+     "wrong_place": 204,
+     "lost": 22
+    },
+    "rounded": {
+     "correct": 94.1,
+     "wrong_place": 5.4,
+     "lost": 0.6,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "cascade",
+    "n": 2644,
+    "counts": {
+     "correct": 2621,
+     "lost": 10,
+     "wrong_place": 13
+    },
+    "rounded": {
+     "correct": 99.1,
+     "wrong_place": 0.5,
+     "lost": 0.4,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "cascade_v1",
+    "n": 2644,
+    "counts": {
+     "correct": 2625,
+     "lost": 4,
+     "wrong_place": 15
+    },
+    "rounded": {
+     "correct": 99.3,
+     "wrong_place": 0.6,
+     "lost": 0.2,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "quote_exact",
+    "n": 2644,
+    "counts": {
+     "correct": 2593,
+     "lost": 50,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 98.1,
+     "wrong_place": 0.0,
+     "lost": 1.9,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "diff_drift",
+    "n": 2644,
+    "counts": {
+     "correct": 2592,
+     "lost": 51,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 98.0,
+     "wrong_place": 0.0,
+     "lost": 1.9,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "line_number",
+    "n": 2644,
+    "counts": {
+     "correct": 962,
+     "lost": 1682
+    },
+    "rounded": {
+     "correct": 36.4,
+     "wrong_place": 0.0,
+     "lost": 63.6,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "tracker_adapter",
+    "n": 2644,
+    "counts": {
+     "correct": 2630,
+     "lost": 13,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 99.5,
+     "wrong_place": 0.0,
+     "lost": 0.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "calibrated",
+    "n": 2644,
+    "counts": {
+     "correct": 2629,
+     "wrong_place": 15
+    },
+    "rounded": {
+     "correct": 99.4,
+     "wrong_place": 0.6,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "cascade",
+    "n": 1161,
+    "counts": {
+     "wrong_place": 103,
+     "lost": 245,
+     "correct": 813
+    },
+    "rounded": {
+     "correct": 70.0,
+     "wrong_place": 8.9,
+     "lost": 21.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "cascade_v1",
+    "n": 1161,
+    "counts": {
+     "wrong_place": 175,
+     "lost": 111,
+     "correct": 875
+    },
+    "rounded": {
+     "correct": 75.4,
+     "wrong_place": 15.1,
+     "lost": 9.6,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "quote_exact",
+    "n": 1161,
+    "counts": {
+     "lost": 628,
+     "correct": 530,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 45.7,
+     "wrong_place": 0.3,
+     "lost": 54.1,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "diff_drift",
+    "n": 1161,
+    "counts": {
+     "lost": 652,
+     "correct": 509
+    },
+    "rounded": {
+     "correct": 43.8,
+     "wrong_place": 0.0,
+     "lost": 56.2,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "line_number",
+    "n": 1161,
+    "counts": {
+     "lost": 966,
+     "correct": 195
+    },
+    "rounded": {
+     "correct": 16.8,
+     "wrong_place": 0.0,
+     "lost": 83.2,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "tracker_adapter",
+    "n": 1161,
+    "counts": {
+     "correct": 1043,
+     "lost": 88,
+     "wrong_place": 30
+    },
+    "rounded": {
+     "correct": 89.8,
+     "wrong_place": 2.6,
+     "lost": 7.6,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "calibrated",
+    "n": 1161,
+    "counts": {
+     "wrong_place": 189,
+     "correct": 950,
+     "lost": 22
+    },
+    "rounded": {
+     "correct": 81.8,
+     "wrong_place": 16.3,
+     "lost": 1.9,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "cascade",
+    "n": 11259,
+    "counts": {
+     "correct": 10392,
+     "lost": 695,
+     "wrong_place": 172
+    },
+    "rounded": {
+     "correct": 92.3,
+     "wrong_place": 1.5,
+     "lost": 6.2,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "cascade_v1",
+    "n": 11259,
+    "counts": {
+     "correct": 10591,
+     "lost": 310,
+     "wrong_place": 358
+    },
+    "rounded": {
+     "correct": 94.1,
+     "wrong_place": 3.2,
+     "lost": 2.8,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "quote_exact",
+    "n": 11259,
+    "counts": {
+     "correct": 9208,
+     "lost": 2041,
+     "wrong_place": 10
+    },
+    "rounded": {
+     "correct": 81.8,
+     "wrong_place": 0.1,
+     "lost": 18.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "diff_drift",
+    "n": 11259,
+    "counts": {
+     "correct": 9159,
+     "lost": 2100
+    },
+    "rounded": {
+     "correct": 81.3,
+     "wrong_place": 0.0,
+     "lost": 18.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "line_number",
+    "n": 11259,
+    "counts": {
+     "correct": 4973,
+     "lost": 6286
+    },
+    "rounded": {
+     "correct": 44.2,
+     "wrong_place": 0.0,
+     "lost": 55.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "tracker_adapter",
+    "n": 11259,
+    "counts": {
+     "correct": 10740,
+     "lost": 302,
+     "wrong_place": 74,
+     "execution_error": 143
+    },
+    "rounded": {
+     "correct": 95.4,
+     "wrong_place": 0.7,
+     "lost": 2.7,
+     "execution_error": 1.3
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "calibrated",
+    "n": 11259,
+    "counts": {
+     "correct": 10803,
+     "wrong_place": 421,
+     "lost": 35
+    },
+    "rounded": {
+     "correct": 95.9,
+     "wrong_place": 3.7,
+     "lost": 0.3,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-uniform",
+    "method": "cascade",
+    "n": 8805,
+    "counts": {
+     "correct": 8753,
+     "lost": 40,
+     "wrong_place": 12
+    },
+    "rounded": {
+     "correct": 99.4,
+     "wrong_place": 0.1,
+     "lost": 0.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-uniform",
+    "method": "cascade_v1",
+    "n": 8805,
+    "counts": {
+     "correct": 8768,
+     "wrong_place": 19,
+     "lost": 18
+    },
+    "rounded": {
+     "correct": 99.6,
+     "wrong_place": 0.2,
+     "lost": 0.2,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-uniform",
+    "method": "quote_exact",
+    "n": 8805,
+    "counts": {
+     "correct": 8648,
+     "lost": 156,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 98.2,
+     "wrong_place": 0.0,
+     "lost": 1.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-uniform",
+    "method": "diff_drift",
+    "n": 8805,
+    "counts": {
+     "correct": 8639,
+     "lost": 166
+    },
+    "rounded": {
+     "correct": 98.1,
+     "wrong_place": 0.0,
+     "lost": 1.9,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-uniform",
+    "method": "line_number",
+    "n": 8805,
+    "counts": {
+     "correct": 4691,
+     "lost": 4114
+    },
+    "rounded": {
+     "correct": 53.3,
+     "wrong_place": 0.0,
+     "lost": 46.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-uniform",
+    "method": "tracker_adapter",
+    "n": 8805,
+    "counts": {
+     "correct": 8688,
+     "lost": 28,
+     "wrong_place": 4,
+     "execution_error": 85
+    },
+    "rounded": {
+     "correct": 98.7,
+     "wrong_place": 0.0,
+     "lost": 0.3,
+     "execution_error": 1.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-uniform",
+    "method": "calibrated",
+    "n": 8805,
+    "counts": {
+     "correct": 8776,
+     "wrong_place": 27,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 99.7,
+     "wrong_place": 0.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "cascade",
+    "n": 2454,
+    "counts": {
+     "correct": 1639,
+     "lost": 655,
+     "wrong_place": 160
+    },
+    "rounded": {
+     "correct": 66.8,
+     "wrong_place": 6.5,
+     "lost": 26.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "cascade_v1",
+    "n": 2454,
+    "counts": {
+     "correct": 1823,
+     "lost": 292,
+     "wrong_place": 339
+    },
+    "rounded": {
+     "correct": 74.3,
+     "wrong_place": 13.8,
+     "lost": 11.9,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "quote_exact",
+    "n": 2454,
+    "counts": {
+     "lost": 1885,
+     "correct": 560,
+     "wrong_place": 9
+    },
+    "rounded": {
+     "correct": 22.8,
+     "wrong_place": 0.4,
+     "lost": 76.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "diff_drift",
+    "n": 2454,
+    "counts": {
+     "lost": 1934,
+     "correct": 520
+    },
+    "rounded": {
+     "correct": 21.2,
+     "wrong_place": 0.0,
+     "lost": 78.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "line_number",
+    "n": 2454,
+    "counts": {
+     "lost": 2172,
+     "correct": 282
+    },
+    "rounded": {
+     "correct": 11.5,
+     "wrong_place": 0.0,
+     "lost": 88.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "tracker_adapter",
+    "n": 2454,
+    "counts": {
+     "correct": 2052,
+     "lost": 274,
+     "wrong_place": 70,
+     "execution_error": 58
+    },
+    "rounded": {
+     "correct": 83.6,
+     "wrong_place": 2.9,
+     "lost": 11.2,
+     "execution_error": 2.4
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "calibrated",
+    "n": 2454,
+    "counts": {
+     "correct": 2027,
+     "wrong_place": 394,
+     "lost": 33
+    },
+    "rounded": {
+     "correct": 82.6,
+     "wrong_place": 16.1,
+     "lost": 1.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "cascade",
+    "n": 11449,
+    "counts": {
+     "correct": 11374,
+     "lost": 50,
+     "wrong_place": 25
+    },
+    "rounded": {
+     "correct": 99.3,
+     "wrong_place": 0.2,
+     "lost": 0.4,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "cascade_v1",
+    "n": 11449,
+    "counts": {
+     "correct": 11393,
+     "lost": 22,
+     "wrong_place": 34
+    },
+    "rounded": {
+     "correct": 99.5,
+     "wrong_place": 0.3,
+     "lost": 0.2,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "quote_exact",
+    "n": 11449,
+    "counts": {
+     "correct": 11241,
+     "lost": 206,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 98.2,
+     "wrong_place": 0.0,
+     "lost": 1.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "diff_drift",
+    "n": 11449,
+    "counts": {
+     "correct": 11231,
+     "lost": 217,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 98.1,
+     "wrong_place": 0.0,
+     "lost": 1.9,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "line_number",
+    "n": 11449,
+    "counts": {
+     "correct": 5653,
+     "lost": 5796
+    },
+    "rounded": {
+     "correct": 49.4,
+     "wrong_place": 0.0,
+     "lost": 50.6,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "tracker_adapter",
+    "n": 11449,
+    "counts": {
+     "correct": 11318,
+     "lost": 41,
+     "wrong_place": 5,
+     "execution_error": 85
+    },
+    "rounded": {
+     "correct": 98.9,
+     "wrong_place": 0.0,
+     "lost": 0.4,
+     "execution_error": 0.7
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "calibrated",
+    "n": 11449,
+    "counts": {
+     "correct": 11405,
+     "wrong_place": 42,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 99.6,
+     "wrong_place": 0.4,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "cascade",
+    "n": 3615,
+    "counts": {
+     "wrong_place": 263,
+     "lost": 900,
+     "correct": 2452
+    },
+    "rounded": {
+     "correct": 67.8,
+     "wrong_place": 7.3,
+     "lost": 24.9,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "cascade_v1",
+    "n": 3615,
+    "counts": {
+     "wrong_place": 514,
+     "lost": 403,
+     "correct": 2698
+    },
+    "rounded": {
+     "correct": 74.6,
+     "wrong_place": 14.2,
+     "lost": 11.1,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "quote_exact",
+    "n": 3615,
+    "counts": {
+     "lost": 2513,
+     "correct": 1090,
+     "wrong_place": 12
+    },
+    "rounded": {
+     "correct": 30.2,
+     "wrong_place": 0.3,
+     "lost": 69.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "diff_drift",
+    "n": 3615,
+    "counts": {
+     "lost": 2586,
+     "correct": 1029
+    },
+    "rounded": {
+     "correct": 28.5,
+     "wrong_place": 0.0,
+     "lost": 71.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "line_number",
+    "n": 3615,
+    "counts": {
+     "lost": 3138,
+     "correct": 477
+    },
+    "rounded": {
+     "correct": 13.2,
+     "wrong_place": 0.0,
+     "lost": 86.8,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "tracker_adapter",
+    "n": 3615,
+    "counts": {
+     "correct": 3095,
+     "lost": 362,
+     "wrong_place": 100,
+     "execution_error": 58
+    },
+    "rounded": {
+     "correct": 85.6,
+     "wrong_place": 2.8,
+     "lost": 10.0,
+     "execution_error": 1.6
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "calibrated",
+    "n": 3615,
+    "counts": {
+     "wrong_place": 583,
+     "correct": 2977,
+     "lost": 55
+    },
+    "rounded": {
+     "correct": 82.4,
+     "wrong_place": 16.1,
+     "lost": 1.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-in place",
+    "method": "cascade",
+    "n": 5966,
+    "counts": {
+     "correct": 5966
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-in place",
+    "method": "cascade_v1",
+    "n": 5966,
+    "counts": {
+     "correct": 5966
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-in place",
+    "method": "quote_exact",
+    "n": 5966,
+    "counts": {
+     "correct": 5965,
+     "lost": 1
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-in place",
+    "method": "diff_drift",
+    "n": 5966,
+    "counts": {
+     "correct": 5963,
+     "lost": 3
+    },
+    "rounded": {
+     "correct": 99.9,
+     "wrong_place": 0.0,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-in place",
+    "method": "line_number",
+    "n": 5966,
+    "counts": {
+     "correct": 5966
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-in place",
+    "method": "tracker_adapter",
+    "n": 5966,
+    "counts": {
+     "correct": 5917,
+     "execution_error": 49
+    },
+    "rounded": {
+     "correct": 99.2,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.8
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-in place",
+    "method": "calibrated",
+    "n": 5966,
+    "counts": {
+     "correct": 5966
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-shifted",
+    "method": "cascade",
+    "n": 6207,
+    "counts": {
+     "correct": 6207
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-shifted",
+    "method": "cascade_v1",
+    "n": 6207,
+    "counts": {
+     "correct": 6207
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-shifted",
+    "method": "quote_exact",
+    "n": 6207,
+    "counts": {
+     "correct": 6205,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-shifted",
+    "method": "diff_drift",
+    "n": 6207,
+    "counts": {
+     "correct": 6129,
+     "lost": 78
+    },
+    "rounded": {
+     "correct": 98.7,
+     "wrong_place": 0.0,
+     "lost": 1.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-shifted",
+    "method": "line_number",
+    "n": 6207,
+    "counts": {
+     "lost": 6207
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-shifted",
+    "method": "tracker_adapter",
+    "n": 6207,
+    "counts": {
+     "correct": 6157,
+     "wrong_place": 7,
+     "execution_error": 43
+    },
+    "rounded": {
+     "correct": 99.2,
+     "wrong_place": 0.1,
+     "lost": 0.0,
+     "execution_error": 0.7
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-shifted",
+    "method": "calibrated",
+    "n": 6207,
+    "counts": {
+     "correct": 6207
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-moved file",
+    "method": "cascade",
+    "n": 111,
+    "counts": {
+     "correct": 108,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 97.3,
+     "wrong_place": 2.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-moved file",
+    "method": "cascade_v1",
+    "n": 111,
+    "counts": {
+     "correct": 108,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 97.3,
+     "wrong_place": 2.7,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-moved file",
+    "method": "quote_exact",
+    "n": 111,
+    "counts": {
+     "lost": 87,
+     "correct": 24
+    },
+    "rounded": {
+     "correct": 21.6,
+     "wrong_place": 0.0,
+     "lost": 78.4,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-moved file",
+    "method": "diff_drift",
+    "n": 111,
+    "counts": {
+     "lost": 87,
+     "correct": 24
+    },
+    "rounded": {
+     "correct": 21.6,
+     "wrong_place": 0.0,
+     "lost": 78.4,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-moved file",
+    "method": "line_number",
+    "n": 111,
+    "counts": {
+     "lost": 91,
+     "correct": 20
+    },
+    "rounded": {
+     "correct": 18.0,
+     "wrong_place": 0.0,
+     "lost": 82.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-moved file",
+    "method": "tracker_adapter",
+    "n": 111,
+    "counts": {
+     "lost": 86,
+     "correct": 25
+    },
+    "rounded": {
+     "correct": 22.5,
+     "wrong_place": 0.0,
+     "lost": 77.5,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-moved file",
+    "method": "calibrated",
+    "n": 111,
+    "counts": {
+     "correct": 100,
+     "wrong_place": 11
+    },
+    "rounded": {
+     "correct": 90.1,
+     "wrong_place": 9.9,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-edited",
+    "method": "cascade",
+    "n": 2636,
+    "counts": {
+     "wrong_place": 274,
+     "lost": 950,
+     "correct": 1412
+    },
+    "rounded": {
+     "correct": 53.6,
+     "wrong_place": 10.4,
+     "lost": 36.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-edited",
+    "method": "cascade_v1",
+    "n": 2636,
+    "counts": {
+     "wrong_place": 504,
+     "lost": 425,
+     "correct": 1707
+    },
+    "rounded": {
+     "correct": 64.8,
+     "wrong_place": 19.1,
+     "lost": 16.1,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-edited",
+    "method": "quote_exact",
+    "n": 2636,
+    "counts": {
+     "lost": 2629,
+     "wrong_place": 7
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.3,
+     "lost": 99.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-edited",
+    "method": "diff_drift",
+    "n": 2636,
+    "counts": {
+     "lost": 2635,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-edited",
+    "method": "line_number",
+    "n": 2636,
+    "counts": {
+     "lost": 2636
+    },
+    "rounded": {
+     "correct": 0.0,
+     "wrong_place": 0.0,
+     "lost": 100.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-edited",
+    "method": "tracker_adapter",
+    "n": 2636,
+    "counts": {
+     "correct": 2192,
+     "lost": 317,
+     "wrong_place": 76,
+     "execution_error": 51
+    },
+    "rounded": {
+     "correct": 83.2,
+     "wrong_place": 2.9,
+     "lost": 12.0,
+     "execution_error": 1.9
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-edited",
+    "method": "calibrated",
+    "n": 2636,
+    "counts": {
+     "wrong_place": 559,
+     "correct": 2020,
+     "lost": 57
+    },
+    "rounded": {
+     "correct": 76.6,
+     "wrong_place": 21.2,
+     "lost": 2.2,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-gone",
+    "method": "cascade",
+    "n": 144,
+    "counts": {
+     "correct": 133,
+     "wrong_place": 11
+    },
+    "rounded": {
+     "correct": 92.4,
+     "wrong_place": 7.6,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-gone",
+    "method": "cascade_v1",
+    "n": 144,
+    "counts": {
+     "correct": 103,
+     "wrong_place": 41
+    },
+    "rounded": {
+     "correct": 71.5,
+     "wrong_place": 28.5,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-gone",
+    "method": "quote_exact",
+    "n": 144,
+    "counts": {
+     "correct": 137,
+     "wrong_place": 7
+    },
+    "rounded": {
+     "correct": 95.1,
+     "wrong_place": 4.9,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-gone",
+    "method": "diff_drift",
+    "n": 144,
+    "counts": {
+     "correct": 144
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-gone",
+    "method": "line_number",
+    "n": 144,
+    "counts": {
+     "correct": 144
+    },
+    "rounded": {
+     "correct": 100.0,
+     "wrong_place": 0.0,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-gone",
+    "method": "tracker_adapter",
+    "n": 144,
+    "counts": {
+     "correct": 122,
+     "wrong_place": 22
+    },
+    "rounded": {
+     "correct": 84.7,
+     "wrong_place": 15.3,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "real",
+    "stratum": "class-gone",
+    "method": "calibrated",
+    "n": 144,
+    "counts": {
+     "correct": 89,
+     "wrong_place": 55
+    },
+    "rounded": {
+     "correct": 61.8,
+     "wrong_place": 38.2,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   }
+  ],
+  "non_100_partitions": [
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "cascade",
+    "n": 3600,
+    "counts": {
+     "correct": 3545,
+     "wrong_place": 53,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 98.5,
+     "wrong_place": 1.5,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "quote_exact",
+    "n": 3600,
+    "counts": {
+     "correct": 2695,
+     "wrong_place": 10,
+     "lost": 895
+    },
+    "rounded": {
+     "correct": 74.9,
+     "wrong_place": 0.3,
+     "lost": 24.9,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "within-file",
+    "method": "calibrated",
+    "n": 3300,
+    "counts": {
+     "correct": 3127,
+     "wrong_place": 171,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 94.8,
+     "wrong_place": 5.2,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "cascade",
+    "n": 300,
+    "counts": {
+     "correct": 290,
+     "wrong_place": 8,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 96.7,
+     "wrong_place": 2.7,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "op-insert_and_edit",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 290,
+     "wrong_place": 8,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 96.7,
+     "wrong_place": 2.7,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "all",
+    "method": "tracker_adapter",
+    "n": 3600,
+    "counts": {
+     "correct": 3293,
+     "lost": 305,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 91.5,
+     "wrong_place": 0.1,
+     "lost": 8.5,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "within-file",
+    "method": "tracker_adapter",
+    "n": 3300,
+    "counts": {
+     "correct": 3293,
+     "lost": 5,
+     "wrong_place": 2
+    },
+    "rounded": {
+     "correct": 99.8,
+     "wrong_place": 0.1,
+     "lost": 0.2,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "op-insert_and_edit",
+    "method": "calibrated",
+    "n": 300,
+    "counts": {
+     "correct": 293,
+     "lost": 2,
+     "wrong_place": 5
+    },
+    "rounded": {
+     "correct": 97.7,
+     "wrong_place": 1.7,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "replication",
+    "stratum": "class-edited",
+    "method": "cascade",
+    "n": 600,
+    "counts": {
+     "correct": 583,
+     "wrong_place": 13,
+     "lost": 4
+    },
+    "rounded": {
+     "correct": 97.2,
+     "wrong_place": 2.2,
+     "lost": 0.7,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "all",
+    "method": "cascade_v1",
+    "n": 15064,
+    "counts": {
+     "correct": 14091,
+     "wrong_place": 548,
+     "lost": 425
+    },
+    "rounded": {
+     "correct": 93.5,
+     "wrong_place": 3.6,
+     "lost": 2.8,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "cascade",
+    "n": 3805,
+    "counts": {
+     "correct": 3434,
+     "wrong_place": 116,
+     "lost": 255
+    },
+    "rounded": {
+     "correct": 90.2,
+     "wrong_place": 3.0,
+     "lost": 6.7,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own",
+    "method": "calibrated",
+    "n": 3805,
+    "counts": {
+     "correct": 3579,
+     "wrong_place": 204,
+     "lost": 22
+    },
+    "rounded": {
+     "correct": 94.1,
+     "wrong_place": 5.4,
+     "lost": 0.6,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "cascade_v1",
+    "n": 2644,
+    "counts": {
+     "correct": 2625,
+     "lost": 4,
+     "wrong_place": 15
+    },
+    "rounded": {
+     "correct": 99.3,
+     "wrong_place": 0.6,
+     "lost": 0.2,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-uniform",
+    "method": "diff_drift",
+    "n": 2644,
+    "counts": {
+     "correct": 2592,
+     "lost": 51,
+     "wrong_place": 1
+    },
+    "rounded": {
+     "correct": 98.0,
+     "wrong_place": 0.0,
+     "lost": 1.9,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "cascade_v1",
+    "n": 1161,
+    "counts": {
+     "wrong_place": 175,
+     "lost": 111,
+     "correct": 875
+    },
+    "rounded": {
+     "correct": 75.4,
+     "wrong_place": 15.1,
+     "lost": 9.6,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "own-targeted",
+    "method": "quote_exact",
+    "n": 1161,
+    "counts": {
+     "lost": 628,
+     "correct": 530,
+     "wrong_place": 3
+    },
+    "rounded": {
+     "correct": 45.7,
+     "wrong_place": 0.3,
+     "lost": 54.1,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "cascade_v1",
+    "n": 11259,
+    "counts": {
+     "correct": 10591,
+     "lost": 310,
+     "wrong_place": 358
+    },
+    "rounded": {
+     "correct": 94.1,
+     "wrong_place": 3.2,
+     "lost": 2.8,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "tracker_adapter",
+    "n": 11259,
+    "counts": {
+     "correct": 10740,
+     "lost": 302,
+     "wrong_place": 74,
+     "execution_error": 143
+    },
+    "rounded": {
+     "correct": 95.4,
+     "wrong_place": 0.7,
+     "lost": 2.7,
+     "execution_error": 1.3
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss",
+    "method": "calibrated",
+    "n": 11259,
+    "counts": {
+     "correct": 10803,
+     "wrong_place": 421,
+     "lost": 35
+    },
+    "rounded": {
+     "correct": 95.9,
+     "wrong_place": 3.7,
+     "lost": 0.3,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "oss-targeted",
+    "method": "tracker_adapter",
+    "n": 2454,
+    "counts": {
+     "correct": 2052,
+     "lost": 274,
+     "wrong_place": 70,
+     "execution_error": 58
+    },
+    "rounded": {
+     "correct": 83.6,
+     "wrong_place": 2.9,
+     "lost": 11.2,
+     "execution_error": 2.4
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "real",
+    "stratum": "uniform",
+    "method": "cascade",
+    "n": 11449,
+    "counts": {
+     "correct": 11374,
+     "lost": 50,
+     "wrong_place": 25
+    },
+    "rounded": {
+     "correct": 99.3,
+     "wrong_place": 0.2,
+     "lost": 0.4,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   },
+   {
+    "benchmark": "real",
+    "stratum": "targeted",
+    "method": "cascade_v1",
+    "n": 3615,
+    "counts": {
+     "wrong_place": 514,
+     "lost": 403,
+     "correct": 2698
+    },
+    "rounded": {
+     "correct": 74.6,
+     "wrong_place": 14.2,
+     "lost": 11.1,
+     "execution_error": 0.0
+    },
+    "total": 99.9
+   }
+  ],
+  "v10_table_III": [
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "cascade",
+    "n": 3600,
+    "counts": {
+     "correct": 3545,
+     "wrong_place": 53,
+     "lost": 2
+    },
+    "rounded": {
+     "correct": 98.5,
+     "wrong_place": 1.5,
+     "lost": 0.1,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "cascade_v1",
+    "n": 3600,
+    "counts": {
+     "correct": 3469,
+     "wrong_place": 131
+    },
+    "rounded": {
+     "correct": 96.4,
+     "wrong_place": 3.6,
+     "lost": 0.0,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "quote_exact",
+    "n": 3600,
+    "counts": {
+     "correct": 2695,
+     "wrong_place": 10,
+     "lost": 895
+    },
+    "rounded": {
+     "correct": 74.9,
+     "wrong_place": 0.3,
+     "lost": 24.9,
+     "execution_error": 0.0
+    },
+    "total": 100.1
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "diff_drift",
+    "n": 3600,
+    "counts": {
+     "correct": 2100,
+     "lost": 1500
+    },
+    "rounded": {
+     "correct": 58.3,
+     "wrong_place": 0.0,
+     "lost": 41.7,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   },
+   {
+    "benchmark": "main",
+    "stratum": "all",
+    "method": "line_number",
+    "n": 3600,
+    "counts": {
+     "correct": 1500,
+     "lost": 2100
+    },
+    "rounded": {
+     "correct": 41.7,
+     "wrong_place": 0.0,
+     "lost": 58.3,
+     "execution_error": 0.0
+    },
+    "total": 100.0
+   }
+  ],
+  "threshold_reviewer_checks": [
+   {
+    "theta": 0.5,
+    "classes": {
+     "edited": {
+      "k": 2020,
+      "n": 2636,
+      "rate": 0.7663125948406677,
+      "wilson95": [
+       0.7497775747840658,
+       0.7820725464831464
+      ],
+      "rounded_percent": 76.6
+     },
+     "gone": {
+      "k": 89,
+      "n": 144,
+      "rate": 0.6180555555555556,
+      "wilson95": [
+       0.5366095891532081,
+       0.6933664965213526
+      ],
+      "rounded_percent": 61.8
+     }
+    },
+    "reviewer_values_verified": true
+   },
+   {
+    "theta": 0.7,
+    "classes": {
+     "edited": {
+      "k": 1870,
+      "n": 2636,
+      "rate": 0.7094081942336874,
+      "wilson95": [
+       0.6917807436184235,
+       0.7264261893438287
+      ],
+      "rounded_percent": 70.9
+     },
+     "gone": {
+      "k": 118,
+      "n": 144,
+      "rate": 0.8194444444444444,
+      "wilson95": [
+       0.7485876541924738,
+       0.8737005776328083
+      ],
+      "rounded_percent": 81.9
+     }
+    },
+    "reviewer_values_verified": true
+   },
+   {
+    "theta": 0.85,
+    "classes": {
+     "edited": {
+      "k": 1412,
+      "n": 2636,
+      "rate": 0.5356600910470409,
+      "wilson95": [
+       0.5165832528915747,
+       0.5546331451128667
+      ],
+      "rounded_percent": 53.6
+     },
+     "gone": {
+      "k": 133,
+      "n": 144,
+      "rate": 0.9236111111111112,
+      "wilson95": [
+       0.8683956370822358,
+       0.956812670338247
+      ],
+      "rounded_percent": 92.4
+     }
+    },
+    "reviewer_values_verified": true
+   },
+   {
+    "theta": 0.95,
+    "classes": {
+     "edited": {
+      "k": 699,
+      "n": 2636,
+      "rate": 0.26517450682852806,
+      "wilson95": [
+       0.24867372111997732,
+       0.28235872180822175
+      ],
+      "rounded_percent": 26.5
+     },
+     "gone": {
+      "k": 136,
+      "n": 144,
+      "rate": 0.9444444444444444,
+      "wilson95": [
+       0.8942089304282713,
+       0.9715833921112514
+      ],
+      "rounded_percent": 94.4
+     }
+    },
+    "reviewer_values_verified": true
+   }
+  ],
+  "rounding_note": "Percentages are independently rounded to one decimal from raw integer counts; mutually exclusive categories may sum to 99.9% or 100.1%. Counts define the exact partition. Accuracy columns for different methods or overlapping subsets are not partitions."
+ }
+}

@@ -1,0 +1,17 @@
+% Extracted from v11 paper-v11.tex by tools/v12/make_v12.py; do not edit.
+\begin{table*}[t]
+\caption{Documented Behavior of Review Tools and Code-Mapping Methods}\label{tab:related}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.21\textwidth}p{.12\textwidth}p{.12\textwidth}p{.12\textwidth}p{.12\textwidth}p{.12\textwidth}p{.12\textwidth}@{}}\toprule
+Criterion & GitHub \cite{github2018outdating} & Gerrit \cite{gerritporting} & GitLab \cite{gitlabautoresolve} & CodeMapper \cite{hu2026codemapper} & LHDiff-style \cite{asaduzzaman2013lhdiff} & \sys{} \\ \midrule
+Follows unchanged code shifted by edits above & yes & calculated position & not documented & yes & yes & yes \\
+Follows code edited in place & no: marked outdated & calculated position or file level & no: outdated & yes & yes & yes, if similarity $\ge\theta$ \\
+Follows code moved to another file & not documented & not documented & not documented & via file renames & no & yes, exact text \\
+Change status shown to reviewer & outdated & none (looks unchanged) & outdated & n/a (mapping only) & n/a & content-match, moved, changed, removed \\
+Who resolves & people & people & people, or automatically when outdated (option) & n/a & n/a & supervisor only \\
+Dismissal remembered on later versions & not documented & not documented & not documented & n/a & n/a & yes, by finding key \\
+Published relocation accuracy & none found & none found & none found & yes & yes & this paper \\ \bottomrule
+\end{tabular}
+\tablenote{}{Product cells summarize the cited documentation as accessed on 31 October 2026, not measured behavior. ``Not documented'': no statement found in the vendor's documentation. ``None found'': no published evaluation of the product's relocation accuracy was found in its documentation or in our related-work search. n/a: the method maps code regions and has no review state.}
+\end{table*}

@@ -1,0 +1,1210 @@
+{
+ "recorded_utc": "2026-11-05T21:46:28Z",
+ "code_sha256": {
+  "wpk5_audit.py": "af896f810213a24a800fe936d9497817f261f66b059035648a327e404ff8e079",
+  "run_wpj.py": "bef940be0b8b393f7aa595a6545592b50b22ce79e233f627002da45085c3bbea",
+  "run_wpj_nim.py": "e47485b3e0f1cff4a44e37f3612ca7ce92d114b9daea1f104c2c6ba0a69a1e27"
+ },
+ "freeze": {
+  "recorded_utc": "2026-11-05T21:27:50Z",
+  "protocol_sha256": "f56b2cb1e847bb2d22e85ae34ab4bdc7a5e2d2dfa10e192a7dd3b25a612cf4a5",
+  "code_sha256": {
+   "wpk5_audit.py": "79f2fea27b7d9eaa62b2eebbb9daccb2f0352d770b0d951812f13e4d8f56f7c3",
+   "run_wpj.py": "bef940be0b8b393f7aa595a6545592b50b22ce79e233f627002da45085c3bbea",
+   "run_wpj_nim.py": "e47485b3e0f1cff4a44e37f3612ca7ce92d114b9daea1f104c2c6ba0a69a1e27"
+  },
+  "sample_sha256": "2670cfa7e661bff296553a22f1cf6f5dcc04b7f1e6231b6c7a091f0f8b1f5d36",
+  "key_sha256": "c125228e1da59e0ed80d50f4c16e8dd9ca2c1ce9a95bc801b0bff10e623a6099",
+  "system_prompt_sha256": "455daf0e87b5106a8867bc6893392af8a25e4fa8b03c06ea34413094a6b0639a",
+  "system_prompt": "You audit how a reviewed block of Python code changed between two versions of a file. In the OLD excerpt the reviewed lines are marked with \">>\". Every line is numbered. Find the code that the reviewed lines became in the NEW file: the same statements, possibly edited or moved, not merely similar code elsewhere. Answer ONLY with a JSON object {\"status\": \"unchanged\" | \"edited\" | \"deleted\", \"start\": <first line number in NEW or null>, \"end\": <last line number in NEW or null>, \"reason\": \"<one line>\"}. unchanged: the reviewed lines are present with the same text apart from whitespace; edited: they are present but their text was modified; deleted: they are no longer in the NEW file (start and end null).",
+  "statement": "No WP K5 model call was made before this record."
+ },
+ "sample_sha256": "2670cfa7e661bff296553a22f1cf6f5dcc04b7f1e6231b6c7a091f0f8b1f5d36",
+ "responses_sha256": {
+  "beam": "257168b83600184682e854696aaba58657a14511696b2a720e37f5b85f396fba",
+  "nemotron": "08a3233a3445b030f9afcb2d407827710da4c57b6cc8895bbd226f7474f2e25a"
+ },
+ "adjudicators": "hosted language models (not human annotators)",
+ "models": {
+  "beam": {
+   "unparsed": 0,
+   "lenient_only": 3,
+   "model_ids": {
+    "reflection/beam-1.0-501b-a23b:free": 284
+   }
+  },
+  "nemotron": {
+   "unparsed": 0,
+   "lenient_only": 64,
+   "model_ids": {
+    "private/nvidia/nemotron-3.5-super-120b-a12b": 284
+   }
+  }
+ },
+ "strata": {
+  "S-miss": {
+   "n": 37,
+   "models": {
+    "beam": {
+     "parsed": 37,
+     "status_dist": {
+      "edited": 29,
+      "unchanged": 8
+     },
+     "status_agree": {
+      "k": 27,
+      "n": 37,
+      "pct": 73.0,
+      "ci": [
+       57.0,
+       84.6
+      ]
+     },
+     "status_kappa": 0.259,
+     "loc_exact": {
+      "k": 25,
+      "n": 30,
+      "pct": 83.3,
+      "ci": [
+       66.4,
+       92.7
+      ]
+     },
+     "loc_near": {
+      "k": 27,
+      "n": 30,
+      "pct": 90.0,
+      "ci": [
+       74.4,
+       96.5
+      ]
+     },
+     "loc_overlap": {
+      "k": 27,
+      "n": 30,
+      "pct": 90.0,
+      "ci": [
+       74.4,
+       96.5
+      ]
+     }
+    },
+    "nemotron": {
+     "parsed": 37,
+     "status_dist": {
+      "edited": 29,
+      "unchanged": 8
+     },
+     "status_agree": {
+      "k": 28,
+      "n": 37,
+      "pct": 75.7,
+      "ci": [
+       59.9,
+       86.6
+      ]
+     },
+     "status_kappa": 0.333,
+     "loc_exact": {
+      "k": 28,
+      "n": 30,
+      "pct": 93.3,
+      "ci": [
+       78.7,
+       98.2
+      ]
+     },
+     "loc_near": {
+      "k": 29,
+      "n": 30,
+      "pct": 96.7,
+      "ci": [
+       83.3,
+       99.4
+      ]
+     },
+     "loc_overlap": {
+      "k": 29,
+      "n": 30,
+      "pct": 96.7,
+      "ci": [
+       83.3,
+       99.4
+      ]
+     }
+    }
+   },
+   "model_model_status_agree": {
+    "k": 31,
+    "n": 37,
+    "pct": 83.8,
+    "ci": [
+     68.9,
+     92.3
+    ]
+   },
+   "model_model_kappa": 0.522,
+   "suspect_status": {
+    "k": 8,
+    "n": 37,
+    "pct": 21.6,
+    "ci": [
+     11.4,
+     37.2
+    ]
+   },
+   "suspect_status_consensus": {
+    "k": 5,
+    "n": 37,
+    "pct": 13.5,
+    "ci": [
+     5.9,
+     28.0
+    ]
+   },
+   "suspect_ids": [
+    "real:13373",
+    "real:12116",
+    "real:1167",
+    "real:14414",
+    "real:12125",
+    "real:13374",
+    "real:14915",
+    "real:2825"
+   ],
+   "within_file": {
+    "n": 37,
+    "suspect": {
+     "k": 8,
+     "n": 37,
+     "pct": 21.6,
+     "ci": [
+      11.4,
+      37.2
+     ]
+    },
+    "suspect_consensus_as": {
+     "unchanged": 5
+    },
+    "status_agree": {
+     "beam": {
+      "k": 27,
+      "n": 37,
+      "pct": 73.0,
+      "ci": [
+       57.0,
+       84.6
+      ]
+     },
+     "nemotron": {
+      "k": 28,
+      "n": 37,
+      "pct": 75.7,
+      "ci": [
+       59.9,
+       86.6
+      ]
+     }
+    }
+   },
+   "suspect_consensus_as": {
+    "unchanged": 5
+   },
+   "miss_suspects_lowering": 5,
+   "miss_suspects_other": 3,
+   "cross_file_reference": 0,
+   "new_file_missing": 0
+  },
+  "S-pair": {
+   "n": 50,
+   "models": {
+    "beam": {
+     "parsed": 50,
+     "status_dist": {
+      "edited": 47,
+      "deleted": 2,
+      "unchanged": 1
+     },
+     "status_agree": {
+      "k": 47,
+      "n": 50,
+      "pct": 94.0,
+      "ci": [
+       83.8,
+       97.9
+      ]
+     },
+     "status_kappa": 0.0,
+     "loc_exact": {
+      "k": 45,
+      "n": 48,
+      "pct": 93.8,
+      "ci": [
+       83.2,
+       97.9
+      ]
+     },
+     "loc_near": {
+      "k": 48,
+      "n": 48,
+      "pct": 100.0,
+      "ci": [
+       92.6,
+       100.0
+      ]
+     },
+     "loc_overlap": {
+      "k": 48,
+      "n": 48,
+      "pct": 100.0,
+      "ci": [
+       92.6,
+       100.0
+      ]
+     }
+    },
+    "nemotron": {
+     "parsed": 50,
+     "status_dist": {
+      "edited": 49,
+      "deleted": 1
+     },
+     "status_agree": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     },
+     "status_kappa": 0.0,
+     "loc_exact": {
+      "k": 49,
+      "n": 49,
+      "pct": 100.0,
+      "ci": [
+       92.7,
+       100.0
+      ]
+     },
+     "loc_near": {
+      "k": 49,
+      "n": 49,
+      "pct": 100.0,
+      "ci": [
+       92.7,
+       100.0
+      ]
+     },
+     "loc_overlap": {
+      "k": 49,
+      "n": 49,
+      "pct": 100.0,
+      "ci": [
+       92.7,
+       100.0
+      ]
+     }
+    }
+   },
+   "model_model_status_agree": {
+    "k": 48,
+    "n": 50,
+    "pct": 96.0,
+    "ci": [
+     86.5,
+     98.9
+    ]
+   },
+   "model_model_kappa": 0.487,
+   "suspect_status": {
+    "k": 1,
+    "n": 50,
+    "pct": 2.0,
+    "ci": [
+     0.4,
+     10.5
+    ]
+   },
+   "suspect_status_consensus": {
+    "k": 1,
+    "n": 50,
+    "pct": 2.0,
+    "ci": [
+     0.4,
+     10.5
+    ]
+   },
+   "suspect_ids": [
+    "real:8392"
+   ],
+   "within_file": {
+    "n": 50,
+    "suspect": {
+     "k": 1,
+     "n": 50,
+     "pct": 2.0,
+     "ci": [
+      0.4,
+      10.5
+     ]
+    },
+    "suspect_consensus_as": {
+     "deleted": 1
+    },
+    "status_agree": {
+     "beam": {
+      "k": 47,
+      "n": 50,
+      "pct": 94.0,
+      "ci": [
+       83.8,
+       97.9
+      ]
+     },
+     "nemotron": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     }
+    }
+   },
+   "suspect_consensus_as": {
+    "deleted": 1
+   },
+   "cross_file_reference": 0,
+   "new_file_missing": 0
+  },
+  "S-del": {
+   "n": 50,
+   "models": {
+    "beam": {
+     "parsed": 47,
+     "status_dist": {
+      "deleted": 29,
+      "edited": 12,
+      "unchanged": 6
+     },
+     "status_agree": {
+      "k": 16,
+      "n": 50,
+      "pct": 32.0,
+      "ci": [
+       20.8,
+       45.8
+      ]
+     },
+     "status_kappa": -0.032,
+     "loc_exact": {
+      "k": 6,
+      "n": 8,
+      "pct": 75.0,
+      "ci": [
+       40.9,
+       92.9
+      ]
+     },
+     "loc_near": {
+      "k": 6,
+      "n": 8,
+      "pct": 75.0,
+      "ci": [
+       40.9,
+       92.9
+      ]
+     },
+     "loc_overlap": {
+      "k": 6,
+      "n": 8,
+      "pct": 75.0,
+      "ci": [
+       40.9,
+       92.9
+      ]
+     }
+    },
+    "nemotron": {
+     "parsed": 47,
+     "status_dist": {
+      "deleted": 32,
+      "edited": 8,
+      "unchanged": 7
+     },
+     "status_agree": {
+      "k": 20,
+      "n": 50,
+      "pct": 40.0,
+      "ci": [
+       27.6,
+       53.8
+      ]
+     },
+     "status_kappa": 0.017,
+     "loc_exact": {
+      "k": 6,
+      "n": 7,
+      "pct": 85.7,
+      "ci": [
+       48.7,
+       97.4
+      ]
+     },
+     "loc_near": {
+      "k": 6,
+      "n": 7,
+      "pct": 85.7,
+      "ci": [
+       48.7,
+       97.4
+      ]
+     },
+     "loc_overlap": {
+      "k": 6,
+      "n": 7,
+      "pct": 85.7,
+      "ci": [
+       48.7,
+       97.4
+      ]
+     }
+    }
+   },
+   "model_model_status_agree": {
+    "k": 45,
+    "n": 50,
+    "pct": 90.0,
+    "ci": [
+     78.6,
+     95.7
+    ]
+   },
+   "model_model_kappa": 0.815,
+   "suspect_status": {
+    "k": 30,
+    "n": 50,
+    "pct": 60.0,
+    "ci": [
+     46.2,
+     72.4
+    ]
+   },
+   "suspect_status_consensus": {
+    "k": 29,
+    "n": 50,
+    "pct": 58.0,
+    "ci": [
+     44.2,
+     70.6
+    ]
+   },
+   "suspect_ids": [
+    "student:2000",
+    "student:749",
+    "student:33",
+    "student:131",
+    "real:10121",
+    "student:187",
+    "student:173",
+    "student:230",
+    "real:5229",
+    "real:10484",
+    "student:14",
+    "student:948",
+    "real:1882",
+    "real:9644",
+    "student:66",
+    "real:8581",
+    "real:11089",
+    "student:14",
+    "real:8464",
+    "student:26",
+    "student:100",
+    "student:1923",
+    "real:5686",
+    "student:124",
+    "real:5948",
+    "student:738",
+    "student:296",
+    "student:100",
+    "student:36",
+    "student:39"
+   ],
+   "within_file": {
+    "n": 30,
+    "suspect": {
+     "k": 10,
+     "n": 30,
+     "pct": 33.3,
+     "ci": [
+      19.2,
+      51.2
+     ]
+    },
+    "suspect_consensus_as": {
+     "edited": 9,
+     "unchanged": 1
+    },
+    "status_agree": {
+     "beam": {
+      "k": 16,
+      "n": 30,
+      "pct": 53.3,
+      "ci": [
+       36.1,
+       69.8
+      ]
+     },
+     "nemotron": {
+      "k": 20,
+      "n": 30,
+      "pct": 66.7,
+      "ci": [
+       48.8,
+       80.8
+      ]
+     }
+    }
+   },
+   "suspect_consensus_as": {
+    "deleted": 18,
+    "edited": 10,
+    "unchanged": 1
+   },
+   "cross_file_reference": 20,
+   "new_file_missing": 15
+  },
+  "S-dis": {
+   "n": 50,
+   "models": {
+    "beam": {
+     "parsed": 50,
+     "status_dist": {
+      "edited": 28,
+      "deleted": 18,
+      "unchanged": 4
+     },
+     "status_agree": {
+      "k": 26,
+      "n": 50,
+      "pct": 52.0,
+      "ci": [
+       38.5,
+       65.2
+      ]
+     },
+     "status_kappa": 0.266,
+     "loc_exact": {
+      "k": 22,
+      "n": 29,
+      "pct": 75.9,
+      "ci": [
+       57.9,
+       87.8
+      ]
+     },
+     "loc_near": {
+      "k": 26,
+      "n": 29,
+      "pct": 89.7,
+      "ci": [
+       73.6,
+       96.4
+      ]
+     },
+     "loc_overlap": {
+      "k": 25,
+      "n": 29,
+      "pct": 86.2,
+      "ci": [
+       69.4,
+       94.5
+      ]
+     }
+    },
+    "nemotron": {
+     "parsed": 50,
+     "status_dist": {
+      "edited": 26,
+      "deleted": 20,
+      "unchanged": 4
+     },
+     "status_agree": {
+      "k": 28,
+      "n": 50,
+      "pct": 56.0,
+      "ci": [
+       42.3,
+       68.8
+      ]
+     },
+     "status_kappa": 0.345,
+     "loc_exact": {
+      "k": 23,
+      "n": 28,
+      "pct": 82.1,
+      "ci": [
+       64.4,
+       92.1
+      ]
+     },
+     "loc_near": {
+      "k": 27,
+      "n": 28,
+      "pct": 96.4,
+      "ci": [
+       82.3,
+       99.4
+      ]
+     },
+     "loc_overlap": {
+      "k": 27,
+      "n": 28,
+      "pct": 96.4,
+      "ci": [
+       82.3,
+       99.4
+      ]
+     }
+    }
+   },
+   "model_model_status_agree": {
+    "k": 44,
+    "n": 50,
+    "pct": 88.0,
+    "ci": [
+     76.2,
+     94.4
+    ]
+   },
+   "model_model_kappa": 0.785,
+   "suspect_status": {
+    "k": 21,
+    "n": 50,
+    "pct": 42.0,
+    "ci": [
+     29.4,
+     55.8
+    ]
+   },
+   "suspect_status_consensus": {
+    "k": 19,
+    "n": 50,
+    "pct": 38.0,
+    "ci": [
+     25.9,
+     51.8
+    ]
+   },
+   "suspect_ids": [
+    "real:5146",
+    "real:6639",
+    "real:854",
+    "real:999",
+    "real:8578",
+    "real:11326",
+    "real:10151",
+    "student:97",
+    "real:11568",
+    "real:2769",
+    "real:8463",
+    "real:5955",
+    "real:5956",
+    "real:864",
+    "real:11441",
+    "real:8467",
+    "real:10103",
+    "real:9808",
+    "real:8586",
+    "real:861",
+    "real:10102"
+   ],
+   "within_file": {
+    "n": 33,
+    "suspect": {
+     "k": 4,
+     "n": 33,
+     "pct": 12.1,
+     "ci": [
+      4.8,
+      27.3
+     ]
+    },
+    "suspect_consensus_as": {
+     "edited": 2,
+     "deleted": 1
+    },
+    "status_agree": {
+     "beam": {
+      "k": 26,
+      "n": 33,
+      "pct": 78.8,
+      "ci": [
+       62.2,
+       89.3
+      ]
+     },
+     "nemotron": {
+      "k": 28,
+      "n": 33,
+      "pct": 84.8,
+      "ci": [
+       69.1,
+       93.3
+      ]
+     }
+    }
+   },
+   "suspect_consensus_as": {
+    "deleted": 17,
+    "edited": 2
+   },
+   "cross_file_reference": 17,
+   "new_file_missing": 8
+  },
+  "S-aligned": {
+   "n": 50,
+   "models": {
+    "beam": {
+     "parsed": 50,
+     "status_dist": {
+      "unchanged": 49,
+      "edited": 1
+     },
+     "status_agree": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     },
+     "status_kappa": 0.658,
+     "loc_exact": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     },
+     "loc_near": {
+      "k": 50,
+      "n": 50,
+      "pct": 100.0,
+      "ci": [
+       92.9,
+       100.0
+      ]
+     },
+     "loc_overlap": {
+      "k": 50,
+      "n": 50,
+      "pct": 100.0,
+      "ci": [
+       92.9,
+       100.0
+      ]
+     }
+    },
+    "nemotron": {
+     "parsed": 50,
+     "status_dist": {
+      "unchanged": 49,
+      "edited": 1
+     },
+     "status_agree": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     },
+     "status_kappa": 0.658,
+     "loc_exact": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     },
+     "loc_near": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     },
+     "loc_overlap": {
+      "k": 50,
+      "n": 50,
+      "pct": 100.0,
+      "ci": [
+       92.9,
+       100.0
+      ]
+     }
+    }
+   },
+   "model_model_status_agree": {
+    "k": 50,
+    "n": 50,
+    "pct": 100.0,
+    "ci": [
+     92.9,
+     100.0
+    ]
+   },
+   "model_model_kappa": 1.0,
+   "suspect_status": {
+    "k": 1,
+    "n": 50,
+    "pct": 2.0,
+    "ci": [
+     0.4,
+     10.5
+    ]
+   },
+   "suspect_status_consensus": {
+    "k": 1,
+    "n": 50,
+    "pct": 2.0,
+    "ci": [
+     0.4,
+     10.5
+    ]
+   },
+   "suspect_ids": [
+    "real:3561"
+   ],
+   "within_file": {
+    "n": 50,
+    "suspect": {
+     "k": 1,
+     "n": 50,
+     "pct": 2.0,
+     "ci": [
+      0.4,
+      10.5
+     ]
+    },
+    "suspect_consensus_as": {
+     "unchanged": 1
+    },
+    "status_agree": {
+     "beam": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     },
+     "nemotron": {
+      "k": 49,
+      "n": 50,
+      "pct": 98.0,
+      "ci": [
+       89.5,
+       99.6
+      ]
+     }
+    }
+   },
+   "suspect_consensus_as": {
+    "unchanged": 1
+   },
+   "cross_file_reference": 0,
+   "new_file_missing": 0
+  },
+  "S-excl": {
+   "n": 50,
+   "models": {
+    "beam": {
+     "parsed": 50,
+     "status_dist": {
+      "unchanged": 3,
+      "edited": 30,
+      "deleted": 17
+     }
+    },
+    "nemotron": {
+     "parsed": 50,
+     "status_dist": {
+      "unchanged": 4,
+      "edited": 31,
+      "deleted": 15
+     }
+    }
+   },
+   "model_model_status_agree": {
+    "k": 45,
+    "n": 50,
+    "pct": 90.0,
+    "ci": [
+     78.6,
+     95.7
+    ]
+   },
+   "model_model_kappa": 0.808,
+   "excluded_consensus": {
+    "unchanged": 3,
+    "edited": 28,
+    "deleted": 14
+   },
+   "excluded_by_reason": {
+    "identical copy in the new version": 3,
+    "function renamed or rewritten": 16,
+    "n:m replacement": 27,
+    "several identical statements": 1,
+    "replaced by another statement type": 3
+   },
+   "cross_file_reference": 0,
+   "new_file_missing": 2
+  },
+  "all-decided": {
+   "n": 237,
+   "models": {
+    "beam": {
+     "parsed": 234,
+     "status_dist": {
+      "edited": 117,
+      "unchanged": 68,
+      "deleted": 49
+     },
+     "status_agree": {
+      "k": 165,
+      "n": 237,
+      "pct": 69.6,
+      "ci": [
+       63.5,
+       75.1
+      ]
+     },
+     "status_kappa": 0.514,
+     "loc_exact": {
+      "k": 147,
+      "n": 165,
+      "pct": 89.1,
+      "ci": [
+       83.4,
+       93.0
+      ]
+     },
+     "loc_near": {
+      "k": 157,
+      "n": 165,
+      "pct": 95.2,
+      "ci": [
+       90.7,
+       97.5
+      ]
+     },
+     "loc_overlap": {
+      "k": 156,
+      "n": 165,
+      "pct": 94.5,
+      "ci": [
+       90.0,
+       97.1
+      ]
+     }
+    },
+    "nemotron": {
+     "parsed": 234,
+     "status_dist": {
+      "edited": 113,
+      "unchanged": 68,
+      "deleted": 53
+     },
+     "status_agree": {
+      "k": 174,
+      "n": 237,
+      "pct": 73.4,
+      "ci": [
+       67.5,
+       78.6
+      ]
+     },
+     "status_kappa": 0.579,
+     "loc_exact": {
+      "k": 155,
+      "n": 164,
+      "pct": 94.5,
+      "ci": [
+       89.9,
+       97.1
+      ]
+     },
+     "loc_near": {
+      "k": 160,
+      "n": 164,
+      "pct": 97.6,
+      "ci": [
+       93.9,
+       99.0
+      ]
+     },
+     "loc_overlap": {
+      "k": 161,
+      "n": 164,
+      "pct": 98.2,
+      "ci": [
+       94.8,
+       99.4
+      ]
+     }
+    }
+   },
+   "model_model_status_agree": {
+    "k": 218,
+    "n": 237,
+    "pct": 92.0,
+    "ci": [
+     87.8,
+     94.8
+    ]
+   },
+   "model_model_kappa": 0.872,
+   "suspect_status": {
+    "k": 61,
+    "n": 237,
+    "pct": 25.7,
+    "ci": [
+     20.6,
+     31.7
+    ]
+   },
+   "suspect_status_consensus": {
+    "k": 55,
+    "n": 237,
+    "pct": 23.2,
+    "ci": [
+     18.3,
+     29.0
+    ]
+   },
+   "suspect_ids": [
+    "real:13373",
+    "real:12116",
+    "real:1167",
+    "real:14414",
+    "real:12125",
+    "real:13374",
+    "real:14915",
+    "real:2825",
+    "real:8392",
+    "student:2000",
+    "student:749",
+    "student:33",
+    "student:131",
+    "real:10121",
+    "student:187",
+    "student:173",
+    "student:230",
+    "real:5229",
+    "real:10484",
+    "student:14",
+    "student:948",
+    "real:1882",
+    "real:9644",
+    "student:66",
+    "real:8581",
+    "real:11089",
+    "student:14",
+    "real:8464",
+    "student:26",
+    "student:100",
+    "student:1923",
+    "real:5686",
+    "student:124",
+    "real:5948",
+    "student:738",
+    "student:296",
+    "student:100",
+    "student:36",
+    "student:39",
+    "real:5146",
+    "real:6639",
+    "real:854",
+    "real:999",
+    "real:8578",
+    "real:11326",
+    "real:10151",
+    "student:97",
+    "real:11568",
+    "real:2769",
+    "real:8463",
+    "real:5955",
+    "real:5956",
+    "real:864",
+    "real:11441",
+    "real:8467",
+    "real:10103",
+    "real:9808",
+    "real:8586",
+    "real:861",
+    "real:10102",
+    "real:3561"
+   ],
+   "within_file": {
+    "n": 200,
+    "suspect": {
+     "k": 24,
+     "n": 200,
+     "pct": 12.0,
+     "ci": [
+      8.2,
+      17.2
+     ]
+    },
+    "suspect_consensus_as": {
+     "unchanged": 7,
+     "deleted": 2,
+     "edited": 11
+    },
+    "status_agree": {
+     "beam": {
+      "k": 165,
+      "n": 200,
+      "pct": 82.5,
+      "ci": [
+       76.6,
+       87.1
+      ]
+     },
+     "nemotron": {
+      "k": 174,
+      "n": 200,
+      "pct": 87.0,
+      "ci": [
+       81.6,
+       91.0
+      ]
+     }
+    }
+   },
+   "suspect_consensus_as": {
+    "unchanged": 7,
+    "deleted": 36,
+    "edited": 12
+   },
+   "cross_file_reference": 37,
+   "new_file_missing": 23
+  }
+ },
+ "assumption": "Suspect rates bound reference error only if a two-model consensus against the reference is right; that is an assumption, not a measurement."
+}

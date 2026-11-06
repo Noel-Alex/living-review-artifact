@@ -1,0 +1,440 @@
+{
+ "provenance": {
+  "input_sha256": {
+   "evidence/source-snapshot/bench_relocation.py": "ea8f369b06d54f56bfa9b25a87fcba923a393532a03f51d6f0d2f6f438e4c1f2",
+   "evidence/source-snapshot/real_history.py": "0bed9ad9d47231cba39028ceafcd83d1fb9dfe9799f44e951c7e3476179dc225",
+   "evidence/source-snapshot/analysis_v3.py": "fa54efa629817707958da3f6ce4be7305b731b6a391bf4994408a9eb5e68a64c",
+   "evidence/source-snapshot/results-real-v1.json": "2565ff3e3c39fcd82c68d1ed4125b933ae9d02fd73bf8f4904b2bbd75444ba4f",
+   "evidence/source-snapshot/results-oss-v1.json": "15aa41755b4f71282769923d4aea757e0fd36e46718a506111d0f2d79a9c402e",
+   "evidence/source-snapshot/results-v3.json": "3bbf477c776a2feca5669c9c9cf1e9f539f57b35a9d795912b05a1d0ca0d1063",
+   "evidence/pinned-corpus/vcap/app/modules/review_studio/carry.py": "f7aef79c3600dc371a541d2e6d370f34cd7c0f66b27a7dcc3aeb44755cc4edcb",
+   "review/V11-WPA-PROTOCOL.md": "8025bd91436226598f738278d527a282f750282034fa4178732baf13b6a5c0bf",
+   "tools/v11/analyze_wpa.py": "919325f1cfd79fe9ac4493d0fa6a3e6d91cd3003965f964ad57ef1eefd5254f5",
+   "tools/v11/build_wpa_results.py": "73bb12b4d7506d5e6079855a62120d127c6a85418746e87d96d6daf49fbd6425",
+   "tools/v11/discover_student_repos.py": "1bd02a6e6400696eba6467f20272f1790614834402443ee61d99fe70c6fec242",
+   "tools/v11/freeze_gate_source.py": "a816d139a0fc82f3f3cac8282c5a2ba04a5a73d7d4a7b6265074c6855f11a963",
+   "tools/v11/mine_review_threads.py": "8ba1296ce2a84327f717e2b02de7fccd81b671d17a9268b664aa35fa5a8f8952",
+   "tools/v11/preserve_wpa_diagnostic.py": "e72d8013f80fe210fb2c4308b467edb07c2ea3d5bf5a1c33b1a886fc4eea9842",
+   "tools/v11/run_wpa_gate.py": "8e378bff44ba85cb1a5a106f3d1ee83c3a08038cfa5c65cf460d5abce9084ed8",
+   "tools/v11/snapshot_gate_runner.py": "7857e1df0cd7673d89026de955522560d468a649abe7a1f694acf50611bc3adb",
+   "tools/v11/test_wpa.py": "278023d1497c1e54c733e84b9cebd58742402238a5937d452dba2aff992550c9",
+   "tools/v11/verify_wpa.py": "98f075c50d1eea08023279e4e11f9b08467393d951f682c5296cdbf398415976",
+   "tools/v11/wpa_core.py": "832529ce56d8bf290301ad6b2eeaccf4f7d545ce6afed64ebc037d906e99b725",
+   "tools/v11/wpa_exclusions.py": "b00e12301ac667f4b91411b1e6164897a64699d7c848813f6b6fdbeb623a9ff6"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\noela\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "seed": 20261031
+ },
+ "data": {
+  "selected_theta_stability": {
+   "threshold_only": {
+    "0.55": 9
+   },
+   "full_cell": {
+    "0.55": 9
+   }
+  },
+  "refined_public_targeted_cell": {
+   "order": "fuzzy_first",
+   "scope": "local",
+   "height": "full",
+   "theta": 0.55,
+   "metrics": {
+    "accuracy": {
+     "k": 2037,
+     "n": 2454,
+     "rate": 0.8300733496332519,
+     "wilson95": [
+      0.8147007725206379,
+      0.8444141570392607
+     ]
+    },
+    "missed": {
+     "k": 10,
+     "n": 1930,
+     "rate": 0.0051813471502590676,
+     "wilson95": [
+      0.0028168501237241304,
+      0.009511698688769143
+     ]
+    },
+    "gone_correct": {
+     "k": 62,
+     "n": 95,
+     "rate": 0.6526315789473685,
+     "wilson95": [
+      0.5526464467822214,
+      0.7407527031899395
+     ]
+    },
+    "wrong": {
+     "k": 371,
+     "n": 2454,
+     "rate": 0.15118174409127955,
+     "wilson95": [
+      0.13755431900638973,
+      0.16589953321179166
+     ]
+    }
+   }
+  },
+  "public_safety_constraint_violations": [
+   {
+    "design": "threshold_only",
+    "alpha": 0.01,
+    "beta": 0.2,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.65
+    ],
+    "public_missed": {
+     "k": 11,
+     "n": 1930,
+     "rate": 0.005699481865284974,
+     "wilson95": [
+      0.0031854863978751425,
+      0.01017727335826997
+     ]
+    },
+    "public_gone_present": {
+     "k": 23,
+     "n": 95,
+     "rate": 0.24210526315789474,
+     "wilson95": [
+      0.16708840091876592,
+      0.3371682077489622
+     ]
+    }
+   },
+   {
+    "design": "threshold_only",
+    "alpha": 0.02,
+    "beta": 0.2,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.65
+    ],
+    "public_missed": {
+     "k": 11,
+     "n": 1930,
+     "rate": 0.005699481865284974,
+     "wilson95": [
+      0.0031854863978751425,
+      0.01017727335826997
+     ]
+    },
+    "public_gone_present": {
+     "k": 23,
+     "n": 95,
+     "rate": 0.24210526315789474,
+     "wilson95": [
+      0.16708840091876592,
+      0.3371682077489622
+     ]
+    }
+   },
+   {
+    "design": "threshold_only",
+    "alpha": 0.05,
+    "beta": 0.05,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.95
+    ],
+    "public_missed": {
+     "k": 19,
+     "n": 1930,
+     "rate": 0.009844559585492229,
+     "wilson95": [
+      0.006311436987960727,
+      0.0153250103173991
+     ]
+    },
+    "public_gone_present": {
+     "k": 6,
+     "n": 95,
+     "rate": 0.06315789473684211,
+     "wilson95": [
+      0.02926488835484705,
+      0.1310065100006925
+     ]
+    }
+   },
+   {
+    "design": "threshold_only",
+    "alpha": 0.05,
+    "beta": 0.2,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.65
+    ],
+    "public_missed": {
+     "k": 11,
+     "n": 1930,
+     "rate": 0.005699481865284974,
+     "wilson95": [
+      0.0031854863978751425,
+      0.01017727335826997
+     ]
+    },
+    "public_gone_present": {
+     "k": 23,
+     "n": 95,
+     "rate": 0.24210526315789474,
+     "wilson95": [
+      0.16708840091876592,
+      0.3371682077489622
+     ]
+    }
+   },
+   {
+    "design": "full_cell",
+    "alpha": 0.01,
+    "beta": 0.2,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.65
+    ],
+    "public_missed": {
+     "k": 11,
+     "n": 1930,
+     "rate": 0.005699481865284974,
+     "wilson95": [
+      0.0031854863978751425,
+      0.01017727335826997
+     ]
+    },
+    "public_gone_present": {
+     "k": 23,
+     "n": 95,
+     "rate": 0.24210526315789474,
+     "wilson95": [
+      0.16708840091876592,
+      0.3371682077489622
+     ]
+    }
+   },
+   {
+    "design": "full_cell",
+    "alpha": 0.02,
+    "beta": 0.2,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.65
+    ],
+    "public_missed": {
+     "k": 11,
+     "n": 1930,
+     "rate": 0.005699481865284974,
+     "wilson95": [
+      0.0031854863978751425,
+      0.01017727335826997
+     ]
+    },
+    "public_gone_present": {
+     "k": 23,
+     "n": 95,
+     "rate": 0.24210526315789474,
+     "wilson95": [
+      0.16708840091876592,
+      0.3371682077489622
+     ]
+    }
+   },
+   {
+    "design": "full_cell",
+    "alpha": 0.05,
+    "beta": 0.05,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.95
+    ],
+    "public_missed": {
+     "k": 19,
+     "n": 1930,
+     "rate": 0.009844559585492229,
+     "wilson95": [
+      0.006311436987960727,
+      0.0153250103173991
+     ]
+    },
+    "public_gone_present": {
+     "k": 6,
+     "n": 95,
+     "rate": 0.06315789473684211,
+     "wilson95": [
+      0.02926488835484705,
+      0.1310065100006925
+     ]
+    }
+   },
+   {
+    "design": "full_cell",
+    "alpha": 0.05,
+    "beta": 0.2,
+    "selected_cell": [
+     "fuzzy_first",
+     "local",
+     "full",
+     0.65
+    ],
+    "public_missed": {
+     "k": 11,
+     "n": 1930,
+     "rate": 0.005699481865284974,
+     "wilson95": [
+      0.0031854863978751425,
+      0.01017727335826997
+     ]
+    },
+    "public_gone_present": {
+     "k": 23,
+     "n": 95,
+     "rate": 0.24210526315789474,
+     "wilson95": [
+      0.16708840091876592,
+      0.3371682077489622
+     ]
+    }
+   }
+  ],
+  "directional_claims_weakened": [
+   {
+    "population": "own",
+    "contrast": "final_theta075-minus-cascade_v1",
+    "pair95": [
+     0.0021482277121375156,
+     0.008032310778383229
+    ],
+    "project95": [
+     -0.0013422818791946067,
+     0.00703774792066536
+    ]
+   },
+   {
+    "population": "own-uniform",
+    "contrast": "cascade-minus-cascade_v1",
+    "pair95": [
+     -0.003060473045285078,
+     -0.0003705075954057974
+    ],
+    "project95": [
+     -0.0019622271277900394,
+     0.0
+    ]
+   },
+   {
+    "population": "own-uniform",
+    "contrast": "cascade-minus-final_theta075",
+    "pair95": [
+     -0.003060473045285078,
+     -0.0003705075954057974
+    ],
+    "project95": [
+     -0.0019622271277900394,
+     0.0
+    ]
+   },
+   {
+    "population": "own-targeted",
+    "contrast": "final_theta075-minus-cascade_v1",
+    "pair95": [
+     0.007079489526849972,
+     0.026473524072367062
+    ],
+    "project95": [
+     -0.004587155963302725,
+     0.02170542635658923
+    ]
+   },
+   {
+    "population": "oss-uniform",
+    "contrast": "cascade-minus-tracker_adapter",
+    "pair95": [
+     0.0034446827116243724,
+     0.01156825752957127
+    ],
+    "project95": [
+     -0.0028044280442804936,
+     0.015316954807400696
+    ]
+   },
+   {
+    "population": "oss-uniform",
+    "contrast": "calibrated-minus-cascade_v1",
+    "pair95": [
+     0.00011645476755112739,
+     0.001707655133893171
+    ],
+    "project95": [
+     0.0,
+     0.0018700327255727345
+    ]
+   },
+   {
+    "population": "oss-uniform",
+    "contrast": "calibrated-minus-v1_calibrated",
+    "pair95": [
+     0.0002287805994052289,
+     0.0014432027770569149
+    ],
+    "project95": [
+     0.0,
+     0.0015137401024685193
+    ]
+   },
+   {
+    "population": "uniform",
+    "contrast": "cascade-minus-tracker_adapter",
+    "pair95": [
+     0.0016551892372675097,
+     0.008460547044634809
+    ],
+    "project95": [
+     -0.003856663980302824,
+     0.012533496166812099
+    ]
+   },
+   {
+    "population": "uniform",
+    "contrast": "calibrated-minus-tracker_adapter",
+    "pair95": [
+     0.004357100099322014,
+     0.011233001680142787
+    ],
+    "project95": [
+     -0.0006915089921680327,
+     0.014854810162117595
+    ]
+   },
+   {
+    "population": "targeted",
+    "contrast": "calibrated-minus-tracker_adapter",
+    "pair95": [
+     -0.04906109580870584,
+     -0.0159732313334982
+    ],
+    "project95": [
+     -0.07475209763539281,
+     0.0036887994634473564
+    ]
+   }
+  ],
+  "v10_interpretation": "No central headline direction reverses. The internal targeted equal-threshold final-v1 advantage loses resolved direction with project clustering; public calibrated-vs-tracker remains unresolved. The finer grid selects 0.55 rather than the archived coarser-grid 0.50. This refines, rather than falsifies, the earlier best-among-tested-grid statement."
+ }
+}

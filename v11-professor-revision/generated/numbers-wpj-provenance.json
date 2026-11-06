@@ -1,0 +1,9 @@
+{
+ "summary": "evidence/v11-wpj/summary-20261104T092825.json",
+ "summary_sha256": "56c4b3c3d7ae9021d6234940cd11cfcaa90eca86ba010ea28a37d50988822c29",
+ "macros": 1859,
+ "output_sha256": "8066ba1c5ed238dc7d8325d8fae12c8ee1bc6305bbe2e7422a6ebc3229d7d893",
+ "tables": {
+  "table-llm.tex": "a521966fe12c50fda2787aada010b8e6a7eef916dc1a2bd79e95f15714df3b82"
+ }
+}

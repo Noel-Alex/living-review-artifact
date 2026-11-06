@@ -1,0 +1,25 @@
+{
+  "scenario": "dismissal_memory",
+  "claim": "A dismissed finding raised again on a later version arrives dismissed; the key is category plus normalised title (v10 wording).",
+  "claim_holds": false,
+  "engine": "sqlite",
+  "note": "Key is category + first body paragraph (200 normalised chars) for partner/system findings and category + title for faculty/agent items; memory spans only the immediately previous version.",
+  "observed": {
+    "a_same_key_other_location": [
+      "dismissed"
+    ],
+    "c_distinct_finding_sharing_first_200_chars": {
+      "statuses": [
+        "dismissed"
+      ],
+      "suppressed": true
+    },
+    "d_raised_again_two_versions_later": [
+      "open"
+    ],
+    "e_faculty_dismissed_same_heading_then_detector_raises_it": [
+      "open"
+    ],
+    "a_note": "oaded code; a mismatch is not the same as “missing” functionality.\n\nYou dismissed this on version 1, so it starts dismissed here. Reopen it if it matters again."
+  }
+}

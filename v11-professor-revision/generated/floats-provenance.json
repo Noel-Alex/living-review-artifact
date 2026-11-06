@@ -1,0 +1,30 @@
+{
+  "tradeoff": {
+    "source": "evidence/v11-wpa/tex/table-threshold-check.tex",
+    "sha256": "69b3c7b9dad6a17f70f5f732c7ba9a9e8d894573a668329fd4f90d7c206ecfec"
+  },
+  "missedcases": {
+    "source": "evidence/v11-wpa/tex/table-missed-recheck.tex",
+    "sha256": "7f59b8349fd6360e59258a97afebfabdbcab01294a640dc213f30d25361a42e2"
+  },
+  "factorial": {
+    "source": "evidence/v11-wpa/tex/table-factorial-summary.tex",
+    "sha256": "8d1079ee39ebac1c8fd69fb91a96975bf1057404186c2ba69e87d85ea2a5f37a"
+  },
+  "lopo": {
+    "source": "evidence/v11-wpa/tex/table-lopo.tex",
+    "sha256": "bc2b5dcc09b93b59cd56505976a4503c044b691c1b7f005da1cb9ab3bbe2a13f"
+  },
+  "exclusions": {
+    "source": "evidence/v11-wpa/tex/table-exclusions.tex",
+    "sha256": "89d594eb762bb97cf123147ca344398b8de3732914d6c81bbfdc14dbc9c7931a"
+  },
+  "duplicates": {
+    "source": "evidence/v11-wpb1/tex/table-duplicates-085.tex",
+    "sha256": "b105e488e4c120c851687bacf621caf45c6af41015eceb2b11ed0cc096d8616e"
+  },
+  "effort": {
+    "source": "v11-professor-revision/generated/effort-v11.pdf",
+    "sha256": "641a0b89fa34b14cc0c8c26ab7b9ba5bbe57146c1410f335c87d65d6e3a13c6e"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "source_sha256": "0bed9ad9d47231cba39028ceafcd83d1fb9dfe9799f44e951c7e3476179dc225",
+  "head": "d086db856be187255b8ec61ef409357393020f32",
+  "commits": 448,
+  "rows": 1792,
+  "expected_rows": 1792,
+  "row_count_matches": true,
+  "ordered_selection_and_reference_matches": true,
+  "exclusions": {
+    "n:m replacement": 181,
+    "function renamed or rewritten": 122,
+    "replaced by another statement type": 30,
+    "identical copy in the new version": 8,
+    "several identical statements": 5
+  },
+  "expected_exclusions": {
+    "n:m replacement": 181,
+    "function renamed or rewritten": 122,
+    "replaced by another statement type": 30,
+    "identical copy in the new version": 8,
+    "several identical statements": 5
+  },
+  "exclusions_match": true,
+  "differences": []
+}

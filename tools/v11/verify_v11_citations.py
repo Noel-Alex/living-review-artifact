@@ -1,0 +1,88 @@
+"""Identity check for the references added in v11, following the v10 citation-audit procedure.
+
+Fetches Crossref (DOI) and arXiv API records and the cited documentation pages, saves every raw
+response with its SHA-256 under evidence/v11-wpg2/citation-audit/, and compares title words and
+author surnames with the bibliography entry. Prints one line per reference.
+
+Run: python -I -B tools/v11/verify_v11_citations.py   (from paper-drafts/; needs network)
+"""
+from __future__ import annotations
+
+import datetime as dt
+import hashlib
+import json
+import re
+import urllib.request
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "evidence/v11-wpg2/citation-audit"
+UA = {"User-Agent": "living-review-citation-audit/1.0"}
+
+REFS = [
+    ("hu2026codemapper", "arxiv", "2511.05205", "CodeMapper: A language-agnostic approach to mapping code regions across commits", ["Hu", "Pradel"]),
+    ("horvath2024metamanager", "doi", "10.1145/3613904.3642676", "Meta-Manager: A tool for collecting and exploring meta information about code", ["Horvath", "Macvean", "Myers"]),
+    ("misback2024magic", "arxiv", "2403.03481", "Magic Markup: Maintaining document-external markup with an LLM", ["Misback", "Tatlock", "Tanimoto"]),
+    ("misback2025codetations", "arxiv", "2504.18702", "Codetations: Intelligent, persistent notes and UIs for programs and other documents", ["Misback", "Vank", "Tatlock", "Tanimoto"]),
+    ("gitlabautoresolve", "page", "https://docs.gitlab.com/user/project/merge_requests/", "become outdated", []),
+    ("githubgraphql", "page", "https://docs.github.com/en/graphql/reference/pulls", "isOutdated", []),
+]
+
+
+def fetch(url: str) -> bytes:
+    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+        return r.read()
+
+
+def words(s: str) -> set[str]:
+    return set(re.findall(r"[a-z0-9]+", s.lower()))
+
+
+def main() -> None:
+    OUT.mkdir(parents=True, exist_ok=True)
+    rows = []
+    for key, kind, ident, title, authors in REFS:
+        rec = {"key": key, "kind": kind, "id": ident, "retrieved_utc": dt.datetime.now(dt.timezone.utc).isoformat()}
+        try:
+            if kind == "doi":
+                url = f"https://api.crossref.org/works/{ident}"
+                raw = fetch(url)
+                msg = json.loads(raw)["message"]
+                got_title = " ".join(msg.get("title", []))
+                got_auth = [a.get("family", "") for a in msg.get("author", [])]
+                rec.update(venue=" ".join(msg.get("container-title", [])), year=msg.get("issued", {}).get("date-parts", [[None]])[0][0])
+            elif kind == "arxiv":
+                url = f"https://export.arxiv.org/api/query?id_list={ident}"
+                raw = fetch(url)
+                text = raw.decode("utf-8")
+                entry = text[text.index("<entry>"):]
+                got_title = re.sub(r"\s+", " ", re.search(r"<title>(.*?)</title>", entry, re.S).group(1)).strip()
+                got_auth = [n.split()[-1] for n in re.findall(r"<name>(.*?)</name>", entry)]
+                rec.update(published=re.search(r"<published>(.*?)</published>", entry).group(1),
+                           comment=(re.search(r"<arxiv:comment[^>]*>(.*?)</arxiv:comment>", entry, re.S) or [None, None])[1])
+            else:
+                url = ident
+                raw = fetch(url)
+                got_title, got_auth = "", []
+                rec["contains_term"] = title in raw.decode("utf-8", "replace")
+            fname = f"{key}.{'json' if kind == 'doi' else 'xml' if kind == 'arxiv' else 'html'}"
+            (OUT / fname).write_bytes(raw)
+            rec.update(url=url, file=fname, sha256=hashlib.sha256(raw).hexdigest())
+            if kind != "page":
+                want = words(title)
+                rec["title_found"] = got_title
+                rec["title_word_overlap"] = round(len(want & words(got_title)) / len(want), 3)
+                rec["authors_found"] = got_auth
+                rec["authors_missing"] = [a for a in authors if a not in got_auth]
+                rec["ok"] = rec["title_word_overlap"] >= 0.9 and not rec["authors_missing"]
+            else:
+                rec["ok"] = rec["contains_term"]
+        except Exception as e:  # recorded, never hidden
+            rec.update(ok=False, error=repr(e))
+        rows.append(rec)
+        print(("ok  " if rec.get("ok") else "FAIL"), key, rec.get("title_found", rec.get("url", "")), rec.get("error", ""))
+    (OUT / "summary.json").write_text(json.dumps({"generator": "tools/v11/verify_v11_citations.py", "rows": rows}, indent=1), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,22 @@
+{
+  "scenario": "repeated_composition",
+  "claim": "Composing the same version repeatedly creates no duplicate issues or attachments and leaves content unchanged.",
+  "claim_holds": true,
+  "engine": "sqlite",
+  "note": "",
+  "observed": {
+    "items_first": 2,
+    "attachments_first": 1,
+    "items_after_each": [
+      2,
+      2,
+      2
+    ],
+    "attachments_after_each": [
+      1,
+      1,
+      1
+    ],
+    "identical": true
+  }
+}

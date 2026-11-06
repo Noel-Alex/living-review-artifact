@@ -1,0 +1,679 @@
+{
+ "Python": {
+  "candidates": [
+   {
+    "repo": "public-apis/public-apis",
+    "stars": 496369,
+    "spdx": "MIT",
+    "prs_scanned": 173,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "EbookFoundation/free-programming-books",
+    "stars": 400973,
+    "spdx": "CC-BY-4.0",
+    "rejected": "licence CC-BY-4.0"
+   },
+   {
+    "repo": "donnemartin/system-design-primer",
+    "stars": 376961,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "vinta/awesome-python",
+    "stars": 332725,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "practical-tutorials/project-based-learning",
+    "stars": 289130,
+    "spdx": "MIT",
+    "prs_scanned": 0,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "NousResearch/hermes-agent",
+    "stars": 260819,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 6,
+    "pre_exclusions": {
+     "not a source-code file": 4
+    },
+    "rejected": "6 units < 40"
+   },
+   {
+    "repo": "TheAlgorithms/Python",
+    "stars": 225902,
+    "spdx": "MIT",
+    "prs_scanned": 382,
+    "raw_units": 101,
+    "pre_exclusions": {
+     "not a source-code file": 18
+    }
+   },
+   {
+    "repo": "yt-dlp/yt-dlp",
+    "stars": 205500,
+    "spdx": "Unlicense",
+    "rejected": "licence Unlicense"
+   },
+   {
+    "repo": "microsoft/markitdown",
+    "stars": 194036,
+    "spdx": "MIT",
+    "prs_scanned": 177,
+    "raw_units": 4,
+    "pre_exclusions": {
+     "not a source-code file": 7
+    },
+    "rejected": "4 units < 40"
+   },
+   {
+    "repo": "Significant-Gravitas/AutoGPT",
+    "stars": 187912,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "anthropics/skills",
+    "stars": 187695,
+    "spdx": null,
+    "rejected": "licence None"
+   },
+   {
+    "repo": "521xueweihan/HelloGitHub",
+    "stars": 187079,
+    "spdx": null,
+    "rejected": "licence None"
+   },
+   {
+    "repo": "huggingface/transformers",
+    "stars": 168573,
+    "spdx": "Apache-2.0",
+    "rejected": "scan failed: gave up: https://api.github.com/graphql",
+    "prs_scanned": 0,
+    "raw_units": 0,
+    "pre_exclusions": {}
+   },
+   {
+    "repo": "AUTOMATIC1111/stable-diffusion-webui",
+    "stars": 165254,
+    "spdx": "AGPL-3.0",
+    "rejected": "licence AGPL-3.0"
+   },
+   {
+    "repo": "langgenius/dify",
+    "stars": 160474,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "langflow-ai/langflow",
+    "stars": 156362,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 109,
+    "pre_exclusions": {
+     "not a source-code file": 66,
+     "not exactly one fence": 2
+    }
+   }
+  ],
+  "accepted": [
+   "TheAlgorithms/Python",
+   "langflow-ai/langflow"
+  ]
+ },
+ "TypeScript": {
+  "candidates": [
+   {
+    "repo": "freeCodeCamp/freeCodeCamp",
+    "stars": 458606,
+    "spdx": "BSD-3-Clause",
+    "prs_scanned": 400,
+    "raw_units": 17,
+    "pre_exclusions": {
+     "not a source-code file": 427,
+     "not exactly one fence": 3
+    },
+    "rejected": "17 units < 40"
+   },
+   {
+    "repo": "morluto/rea",
+    "stars": 433881,
+    "spdx": "MIT",
+    "prs_scanned": 0,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "openclaw/openclaw",
+    "stars": 393982,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 0,
+    "pre_exclusions": {
+     "not exactly one fence": 34
+    },
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "nilbuild/developer-roadmap",
+    "stars": 371336,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "deepseek-ai/deepseek-harness",
+    "stars": 273699,
+    "spdx": "MIT",
+    "prs_scanned": 0,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "anomalyco/opencode",
+    "stars": 224777,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 4,
+    "pre_exclusions": {
+     "not a source-code file": 1
+    },
+    "rejected": "4 units < 40"
+   },
+   {
+    "repo": "vuejs/vue",
+    "stars": 212502,
+    "spdx": "MIT",
+    "prs_scanned": 3,
+    "raw_units": 0,
+    "pre_exclusions": {
+     "not a source-code file": 1
+    },
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "n8n-io/n8n",
+    "stars": 209630,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "firecrawl/firecrawl",
+    "stars": 198929,
+    "spdx": "AGPL-3.0",
+    "rejected": "licence AGPL-3.0"
+   },
+   {
+    "repo": "microsoft/vscode",
+    "stars": 194718,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 4,
+    "pre_exclusions": {},
+    "rejected": "4 units < 40"
+   },
+   {
+    "repo": "anthropics/claude-code",
+    "stars": 154655,
+    "spdx": null,
+    "rejected": "licence None"
+   },
+   {
+    "repo": "iptv-org/iptv",
+    "stars": 143345,
+    "spdx": "Unlicense",
+    "rejected": "licence Unlicense"
+   },
+   {
+    "repo": "yangshun/tech-interview-handbook",
+    "stars": 143221,
+    "spdx": "MIT",
+    "prs_scanned": 39,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "garrytan/gstack",
+    "stars": 139843,
+    "spdx": "MIT",
+    "prs_scanned": 288,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "excalidraw/excalidraw",
+    "stars": 135214,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 26,
+    "pre_exclusions": {
+     "not a source-code file": 6
+    },
+    "rejected": "26 units < 40"
+   },
+   {
+    "repo": "shadcn-ui/ui",
+    "stars": 127433,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 7,
+    "pre_exclusions": {
+     "not a source-code file": 4
+    },
+    "rejected": "7 units < 40"
+   },
+   {
+    "repo": "earendil-works/pi",
+    "stars": 120288,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 0,
+    "pre_exclusions": {
+     "not a source-code file": 1
+    },
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "immich-app/immich",
+    "stars": 118323,
+    "spdx": "AGPL-3.0",
+    "rejected": "licence AGPL-3.0"
+   },
+   {
+    "repo": "stablyai/orca",
+    "stars": 116547,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 131,
+    "pre_exclusions": {
+     "no original commit or line": 19,
+     "not a source-code file": 13
+    }
+   },
+   {
+    "repo": "supabase/supabase",
+    "stars": 114575,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 74,
+    "pre_exclusions": {
+     "not a source-code file": 130
+    }
+   }
+  ],
+  "accepted": [
+   "stablyai/orca",
+   "supabase/supabase"
+  ]
+ },
+ "Go": {
+  "candidates": [
+   {
+    "repo": "avelino/awesome-go",
+    "stars": 192227,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 7,
+    "pre_exclusions": {
+     "not a source-code file": 19,
+     "not exactly one fence": 2
+    },
+    "rejected": "7 units < 40"
+   },
+   {
+    "repo": "ollama/ollama",
+    "stars": 186019,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 45,
+    "pre_exclusions": {
+     "not a source-code file": 14
+    }
+   },
+   {
+    "repo": "golang/go",
+    "stars": 139613,
+    "spdx": "BSD-3-Clause",
+    "prs_scanned": 0,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "kubernetes/kubernetes",
+    "stars": 128711,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 150,
+    "pre_exclusions": {
+     "not a source-code file": 5
+    }
+   }
+  ],
+  "accepted": [
+   "ollama/ollama",
+   "kubernetes/kubernetes"
+  ]
+ },
+ "Rust": {
+  "candidates": [
+   {
+    "repo": "ultraworkers/claw-code",
+    "stars": 194949,
+    "spdx": "MIT",
+    "prs_scanned": 141,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "clash-verge-rev/clash-verge-rev",
+    "stars": 156544,
+    "spdx": "GPL-3.0",
+    "rejected": "licence GPL-3.0"
+   },
+   {
+    "repo": "farion1231/cc-switch",
+    "stars": 152094,
+    "spdx": "MIT",
+    "prs_scanned": 364,
+    "raw_units": 9,
+    "pre_exclusions": {},
+    "rejected": "9 units < 40"
+   },
+   {
+    "repo": "openai/codex",
+    "stars": 133336,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 1,
+    "pre_exclusions": {
+     "not a source-code file": 1
+    },
+    "rejected": "1 units < 40"
+   },
+   {
+    "repo": "rustdesk/rustdesk",
+    "stars": 128308,
+    "spdx": "AGPL-3.0",
+    "rejected": "licence AGPL-3.0"
+   },
+   {
+    "repo": "rust-lang/rust",
+    "stars": 121124,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 189,
+    "pre_exclusions": {
+     "not a source-code file": 13,
+     "not exactly one fence": 1
+    }
+   },
+   {
+    "repo": "tauri-apps/tauri",
+    "stars": 112530,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 38,
+    "pre_exclusions": {
+     "not a source-code file": 28
+    },
+    "rejected": "38 units < 40"
+   },
+   {
+    "repo": "denoland/deno",
+    "stars": 108840,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 2,
+    "pre_exclusions": {
+     "not a source-code file": 1
+    },
+    "rejected": "2 units < 40"
+   },
+   {
+    "repo": "pbakaus/impeccable",
+    "stars": 103771,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 131,
+    "raw_units": 7,
+    "pre_exclusions": {
+     "not a source-code file": 1
+    },
+    "rejected": "7 units < 40"
+   },
+   {
+    "repo": "ruvnet/RuView",
+    "stars": 102541,
+    "spdx": "MIT",
+    "prs_scanned": 354,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "oven-sh/bun",
+    "stars": 96570,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "zed-industries/zed",
+    "stars": 92847,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "astral-sh/uv",
+    "stars": 91594,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 34,
+    "pre_exclusions": {
+     "not a source-code file": 10,
+     "no original commit or line": 8
+    },
+    "rejected": "34 units < 40"
+   },
+   {
+    "repo": "rtk-ai/rtk",
+    "stars": 85644,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 53,
+    "pre_exclusions": {
+     "not a source-code file": 37
+    }
+   }
+  ],
+  "accepted": [
+   "rust-lang/rust",
+   "rtk-ai/rtk"
+  ]
+ },
+ "Java": {
+  "candidates": [
+   {
+    "repo": "NationalSecurityAgency/ghidra",
+    "stars": 98090,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 175,
+    "raw_units": 1,
+    "pre_exclusions": {
+     "no original commit or line": 7
+    },
+    "rejected": "1 units < 40"
+   },
+   {
+    "repo": "iluwatar/java-design-patterns",
+    "stars": 94851,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "macrozheng/mall",
+    "stars": 85011,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 0,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "spring-projects/spring-boot",
+    "stars": 81739,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 113,
+    "raw_units": 0,
+    "pre_exclusions": {
+     "no original commit or line": 1
+    },
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "doocs/advanced-java",
+    "stars": 79169,
+    "spdx": "CC-BY-SA-4.0",
+    "rejected": "licence CC-BY-SA-4.0"
+   },
+   {
+    "repo": "elastic/elasticsearch",
+    "stars": 78501,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "MisterBooo/LeetCodeAnimation",
+    "stars": 76715,
+    "spdx": null,
+    "rejected": "licence None"
+   },
+   {
+    "repo": "TheAlgorithms/Java",
+    "stars": 66737,
+    "spdx": "MIT",
+    "prs_scanned": 400,
+    "raw_units": 15,
+    "pre_exclusions": {},
+    "rejected": "15 units < 40"
+   },
+   {
+    "repo": "kdn251/interviews",
+    "stars": 65550,
+    "spdx": "MIT",
+    "prs_scanned": 0,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "termux/termux-app",
+    "stars": 64167,
+    "spdx": "NOASSERTION",
+    "rejected": "licence NOASSERTION"
+   },
+   {
+    "repo": "spring-projects/spring-framework",
+    "stars": 60310,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 124,
+    "raw_units": 1,
+    "pre_exclusions": {
+     "no original commit or line": 9,
+     "not a source-code file": 1
+    },
+    "rejected": "1 units < 40"
+   },
+   {
+    "repo": "dbeaver/dbeaver",
+    "stars": 52316,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 129,
+    "pre_exclusions": {
+     "not a source-code file": 17
+    }
+   },
+   {
+    "repo": "google/guava",
+    "stars": 51922,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "skylot/jadx",
+    "stars": 51614,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 210,
+    "raw_units": 17,
+    "pre_exclusions": {
+     "not a source-code file": 5
+    },
+    "rejected": "17 units < 40"
+   },
+   {
+    "repo": "jeecgboot/JeecgBoot",
+    "stars": 48384,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 100,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "ReactiveX/RxJava",
+    "stars": 48154,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 366,
+    "raw_units": 0,
+    "pre_exclusions": {},
+    "rejected": "0 units < 40"
+   },
+   {
+    "repo": "lysine-dev/retrofit",
+    "stars": 43935,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 1,
+    "pre_exclusions": {
+     "not a source-code file": 2
+    },
+    "rejected": "1 units < 40"
+   },
+   {
+    "repo": "ashishps1/awesome-system-design-resources",
+    "stars": 43091,
+    "spdx": "GPL-3.0",
+    "rejected": "licence GPL-3.0"
+   },
+   {
+    "repo": "apache/dubbo",
+    "stars": 41574,
+    "spdx": "Apache-2.0",
+    "prs_scanned": 400,
+    "raw_units": 58,
+    "pre_exclusions": {}
+   }
+  ],
+  "accepted": [
+   "dbeaver/dbeaver",
+   "apache/dubbo"
+  ]
+ }
+}

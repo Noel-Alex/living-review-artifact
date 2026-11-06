@@ -1,0 +1,32 @@
+{
+  "provenance": {
+    "script": "tools/v11/audit_reference_direction.py",
+    "inputs_sha256": {
+      "evidence/recomputed-real/results-real-v1.json": "2565ff3e3c39fcd82c68d1ed4125b933ae9d02fd73bf8f4904b2bbd75444ba4f",
+      "evidence/recomputed-real/results-oss-v1.json": "15aa41755b4f71282769923d4aea757e0fd36e46718a506111d0f2d79a9c402e",
+      "evidence/v11-wpa/error-analysis.json": "f5c11738e65d43c8fb2b0a8219eae603a8c325cd6c7d46a9da33b906d48ea021"
+    },
+    "utc": "2026-11-03T14:44:24.001916+00:00"
+  },
+  "data": {
+    "rows": 15064,
+    "reference_unchanged": 12284,
+    "reference_unchanged_textually_certified": 12284,
+    "reference_changed_or_deleted": 2780,
+    "reference_changed_text_differs": 2780,
+    "changed_by_event": {
+      "edited": 2343,
+      "aligned": 293,
+      "deleted": 144
+    },
+    "deployed_missed": 37,
+    "deployed_missed_by_event": {
+      "edited": 24,
+      "aligned": 6,
+      "deleted": 7
+    },
+    "deployed_missed_pct": 1.330935251798561,
+    "adverse_bound_missed": 6,
+    "adverse_bound_missed_pct": 0.2158273381294964
+  }
+}

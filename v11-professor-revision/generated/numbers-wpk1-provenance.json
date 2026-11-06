@@ -1,0 +1,16 @@
+{
+  "summary": "evidence/v12-wpk1/summary-20261105T203259.json",
+  "summary_sha256": "cb68e4a2de2c1fee9eb5c5a90dba84402ee4b7309ba6378e4346b343a0041ccc",
+  "builder": "tools/v11/build_wpk1_tex.py",
+  "builder_sha256": "282b75eeae9b6f402b98b49136acc500918366101a7206ec03dab614c1f6d01a",
+  "protocol_sha256": "c31ec1a7116b794434fab0335ba9ae5cbea600f979fea3fc08c0228fb7c22ff4",
+  "freeze_sha256": "0c333247fb98d188ba97350ccfd78da9f6c5eb97cbd845d71a81cb995f5f4518",
+  "outputs": {
+    "numbers-wpk1.tex": "8c51c7e285a92fa98499a8f9917f1c8dc16a37cfeac711214f9b94fbf99cccec",
+    "table-sixoutcome.tex": "68073647bf478a89399f6e656f0de543d6c76ed366c4a132bc0c8fe15c286e7f",
+    "table-policy.tex": "52d5caf418ff474f235899ebaa48f6b1e95ddfbfa0211f661ee451ffb5e5f4a6",
+    "table-idfloor.tex": "ccf049c7cce05cb9c80336431507a198a92302573fa6963ada5a11cd12ec5fcc",
+    "table-strata.tex": "453cfcfa1d8da3bc5c29a7eeef8aaf8ef81309b5e15037cf549590c021c2f819",
+    "figure-frontier.tex": "7c6212faa8d2c6154cb919bd52e5815045794d068cad718717670ee38b4e74cf"
+  }
+}

@@ -1,0 +1,49 @@
+{
+ "sha": "944fa91e6b359322c1a91f255ed7f4dfc556b68f",
+ "node_id": "C_kwDOKqzlwNoAKDk0NGZhOTFlNmIzNTkzMjJjMWE5MWYyNTVlZDdmNGRmYzU1NmI2OGY",
+ "commit": {
+  "message": "Upload a zenodo link.",
+  "tree": {
+   "sha": "dfdf9abfcdd68493575436b552f772c2460c1bdc",
+   "url": "https://api.github.com/repos/sola-st/CodeMapper/git/trees/dfdf9abfcdd68493575436b552f772c2460c1bdc"
+  },
+  "url": "https://api.github.com/repos/sola-st/CodeMapper/git/commits/944fa91e6b359322c1a91f255ed7f4dfc556b68f",
+  "comment_count": 0,
+  "verification": {
+   "verified": false,
+   "reason": "unsigned",
+   "signature": null,
+   "payload": null,
+   "verified_at": null
+  }
+ },
+ "url": "https://api.github.com/repos/sola-st/CodeMapper/commits/944fa91e6b359322c1a91f255ed7f4dfc556b68f",
+ "html_url": "https://github.com/sola-st/CodeMapper/commit/944fa91e6b359322c1a91f255ed7f4dfc556b68f",
+ "comments_url": "https://api.github.com/repos/sola-st/CodeMapper/commits/944fa91e6b359322c1a91f255ed7f4dfc556b68f/comments",
+ "parents": [
+  {
+   "sha": "0cb3ded4e24647c352c7154a99cff4ff1af0d698",
+   "url": "https://api.github.com/repos/sola-st/CodeMapper/commits/0cb3ded4e24647c352c7154a99cff4ff1af0d698",
+   "html_url": "https://github.com/sola-st/CodeMapper/commit/0cb3ded4e24647c352c7154a99cff4ff1af0d698"
+  }
+ ],
+ "stats": {
+  "total": 2,
+  "additions": 1,
+  "deletions": 1
+ },
+ "files": [
+  {
+   "sha": "8dd600f838c42a02a0f30e7176db23c1a6cb8973",
+   "filename": "README.md",
+   "status": "modified",
+   "additions": 1,
+   "deletions": 1,
+   "changes": 2,
+   "blob_url": "https://github.com/sola-st/CodeMapper/blob/944fa91e6b359322c1a91f255ed7f4dfc556b68f/README.md",
+   "raw_url": "https://github.com/sola-st/CodeMapper/raw/944fa91e6b359322c1a91f255ed7f4dfc556b68f/README.md",
+   "contents_url": "https://api.github.com/repos/sola-st/CodeMapper/contents/README.md?ref=944fa91e6b359322c1a91f255ed7f4dfc556b68f",
+   "patch": "@@ -2,7 +2,7 @@\n \n CodeMapper address the code mapping problem in a way that is independent of specific program elements and programming languages. Given a code region in one commit, CodeMapper finds the corresponding region in another commit. \n To have a comprehensive understanding of this work, you can check out our [research paper](https://software-lab.org/publications/icse2026_CodeMapper.pdf) here.\n-<!-- The artifact has been archived on Zenodo to ensure long-term availability and can be accessed at:  -->\n+The artifact has been archived on Zenodo to ensure long-term availability and can be accessed at: https://doi.org/10.5281/zenodo.18266767\n \n ### Setup\n Choose one of the following options to set up the project:"
+  }
+ ]
+}

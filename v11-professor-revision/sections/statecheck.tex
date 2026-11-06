@@ -1,0 +1,32 @@
+% v11 RQ6: implemented issue-state contract (WP D). Numbers: evidence/v11-wpd via numbers-wpd macros.
+\section{RQ6: The Implemented State Contract}\label{sec:statecheck}
+The safety argument of Sections~\ref{sec:design}--\ref{sec:impl} rests on rules about who may change an issue's state. We checked those rules against the pinned application in three ways: a specification read from the code, a static scan with a bounded model check, and scenario tests that drive the application's own interfaces.
+
+\subsection{Specification}
+Table~\ref{tab:transitions} lists the \wpdTransitionRows{} implemented transitions, with actor, source and target state, and the source lines that implement each. Line numbers are located by exact-substring search when the table is generated, so a stale citation fails the build. \lbl{accepted} is a faculty decision to keep an observation as a point the team must address; it is carried like \lbl{open}, and it is neither a student acknowledgment nor the acceptance of a fix. Faculty status edits have no source-state guard: a supervisor may set any state from any state.
+
+\input{generated/table-transitions}
+
+\subsection{Static Scan and Bounded Model}
+A scan of the abstract syntax trees found \wpdWriters{} call sites that create, update, delete, restore or undo a review issue, and no direct assignment to an issue's status. Each was reviewed. The system writers are carry-forward, the composition merge and composition's creators; none writes \lbl{resolved}.
+
+The bounded model encodes the transitions of Table~\ref{tab:transitions} for two findings and two versions, with the relocation label of every carried issue chosen nondeterministically. Exhaustive search to depth \wpdDepth{} visited \wpdStates{} distinct states and \wpdTransitions{} transitions. No system event wrote \lbl{resolved} (\wpdSystemResolved{} violations); revision history stayed append-only; repeated composition changed nothing; and the assistant never closed an issue without a supervisor's confirmation. One invariant failed. ``An active issue reaches the next version unless a supervisor closes it'' was violated on \wpdNotCarried{} transitions, all through deletion: \wpdNotCarriedFaculty{} by a supervisor and \wpdNotCarriedAgent{} by the assistant, with \wpdNotCarriedOther{} from any other cause. Deletion is journaled and undoable, but a deleted issue is not carried forward. The verified property is therefore narrow: no system event resolves an issue. It is not a guarantee that no concern leaves the workflow. The model abstracts the code as we read it; the scenarios below exercise the code itself.
+
+\subsection{Scenarios Against the Application}
+The pinned application's own review-state and artifact tests were run first: \wpdAppTestsCollected{} collected, \wpdAppTestsPassed{} passed, \wpdAppTestsFailed{} failed and \wpdAppTestsSkipped{} skipped. The failure needs an external partner analyser that is not part of the export, and the skip needs a submodule pin; neither concerns review state. We then wrote \wpdScenarioRun{} scenarios that submit versions, import signed analysis bundles and compose reviews through the application's interfaces (Table~\ref{tab:scenarios}). All \wpdScenarioPassed{} ran as recorded characterizations; the result column states whether the stated claim held.
+
+\input{generated/table-scenarios}
+
+Five claims held. A three-version chain was labelled moved, changed and removed in turn; the issue returned for re-check after the change and kept its original quotation through lineage; a voice note stayed linked to it, and an image note followed its code until the code was removed, then became a document-level note with an explanation. A change to a supporting anchor alone returned a multi-anchor issue for re-check. Repeated composition was idempotent. On PostgreSQL~\wpdPgVersion{}, a second composer's carry-forward was held until the first committed its locked version and produced no duplicates; an interrupted composition left no review document. SQLite does not enforce the row lock, so only this scenario tests locking, at service level with an in-memory file loader.
+
+Three claims did not hold, and the design text has been corrected accordingly.
+
+\emph{Dismissal memory} compares a newly raised finding with the findings dismissed on the immediately preceding version only, by category and the first 200 normalised characters of the description's first paragraph; issues written by a supervisor or the assistant are keyed by title. A different finding with the same opening paragraph was suppressed; a finding absent from one version and raised two versions later arrived \lbl{open}; and a supervisor's dismissal of a hand-written issue did not suppress the detector's finding on the same code. The key is a heuristic, not an identity.
+
+\emph{Carry-forward} reads only the preceding version's review. When an intermediate version had never been composed, its successor received none of the earlier issues until the intermediate review was composed and the successor recomposed. In normal operation every version is composed after analysis, so this needs a failed pipeline.
+
+\emph{Normalisation.} CRLF/LF changes and a removed final newline kept anchors \lbl{content-match}. A byte-order mark changed an anchor on the first line only. A file with an invalid UTF-8 encoding rejected the whole upload rather than losing anchors. An unchanged file of \wpdBigFileBytes{} bytes exceeded the carry size limit, so its anchor was labelled \lbl{removed} and returned for re-check: a false re-check, not a silent error.
+
+The scenarios also recorded two behaviours the earlier text did not describe. When analysis raises a finding again on a carried issue, the issue absorbs it: its evidence is replaced and an active issue returns for re-check, while a resolved or dismissed issue keeps its state. And the studio's ``Compare with version $n$'' panel shows only the immediately preceding version, so after several resubmissions it compares against the last carried quotation; the original survives in the stored lineage.
+
+Of the seven implementation claims made in the earlier draft, \wpdClaimsConfirmed{} were confirmed, \wpdClaimsPartial{} were partially true and \wpdClaimsRefuted{} were refuted; the partially true claims concerned the assistant's powers, interface wording and the comparison panel, and are corrected in Section~\ref{sec:impl}.

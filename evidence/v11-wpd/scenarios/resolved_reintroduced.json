@@ -1,0 +1,53 @@
+{
+  "scenario": "resolved_reintroduced",
+  "claim": "A finding raised again after faculty resolved it creates a new issue, and the resolved issue's history stays visible.",
+  "claim_holds": true,
+  "engine": "sqlite",
+  "note": "Across versions the new issue is not linked to the resolved one. Within one version a resolved carried issue absorbs a re-raised finding with overlapping evidence: no new issue is created and the issue stays resolved; within_version_revisions shows whether the system rewrote its evidence.",
+  "observed": {
+    "across_versions_new_issue": [
+      {
+        "status": "open",
+        "carried": null
+      }
+    ],
+    "v1_resolved_history_operations": [
+      "create",
+      "update"
+    ],
+    "v1_resolved_still_stored": "resolved",
+    "within_version_items_after_late_finding": [
+      {
+        "status": "resolved",
+        "carried": true,
+        "anchors": [
+          {
+            "path": "src/app.py",
+            "line_start": 6,
+            "line_end": 7,
+            "match": "changed",
+            "similarity": null,
+            "quotation": "    total = x * 2\n    return total + 40"
+          }
+        ]
+      }
+    ],
+    "within_version_revisions": [
+      {
+        "revision": 1,
+        "operation": "create",
+        "actor_type": "partner"
+      },
+      {
+        "revision": 2,
+        "operation": "update",
+        "actor_type": "faculty"
+      },
+      {
+        "revision": 3,
+        "operation": "update",
+        "actor_type": "system"
+      }
+    ]
+  }
+}

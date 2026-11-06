@@ -1,0 +1,15 @@
+% Extracted from v11 paper-v11.tex by tools/v12/make_v12.py; do not edit.
+\begin{table}[t]
+\caption{Relocation Labels: Definition, Limits and Effect on the Issue}\label{tab:labels}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.17\columnwidth}p{.37\columnwidth}p{.24\columnwidth}p{.12\columnwidth}@{}}\toprule
+Label & Holds when & Does \emph{not} establish & Issue \\ \midrule
+\lbl{identical} & same path and same file digest (tier 1) & semantic review of the file & keeps state \\
+\lbl{content-match} & normalized quotation $\qbar$ found at the old start (tier 2) & byte identity, equal indentation, equal behavior & keeps state \\
+\lbl{moved} & $\qbar$ found at another start or in another file (tiers 2, 4) & that the match is the original copy & keeps state \\
+\lbl{changed} & best near-predicted window has ratio $\ge\theta$ (tier 3) & that the concern is affected & re-check \\
+\lbl{removed} & no tier succeeds & that the code was deleted & re-check \\ \bottomrule
+\end{tabular}
+\tablenote{}{The deployed code emits a single identifier, \texttt{exact}, for both \lbl{identical} and \lbl{content-match}; this paper separates them because only the first is a byte-level property. Normalization strips each line's leading and trailing whitespace and skips blank lines.}
+\end{table}

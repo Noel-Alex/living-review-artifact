@@ -1,0 +1,39 @@
+% Extracted from v11 paper-v11.tex by tools/v12/make_v12.py; do not edit.
+\begin{figure*}[t]
+\centering
+% Deployment architecture of the review portal with the Living Review components highlighted (shared by both papers).
+\begin{tikzpicture}[>={Stealth[length=2mm]}, font=\footnotesize,
+  user/.style={draw=black!45, rounded corners=2pt, fill=white, align=center, inner sep=3pt, text width=21mm, font=\scriptsize},
+  comp/.style={draw=ink!70, rounded corners=2pt, fill=ink!6, align=center, inner sep=3pt, font=\scriptsize},
+  mod/.style={draw=ink!45, rounded corners=1.5pt, fill=white, align=left, inner sep=2.5pt, text width=40mm, font=\scriptsize},
+  lr/.style={mod, fill=orange!14, draw=warn},
+  store/.style={draw=black!50, cylinder, shape border rotate=90, aspect=0.2, fill=black!4, align=center, inner sep=2pt, text width=26mm, font=\scriptsize}]
+\node[mod] (m1) at (0,0) {\textbf{Submissions}: report versions, code archives, per-file SHA-256};
+\node[mod, below=1.3mm of m1] (m2) {\textbf{Analysis intake}: rule checks, language-model review, signed claim-to-code bundles};
+\node[lr, below=1.3mm of m2] (m3) {\textbf{Living Review}: compose, carry-forward, relocation cascade, dismissal memory};
+\node[lr, below=1.3mm of m3] (m4) {\textbf{Annotations}: anchored comments, media notes, change journal with undo};
+\node[mod, below=1.3mm of m4] (m5) {\textbf{Publication}: frozen per-student feedback packets};
+\begin{scope}[on background layer]
+\node[draw=ink!70, rounded corners=3pt, fill=ink!3, fit=(m1)(m5), inner sep=4pt, label={[font=\footnotesize]above:\textbf{api}: FastAPI, Python}] (api) {};
+\end{scope}
+\node[comp, text width=22mm, left=12mm of api] (web) {\textbf{web}\\Caddy front door,\\static web client};
+\node[user, left=10mm of web, yshift=10mm] (fac) {\textbf{Faculty}\\review pages};
+\node[user, left=10mm of web, yshift=-10mm] (stu) {\textbf{Students}\\submissions, feedback};
+\node[store, right=12mm of api, yshift=13mm] (pg) {\textbf{PostgreSQL}\\versions, issues, anchors,\\revisions, journal};
+\node[store, below=4mm of pg] (art) {\textbf{Artifact store}\\content-addressed files};
+\node[store, below=4mm of art] (redis) {\textbf{Redis}\\task queue, locks};
+\node[comp, text width=40mm, below=7mm of api] (worker) {\textbf{worker} and \textbf{beat}: Celery tasks for analysis and review composition};
+\node[comp, dashed, text width=27mm, left=8mm of worker] (asst) {\textbf{Assistant} (optional): journaled, reversible edits; never resolves an issue};
+\draw[<->, black!60] (fac.east) -- (web.west);
+\draw[<->, black!60] (stu.east) -- (web.west);
+\draw[<->, ink] (web) -- node[above, font=\scriptsize]{API} (api);
+\draw[<->, ink] (api.east |- pg) -- (pg.west);
+\draw[<->, ink] (api.east |- art) -- (art.west);
+\draw[<->, ink] (api.east |- redis) -- (redis.west);
+\draw[<->, ink] (worker.east) -| (redis.south);
+\draw[<->, ink] (worker) -- (api);
+\draw[<->, black!50, dashed] (asst) -- node[above, font=\scriptsize]{tools} (worker.west);
+\end{tikzpicture}
+\caption{Architecture of the review portal. Faculty and students reach the portal through one front door. Caddy serves the static client and the api container provides protected application routes; components that implement \sys{} are shaded orange. Durable state lives in PostgreSQL and a content-addressed artifact store; analysis and review composition also run as queued worker tasks. The optional assistant can edit a draft only through journaled, reversible tool calls.}
+\label{fig:deploy}
+\end{figure*}

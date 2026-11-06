@@ -1,0 +1,28 @@
+{
+ "recorded_utc": "2026-11-05T21:46:48Z",
+ "statement": "Amendment 1, recorded after responses were read. No model call is repeated or changed.",
+ "items": [
+  {
+   "item": "Lenient parsing",
+   "detail": "64 Nemotron and 3 Beam answers were invalid JSON only because the free-text reason was unquoted; their status, start and end fields are read by a regular expression (wpk5_audit.verdict, LENIENT). Strict parsing left 64 Nemotron answers unparsed; both counts are in the summary (models.*.lenient_only)."
+  },
+  {
+   "item": "Within-file view (post hoc)",
+   "detail": "The protocol states that reference locations in another file cannot be seen in the blinded input. Suspect counts and status agreement are also reported over items whose reference location is in the paired file (strata.*.within_file)."
+  },
+  {
+   "item": "Kappa",
+   "detail": "Cohen kappa is undefined in practice within strata whose reference status has one class (S-pair, S-miss, S-del); it is reported for the pooled decided strata."
+  },
+  {
+   "item": "Missing answers",
+   "detail": "3 items per model ended without an answer after the retry rules and are counted as missing."
+  }
+ ],
+ "hashes": {
+  "tools/v11/wpk5_audit.py": "af896f810213a24a800fe936d9497817f261f66b059035648a327e404ff8e079",
+  "evidence/v12-wpk5\\summary-20261105T214628.json": "2558c00d35954f16d0a01756ecd9a129fe9fac299702288ee9599f684a1e5e04",
+  "evidence/v12-wpk5/beam/responses.jsonl": "257168b83600184682e854696aaba58657a14511696b2a720e37f5b85f396fba",
+  "evidence/v12-wpk5/nemotron/responses.jsonl": "08a3233a3445b030f9afcb2d407827710da4c57b6cc8895bbd226f7474f2e25a"
+ }
+}

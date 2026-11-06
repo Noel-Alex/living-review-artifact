@@ -1,0 +1,15 @@
+\begin{table}[t]
+\caption{Identity-Rule Floor: Wrong/Lost Endpoints After Ten Commits}\label{tab:idfloor}
+\centering\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+ & & \multicolumn{5}{c}{Floor} \\ \cmidrule(l){3-7}
+Locator & Miss & 0.3 & 0.5 & 0.7 & 0.9 & 1.0 \\ \midrule
+Cascade, deployed & 8 & 88/335 & 88/335 & 88/335 & 59/482 & 8/945 \\
+Cascade+IG+AGi+VW & 8 & 47/281 & 47/281 & 47/281 & 27/425 & 8/945 \\
+\quad $\theta{=}0.55$ & 3 & 85/20 & 85/20 & 71/77 & 22/430 & 3/950 \\
+CodeMapper+IG+AGi & 3 & -- & 36/81 & 36/81 & 36/81 & 36/81 \\
+\bottomrule
+\end{tabular}
+\tablenote{}{Counts over 4,000 ten-commit chains (CodeMapper 3,998; its traces are replayed only from 0.5 upward). Miss: changes since review never signaled at the last commit, which is the same at every floor. Cells: wrong/lost endpoints. Replays reproduce the stored 0.3, 0.5 and 0.7 traces exactly.}
+\end{table}
