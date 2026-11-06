@@ -77,4 +77,5 @@ evidence/v12-wpk4/model-check-20261105T223148Z.json
 evidence/v12-wpk5/summary-20261105T214628.json
 evidence/v12-wpk6/llm/summary.json
 evidence/v12-wpk6/summary-20261105T210230.json
+evidence/v12-wpk7/summary-20261106T111338.json
 review/V12-PROTOCOL-K1.md

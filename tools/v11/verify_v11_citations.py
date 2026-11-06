@@ -28,6 +28,8 @@ REFS = [
     ("sun2026recite", "doi", "10.1145/3832783.3837474", "We must have missed this comment: Detecting and repairing stale function references in Linux kernel comments", ["Sun", "Lawall", "Lo"]),
     ("alikhanifard2024astdiff", "doi", "10.1145/3696002", "A novel refactoring and semantic aware abstract syntax tree differencing tool and a benchmark for evaluating the accuracy of diff tools", ["Alikhanifard", "Tsantalis"]),
     ("lin2025codereviewqa", "doi", "10.18653/v1/2025.findings-acl.476", "CodeReviewQA: The code review comprehension assessment for large language models", ["Lin", "Liu", "Gao", "Thongtanunam", "Treude"]),
+    # Dataset (DataCite DOI), cited as the external benchmark source; its paper is a preprint and is not cited.
+    ("fu2026reviewanchorbench", "datacite", "10.5281/zenodo.22217751", "ReviewAnchorBench: Executable Benchmark and Replication Package", ["Fu"]),
     ("gitlabautoresolve", "page", "https://docs.gitlab.com/user/project/merge_requests/", "become outdated", []),
     ("githubgraphql", "page", "https://docs.github.com/en/graphql/reference/pulls", "isOutdated", []),
 ]
@@ -55,6 +57,13 @@ def main() -> None:
                 got_title = " ".join(msg.get("title", []))
                 got_auth = [a.get("family", "") for a in msg.get("author", [])]
                 rec.update(venue=" ".join(msg.get("container-title", [])), year=msg.get("issued", {}).get("date-parts", [[None]])[0][0])
+            elif kind == "datacite":
+                url = f"https://api.datacite.org/dois/{ident}"
+                raw = fetch(url)
+                att = json.loads(raw)["data"]["attributes"]
+                got_title = " ".join(t["title"] for t in att.get("titles", []))
+                got_auth = [c.get("familyName") or c.get("name", "").split(",")[0] for c in att.get("creators", [])]
+                rec.update(venue=att.get("publisher"), year=att.get("publicationYear"), version=att.get("version"))
             elif kind == "arxiv":
                 url = f"https://export.arxiv.org/api/query?id_list={ident}"
                 raw = fetch(url)

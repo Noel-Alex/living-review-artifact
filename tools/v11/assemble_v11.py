@@ -214,7 +214,7 @@ app = edit(app, thetasec, thetasec[:head_end] + thetasec[t2_end:].strip("\n") + 
 app_r02 = ("\\clearpage\n\\section{Tables for the Second Review}\\label{app:r02}\n"
            "Tables for Section~\\ref{sec:r02}, in the order that section cites them.\n\n"
            + "".join(gen(n) for n in ("table-sixoutcome", "table-strata", "table-idfloor", "table-policy",
-                                      "table-refaudit", "table-copysuite", "table-suggestion",
+                                      "table-refaudit", "table-copysuite", "table-suggestion", "table-rab",
                                       "table-interventions-full", "table-contract"))
            + "\\clearpage\n")
 bib = cut("\\begin{thebibliography}", "\\end{thebibliography}")

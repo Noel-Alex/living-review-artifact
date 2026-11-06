@@ -1,17 +1,17 @@
 {
- "v11_tex_sha256": "410ab485821fdc18c6b4ecf1eeb95e1d3c80357c421f1882981a71ede00b784d",
+ "v11_tex_sha256": "23aa1ba8d5ec30c4a0cd0c4c75e15d3220df02d4fee0d2e78e7455c96fcda489",
  "sections": {
   "01-front.tex": "17102aaf511ce2b64b6d8bcea0963782b88e4b3ebc7bb3d8dcb8cc67b1f399f6",
-  "02-related.tex": "852fef39b77d893dfb057b4884d07a58488a5a7e06e97d7caea4627febe52a05",
+  "02-related.tex": "a6e5db9202d1813069f1e8b9b127d105300eaeaaefbe83eb834c45cdca776bc1",
   "03-design.tex": "ea1d574bf32c733d0e031d7b39cc2b17b0d0c6aa46bc5b14d242304705b65f88",
   "04-architecture.tex": "b714dc99e89309d75186dbf5f712c3add3851931794df0940ea34c9712b5b78d",
   "05-method.tex": "d1602359ac33d3da45ee16482ddf4868235cff7ae4d5a15784371e8ae880ac5e",
   "06-location.tex": "8e8542f814df0b751f4a9c8fd062f5154060db58cb8b64fbf7a719873dc2c1ca",
-  "07-layer.tex": "b80e11ceb210734a4484ec88e775dfe0d10e1fe083859adbd65c9e76898ccef2",
+  "07-layer.tex": "b7dc886b26e211035a453344e48edbe91b90b30d75f31417bfba5c0e408b6314",
   "08-statecheck.tex": "20f687f22ef392fc53d28ef441939d2cc0c3290b812bda3306f0b7f1d1428a4d",
-  "09-close.tex": "b27731b06de48de2e65464b5bc1fab350db04fcaea387588c8ca904d1336e1a9"
+  "09-close.tex": "887f36ad91d02481e79931897d3e33aa1b8da4146fa5f4683b98d3ee94059c0a"
  },
- "cited": 44,
- "body_words_approx": 10733,
- "pdf_sha256": "647f97f3561e815f39bdbfd7fa1cb6f99e10d4761631c6fcf2ffec6e5443ccb4"
+ "cited": 45,
+ "body_words_approx": 10750,
+ "pdf_sha256": "0f66247818af9791eed84e1e21ffc43aff5d9d7bc1b9c23159addb9a756d1b79"
 }

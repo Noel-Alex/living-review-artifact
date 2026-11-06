@@ -1,0 +1,18 @@
+\begin{table}[t]
+\caption{ReviewAnchorBench: Re-Check Outcomes (\%)}\label{tab:rab}
+\centering\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lrrrrrrrr@{}}\toprule
+ & \multicolumn{4}{c}{Population-sampled} & \multicolumn{4}{c}{Hard held-out} \\
+\cmidrule(lr){2-5}\cmidrule(l){6-9}
+Method & Miss & Silent & Extra & Dup & Miss & Silent & Extra & Dup \\ \midrule
+Cascade, deployed & 3.7 & 0.7 & 0.0 & 0.0 & 4.1 & 1.6 & 0.0 & 0.0 \\
+Cascade+IG+AGi+VW & 0.3 & 0.0 & 33.1 & 0.0 & 0.2 & 0.0 & 33.4 & 0.0 \\
+CodeMapper+quote & 2.7 & 0.0 & 3.0 & 0.3 & 2.3 & 0.0 & 2.6 & 0.0 \\
+\quad +IG+AG & 0.1 & 0.0 & 33.5 & 0.3 & 0.1 & 0.0 & 33.6 & 0.0 \\
+\quad +IG+AGi & 0.3 & 0.0 & 33.1 & 0.3 & 0.2 & 0.0 & 33.1 & 0.0 \\
+Benchmark$^{a}$ & 0.2 & 0.1 & 2.4 & 100.0 & 0.4 & 0.2 & 3.8 & 100.0 \\
+\bottomrule
+\end{tabular}
+\tablenote{}{Seven transformation families rebuilt to the released target hashes: \wrPopCases{} and \wrHardCases{} cases from \wrPopAnchors{} and \wrHardAnchors{} anchors. Miss: changed targets (replacement applied, moved and replaced, deleted) with no re-check request. Silent: wrong placement with no request, over all scored cases. Extra: requests on unchanged targets (identity, prefix insert, block move). Dup: request rate on duplicated pre-images. $^{a}$The benchmark's own cascade: its released predictions, re-scored, not rerun.}
+\end{table}

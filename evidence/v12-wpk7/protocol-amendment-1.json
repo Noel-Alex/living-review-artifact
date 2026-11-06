@@ -1,0 +1,19 @@
+{
+ "recorded_utc": "2026-11-06T11:20:00Z",
+ "after_outcomes": true,
+ "changes": [
+  "codemapper_agreement: restrict to cases that were run (status ok). The first summary counted 942 unrun population cases as agreeing 'none'; this is a bug fix to a descriptive check, not to any outcome measure.",
+  "exploratory(): post-hoc descriptive tables, labelled exploratory: where each method places a duplicated pre-image (original copy, inserted copy, other, none) and the stated reasons for requests on moved blocks. Added after reading the first summary, which showed near-zero duplicate requests and near-total block-move requests under the layer."
+ ],
+ "unchanged": "All protocol outcome measures, class mapping, methods, statistics and rows.json. The first summary (summary-20261106T111218.json) is kept.",
+ "sha256_after": {
+  "tools/v11/analyze_wpk7.py": "3498b4dc63597780219f9f6b31c902804710595656d034debdccfe4da8eefb69"
+ },
+ "addendum_utc": "2026-11-06T12:10:00Z",
+ "addendum": [
+  "R7 artifact audit B1: the freeze records the analyzer before amendment 1; sha256_after records it after. rows.json was not regenerated; only the analysis changed.",
+  "R7 audit N1: the protocol's '126 anchors' shared by the strata is the benchmark paper's count; the two strata use different anchor identifiers (V15- and RAV2-), and the overlap is visible here as shared source blobs.",
+  "R7 audit N3: the first summary ships beside the second so the 'kept' statement can be checked.",
+  "R7 re-audit correction (2026-11-06T12:40:00Z): changes[0] overstates the bug. The first summary included all 942 unrun population cases in its denominator (n=3000 instead of 2058) but counted only 13 of them as agreement (both_none 592 instead of 579), where the benchmark's CodeMapper also gave no location."
+ ]
+}

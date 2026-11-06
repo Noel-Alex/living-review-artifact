@@ -45,6 +45,9 @@ EXTRA_FILES = [
     "evidence/v12-wpk6/protocol-amendment-1.json", "evidence/v12-wpk6/protocol-amendment-2.json",
     "evidence/v12-wpk6/llm/summary.json", "evidence/v12-wpk6/llm/sample.json",
     "evidence/v12-wpk5/protocol-freeze.json", "evidence/v12-wpk5/protocol-amendment-1.json",
+    "evidence/v12-wpk7/rows.json", "evidence/v12-wpk7/units.json", "evidence/v12-wpk7/completion.json",
+    "evidence/v12-wpk7/protocol-freeze.json", "evidence/v12-wpk7/protocol-amendment-1.json",
+    "evidence/v12-wpk7/fetch-report.json", "evidence/v12-wpk7/summary-20261106T111218.json",
     "v12-ieee15/paper-v12.pdf", "v12-ieee15/paper-v12.tex",
     "v11-professor-revision/paper-v11.pdf", "v11-professor-revision/paper-v11.tex", "v11-professor-revision/main.tex",
 ]
@@ -212,7 +215,7 @@ Resubmissions* (Jose, Samuel, Safar and Kalyanaraman, VIT Vellore) and its exten
 | `v12-ieee15/paper-v12.pdf` | The paper (16 pages) and, beside it, its LaTeX source. |
 | `v11-professor-revision/paper-v11.pdf` | The extended technical report (66 pages) and its LaTeX source. |
 | `v11-professor-revision/generated/` | Every macro file and generated table the two documents use. Every number in the text is a macro defined here. |
-| `evidence/` | Every evidence file the build reads, except the private inputs listed below, plus the suggestion-oracle records (`evidence/v12-wpk6/`). Each JSON records the SHA-256 of the code and inputs that produced it. |
+| `evidence/` | Every evidence file the build reads, except the private inputs listed below, plus the suggestion-oracle records (`evidence/v12-wpk6/`) and the ReviewAnchorBench runs (`evidence/v12-wpk7/`). Each JSON records the SHA-256 of the code and inputs that produced it. |
 | `tools/v11/`, `tools/v12/` | Runners, analyses and builders. `tools/v11/make_v11.py` and `tools/v12/make_v12.py` rebuild both documents. |
 | `review/` | The frozen protocols, recorded before the analyses they govern ran. |
 | `tools/release/verify_artifact.py` | Checks `SHA256SUMS` and rebuilds the macro files from the shipped evidence. |
@@ -239,6 +242,9 @@ source text that is shipped only as digests.
 - The controlled-edit corpus, bare clones of the public histories (re-fetch them at the pinned heads), raw
   model transcripts and the suggestion-oracle file blobs (re-fetchable by commit and path). The sampled
   old/new code windows that the models saw do ship (`evidence/v12-wpk6/llm/sample.json`).
+- The ReviewAnchorBench package and its third-party source files. The package is on Zenodo
+  (doi 10.5281/zenodo.22217751); `tools/v12/rab_fetch.py` re-fetches the sources from the pinned URLs in its
+  manifest and checks their hashes, and `tools/v12/rab_cases.py` rebuilds the cases.
 - Third-party identity fields (commit author and committer) in the pinned CodeMapper commit record.
 - The blinded 120-item human-annotation packet and its key. They sample internal and student code.
 
@@ -246,7 +252,9 @@ source text that is shipped only as digests.
 
 Code: MIT. Our evidence, tables and text: CC BY 4.0. The review-suggestion records in `evidence/v12-wpk6/`
 quote code and comments from ten public repositories, each under MIT or Apache-2.0 (SPDX identifiers in
-`evidence/v12-wpk6/selection.json`); that material keeps its own licence and attribution.
+`evidence/v12-wpk6/selection.json`); that material keeps its own licence and attribution. The case identifiers, repository names, paths,
+ranges and source URLs in `evidence/v12-wpk7/` (units.json, rows.json, fetch-report.json) come from
+ReviewAnchorBench (J. Fu, CC BY 4.0, doi 10.5281/zenodo.22217751).
 """
 
 
