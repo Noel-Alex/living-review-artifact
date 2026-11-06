@@ -20,10 +20,14 @@ OUT = ROOT / "evidence/v11-wpg2/citation-audit"
 UA = {"User-Agent": "living-review-citation-audit/1.0"}
 
 REFS = [
-    ("hu2026codemapper", "arxiv", "2511.05205", "CodeMapper: A language-agnostic approach to mapping code regions across commits", ["Hu", "Pradel"]),
+    # Peer-reviewed versions replace arXiv records (professor's reference feedback, 2026-11-06).
+    ("hu2026codemapper", "doi", "10.1145/3744916.3773267", "CodeMapper: A language-agnostic approach to mapping code regions across commits", ["Hu", "Pradel"]),
     ("horvath2024metamanager", "doi", "10.1145/3613904.3642676", "Meta-Manager: A tool for collecting and exploring meta information about code", ["Horvath", "Macvean", "Myers"]),
-    ("misback2024magic", "arxiv", "2403.03481", "Magic Markup: Maintaining document-external markup with an LLM", ["Misback", "Tatlock", "Tanimoto"]),
-    ("misback2025codetations", "arxiv", "2504.18702", "Codetations: Intelligent, persistent notes and UIs for programs and other documents", ["Misback", "Vank", "Tatlock", "Tanimoto"]),
+    ("misback2024magic", "doi", "10.1145/3660829.3660836", "Magic Markup: Maintaining document-external markup with an LLM", ["Misback", "Tatlock", "Tanimoto"]),
+    ("islam2025historyfinder", "doi", "10.1145/3744916.3773238", "HistoryFinder: Advancing method-level source code history generation with accurate oracles and enhanced algorithm", ["Islam", "Aowal", "Uddin", "Chowdhury"]),
+    ("sun2026recite", "doi", "10.1145/3832783.3837474", "We must have missed this comment: Detecting and repairing stale function references in Linux kernel comments", ["Sun", "Lawall", "Lo"]),
+    ("alikhanifard2024astdiff", "doi", "10.1145/3696002", "A novel refactoring and semantic aware abstract syntax tree differencing tool and a benchmark for evaluating the accuracy of diff tools", ["Alikhanifard", "Tsantalis"]),
+    ("lin2025codereviewqa", "doi", "10.18653/v1/2025.findings-acl.476", "CodeReviewQA: The code review comprehension assessment for large language models", ["Lin", "Liu", "Gao", "Thongtanunam", "Treude"]),
     ("gitlabautoresolve", "page", "https://docs.gitlab.com/user/project/merge_requests/", "become outdated", []),
     ("githubgraphql", "page", "https://docs.github.com/en/graphql/reference/pulls", "isOutdated", []),
 ]

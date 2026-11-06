@@ -1,9 +1,9 @@
 {
- "v11_tex_sha256": "20c40519cd9f2b8a60784df4d1b155e8f08066868edaced47c1b874f2980f3c9",
+ "v11_tex_sha256": "410ab485821fdc18c6b4ecf1eeb95e1d3c80357c421f1882981a71ede00b784d",
  "sections": {
-  "01-front.tex": "1fcebf95e3f726fa38347441c59a9a7e7080f4e41bbc39497a4a4cd2d783716f",
-  "02-related.tex": "0111507c73f7992db77623f31f3e835e0834fa4c29ed0b5213bb0dbe446dac05",
-  "03-design.tex": "354e283d364fdd4647c64019a7d1d0a4750a72c2e5267c3da627302743d6bf65",
+  "01-front.tex": "17102aaf511ce2b64b6d8bcea0963782b88e4b3ebc7bb3d8dcb8cc67b1f399f6",
+  "02-related.tex": "852fef39b77d893dfb057b4884d07a58488a5a7e06e97d7caea4627febe52a05",
+  "03-design.tex": "ea1d574bf32c733d0e031d7b39cc2b17b0d0c6aa46bc5b14d242304705b65f88",
   "04-architecture.tex": "b714dc99e89309d75186dbf5f712c3add3851931794df0940ea34c9712b5b78d",
   "05-method.tex": "d1602359ac33d3da45ee16482ddf4868235cff7ae4d5a15784371e8ae880ac5e",
   "06-location.tex": "8e8542f814df0b751f4a9c8fd062f5154060db58cb8b64fbf7a719873dc2c1ca",
@@ -11,7 +11,7 @@
   "08-statecheck.tex": "20f687f22ef392fc53d28ef441939d2cc0c3290b812bda3306f0b7f1d1428a4d",
   "09-close.tex": "b27731b06de48de2e65464b5bc1fab350db04fcaea387588c8ca904d1336e1a9"
  },
- "cited": 46,
- "body_words_approx": 10774,
- "pdf_sha256": "cfc17584b4e06ecd83902eb4acb9ad358ef67def5ffd19434a6ae72325e80b5f"
+ "cited": 44,
+ "body_words_approx": 10733,
+ "pdf_sha256": "647f97f3561e815f39bdbfd7fa1cb6f99e10d4761631c6fcf2ffec6e5443ccb4"
 }

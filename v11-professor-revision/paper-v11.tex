@@ -459,10 +459,10 @@ The paper makes four contributions. (1)~A content-based code-anchor relocation c
 To quantify the problem in a public setting, we collected every merged pull request with at least one inline review thread from Requests, Flask, Click, HTTPX and Rich between January 2022 and June 2026, through GitHub's GraphQL interface \cite{githubgraphql}. Of \wpeThreads{} inline threads, \wpeFollowedPct\% were followed by at least one further commit to the pull request, and \wpeOutdatedPct\% (pull-request cluster bootstrap 95\% interval \wpeOutdatedLo--\wpeOutdatedHi\%) were marked outdated; \wpeNullLinePct\% of the outdated threads no longer had a line in the current diff. GitHub marks a thread outdated when the diff hunk it was written on changes \cite{github2018outdating}; outdated threads remain readable, but the reviewer must find where the concern now applies. The sample is professional open source, the snapshot reflects force-pushes and squashes, and resolution does not show that a concern was fixed, so the figures motivate rather than measure the educational problem.
 
 \subsection{Robust Annotation Anchoring}
-Robust document annotation predates this system. Brush et al.\ examined annotation positioning after document edits \cite{brush2001robust}; Phelps and Wilensky developed robust intra-document locations \cite{phelps2000robust}. Hypothesis describes quote-based fuzzy anchoring \cite{csillag2013fuzzy}, and the W3C Web Annotation Data Model specifies text-quote and text-position selectors \cite{w3c2017annotation}. For code, recent systems keep annotations attached as programs evolve: Meta-Manager records the provenance of edits in the editor \cite{horvath2024metamanager}, Magic Markup re-tags document-external markup with a language model \cite{misback2024magic}, and Codetations combines editor-tracked edits with language-model resolution of offline changes \cite{misback2025codetations}. These systems target a single developer's working copy and its edit stream; \sys{} receives whole submitted versions without an edit stream and must decide, for each earlier concern, whether its supervisor needs to look again.
+Robust document annotation predates this system. Brush et al.\ examined annotation positioning after document edits \cite{brush2001robust}; Phelps and Wilensky developed robust intra-document locations \cite{phelps2000robust}. Hypothesis describes quote-based fuzzy anchoring \cite{csillag2013fuzzy}, and the W3C Web Annotation Data Model specifies text-quote and text-position selectors \cite{w3c2017annotation}. For code, recent systems keep annotations attached as programs evolve: Meta-Manager records the provenance of edits in the editor \cite{horvath2024metamanager}, and Magic Markup re-tags document-external markup with a language model \cite{misback2024magic}. These systems target a single developer's working copy and its edit stream; \sys{} receives whole submitted versions without an edit stream and must decide, for each earlier concern, whether its supervisor needs to look again.
 
 \subsection{Code Review and Warning Tracking}
-Modern review combines line-specific discussion with human judgment \cite{bacchelli2013expectations,sadowski2018modern}. Review tools differ in how comments survive a revision, and a fixed-line model describes none of them fully. GitHub keeps a comment on its line while the line is unchanged and marks it outdated when the exact anchoring line changes \cite{github2018outdating}. Gerrit ports unresolved comments to a newer patch set by calculating their position in the new file, and attaches them at file level when no position can be calculated; ported comments look like ordinary ones, and resolved comments are not ported \cite{gerritporting}. GitLab can be configured to resolve diff threads automatically when a push makes them outdated \cite{gitlabautoresolve}, the opposite of the human-only resolution adopted here. CodeReviewQA tests whether language models understand review comments by asking them to recognize the change type, localize the change and identify the solution, on 900 curated examples in nine languages \cite{lin2025codereviewqa}. It localizes the code a comment asks to change within one version, whereas \sys{} must find where already-reviewed code went in the next. Static-analysis warning trackers retain issue identity across versions and remember earlier review decisions about warnings \cite{avgustinov2015tracking,li2024tracking,spacco2006tracking,sonarqube}; their findings are produced by the analyzer, so an issue that disappears from the analysis can be treated as fixed, whereas a supervisor's concern cannot. ViolationTracker builds precise violation histories with introduced, fixed, deleted and reopened states \cite{yu2023violationtracker}; there too a violation is fixed when the analyzer stops reporting it. Anand distinguishes whether a change touches what a stored claim depends on from whether the claim is now false, and shows that content anchoring is a poor proxy for the second \cite{anand2026impact}; a \sys{} change label is of the first kind, so it only requests a check. Table~\ref{tab:related} compares documented behaviors. We did not benchmark these products; our conventional baselines reimplement their documented policies, and product documentation supports the table, not performance claims.
+Modern review combines line-specific discussion with human judgment \cite{bacchelli2013expectations,sadowski2018modern}. Review tools differ in how comments survive a revision, and a fixed-line model describes none of them fully. GitHub keeps a comment on its line while the line is unchanged and marks it outdated when the exact anchoring line changes \cite{github2018outdating}. Gerrit ports unresolved comments to a newer patch set by calculating their position in the new file, and attaches them at file level when no position can be calculated; ported comments look like ordinary ones, and resolved comments are not ported \cite{gerritporting}. GitLab can be configured to resolve diff threads automatically when a push makes them outdated \cite{gitlabautoresolve}, the opposite of the human-only resolution adopted here. CodeReviewQA tests whether language models understand review comments by asking them to recognize the change type, localize the change and identify the solution, on 900 curated examples in nine languages \cite{lin2025codereviewqa}. It localizes the code a comment asks to change within one version, whereas \sys{} must find where already-reviewed code went in the next. Static-analysis warning trackers retain issue identity across versions and remember earlier review decisions about warnings \cite{avgustinov2015tracking,li2024tracking,spacco2006tracking,sonarqube}; their findings are produced by the analyzer, so an issue that disappears from the analysis can be treated as fixed, whereas a supervisor's concern cannot. ViolationTracker builds precise violation histories with introduced, fixed, deleted and reopened states \cite{yu2023violationtracker}; there too a violation is fixed when the analyzer stops reporting it. Whether a revision touched the reviewed code and whether the concern about that code still holds are different questions; a \sys{} change label answers only the first, so it only requests a check. Table~\ref{tab:related} compares documented behaviors. Apart from GitHub's outdated flag, which the suggestion oracle measures, we did not benchmark these products; our conventional baselines reimplement their documented policies, and product documentation supports the table, not performance claims.
 
 \begin{table*}[t]
 \caption{Documented Behavior of Review Tools and Code-Mapping Methods}\label{tab:related}
@@ -1334,7 +1334,7 @@ The protocol, adapters and hypotheses were recorded with code hashes before any 
 
 \textbf{The corrected copy guard costs less but does not dominate.} Over CodeMapper, AGi asked for fewer unnecessary re-checks than the original copy guard on every population (stress seed \wiFrCmGiFalse\% against \wiFrCmGFalse\%; student repositories \wiStuCmGiFalse\% against \wiStuCmGFalse\%; real histories \wiRealCmGiFalse\% against \wiRealCmGFalse\%). It missed more only where an identical copy sits just below the original, the case in which the line diff aligns the original's lines with the copy: on the duplicate suite \wiFrDupCmGiMiss\% against \wiFrDupCmGMiss\%, which accounts for the whole difference on the stress seed, and \wiHumCmGiMissK{} against \wiHumCmGMissK{} misses on the human-annotated regions. The registered hypothesis that AGi lowers unnecessary requests without losing safety therefore held on the held-out short-anchor and compound suites but not on the held-out seed as a whole. The provenance rule AG2 (Section~\ref{sec:guards}) removed more unnecessary requests but failed exactly where a copy guard is needed: on the held-out duplicate suite the cascade with AG2 missed \wiFrDupCasAGtwoMiss\% of the needed re-checks, against \wiFrDupCasAGiMiss\% with AGi and \wiFrDupDepMiss\% with no guard. We recommend AGi, keep the original guard where duplicates are expected, and report AG2 as a negative result.
 
-\textbf{A language model as the locator.} Magic Markup and Codetations re-anchor annotations with a language model \cite{misback2024magic,misback2025codetations}, so we also placed one inside the workflow. The protocol was registered before any evaluation call, and its amendments, including a change of model made before that model's first evaluation call, are in the artifact. The model is \wjModel{}, the model the deployed portal is configured with, at temperature~0. For each anchor it receives the old region with 15 lines of context and the complete new version of the paired file. It returns where the region now is and whether it changed. Its own answer can decide the request (\emph{own judgment}), or its window can pass through the same labels and guards as CodeMapper's (Table~\ref{tab:llm}). Only public code was sent: the human-annotated regions, the open-source edit-targeted histories and the student repositories.
+\textbf{A language model as the locator.} Magic Markup re-anchors annotations with a language model \cite{misback2024magic}, so we also placed one inside the workflow. The protocol was registered before any evaluation call, and its amendments, including a change of model made before that model's first evaluation call, are in the artifact. The model is \wjModel{}, the model the deployed portal is configured with, at temperature~0. For each anchor it receives the old region with 15 lines of context and the complete new version of the paired file. It returns where the region now is and whether it changed. Its own answer can decide the request (\emph{own judgment}), or its window can pass through the same labels and guards as CodeMapper's (Table~\ref{tab:llm}). Only public code was sent: the human-annotated regions, the open-source edit-targeted histories and the student repositories.
 
 \input{generated/table-llm}
 
@@ -1571,7 +1571,7 @@ Tables for Section~\ref{sec:r02}, in the order that section cites them.
 \input{generated/table-contract}
 \clearpage
 
-\begin{thebibliography}{48}
+\begin{thebibliography}{46}
 \providecommand{\url}[1]{#1}
 \csname url@samestyle\endcsname
 \providecommand{\newblock}{\relax}
@@ -1653,7 +1653,7 @@ S.~P. Reiss, ``Tracking source locations,'' in \emph{Proc. 30th Int. Conf.
  doi: \url{https://doi.org/10.1145/1368088.1368091}.
 
 \bibitem{hu2026codemapper}
-H.~Hu and M.~Pradel, ``CodeMapper: A language-agnostic approach to mapping code regions across commits,'' in \emph{Proc. IEEE/ACM 48th Int. Conf. Softw. Eng. (ICSE)}, 2026. [Online]. Available: \url{https://arxiv.org/abs/2511.05205}
+H.~Hu and M.~Pradel, ``CodeMapper: A language-agnostic approach to mapping code regions across commits,'' in \emph{Proc. IEEE/ACM 48th Int. Conf. Softw. Eng. (ICSE)}, 2026, pp. 2287--2298, doi: \href{https://doi.org/10.1145/3744916.3773267}{10.1145/3744916.3773267}.
 
 \bibitem{gerritporting}
 
@@ -1672,7 +1672,7 @@ GitHub, ``Precision review comment outdating,'' GitHub changelog, Sep. 2018,
 \bibitem{githubgraphql}
 GitHub, ``GraphQL API: Pull requests (\texttt{PullRequestReviewThread.isOutdated}),'' GitHub Docs. Accessed: Oct.~31, 2026. [Online]. Available: \url{https://docs.github.com/en/graphql/reference/pulls}
 
-% R03 additions. Metadata verified 2026-11-03: Crossref (CodeShovel, CodeTracker) and arXiv abstract pages (others).
+% R03 additions. Metadata verified against Crossref (2026-11-03; peer-reviewed versions 2026-11-06).
 
 \bibitem{phelps2000robust}
 
@@ -1694,10 +1694,7 @@ K.~Csillag, ``Fuzzy anchoring,'' Hypothesis blog, Apr. 2013, {Accessed}: Oct.
 A.~Horvath, A.~Macvean, and B.~A. Myers, ``Meta-Manager: A tool for collecting and exploring meta information about code,'' in \emph{Proc. CHI Conf. Human Factors Comput. Syst.}, 2024, doi: \href{https://doi.org/10.1145/3613904.3642676}{10.1145/3613904.3642676}.
 
 \bibitem{misback2024magic}
-E.~Misback, Z.~Tatlock, and S.~L. Tanimoto, ``Magic Markup: Maintaining document-external markup with an LLM,'' in \emph{Companion Proc. Int. Conf. Art, Sci., Eng. Program. ($\langle$Programming$\rangle$)}, 2024. [Online]. Available: \url{https://arxiv.org/abs/2403.03481}
-
-\bibitem{misback2025codetations}
-E.~Misback, E.~Vank, Z.~Tatlock, and S.~Tanimoto, ``Codetations: Intelligent, persistent notes and UIs for programs and other documents,'' arXiv:2504.18702, 2025.
+E.~Misback, Z.~Tatlock, and S.~L. Tanimoto, ``Magic Markup: Maintaining document-external markup with an LLM,'' in \emph{Companion Proc. 8th Int. Conf. Art, Sci., Eng. Program. ($\langle$Programming$\rangle$)}, 2024, pp. 22--31, doi: \href{https://doi.org/10.1145/3660829.3660836}{10.1145/3660829.3660836}.
 
 \bibitem{bacchelli2013expectations}
 
@@ -1722,7 +1719,7 @@ GitLab, ``Merge requests: Automatically resolve threads when they become outdate
 % WP C adds GumTree software/version and CodeMapper artifact commit; WP E adds the GitHub GraphQL reference:
 
 \bibitem{lin2025codereviewqa}
-H.~Y. Lin, C.~Liu, H.~Gao, P.~Thongtanunam, and C.~Treude, ``CodeReviewQA: The code review comprehension assessment for large language models,'' arXiv:2503.16167, 2025. [Online]. Available: \url{https://arxiv.org/abs/2503.16167}
+H.~Y. Lin, C.~Liu, H.~Gao, P.~Thongtanunam, and C.~Treude, ``CodeReviewQA: The code review comprehension assessment for large language models,'' in \emph{Findings Assoc. Comput. Linguist.: ACL 2025}, 2025, pp. 9138--9166, doi: \href{https://doi.org/10.18653/v1/2025.findings-acl.476}{10.18653/v1/2025.findings-acl.476}.
 
 \bibitem{avgustinov2015tracking}
 
@@ -1760,9 +1757,6 @@ SonarSource, ``{SonarQube} documentation: Issue tracking across analyses,''
 
 \bibitem{yu2023violationtracker}
 P.~Yu, Y.~Wu, X.~Peng, J.~Peng, J.~Zhang, P.~Xie, and W.~Zhao, ``ViolationTracker: Building precise histories for static analysis violations,'' in \emph{Proc. IEEE/ACM 45th Int. Conf. Softw. Eng. (ICSE)}, 2023, pp. 2022--2034, doi: \href{https://doi.org/10.1109/ICSE48619.2023.00171}{10.1109/ICSE48619.2023.00171}.
-
-\bibitem{anand2026impact}
-A.~Anand, ``Impact is not invalidation: Ask about the claim, not the diff,'' arXiv preprint, Sep. 2026. [Online]. Available: \url{https://arxiv.org/abs/2609.25130}
 
 \bibitem{myers1986ond}
 
@@ -1810,7 +1804,7 @@ B.~Fluri, M.~W{\"u}rsch, M.~Pinzger, and H.~C. Gall, ``Change distilling: Tree
  doi: \url{https://doi.org/10.1109/TSE.2007.70731}.
 
 \bibitem{alikhanifard2024astdiff}
-P.~Alikhanifard and N.~Tsantalis, ``A novel refactoring and semantic aware abstract syntax tree differencing tool and a benchmark for evaluating the accuracy of diff tools,'' arXiv:2403.05939, 2024. [Online]. Available: \url{https://arxiv.org/abs/2403.05939}
+P.~Alikhanifard and N.~Tsantalis, ``A novel refactoring and semantic aware abstract syntax tree differencing tool and a benchmark for evaluating the accuracy of diff tools,'' \emph{ACM Trans. Softw. Eng. Methodol.}, vol.~34, no.~2, pp. 1--63, 2025, doi: \href{https://doi.org/10.1145/3696002}{10.1145/3696002}.
 
 \bibitem{godfrey2005using}
 
@@ -1830,13 +1824,13 @@ M.~Jodavi and N.~Tsantalis, ``Accurate method and variable tracking in commit hi
 M.~T. Hasan, N.~Tsantalis, and P.~Alikhanifard, ``Refactoring-aware block tracking in commit history,'' \emph{IEEE Trans. Softw. Eng.}, vol.~50, no.~12, pp. 3330--3350, Dec. 2024, doi: \href{https://doi.org/10.1109/TSE.2024.3484586}{10.1109/TSE.2024.3484586}.
 
 \bibitem{islam2025historyfinder}
-S.~Islam, A.~Aowal, M.~S. Uddin, and S.~Chowdhury, ``HistoryFinder: Advancing method-level source code history generation with accurate oracles and enhanced algorithm,'' arXiv:2507.14716, 2025. [Online]. Available: \url{https://arxiv.org/abs/2507.14716}
+S.~Islam, A.~Aowal, M.~S. Uddin, and S.~Chowdhury, ``HistoryFinder: Advancing method-level source code history generation with accurate oracles and enhanced algorithm,'' in \emph{Proc. IEEE/ACM 48th Int. Conf. Softw. Eng. (ICSE)}, 2026, pp. 2262--2273, doi: \href{https://doi.org/10.1145/3744916.3773238}{10.1145/3744916.3773238}.
 
 \bibitem{sun2026recite}
-K.~Sun, Y.~Lyu, X.~Ma, H.~Kuang, R.~Widyasari, H.~Zhang, X.~Ma, J.~Lawall, and D.~Lo, ``We must have missed this comment: Detecting and repairing stale function references in Linux kernel comments,'' arXiv:2608.03734, 2026. [Online]. Available: \url{https://arxiv.org/abs/2608.03734}
+K.~Sun, Y.~Lyu, X.~Ma, H.~Kuang, R.~Widyasari, H.~Zhang, X.~Ma, J.~Lawall, and D.~Lo, ``We must have missed this comment: Detecting and repairing stale function references in Linux kernel comments,'' in \emph{Proc. 41st IEEE/ACM Int. Conf. Autom. Softw. Eng. (ASE)}, 2026, pp. 2254--2266, doi: \href{https://doi.org/10.1145/3832783.3837474}{10.1145/3832783.3837474}.
 
-% Verified 2026-11-03 from the arXiv full text (title, authors, abstract; claims limited to the abstract). The AST-diff paper's
-% own reference line names ACM TOSEM 2024 with a placeholder DOI, so the arXiv version is cited.
+% Peer-reviewed versions verified 2026-11-06 against Crossref (DOI records: title, authors, venue, pages).
+% Preprint-only works (Codetations; Anand, "Impact is not invalidation") were removed at the professor's request.
 
 \bibitem{hattie2007power}
 
@@ -1898,7 +1892,7 @@ Oct. 28, 2026. [Online]. Available: \url{https://openai.com/codex/}
 
 
 
-% New v11 references. Metadata verified 2026-10-31 (arXiv API; Crossref; researchr ICSE 2026 page; GitLab docs).
+% New v11 references. Metadata re-verified 2026-11-06 against Crossref DOI records (tools/v11/verify_v11_citations.py); no preprints.
 % Merge into the bibliography in citation order; run the v10 citation-audit procedure on each before submission.
 
 \end{thebibliography}
