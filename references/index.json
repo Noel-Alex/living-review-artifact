@@ -1,0 +1,371 @@
+[
+ {
+  "n": 1,
+  "key": "lei2026",
+  "doi": "10.1080/02602938.2026.2656285",
+  "citation": "W. Lei and Z. Lei, “A systematic review of feedback literacy in higher education: Concepts, measurement, and interventions,” Assessment & Evaluation in Higher Education, vol. 51, no. 7, pp. 1425–1446, 2026.",
+  "pdf": null,
+  "version": null,
+  "retrieved_from": null
+ },
+ {
+  "n": 2,
+  "key": "istencioglu2026",
+  "doi": "10.1080/02602938.2026.2631533",
+  "citation": "T. Istencioglu, D. Boud, P. Dawson, and L. Yang, “Teacher feedback literacy as an emerging field: A scoping review,” Assessment & Evaluation in Higher Education, 2026.",
+  "pdf": "pdf/02-istencioglu2026.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2631533"
+ },
+ {
+  "n": 3,
+  "key": "little2024",
+  "doi": "10.1080/02602938.2023.2177613",
+  "citation": "T. Little, P. Dawson, D. Boud, and J. Tai, “Can students’ feedback literacy be improved? A scoping review of interventions,” Assessment & Evaluation in Higher Education, vol. 49, no. 1, pp. 39–52, 2024.",
+  "pdf": "pdf/03-little2024.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://www.tandfonline.com/doi/pdf/10.1080/02602938.2023.2177613"
+ },
+ {
+  "n": 4,
+  "key": "carlessyoung2025",
+  "doi": "10.1080/03075079.2024.2389436",
+  "citation": "D. Carless and S. Young, “Towards an idealized model of feedback uptake: Longitudinal development of feedback literacy from a social constructivist perspective,” Studies in Higher Education, vol. 50, no. 8, pp. 1641–1653, 2025.",
+  "pdf": null,
+  "version": null,
+  "retrieved_from": null
+ },
+ {
+  "n": 5,
+  "key": "woitta2025",
+  "doi": "10.1080/13562517.2023.2263838",
+  "citation": "S. Woitta, J. Weidlich, I. Jivet, D. Orhan Goksun, H. Drachsler, and M. Kalz, “Students’ feedback literacy in higher education: An initial scale validation study,” Teaching in Higher Education, vol. 30, no. 1, pp. 257–276, 2025.",
+  "pdf": "pdf/05-woitta2025.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://www.tandfonline.com/doi/pdf/10.1080/13562517.2023.2263838"
+ },
+ {
+  "n": 6,
+  "key": "zheng2026",
+  "doi": "10.1080/07294360.2025.2549403",
+  "citation": "Q. Zheng, D. Boud, and P. Dawson, “Using peer feedback, teacher feedback and self-assessment to enhance students’ feedback literacy behaviour,” Higher Education Research & Development, vol. 45, no. 3, pp. 831–846, 2026.",
+  "pdf": null,
+  "version": null,
+  "retrieved_from": null
+ },
+ {
+  "n": 7,
+  "key": "meta2024",
+  "doi": "10.1145/3613904.3642676",
+  "citation": "A. Horvath, A. Macvean, and B. A. Myers, “Meta-Manager: A tool for collecting and exploring meta information about code,” in Proceedings of CHI, 2024.",
+  "pdf": "pdf/07-meta2024.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://dl.acm.org/doi/pdf/10.1145/3613904.3642676"
+ },
+ {
+  "n": 8,
+  "key": "magic2024",
+  "doi": "10.1145/3660829.3660836",
+  "citation": "E. Misback, Z. Tatlock, and S. L. Tanimoto, “Magic Markup: Maintaining document-external markup with an LLM,” in Programming Companion, ACM, 2024.",
+  "pdf": "pdf/08-magic2024.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2403.03481"
+ },
+ {
+  "n": 9,
+  "key": "codetations2026",
+  "doi": "10.1145/3830398.3830552",
+  "citation": "E. Misback, E. Jun, E. Vank, Z. Tatlock, and S. Tanimoto, “Codetations: Rich, granular, and maintainable annotations for evolving code,” in Proceedings of UIST, art. 162, 2026.",
+  "pdf": "pdf/09-codetations2026.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://dl.acm.org/doi/pdf/10.1145/3830398.3830552"
+ },
+ {
+  "n": 10,
+  "key": "codemapper2026",
+  "doi": "10.1145/3744916.3773267",
+  "citation": "H. Hu and M. Pradel, “CodeMapper: A language-agnostic approach to mapping code regions across commits,” in Proceedings of ICSE, 2026.",
+  "pdf": "pdf/10-codemapper2026.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2511.05205"
+ },
+ {
+  "n": 11,
+  "key": "fregnan2022",
+  "doi": "10.1007/s10664-022-10205-7",
+  "citation": "E. Fregnan, F. Petrulio, and A. Bacchelli, “The evolution of the code during review: An investigation on review changes,” Empirical Software Engineering, vol. 27, art. 177, 2022.",
+  "pdf": "pdf/11-fregnan2022.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://link.springer.com/content/pdf/10.1007/s10664-022-10205-7.pdf"
+ },
+ {
+  "n": 12,
+  "key": "gocmen2025",
+  "doi": "10.1007/s10664-024-10600-2",
+  "citation": "I. S. Göçmen, A. S. Cezayir, and E. Tüzün, “Enhanced code reviews using pull request based change impact analysis,” Empirical Software Engineering, vol. 30, art. 64, 2025.",
+  "pdf": "pdf/12-gocmen2025.pdf",
+  "version": "author or repository copy",
+  "retrieved_from": "https://repository.bilkent.edu.tr/bitstreams/c0c0a3d0-7421-42e1-a240-1fc9c1a13023/download"
+ },
+ {
+  "n": 13,
+  "key": "roadmap2026",
+  "doi": "10.1145/3800963",
+  "citation": "Z. Yang, C. Gao, Z. Guo, Z. Li, K. Liu, X. Xia, and Y. Zhou, “A roadmap for modern code review: Challenges and opportunities,” ACM Transactions on Software Engineering and Methodology, vol. 35, no. 9, art. 271, 2026.",
+  "pdf": "pdf/13-roadmap2026.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2405.18216"
+ },
+ {
+  "n": 14,
+  "key": "oliveira2025",
+  "doi": "10.1109/TSE.2024.3453783",
+  "citation": "D. Oliveira, R. Santos, B. de Oliveira, M. Monperrus, F. Castor, and F. Madeiral, “Understanding code understandability improvements in code reviews,” IEEE Transactions on Software Engineering, vol. 51, no. 1, pp. 14–37, 2025.",
+  "pdf": "pdf/14-oliveira2025.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2410.21990"
+ },
+ {
+  "n": 15,
+  "key": "charoenwet2024",
+  "doi": "10.1007/s10664-024-10496-y",
+  "citation": "W. Charoenwet, P. Thongtanunam, V.-T. Pham, and C. Treude, “Toward effective secure code reviews: An empirical study of security-related coding weaknesses,” Empirical Software Engineering, vol. 29, art. 88, 2024.",
+  "pdf": "pdf/15-charoenwet2024.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2311.16396"
+ },
+ {
+  "n": 16,
+  "key": "dorner2025",
+  "doi": "10.1007/s10664-024-10442-y",
+  "citation": "M. Dorner, D. Mendez, K. Wnuk, E. Zabardast, and J. Czerwonka, “The upper bound of information diffusion in code review,” Empirical Software Engineering, vol. 30, art. 2, 2025.",
+  "pdf": "pdf/16-dorner2025.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2306.08980"
+ },
+ {
+  "n": 17,
+  "key": "codereviewqa2025",
+  "doi": "10.18653/v1/2025.findings-acl.476",
+  "citation": "H. Y. Lin, C. Liu, H. Gao, P. Thongtanunam, and C. Treude, “CodeReviewQA: The code review comprehension assessment for large language models,” in Findings of ACL, pp. 9138–9166, 2025.",
+  "pdf": "pdf/17-codereviewqa2025.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://aclanthology.org/2025.findings-acl.476.pdf"
+ },
+ {
+  "n": 18,
+  "key": "tufano2024",
+  "doi": "10.1109/TSE.2023.3348172",
+  "citation": "R. Tufano, O. Dabic, A. Mastropaolo, M. Ciniselli, and G. Bavota, “Code review automation: Strengths and weaknesses of the state of the art,” IEEE Transactions on Software Engineering, vol. 50, no. 2, pp. 338–353, 2024.",
+  "pdf": "pdf/18-tufano2024.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2401.05136"
+ },
+ {
+  "n": 19,
+  "key": "bitsai2025",
+  "doi": "10.1145/3696630.3728552",
+  "citation": "T. Sun et al., “BitsAI-CR: Automated code review via LLM in practice,” in Companion Proceedings of the ACM International Conference on the Foundations of Software Engineering (FSE Companion), pp. 274–285, 2025.",
+  "pdf": "pdf/19-bitsai2025.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2501.15134"
+ },
+ {
+  "n": 20,
+  "key": "pirouzkhah2026",
+  "doi": "10.1007/s10664-025-10781-4",
+  "citation": "S. Pirouzkhah, P. Rani, F. Sovrano, V. Hellendoorn, and A. Bacchelli, “The price of precision: The cost of preprocessing for automated code revision in code review,” Empirical Software Engineering, vol. 31, art. 47, 2026.",
+  "pdf": "pdf/20-pirouzkhah2026.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://link.springer.com/content/pdf/10.1007/s10664-025-10781-4.pdf"
+ },
+ {
+  "n": 21,
+  "key": "warnings2024",
+  "doi": "10.1109/TSE.2024.3358283",
+  "citation": "J. Li and J. Yang, “Tracking the evolution of static code warnings: The state-of-the-art and a better approach,” IEEE Transactions on Software Engineering, vol. 50, no. 3, pp. 534–550, 2024.",
+  "pdf": "pdf/21-warnings2024.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2210.02651v2"
+ },
+ {
+  "n": 22,
+  "key": "violation2023",
+  "doi": "10.1109/ICSE48619.2023.00171",
+  "citation": "P. Yu, Y. Wu, X. Peng, J. Peng, J. Zhang, P. Xie, and W. Zhao, “ViolationTracker: Building precise histories for static analysis violations,” in Proceedings of ICSE, pp. 2022–2034, 2023.",
+  "pdf": null,
+  "version": null,
+  "retrieved_from": null
+ },
+ {
+  "n": 23,
+  "key": "alami2025",
+  "doi": "10.1109/CHASE66643.2025.00016",
+  "citation": "A. Alami and N. A. Ernst, “Human and machine: How software engineers perceive and engage with AI-assisted code reviews compared to their peers,” in Proceedings of the IEEE/ACM International Conference on Cooperative and Human Aspects of Software Engineering (CHASE), pp. 63–74, 2025.",
+  "pdf": "pdf/23-alami2025.pdf",
+  "version": "author or repository copy",
+  "retrieved_from": "https://findresearcher.sdu.dk/ws/files/303311336/CHASE_2025_CR.pdf"
+ },
+ {
+  "n": 24,
+  "key": "gao2026",
+  "doi": "10.1145/3793302.3793573",
+  "citation": "H. Gao, P. Banyongrakkul, H. Guan, M. Zahedi, and C. Treude, “On autopilot? An empirical study of human–AI teaming and review practices in open source,” in Proceedings of the International Conference on Mining Software Repositories (MSR), pp. 777–781, 2026.",
+  "pdf": "pdf/24-gao2026.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2601.13754"
+ },
+ {
+  "n": 25,
+  "key": "njoku2026",
+  "doi": "10.1145/3805760.3814909",
+  "citation": "A. O. Njoku, Z. Sharafi, and F. Khomh, “When code authors are agents: A large-scale study of human–agent collaboration in pull requests,” in Proceedings of the ACM International Conference on AI-Powered Software (AIware), pp. 188–196, 2026.",
+  "pdf": "pdf/25-njoku2026.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://dl.acm.org/doi/pdf/10.1145/3805760.3814909"
+ },
+ {
+  "n": 26,
+  "key": "lhdiff2013",
+  "doi": "10.1109/ICSM.2013.34",
+  "citation": "M. Asaduzzaman, C. K. Roy, K. A. Schneider, and M. Di Penta, “LHDiff: A language-independent hybrid approach for tracking source code lines,” in Proc. IEEE Int. Conf. Software Maintenance (ICSM), pp. 230–239, 2013.",
+  "pdf": "pdf/26-lhdiff2013.pdf",
+  "version": "author or repository copy",
+  "retrieved_from": "https://www.cs.usask.ca/~croy/papers/2013/LHDiffFullPaper-preprint.pdf"
+ },
+ {
+  "n": 27,
+  "key": "gumtree2014",
+  "doi": "10.1145/2642937.2642982",
+  "citation": "J.-R. Falleri, F. Morandat, X. Blanc, M. Martinez, and M. Monperrus, “Fine-grained and accurate source code differencing,” in Proc. 29th ACM/IEEE Int. Conf. Automated Software Engineering (ASE), pp. 313–324, 2014.",
+  "pdf": "pdf/27-gumtree2014.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://dl.acm.org/doi/pdf/10.1145/2642937.2642982"
+ },
+ {
+  "n": 28,
+  "key": "astdiff2024",
+  "doi": "10.1145/3696002",
+  "citation": "P. Alikhanifard and N. Tsantalis, “A novel refactoring and semantic aware abstract syntax tree differencing tool and a benchmark for evaluating the accuracy of diff tools,” ACM Transactions on Software Engineering and Methodology, vol. 34, no. 2, art. 40, 2025.",
+  "pdf": "pdf/28-astdiff2024.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2403.05939"
+ },
+ {
+  "n": 29,
+  "key": "codeshovel2021",
+  "doi": "10.1109/ICSE43902.2021.00135",
+  "citation": "F. Grund, S. A. Chowdhury, N. C. Bradley, B. Hall, and R. Holmes, “CodeShovel: Constructing method-level source code histories,” in Proceedings of ICSE, pp. 1510–1522, 2021.",
+  "pdf": "pdf/29-codeshovel2021.pdf",
+  "version": "author or repository copy",
+  "retrieved_from": "https://www.cs.ubc.ca/~rtholmes/papers/icse_2021_grund.pdf"
+ },
+ {
+  "n": 30,
+  "key": "methodtracking2022",
+  "doi": "10.1145/3540250.3549079",
+  "citation": "M. Jodavi and N. Tsantalis, “Accurate method and variable tracking in commit history,” in Proceedings of ESEC/FSE, pp. 183–195, 2022.",
+  "pdf": "pdf/30-methodtracking2022.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://dl.acm.org/doi/pdf/10.1145/3540250.3549079"
+ },
+ {
+  "n": 31,
+  "key": "blocktracking2024",
+  "doi": "10.1109/TSE.2024.3484586",
+  "citation": "M. T. Hasan, N. Tsantalis, and P. Alikhanifard, “Refactoring-aware block tracking in commit history,” IEEE Transactions on Software Engineering, vol. 50, no. 12, pp. 3330–3350, 2024.",
+  "pdf": "pdf/31-blocktracking2024.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2409.16185"
+ },
+ {
+  "n": 32,
+  "key": "recite2026",
+  "doi": "10.1145/3832783.3837474",
+  "citation": "K. Sun, Y. Lyu, X. Ma, H. Kuang, R. Widyasari, H. Zhang, X. Ma, J. Lawall, and D. Lo, “We must have missed this comment: Detecting and repairing stale function references in Linux kernel comments,” in Proceedings of ASE, 2026.",
+  "pdf": "pdf/32-recite2026.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2608.03734"
+ },
+ {
+  "n": 33,
+  "key": "alomari2026",
+  "doi": "10.1016/j.infsof.2025.107960",
+  "citation": "N. Alomari, M. Redah, A. Ashraf, and M. Alshayeb, “Using LLMs to enhance code quality: A systematic literature review,” Information and Software Technology, vol. 190, art. 107960, 2026.",
+  "pdf": null,
+  "version": null,
+  "retrieved_from": null
+ },
+ {
+  "n": 34,
+  "key": "patcas2026",
+  "doi": "10.1007/s10664-026-10858-8",
+  "citation": "R. Patcas and S. Motogna, “An evaluation study of large language models for addressing code quality issues,” Empirical Software Engineering, vol. 31, art. 118, 2026.",
+  "pdf": "pdf/34-patcas2026.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://link.springer.com/content/pdf/10.1007/s10664-026-10858-8.pdf"
+ },
+ {
+  "n": 35,
+  "key": "zhan2026",
+  "doi": "10.1016/j.stueduc.2026.101578",
+  "citation": "Y. Zhan, Z. Yan, Y. Zeng, W. Luo, and Z. H. Wan, “A systematic review of feedback literacy scales: Development and validation,” Studies in Educational Evaluation, vol. 88, art. 101578, 2026.",
+  "pdf": null,
+  "version": null,
+  "retrieved_from": null
+ },
+ {
+  "n": 36,
+  "key": "surveyfeedback2025",
+  "doi": "10.1145/3764593",
+  "citation": "S. S. Kumar, M. A. Lones, M. Maarek, and H. Zantout, “Navigating the landscape of automated feedback generation techniques for programming exercises,” ACM Transactions on Computing Education, vol. 25, no. 4, art. 54, 2025.",
+  "pdf": "pdf/36-surveyfeedback2025.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://dl.acm.org/doi/pdf/10.1145/3764593"
+ },
+ {
+  "n": 37,
+  "key": "surveygrading2024",
+  "doi": "10.1145/3636515",
+  "citation": "M. Messer, N. C. C. Brown, M. Kölling, and M. Shi, “Automated grading and feedback tools for programming education: A systematic review,” ACM Transactions on Computing Education, vol. 24, no. 1, art. 10, 2024.",
+  "pdf": "pdf/37-surveygrading2024.pdf",
+  "version": "author or repository copy",
+  "retrieved_from": "https://kclpure.kcl.ac.uk/ws/files/239855044/Systematic_Literature_Review-v1.5.1.pdf"
+ },
+ {
+  "n": 38,
+  "key": "feedbacktypes2026",
+  "doi": "10.1145/3773911",
+  "citation": "E. Frankford et al., “A survey on feedback types in automated programming assessment systems,” ACM Transactions on Computing Education, vol. 26, no. 1, art. 14, 2026.",
+  "pdf": "pdf/38-feedbacktypes2026.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2510.18923"
+ },
+ {
+  "n": 39,
+  "key": "weidlich2025",
+  "doi": "10.1186/s41239-025-00539-9",
+  "citation": "J. Weidlich et al., “Highly informative feedback using learning analytics: How feedback literacy moderates student perceptions of feedback,” International Journal of Educational Technology in Higher Education, vol. 22, art. 43, 2025.",
+  "pdf": "pdf/39-weidlich2025.pdf",
+  "version": "publisher version",
+  "retrieved_from": "https://educationaltechnologyjournal.springeropen.com/counter/pdf/10.1186/s41239-025-00539-9"
+ },
+ {
+  "n": 40,
+  "key": "mcrbench2026",
+  "doi": "10.1145/3832219",
+  "citation": "D. Zheng, Y. Wang, X. Wang, K. Duan, H. Zhang, X. Liu, Y. Ma, and Z. Zheng, “From static to dynamic: Benchmarking real-world code review with MCR-Bench,” Proceedings of the ACM on Software Engineering, vol. 3, ISSTA, pp. 2928–2951, 2026.",
+  "pdf": "pdf/40-mcrbench2026.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2608.27442"
+ },
+ {
+  "n": 41,
+  "key": "kudrjavets2024",
+  "doi": "10.1007/s10664-023-10401-z",
+  "citation": "G. Kudrjavets and A. Rastogi, “Does code review speed matter for practitioners?,” Empirical Software Engineering, vol. 29, art. 7, 2024.",
+  "pdf": "pdf/41-kudrjavets2024.pdf",
+  "version": "arXiv preprint",
+  "retrieved_from": "https://arxiv.org/pdf/2311.02489"
+ }
+]
