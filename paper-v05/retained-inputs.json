@@ -1,0 +1,295 @@
+{
+  "manuscript": "paper-v05/main.tex",
+  "title": "Preserving Code Review Comments Across Revisions",
+  "edition": "v05",
+  "scope": "Public inputs and author-derived constructed suites only. No result in this edition is computed from the excluded collections below.",
+  "excluded": [
+    "Four private project histories, including the review portal's source.",
+    "Twenty student repositories selected by the authors from public sources.",
+    "Every pooled public+private total: nine-project aggregates, mixed-population confidence intervals, model-adjudication totals, ten-commit replays and supervision simulations."
+  ],
+  "populations": [
+    {
+      "population": "GitHub review threads on the five public Python projects",
+      "size": "931 inline review threads in 288 merged pull requests",
+      "used_in": [
+        "Section I (601 of 931 outdated; 99.0% without a diff position)"
+      ],
+      "public_input": true,
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/numbers-v11.tex",
+          "sha256": "7b33f31801bf8e0ab5a69119cb49ca3d588372502325dd9714f86ee7919f1305"
+        }
+      ],
+      "macros": "wpeThreads, wpeOutdated*, wpeNullLinePct",
+      "evidence": [
+        {
+          "path": "evidence/v11-wpe/review_threads_summary.json",
+          "sha256": "b650095d7e1ab04beb38dfd55ca4fb7d771ea1e6dc824a48a70cb12d8f87f282"
+        }
+      ],
+      "builder": "tools/v11/mine_review_threads.py; tools/v11/build_v11_numbers.py"
+    },
+    {
+      "population": "Controlled edit seed (author-derived)",
+      "size": "3,600 synthetic trials; 12 operators; replication seed",
+      "used_in": [
+        "Section V-A",
+        "Section VI (controlled edits)",
+        "Table IV"
+      ],
+      "public_input": false,
+      "note": "117 implementation-derived Python files; the corpus is not shipped. Numbers are the archived macros.",
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/numbers-v11.tex",
+          "sha256": "7b33f31801bf8e0ab5a69119cb49ca3d588372502325dd9714f86ee7919f1305"
+        }
+      ],
+      "macros": "smCtl*",
+      "evidence": [
+        {
+          "path": "evidence/v11-wpa/safety-metrics.json",
+          "sha256": "5e8532d75762bc815da55cd7cde45cc43af2703ff74f890c7139acbac9be5fba"
+        }
+      ],
+      "builder": "tools/v11/build_v11_numbers.py"
+    },
+    {
+      "population": "Five public Python histories (Requests, Flask, Click, HTTPX, Rich)",
+      "size": "8,805 uniform + 2,454 edit-targeted observations",
+      "used_in": [
+        "Abstract",
+        "Section VI",
+        "Section VII-A",
+        "Table VI"
+      ],
+      "public_input": true,
+      "note": "Table VI is read from the numerator/denominator macros only; no mixed-population total is used.",
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/numbers-v11.tex",
+          "sha256": "7b33f31801bf8e0ab5a69119cb49ca3d588372502325dd9714f86ee7919f1305"
+        }
+      ],
+      "macros": "smPubTgt*, smPubUni*",
+      "evidence": [
+        {
+          "path": "evidence/v11-wpb1/evaluation-summary-corrected.json",
+          "sha256": "cfc4fd19594d27194ec16c8333c0425f1f1b02882e57e79fc812364f45064c30"
+        },
+        {
+          "path": "evidence/public-histories/manifest.json",
+          "sha256": "86539301c77439abfa8f73866e21cb2b3cd6f4c127701c2dc80f60665ea582af"
+        },
+        {
+          "path": "evidence/regenerated-history-selection/requests-report.json",
+          "sha256": "2e8bc960cc007d0d24faf3ea0c729b046752a1bb6a3e43b2ef5e29a074f7deb4"
+        },
+        {
+          "path": "evidence/regenerated-history-selection/flask-report.json",
+          "sha256": "3d4dcfa452b6c160d9402a9e247ca75171ad3b22d1fc15ff0afa3c7ffa7db0d0"
+        },
+        {
+          "path": "evidence/regenerated-history-selection/click-report.json",
+          "sha256": "85ea7ddcba49d1cdc32ce417472b6dcec5a8f19d6e9a4a4227532db8dee429a1"
+        },
+        {
+          "path": "evidence/regenerated-history-selection/httpx-report.json",
+          "sha256": "2ce27d6e816c2062e3396f3a78f1b63c36c8bfce5cf4f58637581c9e094eb288"
+        },
+        {
+          "path": "evidence/regenerated-history-selection/rich-report.json",
+          "sha256": "f36424e95856aa326c916e5e536e352b78106414d8f2acdce8300edafcbb149b"
+        }
+      ],
+      "builder": "tools/v11/build_v11_numbers.py"
+    },
+    {
+      "population": "CodeMapper external benchmark (independent human annotations)",
+      "size": "200 human-annotated regions; 2,392 in the full external set",
+      "used_in": [
+        "Abstract",
+        "Section VI",
+        "Table VII",
+        "Table IX (left half)"
+      ],
+      "public_input": true,
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/table-external.tex",
+          "sha256": "97f09d9995f8c176f5f1b65428fdaf44b187f4919c0590621165cedd24abdf25"
+        },
+        {
+          "path": "v12-ieee15/generated/table-locator.tex",
+          "sha256": "b61f840ce85c1b2e61a66959e40634c9729f70cd2e6d5e8723c3da17e380aa65"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/v11-wpc/evaluation-summary.json",
+          "sha256": "90816961cdbccfc8dbce5e4d6148d1585ec5b7f3fe3505b5a4b1f2c21a822cc3"
+        },
+        {
+          "path": "evidence/v11-wpc/codemapper-head.json",
+          "sha256": "1718268f88344448719d7071870f5f90a30ff370a6edff797d573ea79a0f7f0a"
+        },
+        {
+          "path": "evidence/v11-wpi/summary-20261102T183407.json",
+          "sha256": "9b515032e3b76213554e64fc79edb6670bdadcdbe7020d5d7564cc90e9380146"
+        }
+      ],
+      "builder": "tools/v11/build_wpc_v11_tex.py; tools/v11/build_wpi_tex.py"
+    },
+    {
+      "population": "Constructed stress cases (author-derived)",
+      "size": "23,550 generated cases",
+      "used_in": [
+        "Abstract",
+        "Section VII-A",
+        "Table VIII",
+        "Table IX (right half)"
+      ],
+      "public_input": false,
+      "note": "Generated from implementation-derived source files; a mechanism check, not a prevalence estimate.",
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/table-stress.tex",
+          "sha256": "1d582cddc8bf08ef43fdbb1c3892585c41be236f58c5b2a53b69a0ef49f118c1"
+        },
+        {
+          "path": "v12-ieee15/generated/table-locator.tex",
+          "sha256": "b61f840ce85c1b2e61a66959e40634c9729f70cd2e6d5e8723c3da17e380aa65"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/v11-wpi/summary-20261102T183407.json",
+          "sha256": "9b515032e3b76213554e64fc79edb6670bdadcdbe7020d5d7564cc90e9380146"
+        }
+      ],
+      "builder": "tools/v11/build_wpi_tex.py"
+    },
+    {
+      "population": "Applied GitHub review suggestions",
+      "size": "998 suggestions; 486 merged pull requests; 10 repositories; 5 languages",
+      "used_in": [
+        "Abstract",
+        "Section VII-D",
+        "Table X"
+      ],
+      "public_input": true,
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/table-suggestion.tex",
+          "sha256": "94113b1ebc0ead98838952e34b2bc7180d5969816284115ecf72bf9654c650d2"
+        },
+        {
+          "path": "v12-ieee15/generated/numbers-wpk6.tex",
+          "sha256": "8f9e7f47d8116e68dfa3cf96c573608a1826b317128b72f34d11f1844e6be65c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/v12-wpk6/summary-20261105T210230.json",
+          "sha256": "ea3c014f9677d04875e7b1feada89a034f64e4e42c9ffc0c20e01b00156e98d8"
+        },
+        {
+          "path": "evidence/v12-wpk6/selection.json",
+          "sha256": "5e7d10650270d3324a632ffefc97d20279cc3248f65d55a49c2a2f2e451783b1"
+        },
+        {
+          "path": "evidence/v12-wpk6/rows.json",
+          "sha256": "dd35fee2106f8e936f4105d4a28da5f596a8c027c9dbe2bb27bbc611c70fa62a"
+        },
+        {
+          "path": "evidence/v12-wpk6/protocol-freeze.json",
+          "sha256": "2a905f686db9d721dd85c28f7f1047cc5203c3f645a7494be54a6927ecb25c7e"
+        }
+      ],
+      "builder": "tools/v11/build_wpk6_tex.py"
+    },
+    {
+      "population": "Parametric copy suite (author-derived)",
+      "size": "6,800 existing-copy + 800 same-revision-copy trials",
+      "used_in": [
+        "Section VII-E",
+        "Table XI"
+      ],
+      "public_input": false,
+      "note": "116 implementation-derived Python files; needs regeneration on public files for a strict public-input replication.",
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/table-copysuite.tex",
+          "sha256": "ff0068b351ba72a3a5fe8a3edc40b650f038342a4e6e03c20800bd4d33719fb6"
+        },
+        {
+          "path": "v12-ieee15/generated/numbers-wpk2.tex",
+          "sha256": "be6521525e8c0218f9c85bd9318565d65a29931747152d8af625c42bec185f66"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/v12-wpk2/summary-20261105T214747.json",
+          "sha256": "e5e9b043579314e15668ab0bd097723f41f79d082db36b1f799aa212b290fb97"
+        }
+      ],
+      "builder": "tools/v11/build_wpk2_tex.py"
+    },
+    {
+      "population": "Hosted language-model locators",
+      "size": "1,930 changed targets of the edit-targeted public sample",
+      "used_in": [
+        "Section VII-C"
+      ],
+      "public_input": true,
+      "note": "Dated, partly nondeterministic hosted-model observations.",
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/numbers-wpj.tex",
+          "sha256": "704ffdc692332732797aa54ca1370358d8e88d54c8d47d79bcd511a8792109e9"
+        }
+      ],
+      "macros": "wjPubSelfMiss*, wjNemoPubSelfMiss*",
+      "evidence": [
+        {
+          "path": "evidence/v11-wpj/summary-20261104T092825.json",
+          "sha256": "56c4b3c3d7ae9021d6234940cd11cfcaa90eca86ba010ea28a37d50988822c29"
+        }
+      ],
+      "builder": "tools/v11/build_wpj_tex.py"
+    },
+    {
+      "population": "Review-state model and scenarios",
+      "size": "bounded model: 7,179,369 states; gap model to depth 8; 82 pinned scenarios",
+      "used_in": [
+        "Section VIII",
+        "Table XII"
+      ],
+      "public_input": false,
+      "note": "Portal source is shipped only as SHA-256 digests; see the artifact README.",
+      "numbers": [
+        {
+          "path": "v12-ieee15/generated/table-contract.tex",
+          "sha256": "9b664ac68f06fe08ae0f2d283042b9d8f242cba517f666a3e9f67705e698648c"
+        },
+        {
+          "path": "v12-ieee15/generated/numbers-wpk4.tex",
+          "sha256": "a820473b61540e9d14c0e90cbf7d628a4791523b88345751b97680f44cfd4909"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/v12-wpk4/model-check-20261105T223148Z.json",
+          "sha256": "51981e3c6454cebc440c6402454fddca993d16a8b03360afb079f28cee44c6ef"
+        },
+        {
+          "path": "evidence/v11-wpd/model-check.json",
+          "sha256": "eeeb5d48c9073a629bd4cad3447214323bc2b23e8d4fd167950b1a4dad164204"
+        }
+      ],
+      "builder": "tools/v11/build_wpk4_tex.py"
+    }
+  ]
+}
